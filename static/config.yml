@@ -2,14 +2,12 @@ backend:
   name: git-gateway
   branch: master
 
-publish_mode: editorial_workflow  
-
 media_folder: content/media
 
 collections:
   - name: page
     label: Page
-    folder: page
+    folder: content/pages
     create: true
     fields:
       - { name: path, label: Path, widget: string }

@@ -1,0 +1,16 @@
+backend:
+  name: github
+  repo: product-mindset/site
+
+media_folder: content
+
+collections:
+  - name: page
+    label: Page
+    folder: page
+    create: true
+    fields:
+      - { name: path, label: Path, widget: string }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text }
+      - { name: body, label: Body, widget: markdown }

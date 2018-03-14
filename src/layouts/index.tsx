@@ -2,7 +2,7 @@ import * as React from 'react'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
-import './index.css'
+import '../../content/styles/site.sass'
 
 const Header = () => (
   <div

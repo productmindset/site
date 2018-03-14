@@ -2,7 +2,7 @@
 
 See [3Pillar Global](https://www.3pillarglobal.com/legal).
 
-This repository was originally forked from  [haysclark/gatsby-starter-typescript](https://github.com/haysclark/gatsby-starter-typescript/tree/e73812d72504641d9271ad90b76cf9811570ff86)
+This repository was originally forked from the [haysclark/gatsby-starter-typescript](https://github.com/haysclark/gatsby-starter-typescript/tree/e73812d72504641d9271ad90b76cf9811570ff86) repository
 
 This repository contains changes made for and on behalf of [productmindset.com](https://productmindset.com/).
 

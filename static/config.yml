@@ -1,8 +1,10 @@
 backend:
-  name: github
-  repo: product-mindset/site
+  name: git-gateway
+  branch: master
 
-media_folder: content
+publish_mode: editorial_workflow  
+
+media_folder: content/media
 
 collections:
   - name: page

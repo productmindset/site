@@ -1,10 +1,36 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Typescript Starter`,
+    title: `Gatsby Typescript Starter Plus`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    // Add typescript stack into webpack
-    `gatsby-plugin-typescript`
+    `gatsby-plugin-typescript`,
+    `gatsby-plugin-emotion`,
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-typography`,
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/content`,
+        name: 'content',
+      },
+    },           
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-netlify-cms',
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.tsx`,
+      },
+    },
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-react-next`
   ],
-}
+};

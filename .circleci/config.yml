@@ -29,5 +29,8 @@ jobs:
       - run:
           name: Test
           command: yarn test
-    post:
-      - bash <(curl -s https://codecov.io/bash) -s coverage
+      - store_artifacts:
+          path: coverage          
+      - run:
+          name: Upload test coverage
+          command: bash <(curl -s https://codecov.io/bash) -s coverage

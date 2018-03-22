@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { MarkdownRemark, ImageSharp } from '../graphql-types'
 import * as Page from './page'
 
 const ContactPageLayout: React.StatelessComponent<Page.PageTemplateLayoutProps> = (props) => {

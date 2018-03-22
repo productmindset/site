@@ -1,70 +1,38 @@
 import * as React from 'react'
-import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 
 import '../../content/styles/site.sass'
 
-const Header = () => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          Gatsby
-        </Link>
-      </h1>
-    </div>
-  </div>
-)
-
-interface DefaultLayoutProps extends React.HTMLProps<HTMLDivElement> {
-  location: {
-    pathname: string
-  }
-  children: any
+interface DefaultLayoutProps {
+  children(): React.ReactNode,
 }
 
-class DefaultLayout extends React.PureComponent<DefaultLayoutProps, void> {
-  public render() {
-    return (
-      <div>
-        <Helmet
-          title="Gatsby Default Starter"
-          meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
-          ]}
-        />
-        <Header />
-        <div
-          style={{
-            margin: '0 auto',
-            maxWidth: 960,
-            padding: '0px 1.0875rem 1.45rem',
-            paddingTop: 0,
-          }}
-        >
-          {this.props.children()}
-        </div>
-      </div>
-    )
-  }
+const DefaultLayout: React.StatelessComponent<DefaultLayoutProps> = (props) => {
+  return (
+    <div>
+      <Helmet
+        title="3Pillar Global Product Mindset Workshop"
+        meta={[
+          { name: 'description', content: 'Join the Product Mindset Workshops' },
+          { name: 'keywords', content: 'product, mindset, agile, software, development' },
+        ]}
+        link={[
+          {
+            href: 'https://fonts.googleapis.com/css?family=Roboto+Condensed:400',
+            rel: 'stylesheet',
+            type: 'text/css',
+          },
+        ]}
+        script={[
+          {
+            defer: true,
+            src: 'https://use.fontawesome.com/releases/v5.0.6/js/all.js',
+          },
+        ]}
+      />
+      {props!.children()}
+    </div>
+  )
 }
 
 export default DefaultLayout

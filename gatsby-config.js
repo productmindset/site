@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Typescript Starter Plus`,
-  },
+    title: `3Pillar Global Product Mindset Workshop`,
+    siteName: `Product Mindset`,
+  },  
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
@@ -14,7 +15,7 @@ module.exports = {
         path: `${__dirname}/content`,
         name: 'content',
       },
-    },           
+    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {

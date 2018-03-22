@@ -8,6 +8,8 @@
     ],
     "jsRules": {},
     "rules": {
+        "no-submodule-imports": [false],
+        "no-implicit-dependencies": [false],
         "quotemark": [true, "single", "avoid-escape", "jsx-double"],        
         "semicolon": [true, "never"],
         "space-before-function-paren": [true, "never"],
@@ -21,7 +23,8 @@
                 },
                 "esSpecCompliant": true
             }
-        ],          
+        ],
+        "no-duplicate-string": [false],
         "interface-name": [ true, "never-prefix" ],
         "member-access": [
             false

@@ -3,6 +3,9 @@
   "description": "Gatsby TypeScript starter plus",
   "version": "1.0.0",
   "author": "Derek Tiffany <derek.tiffany+product-mindset@3pillarglobal.com>",
+  "repository" : { 
+    "type" : "git" , 
+    "url" : "https://github.com/product-mindset/site" },
   "dependencies": {
     "@types/node": "^8.0.7",
     "@types/react": "16.0.40",

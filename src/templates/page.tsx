@@ -1,8 +1,7 @@
 import * as React from 'react'
 import Link from 'gatsby-link'
-import Helmet from 'react-helmet'
 import Img from 'gatsby-image'
-import { MarkdownRemark, ImageSharp, frontmatter_2 } from '../graphql-types'
+import { MarkdownRemark, ImageSharp } from '../graphql-types'
 
 const logo = require('../../content/images/included/logo.png')
 const landingVideo = require('../../content/media/landing_video.mp4')
@@ -25,9 +24,9 @@ export interface PageTemplateLayoutProps {
   }
   headerTitle: string
   slug: string
-  data: {
-    imageSharp: ImageSharp
-    markdownRemark: MarkdownRemark
+  data?: {
+    imageSharp?: ImageSharp
+    markdownRemark?: MarkdownRemark
   },
   children?: any
 }
@@ -46,7 +45,7 @@ const PageTemplateLayout: React.StatelessComponent<PageTemplateLayoutProps> = (p
             <Img style={heroVideoStyle} className="heroVideoStyle"
               title="Header image"
               alt="Greek food laid out on table"
-              sizes={props.data.imageSharp!.sizes!}
+              sizes={props.data!.imageSharp!.sizes!}
             />
           )}
         </div>
@@ -99,10 +98,10 @@ const PageTemplateLayout: React.StatelessComponent<PageTemplateLayoutProps> = (p
         </nav>
         <div className="hero-body">
           <p className="title">
-            {props!.data!.markdownRemark!.frontmatter!.heroTitle!}
+            {props.data!.markdownRemark!.frontmatter!.heroTitle!}
           </p>
           <p className="subtitle">
-            {props!.data!.markdownRemark!.frontmatter!.heroSubtitle!}
+            {props.data!.markdownRemark!.frontmatter!.heroSubtitle!}
           </p>
         </div>
       </div>

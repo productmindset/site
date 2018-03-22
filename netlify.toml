@@ -1,0 +1,2 @@
+[build]
+  command = "npm run lint && npm run build"

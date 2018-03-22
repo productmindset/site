@@ -1,5 +1,4 @@
 import * as React from 'react'
-import Helmet from 'react-helmet'
 import { MarkdownRemark, ImageSharp } from '../graphql-types'
 import * as Page from './page'
 const releasePlanImage = require('../../content/images/included/release_plan.png')
@@ -10,9 +9,9 @@ interface ResourcesPageProps extends Page.PageTemplateLayoutProps {
     pathname: string
   },
   slug: string
-  data: {
-    imageSharp: ImageSharp
-    markdownRemark: MarkdownRemark
+  data?: {
+    imageSharp?: ImageSharp
+    markdownRemark?: MarkdownRemark
   },
 }
 

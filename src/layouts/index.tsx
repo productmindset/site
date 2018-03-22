@@ -30,7 +30,7 @@ const DefaultLayout: React.StatelessComponent<DefaultLayoutProps> = (props) => {
           },
         ]}
       />
-      {props!.children()}
+      {props.children()}
     </div>
   )
 }

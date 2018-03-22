@@ -29,5 +29,6 @@ collections:
       - { name: title, label: Title, widget: string }
       - { name: heroTitle, label: Hero Title, widget: string }
       - { name: heroSubtitle, label: Hero Subtitle, widget: string }
+      - { name: heroImage, label: Hero Image, required: false, widget: hidden }
       - { name: heroIsVideo, label: Hero Video, widget: boolean, default: false }      
       - { name: body, label: Body, widget: markdown }

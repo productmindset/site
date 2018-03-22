@@ -3,9 +3,6 @@ import { MarkdownRemark, ImageSharp } from '../graphql-types'
 import * as Page from './page'
 
 interface ContactPageProps extends Page.PageTemplateLayoutProps {
-  location: {
-    pathname: string
-  },
   slug: string
   data: {
     imageSharp?: ImageSharp

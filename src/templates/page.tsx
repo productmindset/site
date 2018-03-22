@@ -19,10 +19,12 @@ const heroVideoStyle = {
 }
 
 export interface PageTemplateLayoutProps {
-  pathContext: {
-    path: string
-  }
   headerTitle: string
+  pageResources: {
+    page: {
+      path: string
+    }
+  }
   slug: string
   data?: {
     imageSharp?: ImageSharp
@@ -72,22 +74,22 @@ const PageTemplateLayout: React.StatelessComponent<PageTemplateLayoutProps> = (p
             </div>
             <div id="nav-menu" className="navbar-menu">
               <div className="navbar-end">
-                <Link className={'navbar-item' + (props.pathContext.path === '/workshops' ? ' is-active' : '')}
+                <Link className={'navbar-item' + (props.pageResources.page.path === '/workshops' ? ' is-active' : '')}
                   to="/workshops"
                 >
                   LIVE WORKSHOPS
               </Link>
-                <Link className={'navbar-item' + (props.pathContext.path === '/resources' ? ' is-active' : '')}
+                <Link className={'navbar-item' + (props.pageResources.page.path === '/resources' ? ' is-active' : '')}
                   to="/resources"
                 >
                   ONLINE RESOURCES
               </Link>
-                <Link className={'navbar-item' + (props.pathContext.path === '/faq' ? ' is-active' : '')}
+                <Link className={'navbar-item' + (props.pageResources.page.path === '/faq' ? ' is-active' : '')}
                   to="/faq"
                 >
                   SUPPORT
               </Link>
-                <Link className={'navbar-item' + (props.pathContext.path === '/contact' ? ' is-active' : '')}
+                <Link className={'navbar-item' + (props.pageResources.page.path === '/contact' ? ' is-active' : '')}
                   to="/contact"
                 >
                   CONTACT

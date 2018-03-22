@@ -1,2 +1,2 @@
 [build]
-  command = "npm run lint && npm run test && npm run build"
+  command = "yarn run lint && yarn run test && gatsby build"

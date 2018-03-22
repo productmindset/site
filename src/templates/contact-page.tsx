@@ -18,7 +18,7 @@ const ContactPageLayout: React.StatelessComponent<ContactPageProps> = (props) =>
     <div>
       <Page.default {...props}>
         <div className="container" >
-          <form name="contact" method="POST" netlify>
+          <form name="contact" method="POST" data-netlify="true">
             <div className="field">
               <label className="label">Name</label>
               <div className="control">

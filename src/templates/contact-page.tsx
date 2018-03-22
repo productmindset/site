@@ -2,15 +2,7 @@ import * as React from 'react'
 import { MarkdownRemark, ImageSharp } from '../graphql-types'
 import * as Page from './page'
 
-interface ContactPageProps extends Page.PageTemplateLayoutProps {
-  slug: string
-  data: {
-    imageSharp?: ImageSharp
-    markdownRemark?: MarkdownRemark
-  },
-}
-
-const ContactPageLayout: React.StatelessComponent<ContactPageProps> = (props) => {
+const ContactPageLayout: React.StatelessComponent<Page.PageTemplateLayoutProps> = (props) => {
   return (
     <div>
       <Page.default {...props}>

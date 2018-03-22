@@ -8,8 +8,8 @@ interface ContactPageProps extends Page.PageTemplateLayoutProps {
   },
   slug: string
   data: {
-    imageSharp: ImageSharp
-    markdownRemark: MarkdownRemark
+    imageSharp?: ImageSharp
+    markdownRemark?: MarkdownRemark
   },
 }
 

@@ -78,7 +78,7 @@
     ]
   },
   "devDependencies": {
-    "@types/enzyme": "2.8.12",
+    "@types/enzyme": "3.1.9",
     "@types/jest": "19.2.4",
     "@types/node": "8.10.0",
     "@types/react-test-renderer": "16.0.1",

@@ -79,7 +79,7 @@
   },
   "devDependencies": {
     "@types/enzyme": "2.8.12",
-    "@types/jest": "19.2.4",
+    "@types/jest": "22.2.2",
     "@types/node": "8.10.0",
     "@types/react-test-renderer": "16.0.1",
     "@types/webpack-env": "1.13.5",

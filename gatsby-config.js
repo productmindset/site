@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `3Pillar Global Product Mindset Workshop`,
-    siteName: `Product Mindset`,
-  },  
+    siteName: `Product Mindset`
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
@@ -10,29 +10,29 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-typography`,
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content`,
-        name: 'content',
-      },
+        name: `content`
+      }
     },
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [],
-      },
+        plugins: []
+      }
     },
     {
-      resolve: 'gatsby-plugin-netlify-cms',
+      resolve: `gatsby-plugin-netlify-cms`,
       options: {
-        modulePath: `${__dirname}/src/cms/cms.js`,
-      },
+        modulePath: `${__dirname}/src/cms/cms.tsx`
+      }
     },
     `gatsby-transformer-remark`,
-    `gatsby-plugin-netlify`,    
+    `gatsby-plugin-netlify`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-react-next`
-  ],
-};
+  ]
+}

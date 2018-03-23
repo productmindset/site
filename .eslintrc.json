@@ -1,0 +1,7 @@
+{
+    "extends": "standard",
+    "rules": {
+        "no-console": "off",
+        "quotes": ["error", "backtick", { "avoidEscape": true, "allowTemplateLiterals": true }]
+    }  
+}

@@ -41,7 +41,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             `src/templates/${String(node.frontmatter.templateKey)}.tsx`,
         ),
         // additional data can be passed via context
-         context: {slug: node.fields.slug, heroImageSlug: node.frontmatter.heroImage, path: pagePath},
+         context: {slug: node.fields.slug, heroImageSlug: node.frontmatter.heroImage, pagePath: pagePath},
          path: pagePath,
        })
      })

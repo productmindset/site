@@ -1,21 +1,9 @@
 import * as React from 'react'
-import { MarkdownRemark, ImageSharp } from '../graphql-types'
 import * as Page from './page'
 const releasePlanImage = require('../../content/images/included/release_plan.png')
 const personaCreationImage = require('../../content/images/included/persona_creation.png')
 
-interface ResourcesPageProps extends Page.PageTemplateLayoutProps {
-  location: {
-    pathname: string
-  },
-  slug: string
-  data?: {
-    imageSharp?: ImageSharp
-    markdownRemark?: MarkdownRemark
-  },
-}
-
-const ContactPageLayout: React.StatelessComponent<ResourcesPageProps> = (props) => {
+const ContactPageLayout: React.StatelessComponent<Page.PageTemplateLayoutProps> = (props) => {
   return (
     <div>
       <Page.default {...props}>

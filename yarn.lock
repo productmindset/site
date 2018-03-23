@@ -5108,43 +5108,43 @@ graceful-fs@^4.0.0, graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.3,
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
 
-graphql-code-generator@0.8.19:
-  version "0.8.19"
-  resolved "https://registry.yarnpkg.com/graphql-code-generator/-/graphql-code-generator-0.8.19.tgz#c3ccd28d03d9ff07429a7d397ba9daaac78d532f"
+graphql-code-generator@0.8.21:
+  version "0.8.21"
+  resolved "https://registry.yarnpkg.com/graphql-code-generator/-/graphql-code-generator-0.8.21.tgz#364cb97e823832b2348f0bfedeb94ce54fe646b1"
   dependencies:
     "@types/prettier" "1.10.0"
     commander "2.15.0"
     glob "7.1.2"
-    graphql-codegen-compiler "0.8.19"
-    graphql-codegen-core "0.8.19"
-    graphql-codegen-generators "0.8.19"
+    graphql-codegen-compiler "0.8.21"
+    graphql-codegen-core "0.8.21"
+    graphql-codegen-generators "0.8.21"
     mkdirp "0.5.1"
     prettier "1.11.1"
     request "2.85.0"
     strip-comments "0.4.4"
 
-graphql-codegen-compiler@0.8.19:
-  version "0.8.19"
-  resolved "https://registry.yarnpkg.com/graphql-codegen-compiler/-/graphql-codegen-compiler-0.8.19.tgz#96049de50ba503299db8deb569a11deb6f65be79"
+graphql-codegen-compiler@0.8.21:
+  version "0.8.21"
+  resolved "https://registry.yarnpkg.com/graphql-codegen-compiler/-/graphql-codegen-compiler-0.8.21.tgz#56c716abb76e7c305c5f50b4698cb6c6a2fc838f"
   dependencies:
     "@types/handlebars" "4.0.36"
     change-case "3.0.2"
     common-tags "1.7.2"
-    graphql-codegen-core "0.8.19"
-    graphql-codegen-generators "0.8.19"
+    graphql-codegen-core "0.8.21"
+    graphql-codegen-generators "0.8.21"
     handlebars "4.0.11"
     moment "2.21.0"
 
-graphql-codegen-core@0.8.19:
-  version "0.8.19"
-  resolved "https://registry.yarnpkg.com/graphql-codegen-core/-/graphql-codegen-core-0.8.19.tgz#67955316e59bfda7a425240f5c969c90e848afae"
+graphql-codegen-core@0.8.21:
+  version "0.8.21"
+  resolved "https://registry.yarnpkg.com/graphql-codegen-core/-/graphql-codegen-core-0.8.21.tgz#0a49eae274c55ef3fb882d9e189cf5a152ef2eed"
   dependencies:
     graphql-tag "2.8.0"
-    graphql-tools "2.22.0"
+    graphql-tools "2.23.1"
 
-graphql-codegen-generators@0.8.19:
-  version "0.8.19"
-  resolved "https://registry.yarnpkg.com/graphql-codegen-generators/-/graphql-codegen-generators-0.8.19.tgz#58e8d09fd725bb3cdbe4ecea888cdb488904fe03"
+graphql-codegen-generators@0.8.21:
+  version "0.8.21"
+  resolved "https://registry.yarnpkg.com/graphql-codegen-generators/-/graphql-codegen-generators-0.8.21.tgz#646f1dc95c3437cb4ca0365e77282d0ead565cee"
 
 graphql-relay@^0.5.1:
   version "0.5.4"
@@ -5161,9 +5161,9 @@ graphql-tag@2.8.0:
   version "2.8.0"
   resolved "https://registry.yarnpkg.com/graphql-tag/-/graphql-tag-2.8.0.tgz#52cdea07a842154ec11a2e840c11b977f9b835ce"
 
-graphql-tools@2.22.0:
-  version "2.22.0"
-  resolved "https://registry.yarnpkg.com/graphql-tools/-/graphql-tools-2.22.0.tgz#0341805efad0d626982e08c5918e2d9308dbca6e"
+graphql-tools@2.23.1:
+  version "2.23.1"
+  resolved "https://registry.yarnpkg.com/graphql-tools/-/graphql-tools-2.23.1.tgz#23f43000e2b9dc5a89920fe846fc5f71a320efdb"
   dependencies:
     apollo-link "^1.2.1"
     apollo-utilities "^1.0.1"

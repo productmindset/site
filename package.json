@@ -3,9 +3,10 @@
   "description": "Gatsby TypeScript starter plus",
   "version": "1.0.0",
   "author": "Derek Tiffany <derek.tiffany+product-mindset@3pillarglobal.com>",
-  "repository" : { 
-    "type" : "git", 
-    "url" : "https://github.com/product-mindset/site" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/product-mindset/site"
+  },
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
@@ -30,7 +31,6 @@
     "gatsby-source-filesystem": "1.5.27",
     "gatsby-transformer-remark": "1.7.36",
     "gatsby-transformer-sharp": "1.6.22",
-    "npm": "5.7.1",
     "prop-types": "15.6.1",
     "react": "16.2.0",
     "react-dom": "16.2.0",
@@ -87,7 +87,8 @@
     "enzyme-adapter-react-16": "1.1.1",
     "enzyme-to-json": "3.3.3",
     "gatsby-cli": "1.1.46",
-    "graphql-code-generator": "0.8.19",
+    "graphql-code-generator": "0.8.21",
+    "npm": "5.7.1",
     "jest": "22.4.3",
     "jest-cli": "22.4.3",
     "prettier": "1.11.1",

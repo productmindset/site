@@ -1,4 +1,4 @@
-// tslint:disable-next-line:no-implicit-dependencies
-import CMS from 'netlify-cms'
-
-CMS.registerPreviewStyle('/cms.css')
+// Your module must at least include these three imports
+import React from "react";
+import CMS from "netlify-cms";
+import "netlify-cms/dist/cms.css";

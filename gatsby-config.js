@@ -31,6 +31,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
+    `gatsby-plugin-netlify`,    
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-react-next`
   ],

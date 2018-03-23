@@ -53,6 +53,56 @@ yarn build
 gatsby serve
 ```
 
+#### Automated Build
+
+The following commands are run durng the automated build and are required to be completed successfully.
+
+```sh
+yarn lint
+yarn build
+yarn test
+```
+
+They can be run locally to resolve any build issues.
+
+Preview deploys are available from `Netlify` on each branch / pull request. Note that CMS Admin functionality is not available on these previewes.
+
+There are several additional automation checks run on branches. Some may be helpful.
+
+#### CMS Development
+
+Netlify CMS options are configured in `/static/admin/config.yml`.
+
+Note the following section:
+
+```yaml
+backend:
+  name: git-gateway
+  branch: master
+  repo: product-mindset/site
+
+publish_mode: editorial_workflow
+```
+
+The following will allow for using a local in-memory version of the CMS backend (useful for local development)
+
+```yaml
+backend:
+  name: test-repo
+```
+
+And remove:
+
+~~branch: master~~
+
+~~repo: product-mindset/site~~
+
+~~publish_mode: editorial_workflow~~
+
+Note that the test-repo backend does not (currently) support using the `editorial_workflow`.
+
+Modifying these settings *locally* should allow for a useful CMS development environment.
+
 ### Deployment
 
 Merges to `master` will automatically be deployed.

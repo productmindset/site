@@ -4,8 +4,10 @@
   "version": "1.0.0",
   "author": "Derek Tiffany <derek.tiffany+product-mindset@3pillarglobal.com>",
   "repository" : { 
-    "type" : "git" , 
+    "type" : "git", 
     "url" : "https://github.com/product-mindset/site" },
+  "license": "UNLICENSED",
+  "private": true,
   "dependencies": {
     "@types/node": "^8.0.7",
     "@types/react": "16.0.40",
@@ -38,7 +40,6 @@
   "keywords": [
     "gatsby, typescript"
   ],
-  "license": "MIT",
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",

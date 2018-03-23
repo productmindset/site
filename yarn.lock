@@ -4474,9 +4474,9 @@ gatsby-1-config-extract-plugin@^1.0.2:
     babel-runtime "^6.26.0"
     extract-text-webpack-plugin "^1.0.1"
 
-gatsby-cli@1.1.46, gatsby-cli@^1.1.46:
-  version "1.1.46"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-1.1.46.tgz#ebbca830805c63f6ef5be0a0c4d308dd597ad10b"
+gatsby-cli@1.1.47, gatsby-cli@^1.1.47:
+  version "1.1.47"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-1.1.47.tgz#75474ca674ea7f4e018825f3ad4ec070c915a7cd"
   dependencies:
     babel-code-frame "^6.26.0"
     babel-runtime "^6.26.0"
@@ -4535,9 +4535,9 @@ gatsby-plugin-netlify-cms@1.0.12:
     netlify-cms "^1.0.1"
     netlify-identity-widget "^1.4.11"
 
-gatsby-plugin-react-helmet@2.0.7:
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-2.0.7.tgz#f2d7836147f28cd3d3a7eae82b5ac6978c4c5e34"
+gatsby-plugin-react-helmet@2.0.8:
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-2.0.8.tgz#26928bfd38f6828f479d76393839523ddf85b005"
   dependencies:
     babel-runtime "^6.26.0"
 
@@ -4550,13 +4550,13 @@ gatsby-plugin-react-next@1.0.11:
     react "^16.0.0"
     react-dom "^16.0.0"
 
-gatsby-plugin-sass@1.0.21:
-  version "1.0.21"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-1.0.21.tgz#3866d859ea4745c152d5280459bfb78fe089d4e5"
+gatsby-plugin-sass@1.0.23:
+  version "1.0.23"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-1.0.23.tgz#bc2039b87d76b996346db8a0ed53ab131d533a8f"
   dependencies:
     babel-runtime "^6.26.0"
-    extract-text-webpack-plugin "^1.0.1"
     gatsby-1-config-css-modules "^1.0.10"
+    gatsby-1-config-extract-plugin "^1.0.2"
     node-sass "^4.5.2"
     sass-loader "^4.1.1"
     webpack "^1.13.3"
@@ -4594,9 +4594,9 @@ gatsby-plugin-typography@1.7.18:
     react-typography "^0.16.1"
     typography "^0.16.0"
 
-gatsby-react-router-scroll@^1.0.13:
-  version "1.0.13"
-  resolved "https://registry.yarnpkg.com/gatsby-react-router-scroll/-/gatsby-react-router-scroll-1.0.13.tgz#d1cfd43c334497ad174ae9409c24bb5d4dcda3aa"
+gatsby-react-router-scroll@^1.0.14:
+  version "1.0.14"
+  resolved "https://registry.yarnpkg.com/gatsby-react-router-scroll/-/gatsby-react-router-scroll-1.0.14.tgz#7e3b59c2266772030c6bfeaa8914c71dd3c12c59"
   dependencies:
     babel-runtime "^6.26.0"
     scroll-behavior "^0.9.9"
@@ -4630,9 +4630,9 @@ gatsby-source-filesystem@1.5.27:
     slash "^1.0.0"
     valid-url "^1.0.9"
 
-gatsby-transformer-remark@1.7.36:
-  version "1.7.36"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-1.7.36.tgz#896a1d0fffc624f5a7b75692ba1e92c0347944b5"
+gatsby-transformer-remark@1.7.37:
+  version "1.7.37"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-1.7.37.tgz#30ad37403a7dd647e69fc7696e024dade526a12f"
   dependencies:
     babel-runtime "^6.26.0"
     bluebird "^3.5.0"
@@ -4664,9 +4664,9 @@ gatsby-transformer-sharp@1.6.22:
     fs-extra "^4.0.2"
     probe-image-size "^3.2.0"
 
-gatsby@1.9.236:
-  version "1.9.236"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.9.236.tgz#ece3784aac05be3ade58e6eb2e99c5557464e65c"
+gatsby@1.9.239:
+  version "1.9.239"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.9.239.tgz#ce5f111ac066da7354c01bc132a78f2466ece4ab"
   dependencies:
     async "^2.1.2"
     babel-code-frame "^6.22.0"
@@ -4708,10 +4708,10 @@ gatsby@1.9.236:
     fs-extra "^4.0.1"
     gatsby-1-config-css-modules "^1.0.10"
     gatsby-1-config-extract-plugin "^1.0.2"
-    gatsby-cli "^1.1.46"
+    gatsby-cli "^1.1.47"
     gatsby-link "^1.6.39"
     gatsby-module-loader "^1.0.11"
-    gatsby-react-router-scroll "^1.0.13"
+    gatsby-react-router-scroll "^1.0.14"
     glob "^7.1.1"
     graphql "^0.11.7"
     graphql-relay "^0.5.1"

@@ -800,19 +800,6 @@ babel-plugin-check-es2015-constants@^6.22.0, babel-plugin-check-es2015-constants
   dependencies:
     babel-runtime "^6.22.0"
 
-babel-plugin-emotion@^9.0.1:
-  version "9.0.1"
-  resolved "https://registry.yarnpkg.com/babel-plugin-emotion/-/babel-plugin-emotion-9.0.1.tgz#1c1ec14a5d6f40c64bd68e805f074fea60a580a7"
-  dependencies:
-    "@babel/helper-module-imports" "7.0.0-beta.32"
-    babel-plugin-macros "^2.0.0"
-    babel-plugin-syntax-jsx "^6.18.0"
-    convert-source-map "^1.5.0"
-    emotion-utils "^9.0.1"
-    find-root "^1.1.0"
-    source-map "^0.5.7"
-    touch "^1.0.0"
-
 babel-plugin-emotion@^9.1.0:
   version "9.1.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-emotion/-/babel-plugin-emotion-9.1.0.tgz#d0b7598168980f4fbc7b72fd86c49904b613fe79"
@@ -2728,11 +2715,11 @@ create-emotion-server@^9.0.2:
     multipipe "^1.0.2"
     through "^2.3.8"
 
-create-emotion-styled@^9.0.1:
-  version "9.0.1"
-  resolved "https://registry.yarnpkg.com/create-emotion-styled/-/create-emotion-styled-9.0.1.tgz#70be09fcd0735ec88459ffbfc8128eb3f5690341"
+create-emotion-styled@^9.1.0:
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/create-emotion-styled/-/create-emotion-styled-9.1.0.tgz#ad6ee63e9be342e9d6339e4e4ee758028e9b967f"
   dependencies:
-    emotion-utils "^9.0.1"
+    emotion-utils "^9.1.0"
 
 create-emotion@^9.1.0:
   version "9.1.0"
@@ -10573,12 +10560,12 @@ react-dom@^15.6.0:
     object-assign "^4.1.0"
     prop-types "^15.5.10"
 
-react-emotion@9.0.2:
-  version "9.0.2"
-  resolved "https://registry.yarnpkg.com/react-emotion/-/react-emotion-9.0.2.tgz#99ec26cb9ad671fff393338354543ff7c2540ae1"
+react-emotion@9.1.0:
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/react-emotion/-/react-emotion-9.1.0.tgz#6d12de5990510740d03e2cd9be3a681183316e38"
   dependencies:
-    babel-plugin-emotion "^9.0.1"
-    create-emotion-styled "^9.0.1"
+    babel-plugin-emotion "^9.1.0"
+    create-emotion-styled "^9.1.0"
 
 react-error-overlay@^3.0.0:
   version "3.0.0"

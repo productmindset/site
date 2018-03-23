@@ -2719,11 +2719,11 @@ create-ecdh@^4.0.0:
     bn.js "^4.1.0"
     elliptic "^6.0.0"
 
-create-emotion-server@^9.0.2:
-  version "9.0.2"
-  resolved "https://registry.yarnpkg.com/create-emotion-server/-/create-emotion-server-9.0.2.tgz#1525f5a998cca795b9bcd1383c7051bb177ad74d"
+create-emotion-server@^9.1.0:
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/create-emotion-server/-/create-emotion-server-9.1.0.tgz#621f3d82240f18f4b65ec71d1389243ba0bd0324"
   dependencies:
-    emotion-utils "^9.0.1"
+    emotion-utils "^9.1.0"
     html-tokenize "^2.0.0"
     multipipe "^1.0.2"
     through "^2.3.8"
@@ -3528,11 +3528,11 @@ emojis-list@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-2.1.0.tgz#4daa4d9db00f9819880c79fa457ae5b09a1fd389"
 
-emotion-server@9.0.2:
-  version "9.0.2"
-  resolved "https://registry.yarnpkg.com/emotion-server/-/emotion-server-9.0.2.tgz#828d466407278419ee92a78c33046da58da2cc55"
+emotion-server@9.1.0:
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/emotion-server/-/emotion-server-9.1.0.tgz#220f549052715b6d531258d3d83ff2da98def5d0"
   dependencies:
-    create-emotion-server "^9.0.2"
+    create-emotion-server "^9.1.0"
 
 emotion-utils@^9.0.1:
   version "9.0.1"

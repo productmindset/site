@@ -15,7 +15,7 @@
     "@types/react-helmet": "5.0.5",
     "bulma": "0.6.2",
     "emotion": "9.1.0",
-    "emotion-server": "9.0.2",
+    "emotion-server": "9.1.0",
     "gatsby": "1.9.240",
     "gatsby-image": "1.0.42",
     "gatsby-link": "1.6.39",

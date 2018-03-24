@@ -10,16 +10,15 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-          - dependencies-
-          # fallback to using the latest cache if no exact match is found
-          - dependencies-
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
       - run:
           name: Install
           command: yarn install
       - save_cache:
           paths:
             - node_modules
-          key: dependencies-
+          key: v1-dependencies-{{ checksum "package.json" }}
       - run:
           name: Lint
           command: yarn lint
@@ -27,10 +26,14 @@ jobs:
           name: Gatsby build site
           command: yarn build
       - run:
-          name: Test
-          command: yarn test
+          name: Tests
+          command: yarn jest tests --runInBand --ci --testResultsProcessor="jest-junit"
+          environment:
+            JEST_JUNIT_OUTPUT: "reports/junit/js-test-results.xml"
+      - store_test_results:
+          path: reports/junit
       - store_artifacts:
-          path: coverage          
+          path: coverage
       - run:
           name: Upload test coverage
           command: bash <(curl -s https://codecov.io/bash) -s coverage

@@ -7,14 +7,6 @@ publish_mode: editorial_workflow
 media_folder: content/images
 public_folder: /images
 
-isPage: true
-title: About
-path: about
-templateKey: page
-heroTitle: ABOUT
-heroSubtitle: Built for and by ...
-heroIsVideo: false
-
 collections:
   - name: pages
     label: Pages
@@ -24,11 +16,11 @@ collections:
     slug: "{{slug}}"
     fields:
       - { name: isPage, label: Is Page, default: true, widget: hidden}
-      - { name: templateKey, label: Template Key, default: page, widget: hidden}      
+      - { name: templateKey, label: Template Key, default: page, widget: hidden}
       - { name: path, label: Path, widget: string, required: false}
       - { name: title, label: Title, widget: string }
       - { name: heroTitle, label: Hero Title, widget: string }
       - { name: heroSubtitle, label: Hero Subtitle, widget: string }
       - { name: heroImage, label: Hero Image, required: false, widget: hidden }
-      - { name: heroIsVideo, label: Hero Video, widget: boolean, default: false }      
+      - { name: heroIsVideo, label: Hero Video, widget: boolean, default: false }
       - { name: body, label: Body, widget: markdown }

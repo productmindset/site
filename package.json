@@ -15,7 +15,7 @@
     "@types/react-helmet": "5.0.5",
     "bulma": "0.6.2",
     "emotion": "9.1.0",
-    "emotion-server": "9.0.2",
+    "emotion-server": "9.1.0",
     "gatsby": "1.9.240",
     "gatsby-image": "1.0.42",
     "gatsby-link": "1.6.39",
@@ -34,7 +34,7 @@
     "prop-types": "15.6.1",
     "react": "16.2.0",
     "react-dom": "16.2.0",
-    "react-emotion": "9.0.2",
+    "react-emotion": "9.1.0",
     "react-helmet": "5.2.0"
   },
   "keywords": [
@@ -45,7 +45,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --parser typescript --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.ts*\"",
-    "lint": "tslint --project tsconfig.json -c ./tslint.json './src/**/*.ts*' && eslint --ext .js, .jsx *.js",
+    "lint": "tslint --project tsconfig.json -c ./tslint.json './src/**/*.ts*' && eslint *.js && eslint --ext .js, .jsx ./tests/**",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
@@ -78,8 +78,8 @@
     ]
   },
   "devDependencies": {
-    "@types/enzyme": "2.8.12",
-    "@types/jest": "19.2.4",
+    "@types/enzyme": "3.1.9",
+    "@types/jest": "22.2.2",
     "@types/node": "8.10.0",
     "@types/react-test-renderer": "16.0.1",
     "@types/webpack-env": "1.13.5",
@@ -96,7 +96,8 @@
     "graphql-code-generator": "0.8.21",
     "jest": "22.4.3",
     "jest-cli": "22.4.3",
-    "npm": "5.7.1",
+    "jest-junit": "3.6.0",
+    "npm": "5.8.0",
     "prettier": "1.11.1",
     "react-test-renderer": "16.2.0",
     "ts-jest": "22.4.2",

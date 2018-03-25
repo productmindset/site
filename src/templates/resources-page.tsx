@@ -59,23 +59,23 @@ const ContactPageLayout: React.StatelessComponent<Page.PageTemplateLayoutProps> 
 
 export const ResourcesPageTemplateQuery = graphql`
   query ResourcesPageTemplateQuery($slug: String!, $heroImageSlug: String) {
-            imageSharp(fields: {slug: {eq: $heroImageSlug }} ) {
-            sizes(maxWidth: 1240 ) {
-            ...GatsbyImageSharpSizes
-          }
-          }
-    markdownRemark(fields: {slug: {eq: $slug } }) {
-            html
-      frontmatter {
-            heroIsVideo
-        path
-          title
-          heroTitle
-          heroSubtitle
-          templateKey
-        }
+    imageSharp (fields: {slug: {eq: $heroImageSlug }} ) {
+      sizes(maxWidth: 1240 ) {
+        ...GatsbyImageSharpSizes
       }
     }
-  `
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+        heroIsVideo
+        path
+        title
+        heroTitle
+        heroSubtitle
+        templateKey
+      }
+    }
+  }
+`
 
 export default ContactPageLayout

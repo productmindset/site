@@ -1,0 +1,77 @@
+* text=auto
+
+#
+# The above will handle all files NOT found below
+#
+# These files are text and should be normalized (Convert crlf => lf)
+
+# SVG treated as an asset (binary) by default.
+*.svg text
+
+*.css text
+.editorconfig text
+.gitattributes text
+.gitignore text
+*.js text
+*.json text
+*.lock text
+*.md text
+*.sass text
+*.scss text
+*.toml text
+*.ts text
+*.tsx text
+*.yml text
+
+# SVG treated as an asset (binary) by default.
+*.svg text
+
+## GRAPHICS
+*.ai binary
+*.bmp binary
+*.eps binary
+*.epsf binary
+*.gif binary
+*.ico binary
+*.jng binary
+*.jp2 binary
+*.jpg binary
+*.jpeg binary
+*.jpx binary
+*.jxr binary
+*.pdf binary
+*.png binary
+*.psb binary
+*.psd binary
+*.svg text
+*.svgz binary
+*.tif binary
+*.tiff binary
+*.wbmp binary
+*.webp binary
+
+## VIDEO
+*.3gpp binary
+*.3gp binary
+*.as binary
+*.asf binary
+*.asx binary
+*.fla binary
+*.flv binary
+*.m4v binary
+*.mng binary
+*.mov binary
+*.mp4 binary
+*.mpeg binary
+*.mpg binary
+*.ogv binary
+*.swc binary
+*.swf binary
+*.webm binary
+
+## FONTS
+*.ttf binary
+*.eot binary
+*.otf binary
+*.woff binary
+*.woff2 binary

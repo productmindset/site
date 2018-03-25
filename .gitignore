@@ -1,10 +1,20 @@
 # Project dependencies
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
 node_modules
+
+# Generated output
 .cache/
+coverage/
+yarn-error.log
+
 # Build directory
 public/
+
+# OS
 .DS_Store
-yarn-error.log
-# Code coverage directory
-coverage/
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+

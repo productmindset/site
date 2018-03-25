@@ -1,5 +1,7 @@
 # Product Mindset Site
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/product-mindset/site.svg)](https://greenkeeper.io/)
+
 Web site for: <http://productmindset.com>
 
 Currently deployed to: <https://product-mindset.netlify.com/>

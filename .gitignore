@@ -18,3 +18,5 @@ public/
 *.iml
 .vscode/
 
+# Sonar
+.scannerwork/

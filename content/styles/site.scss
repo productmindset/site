@@ -1,0 +1,41 @@
+@import "~bulma/sass/utilities/initial-variables";
+
+/*
+    Design Assets, from Invision
+*/
+
+/*
+    Colors:
+*/
+
+// Brand Palette
+$color-blue: #212492;
+$color-orange: #ff7901;
+$color-cool-grey: #818a8f;
+$color-blue-shadowed: #002f5f;
+$color-blue-highlighted: #02a9e0;
+$color-cool-grey-shadowed: #394a58;
+$color-black: #000000;
+$color-white: #ffffff;
+
+/*
+    Not from Invision
+*/
+
+$family-primary: "Robooto Condensed", "Helvetica", "Arial", sans-serif;
+$family-sans-serif: "Robooto Condensed", "Helvetica", "Arial", sans-serif;
+$body-family: "Robooto Condensed", "Helvetica", "Arial", sans-serif;
+$navbar-item-img-max-height: 3rem;
+$blue: $color-blue;
+$orange: $color-orange;
+$primary: $color-blue-shadowed;
+$info: $orange;
+
+@import '~bulma';
+
+
+.hero-video {
+  @include mobile {
+    display: block;
+  }
+}

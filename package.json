@@ -29,13 +29,15 @@
     "gatsby-plugin-typography": "1.7.18",
     "gatsby-remark-images": "1.5.60",
     "gatsby-source-filesystem": "1.5.27",
-    "gatsby-transformer-remark": "1.7.38",
+    "gatsby-transformer-remark": "1.7.39",
     "gatsby-transformer-sharp": "1.6.22",
     "prop-types": "15.6.1",
     "react": "16.2.0",
     "react-dom": "16.2.0",
     "react-emotion": "9.1.0",
-    "react-helmet": "5.2.0"
+    "react-helmet": "5.2.0",
+    "typeface-roboto": "0.0.54",
+    "typeface-roboto-condensed": "0.0.54"
   },
   "keywords": [
     "gatsby, typescript"

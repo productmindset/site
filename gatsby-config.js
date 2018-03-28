@@ -8,7 +8,13 @@ module.exports = {
     `gatsby-plugin-typescript`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-sass`,
-    `gatsby-plugin-typography`,
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        omitGoogleFont: true,
+        pathToConfigModule: `src/utils/typography`
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -1,8 +1,10 @@
 import * as React from 'react'
 import Helmet from 'react-helmet'
 
-import '../../content/styles/site.sass'
+import '../../content/styles/site.scss'
 
+require('typeface-roboto')
+require('typeface-roboto-condensed')
 interface DefaultLayoutProps {
   children(): React.ReactNode,
 }
@@ -15,13 +17,6 @@ const DefaultLayout: React.StatelessComponent<DefaultLayoutProps> = (props) => {
         meta={[
           { name: 'description', content: 'Join the Product Mindset Workshops' },
           { name: 'keywords', content: 'product, mindset, agile, software, development' },
-        ]}
-        link={[
-          {
-            href: 'https://fonts.googleapis.com/css?family=Roboto+Condensed:400',
-            rel: 'stylesheet',
-            type: 'text/css',
-          },
         ]}
         script={[
           {

@@ -18,6 +18,10 @@ const heroVideoStyle = {
   objectPosition: 'center top',
 }
 
+const navIndex = {
+  zIndex: 99,
+}
+
 export interface PageTemplateLayoutProps {
   headerTitle: string
   pathContext: {
@@ -44,12 +48,12 @@ const PageTemplateLayout: React.StatelessComponent<PageTemplateLayoutProps> = (p
           {props.data!.imageSharp && (
             <Img style={heroVideoStyle} className="heroVideoStyle"
               title="Header image"
-              alt="Greek food laid out on table"
+              alt="Header image"
               sizes={props.data!.imageSharp!.sizes!}
             />
           )}
         </div>
-        <nav className="navbar is-overlay is-transparent">
+        <nav className="navbar is-overlay is-transparent" style={navIndex}>
           <div className="container">
             <div className="navbar-brand">
               <Link className="navbar-item"
@@ -96,7 +100,7 @@ const PageTemplateLayout: React.StatelessComponent<PageTemplateLayoutProps> = (p
             </div>
           </div>
         </nav>
-        <div className="hero-body">
+        <div className="container hero-body">
           <p className="title">
             {props.data!.markdownRemark!.frontmatter!.heroTitle!}
           </p>
@@ -105,7 +109,8 @@ const PageTemplateLayout: React.StatelessComponent<PageTemplateLayoutProps> = (p
           </p>
         </div>
       </div>
-      <div className="section content" dangerouslySetInnerHTML={{ __html: props.data!.markdownRemark!.html! }} />
+      <div className="container section content"
+        dangerouslySetInnerHTML={{ __html: props.data!.markdownRemark!.html! }} />
       {props.children}
     </div >
   )

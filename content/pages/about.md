@@ -1,10 +1,10 @@
 ---
 isPage: true
-title: About
-path: about
 templateKey: page
+path: about
+title: About
 heroTitle: ABOUT
-heroSubtitle: Built for and by ...
+heroSubtitle: 'Built for and by:'
 heroIsVideo: false
 ---
 ### Built for

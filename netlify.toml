@@ -1,2 +1,2 @@
 [build]
-  command = "yarn run lint && yarn run test && gatsby build"
+  command = "yarn run lint && yarn run test && yarn build"

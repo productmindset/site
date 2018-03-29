@@ -1,12 +1,13 @@
 import * as React from 'react'
 import * as Page from './page'
+import * as PageComponent from '../components/PageComponent'
 const releasePlanImage = require('../../content/images/included/release_plan.png')
 const personaCreationImage = require('../../content/images/included/persona_creation.png')
 
 const ContactPageLayout: React.StatelessComponent<Page.PageTemplateLayoutProps> = (props) => {
   return (
     <div>
-      <Page.default {...props}>
+      <PageComponent.default {...props}>
         <div className="columns" >
           <div className="column" >
             <div className="card">
@@ -52,7 +53,7 @@ const ContactPageLayout: React.StatelessComponent<Page.PageTemplateLayoutProps> 
             </div>
           </div>
         </div>
-      </Page.default>
+      </PageComponent.default>
     </div >
   )
 }

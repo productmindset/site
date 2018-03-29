@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as Page from './page'
-import { MarkdownRemark, MarkdownRemarkEdge, MarkdownRemarkConnection, ImageSharp, Node } from '../graphql-types'
+import { MarkdownRemark, MarkdownRemarkConnection, ImageSharp } from '../graphql-types'
 
 interface WorkshopPageTemplateLayoutProps extends Page.PageTemplateLayoutProps {
   data?: {
@@ -14,7 +14,7 @@ const WorkshopsPageLayout: React.StatelessComponent<WorkshopPageTemplateLayoutPr
   return (
     <Page.default {...props}>
       <div >
-        {props!.data!.speakers!.edges!.map((node) => (
+        {props.data!.speakers!.edges!.map((node) => (
           <div className="card">
             <div className="card-content">
               <div className="media">

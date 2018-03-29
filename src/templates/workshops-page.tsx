@@ -14,7 +14,7 @@ interface WorkshopPageTemplateLayoutProps extends Page.PageTemplateLayoutProps {
 const WorkshopsPageLayout: React.StatelessComponent<WorkshopPageTemplateLayoutProps> = (props) => {
   return (
     <PageComponent.default {...props}>
-      <div className="section contqiner" >
+      <div className="section container" >
         <h3 className="title">Speakers</h3>
         {props.data!.speakers!.edges!.map((node) => (
           <div className="card">

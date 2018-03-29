@@ -4,7 +4,7 @@ backend:
   repo: product-mindset/site
 
 publish_mode: editorial_workflow
-media_folder: content/images
+media_folder: static/images
 public_folder: /images
 
 collections:
@@ -24,3 +24,20 @@ collections:
       - { name: heroImage, label: Hero Image, required: false, widget: hidden }
       - { name: heroIsVideo, label: Hero Video, widget: boolean, default: false }
       - { name: body, label: Body, widget: markdown }
+
+  - name: speakers
+    label: Speakers
+    label_singular: Speaker
+    folder: content/speakers
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: isPage, label: Is Page, default: false, widget: hidden}
+      - { name: type, label: Type, default: speaker, widget: hidden}
+      - { name: title, label: Short Name (Unique), widget: string }
+      - { name: fullName, label: Full Name, widget: string }
+      - { name: jobTitle, label: Title, widget: string }
+      - { name: company, label: Company, widget: string }
+      - { name: description, label: Description, widget: text }
+      - { name: sortOrder, label: Sort Order, valueType: int, widget: number }
+      - { name: image, label: Image, widget: image }

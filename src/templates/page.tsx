@@ -118,8 +118,8 @@ const PageTemplateLayout: React.StatelessComponent<PageTemplateLayoutProps> = (p
 
 export default PageTemplateLayout
 
-export const PageTemplateQuery = graphql`
-  query PageTemplateQuery($slug: String!, $heroImageSlug: String) {
+export const PageQueryFragment = graphql`
+  fragment PageQueryFragment on RootQueryType {
     imageSharp (fields: {slug: {eq: $heroImageSlug }} ) {
       sizes(maxWidth: 1240 ) {
         ...GatsbyImageSharpSizes
@@ -136,5 +136,11 @@ export const PageTemplateQuery = graphql`
         templateKey
       }
     }
+  }
+`
+
+export const PageTemplateQuery = graphql`
+  query PageTemplateQuery($slug: String!, $heroImageSlug: String) {
+    ...PageQueryFragment
   }
 `

@@ -1,6 +1,6 @@
 ---
 isPage: true
-templateKey: page
+templateKey: workshops-page
 title: Workshops
 heroTitle: JOIN OUR LIVE EVENTS
 heroSubtitle: >-

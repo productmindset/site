@@ -1,6 +1,4 @@
 import * as React from 'react'
-import Link from 'gatsby-link'
-import Img from 'gatsby-image'
 import { MarkdownRemark, ImageSharp } from '../graphql-types'
 import * as PageComponent from '../components/PageComponent'
 

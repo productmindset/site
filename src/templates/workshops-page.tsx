@@ -19,11 +19,12 @@ const WorkshopsPageLayout: React.StatelessComponent<WorkshopPageTemplateLayoutPr
     <PageComponent.default {...props}>
       <div className="section container" >
         <h3 className="title">Speakers</h3>
-        {_.chunk(props.data!.speakers!.edges!, 2).map((chunkedEdges) => (
-          <div className="columns">
-            {...chunkedEdges.map((speakerEdge) => (
-              <div className="column">
+        {_.chunk(props.data!.speakers!.edges!, 2).map((chunkedEdges, key) => (
+          <div className="columns" key={key}>
+            {...chunkedEdges.map((speakerEdge, speakerKey) => (
+              <div className="column" key={speakerKey}>
                 <CardComponent
+                  key={speakerKey}
                   description={speakerEdge.node!.frontmatter!.description!}
                   imageSrc={speakerEdge.node!.frontmatter!.image!}
                   imageAlt={speakerEdge.node!.frontmatter!.fulllName!}
@@ -37,8 +38,9 @@ const WorkshopsPageLayout: React.StatelessComponent<WorkshopPageTemplateLayoutPr
           </div>
         ))}
         <h3 className="title">Workshops</h3>
-        {props.data!.workshops!.edges!.map((workshopEdge) => (
+        {props.data!.workshops!.edges!.map((workshopEdge, workshopKey) => (
           <CardComponent
+            key={workshopKey}
             description={workshopEdge.node!.frontmatter!.description!}
             imageSrc={workshopEdge.node!.frontmatter!.image!}
             imageAlt={workshopEdge.node!.frontmatter!.fulllTitle!}

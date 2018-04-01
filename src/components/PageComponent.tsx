@@ -84,8 +84,9 @@ const PageComponent: React.StatelessComponent<Page.PageTemplateLayoutProps> = (p
             </div>
             <div id="nav-menu" className="navbar-menu">
               <div className="navbar-end">
-                {navigationMenuLinks.map((navigationLink) => (
+                {navigationMenuLinks.map((navigationLink, key) => (
                   <NavigationLinkComponent
+                    key={key}
                     title={navigationLink.title}
                     to={navigationLink.to}
                     isActive={props.pathContext.pagePath === navigationLink.to}

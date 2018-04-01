@@ -89,8 +89,7 @@ const PageComponent: React.StatelessComponent<Page.PageTemplateLayoutProps> = (p
                     title={navigationLink.title}
                     to={navigationLink.to}
                     isActive={props.pathContext.pagePath === navigationLink.to}
-                  >
-                  </NavigationLinkComponent>
+                  />
                 ))}
               </div>
             </div>

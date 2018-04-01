@@ -43,7 +43,10 @@ const WorkshopsPageLayout: React.StatelessComponent<WorkshopPageTemplateLayoutPr
             imageSrc={workshopEdge.node!.frontmatter!.image!}
             imageAlt={workshopEdge.node!.frontmatter!.fulllTitle!}
           >
-            <p className="subtitle is-6">{workshopEdge.node!.frontmatter!.time!}</p>
+            <p className="subtitle is-6">
+              <i className="far fa-clock fa-fw"></i>
+              {workshopEdge.node!.frontmatter!.time!}
+            </p>
             <p className="title is-4">{workshopEdge.node!.frontmatter!.fulllTitle!}</p>
           </CardComponent>
         ))}

@@ -23,8 +23,9 @@ const DefaultLayout: React.StatelessComponent<DefaultLayoutProps> = (props) => {
             defer: true,
             src: 'https://use.fontawesome.com/releases/v5.0.6/js/all.js',
           },
-        ]}
-      />
+        ]}>
+        <html lang="en" />
+      </Helmet>
       {props.children()}
     </div>
   )

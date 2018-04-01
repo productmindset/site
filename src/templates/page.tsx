@@ -27,7 +27,7 @@ export const PageQueryFragment = graphql`
   fragment PageQueryFragment on RootQueryType {
     imageSharp (fields: {slug: {eq: $heroImageSlug }} ) {
       sizes(maxWidth: 1240 ) {
-        ...GatsbyImageSharpSizes
+        ...GatsbyImageSharpSizes_withWebp
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {

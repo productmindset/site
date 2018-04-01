@@ -354,11 +354,14 @@ export interface frontmatter_2 {
   heroVideo?: string | null;
   type?: string | null;
   sortOrder?: number | null;
+  active?: boolean | null;
   fulllName?: string | null;
   jobTitle?: string | null;
   company?: string | null;
   description?: string | null;
   image?: string | null;
+  fulllTitle?: string | null;
+  time?: string | null;
 }
 
 export interface fields_3 {
@@ -2344,11 +2347,14 @@ export interface markdownRemarkConnectionFrontmatterInputObject_2 {
   heroVideo?: markdownRemarkConnectionFrontmatterHeroVideoQueryString_2 | null;
   type?: markdownRemarkConnectionFrontmatterTypeQueryString_2 | null;
   sortOrder?: markdownRemarkConnectionFrontmatterSortOrderQueryInteger_2 | null;
+  active?: markdownRemarkConnectionFrontmatterActiveQueryBoolean_2 | null;
   fulllName?: markdownRemarkConnectionFrontmatterFulllNameQueryString_2 | null;
   jobTitle?: markdownRemarkConnectionFrontmatterJobTitleQueryString_2 | null;
   company?: markdownRemarkConnectionFrontmatterCompanyQueryString_2 | null;
   description?: markdownRemarkConnectionFrontmatterDescriptionQueryString_2 | null;
   image?: markdownRemarkConnectionFrontmatterImageQueryString_2 | null;
+  fulllTitle?: markdownRemarkConnectionFrontmatterFulllTitleQueryString_2 | null;
+  time?: markdownRemarkConnectionFrontmatterTimeQueryString_2 | null;
 }
 
 export interface markdownRemarkConnectionFrontmatterTitleQueryString_2 {
@@ -2436,6 +2442,11 @@ export interface markdownRemarkConnectionFrontmatterSortOrderQueryInteger_2 {
   ne?: number | null;
 }
 
+export interface markdownRemarkConnectionFrontmatterActiveQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
 export interface markdownRemarkConnectionFrontmatterFulllNameQueryString_2 {
   eq?: string | null;
   ne?: string | null;
@@ -2465,6 +2476,20 @@ export interface markdownRemarkConnectionFrontmatterDescriptionQueryString_2 {
 }
 
 export interface markdownRemarkConnectionFrontmatterImageQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionFrontmatterFulllTitleQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionFrontmatterTimeQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -4236,11 +4261,14 @@ export interface markdownRemarkFrontmatterInputObject_2 {
   heroVideo?: markdownRemarkFrontmatterHeroVideoQueryString_2 | null;
   type?: markdownRemarkFrontmatterTypeQueryString_2 | null;
   sortOrder?: markdownRemarkFrontmatterSortOrderQueryInteger_2 | null;
+  active?: markdownRemarkFrontmatterActiveQueryBoolean_2 | null;
   fulllName?: markdownRemarkFrontmatterFulllNameQueryString_2 | null;
   jobTitle?: markdownRemarkFrontmatterJobTitleQueryString_2 | null;
   company?: markdownRemarkFrontmatterCompanyQueryString_2 | null;
   description?: markdownRemarkFrontmatterDescriptionQueryString_2 | null;
   image?: markdownRemarkFrontmatterImageQueryString_2 | null;
+  fulllTitle?: markdownRemarkFrontmatterFulllTitleQueryString_2 | null;
+  time?: markdownRemarkFrontmatterTimeQueryString_2 | null;
 }
 
 export interface markdownRemarkFrontmatterTitleQueryString_2 {
@@ -4328,6 +4356,11 @@ export interface markdownRemarkFrontmatterSortOrderQueryInteger_2 {
   ne?: number | null;
 }
 
+export interface markdownRemarkFrontmatterActiveQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
 export interface markdownRemarkFrontmatterFulllNameQueryString_2 {
   eq?: string | null;
   ne?: string | null;
@@ -4357,6 +4390,20 @@ export interface markdownRemarkFrontmatterDescriptionQueryString_2 {
 }
 
 export interface markdownRemarkFrontmatterImageQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkFrontmatterFulllTitleQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkFrontmatterTimeQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -5556,11 +5603,14 @@ export enum MarkdownRemarkConnectionSortByFieldsEnum {
   frontmatter___heroVideo = "frontmatter___heroVideo",
   frontmatter___type = "frontmatter___type",
   frontmatter___sortOrder = "frontmatter___sortOrder",
+  frontmatter___active = "frontmatter___active",
   frontmatter___fulllName = "frontmatter___fulllName",
   frontmatter___jobTitle = "frontmatter___jobTitle",
   frontmatter___company = "frontmatter___company",
   frontmatter___description = "frontmatter___description",
   frontmatter___image = "frontmatter___image",
+  frontmatter___fulllTitle = "frontmatter___fulllTitle",
+  frontmatter___time = "frontmatter___time",
   excerpt = "excerpt",
   fileAbsolutePath = "fileAbsolutePath",
   fields___slug = "fields___slug",
@@ -5599,11 +5649,14 @@ export enum markdownRemarkDistinctEnum {
   frontmatter___heroVideo = "frontmatter___heroVideo",
   frontmatter___type = "frontmatter___type",
   frontmatter___sortOrder = "frontmatter___sortOrder",
+  frontmatter___active = "frontmatter___active",
   frontmatter___fulllName = "frontmatter___fulllName",
   frontmatter___jobTitle = "frontmatter___jobTitle",
   frontmatter___company = "frontmatter___company",
   frontmatter___description = "frontmatter___description",
   frontmatter___image = "frontmatter___image",
+  frontmatter___fulllTitle = "frontmatter___fulllTitle",
+  frontmatter___time = "frontmatter___time",
   excerpt = "excerpt",
   fileAbsolutePath = "fileAbsolutePath",
   fields___slug = "fields___slug"
@@ -5630,11 +5683,14 @@ export enum markdownRemarkGroupEnum {
   frontmatter___heroVideo = "frontmatter___heroVideo",
   frontmatter___type = "frontmatter___type",
   frontmatter___sortOrder = "frontmatter___sortOrder",
+  frontmatter___active = "frontmatter___active",
   frontmatter___fulllName = "frontmatter___fulllName",
   frontmatter___jobTitle = "frontmatter___jobTitle",
   frontmatter___company = "frontmatter___company",
   frontmatter___description = "frontmatter___description",
   frontmatter___image = "frontmatter___image",
+  frontmatter___fulllTitle = "frontmatter___fulllTitle",
+  frontmatter___time = "frontmatter___time",
   excerpt = "excerpt",
   fileAbsolutePath = "fileAbsolutePath",
   fields___slug = "fields___slug"

@@ -30,14 +30,33 @@ collections:
     label_singular: Speaker
     folder: content/speakers
     create: true
+    delete: true
     slug: "{{slug}}"
     fields:
       - { name: isPage, label: Is Page, default: false, widget: hidden}
       - { name: type, label: Type, default: speaker, widget: hidden}
+      - { name: active, label: Active, default: true, widget: boolean }
       - { name: title, label: Short Name (Unique), widget: string }
       - { name: fullName, label: Full Name, widget: string }
       - { name: jobTitle, label: Title, widget: string }
       - { name: company, label: Company, widget: string }
+      - { name: description, label: Description, widget: text }
+      - { name: sortOrder, label: Sort Order, valueType: int, widget: number }
+      - { name: image, label: Image, widget: image }
+
+  - name: workshops
+    label: Workshops
+    label_singular: Workshop
+    folder: content/workshops
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: isPage, label: Is Page, default: false, widget: hidden}
+      - { name: type, label: Type, default: workshop, widget: hidden}
+      - { name: active, label: Active, default: true, widget: boolean }
+      - { name: title, label: Short Name (Unique), widget: string }
+      - { name: fullTitle, label: Full Title, widget: string }
+      - { name: time, label: Time, widget: string }
       - { name: description, label: Description, widget: text }
       - { name: sortOrder, label: Sort Order, valueType: int, widget: number }
       - { name: image, label: Image, widget: image }

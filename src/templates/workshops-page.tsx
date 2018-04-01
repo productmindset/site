@@ -9,6 +9,7 @@ interface WorkshopPageTemplateLayoutProps extends Page.PageTemplateLayoutProps {
     imageSharp?: ImageSharp
     markdownRemark?: MarkdownRemark
     speakers?: MarkdownRemarkConnection
+    workshops?: MarkdownRemarkConnection
   },
 }
 
@@ -44,6 +45,29 @@ const WorkshopsPageLayout: React.StatelessComponent<WorkshopPageTemplateLayoutPr
             ))}
           </div>
         ))}
+        <h3 className="title">Workshops</h3>
+        {props.data!.workshops!.edges!.map((workshopEdge) => (
+          <div className="card">
+            <div className="card-content">
+              <div className="media">
+                <div className="media-left">
+                  <figure className="image is-128x128">
+                    <img
+                      src={workshopEdge.node!.frontmatter!.image!}
+                      alt={workshopEdge.node!.frontmatter!.fulllTitle!} />
+                  </figure>
+                </div>
+                <div className="media-content">
+                  <p className="subtitle is-6">{workshopEdge.node!.frontmatter!.time!}</p>
+                  <p className="title is-4">{workshopEdge.node!.frontmatter!.fulllTitle!}</p>
+                </div>
+              </div>
+              <div className="content">
+                {workshopEdge.node!.frontmatter!.description!}
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </PageComponent.default>
   )
@@ -53,21 +77,35 @@ export const WorkshopsPageTemplateQuery = graphql`
   query WorkshopsPageTemplateQuery($slug: String!, $heroImageSlug: String) {
     ...PageQueryFragment
     speakers: allMarkdownRemark(
-      filter: {frontmatter: {type: {eq: "speaker"}}},
-      sort: {fields: [frontmatter___sortOrder], order: ASC}) {
-    edges {
-      node {
-        frontmatter {
-          fulllName
-          jobTitle
-          company
-          description
-          image
+        filter: {frontmatter: {type: {eq: "speaker"}, active: {eq: true}}},
+        sort: {fields: [frontmatter___sortOrder], order: ASC}) {
+      edges {
+        node {
+          frontmatter {
+            fulllName
+            jobTitle
+            company
+            description
+            image
+          }
+        }
+      }
+    }
+    workshops: allMarkdownRemark(
+        filter: {frontmatter: {type: {eq: "workshop"}, active: {eq: true}}},
+        sort: {fields: [frontmatter___sortOrder], order: ASC}) {
+      edges {
+        node {
+          frontmatter {
+            fulllTitle
+            time
+            description
+            image
+          }
         }
       }
     }
   }
-}
 `
 
 export default WorkshopsPageLayout

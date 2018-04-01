@@ -24,26 +24,26 @@ const navIndex = {
   zIndex: 99,
 }
 
-const PageComponent: React.StatelessComponent<Page.PageTemplateLayoutProps> = (props) => {
+const navigationMenuLinks = [
+  {
+    title: `LIVE WORKSHOPS`,
+    to: `/workshops`,
+  },
+  {
+    title: `ONLINE RESOURCES`,
+    to: `/resources`,
+  },
+  {
+    title: `SUPPORT`,
+    to: `/faq`,
+  },
+  {
+    title: `CONTACT`,
+    to: `/contact`,
+  },
+]
 
-  const navigationMenuLinks = [
-    {
-      title: `LIVE WORKSHOPS`,
-      to: `/workshops`,
-    },
-    {
-      title: `ONLINE RESOURCES`,
-      to: `/resources`,
-    },
-    {
-      title: `SUPPORT`,
-      to: `/faq`,
-    },
-    {
-      title: `CONTACT`,
-      to: `/contact`,
-    },
-  ]
+const PageComponent: React.StatelessComponent<Page.PageTemplateLayoutProps> = (props) => {
   return (
     <div>
       <div className="hero is-primary is-medium" style={heroHeightStyle}>

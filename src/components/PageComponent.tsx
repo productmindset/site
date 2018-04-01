@@ -3,6 +3,7 @@ import Link from 'gatsby-link'
 import Img from 'gatsby-image'
 import { MarkdownRemark, ImageSharp } from '../graphql-types'
 import * as Page from '../templates/page'
+import NavigationLinkComponent from './NavigationLinkComponent'
 
 const logo = require('../../content/images/included/logo.png')
 const landingVideo = require('../../content/media/landing_video.mp4')
@@ -24,6 +25,25 @@ const navIndex = {
 }
 
 const PageComponent: React.StatelessComponent<Page.PageTemplateLayoutProps> = (props) => {
+
+  const navigationMenuLinks = [
+    {
+      title: `LIVE WORKSHOPS`,
+      to: `/workshops`,
+    },
+    {
+      title: `ONLINE RESOURCES`,
+      to: `/resources`,
+    },
+    {
+      title: `SUPPORT`,
+      to: `/faq`,
+    },
+    {
+      title: `CONTACT`,
+      to: `/contact`,
+    },
+  ]
   return (
     <div>
       <div className="hero is-primary is-medium" style={heroHeightStyle}>
@@ -64,26 +84,14 @@ const PageComponent: React.StatelessComponent<Page.PageTemplateLayoutProps> = (p
             </div>
             <div id="nav-menu" className="navbar-menu">
               <div className="navbar-end">
-                <Link className={'navbar-item' + (props.pathContext.pagePath === '/workshops' ? ' is-active' : '')}
-                  to="/workshops"
-                >
-                  LIVE WORKSHOPS
-              </Link>
-                <Link className={'navbar-item' + (props.pathContext.pagePath === '/resources' ? ' is-active' : '')}
-                  to="/resources"
-                >
-                  ONLINE RESOURCES
-              </Link>
-                <Link className={'navbar-item' + (props.pathContext.pagePath === '/faq' ? ' is-active' : '')}
-                  to="/faq"
-                >
-                  SUPPORT
-              </Link>
-                <Link className={'navbar-item' + (props.pathContext.pagePath === '/contact' ? ' is-active' : '')}
-                  to="/contact"
-                >
-                  CONTACT
-              </Link>
+                {navigationMenuLinks.map((navigationLink) => (
+                  <NavigationLinkComponent
+                    title={navigationLink.title}
+                    to={navigationLink.to}
+                    isActive={props.pathContext.pagePath === navigationLink.to}
+                  >
+                  </NavigationLinkComponent>
+                ))}
               </div>
             </div>
           </div>

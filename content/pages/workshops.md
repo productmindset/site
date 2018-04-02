@@ -11,9 +11,14 @@ heroIsVideo: false
 ---
 # LIVE WORKSHOPS
 
-We created the Product Mindset based on years of experience helping clients build world-class products, combined with best practices from Agile, Lean Startup and Design Thinking.
+We created the Product Mindset based on years of experience helping clients
+build world-class products, combined with best practices from Agile, Lean
+Startup and Design Thinking.
 
-It is a collection of values, principles and practices that guide every action and decision we take in building successful products. It helps align everyone on the team and beyond team so they can think, talk and execute as tightly-integrated unit.
+It is a collection of values, principles and practices that guide every action
+and decision we take in building successful products. It helps align everyone
+on the team and beyond team so they can think, talk and execute as a
+tightly-integrated unit.
 
 ## WHAT WILL YOU LEARN
 

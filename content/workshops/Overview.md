@@ -4,7 +4,7 @@ type: workshop
 sortOrder: 10
 active: true
 title: Overview
-fulllTitle: Why Product Matters & Product Mindset Overview
+fullTitle: Why Product Matters & Product Mindset Overview
 time: 9:15 AM
 description: >-
   We are all trying to create software products customers want but we're often

@@ -4,7 +4,7 @@ type: workshop
 sortOrder: 60
 active: true
 title: Summary
-fulllTitle: Summary & Panel Discussion
+fullTitle: Summary & Panel Discussion
 time: 2:35 PM
 description: >-
   To wrap things up, we'll bring it back to center and leave you with some

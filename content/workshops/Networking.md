@@ -4,7 +4,7 @@ type: workshop
 sortOrder: 70
 active: true
 title: Networking
-fulllTitle: Happy Hour & Networking
+fullTitle: Happy Hour & Networking
 time: 3:00 - 4:15 PM
 description: >-
   After intense focus on building high-performing teams and high-performance

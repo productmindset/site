@@ -26,6 +26,7 @@ const WorkshopsPageLayout: React.StatelessComponent<WorkshopPageTemplateLayoutPr
                 <CardComponent
                   key={speakerKey}
                   description={speakerEdge.node!.frontmatter!.description!}
+                  imageSharp = {speakerEdge.node!.imageFile!.childImageSharp!}
                   imageSrc={speakerEdge.node!.frontmatter!.image!}
                   imageAlt={speakerEdge.node!.frontmatter!.fullName!}
                 >
@@ -44,6 +45,7 @@ const WorkshopsPageLayout: React.StatelessComponent<WorkshopPageTemplateLayoutPr
           <CardComponent
             key={workshopKey}
             description={workshopEdge.node!.frontmatter!.description!}
+            imageSharp = {workshopEdge.node!.imageFile!.childImageSharp!}
             imageSrc={workshopEdge.node!.frontmatter!.image!}
             imageAlt={workshopEdge.node!.frontmatter!.fullTitle!}
           >
@@ -67,6 +69,13 @@ export const WorkshopsPageTemplateQuery = graphql`
         sort: {fields: [frontmatter___sortOrder], order: ASC}) {
       edges {
         node {
+          imageFile {
+            childImageSharp {
+            resolutions(width: 128, height: 128 ) {
+              ...GatsbyImageSharpResolutions_withWebp
+            }
+            }
+          }
           frontmatter {
             fullName
             jobTitle
@@ -82,6 +91,13 @@ export const WorkshopsPageTemplateQuery = graphql`
         sort: {fields: [frontmatter___sortOrder], order: ASC}) {
       edges {
         node {
+          imageFile {
+            childImageSharp {
+            resolutions(width: 128, height: 128 ) {
+              ...GatsbyImageSharpResolutions_withWebp
+            }
+            }
+          }
           frontmatter {
             fullTitle
             time

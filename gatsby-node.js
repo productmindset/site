@@ -47,7 +47,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
   })
 }
 
-exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
+exports.onCreateNode = ({ node, getNode, getNodes, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators
   if (node.internal.type === `MarkdownRemark` && node.frontmatter.isPage === true) {
     const slug = createFilePath({ node, getNode, basePath: `content/pages` })
@@ -56,6 +56,24 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
       name: `slug`,
       value: slug
     })
+  } else if (node.internal.type === `MarkdownRemark` && node.frontmatter.type === `workshop`) {
+    const pathToFile = path
+      .join(__dirname, `content`, node.frontmatter.image)
+      .split(path.sep)
+      .join(`/`)
+
+    // Find ID of File node
+    const fileNode = getNodes().find(n => n.absolutePath === pathToFile)
+    node.imageFile___NODE = fileNode.id
+  } else if (node.internal.type === `MarkdownRemark` && node.frontmatter.type === `speaker`) {
+    const pathToFile = path
+      .join(__dirname, `content`, node.frontmatter.image)
+      .split(path.sep)
+      .join(`/`)
+
+    // Find ID of File node
+    const fileNode = getNodes().find(n => n.absolutePath === pathToFile)
+    node.imageFile___NODE = fileNode.id
   } else if (node.internal.type === `ImageSharp`) {
     const slug = createFilePath({ node, getNode, basePath: `content/images` })
     createNodeField({

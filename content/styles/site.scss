@@ -31,11 +31,37 @@ $orange: $color-orange;
 $primary: $color-blue-shadowed;
 $info: $orange;
 
+$body-background-color: #F5F6F6;
+
 @import '~bulma';
 
+// Change a list bullet to Font Awesome icon of choice.
+@mixin fa-list-icon($faIcon: f0a9, $faIcon-left: -1.4, $fa-color: $color-orange){
+	list-style-type: none;
+	li{
+		position: relative;
+		&:before{
+			font-family: FontAwesome;
+			position: absolute;
+			left: $faIcon-left * 1em;
+			color: $fa-color;
+			content: unquote("\"")+unquote(str-insert($faIcon,"\\", 1))+unquote("\"");
+		}
+	}
+}
 
 .hero-video {
   @include mobile {
     display: block;
   }
+}
+
+.content {
+  ul {
+    @include fa-list-icon()
+  }
+}
+
+.content {
+  background-color: #F5F6F6
 }

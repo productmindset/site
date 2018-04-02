@@ -23,7 +23,7 @@ const ContactPageLayout: React.StatelessComponent<Page.PageTemplateLayoutProps> 
                   </div>
                 </div>
 
-                <div className="content">
+                <div>
                   Plan how you can get things in your customer's hands quickly.
                   Releae planning helps the team understand how we get new stories or features to market.
               </div>
@@ -44,7 +44,7 @@ const ContactPageLayout: React.StatelessComponent<Page.PageTemplateLayoutProps> 
                   </div>
                 </div>
 
-                <div className="content">
+                <div>
                   Personas give us a way to think about who exists beyond the screen and what their life looks like,
                   what motivates them, frustrates them and what they are trying to do with our product. This helps us
                   make informed decisions about how to better serve them and drive adoption, referrals and retention.

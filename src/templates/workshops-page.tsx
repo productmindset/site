@@ -27,7 +27,7 @@ const WorkshopsPageLayout: React.StatelessComponent<WorkshopPageTemplateLayoutPr
                   key={speakerKey}
                   description={speakerEdge.node!.frontmatter!.description!}
                   imageSrc={speakerEdge.node!.frontmatter!.image!}
-                  imageAlt={speakerEdge.node!.frontmatter!.Name!}
+                  imageAlt={speakerEdge.node!.frontmatter!.fullName!}
                 >
                   <p className="title is-4">{speakerEdge.node!.frontmatter!.fullName!}</p>
                   <p className="subtitle is-6">{speakerEdge.node!.frontmatter!.jobTitle!}</p>

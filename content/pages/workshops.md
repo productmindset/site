@@ -1,6 +1,6 @@
 ---
 isPage: true
-templateKey: page
+templateKey: workshops-page
 title: Workshops
 heroTitle: JOIN OUR LIVE EVENTS
 heroSubtitle: >-
@@ -9,13 +9,18 @@ heroSubtitle: >-
 heroImage: /images/included/workshops_hero/
 heroIsVideo: false
 ---
-### Live workshops 
+# LIVE WORKSHOPS
 
-### We created the Product Mindset based on years of experience helping clients build world-class products, combined with best practices from Agile, Lean Startup and Design Thinking. 
+We created the Product Mindset based on years of experience helping clients
+build world-class products, combined with best practices from Agile, Lean
+Startup and Design Thinking.
 
-It is a collection of values, principles and practices that guide every action and decision we take in building successful products. It helps align everyone on the team and beyond team so they can think, talk and execute as tightly-integrated unit.
+It is a collection of values, principles and practices that guide every action
+and decision we take in building successful products. It helps align everyone
+on the team and beyond team so they can think, talk and execute as a
+tightly-integrated unit.
 
-### WHAT WILL YOU LEARN
+## WHAT WILL YOU LEARN
 
 * A simple language for product development that teams can share with stakeholders
 * How to better understand your customers and business

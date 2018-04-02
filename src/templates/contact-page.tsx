@@ -1,10 +1,11 @@
 import * as React from 'react'
 import * as Page from './page'
+import * as PageComponent from '../components/PageComponent'
 
 const ContactPageLayout: React.StatelessComponent<Page.PageTemplateLayoutProps> = (props) => {
   return (
     <div>
-      <Page.default {...props}>
+      <PageComponent.default {...props}>
         <div className="container" >
           <form name="contact" method="POST" data-netlify="true">
             <div className="field">
@@ -53,29 +54,14 @@ const ContactPageLayout: React.StatelessComponent<Page.PageTemplateLayoutProps> 
             </div>
           </form>
         </div>
-      </Page.default>
+      </PageComponent.default>
     </div >
   )
 }
 
 export const AboutPageTemplateQuery = graphql`
   query AboutPageTemplateQuery($slug: String!, $heroImageSlug: String) {
-    imageSharp (fields: {slug: {eq: $heroImageSlug }} ) {
-      sizes(maxWidth: 1240 ) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      frontmatter {
-        heroIsVideo
-        path
-        title
-        heroTitle
-        heroSubtitle
-        templateKey
-      }
-    }
+    ...PageQueryFragment
   }
 `
 

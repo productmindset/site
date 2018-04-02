@@ -1,12 +1,13 @@
 import * as React from 'react'
 import * as Page from './page'
+import * as PageComponent from '../components/PageComponent'
 const releasePlanImage = require('../../content/images/included/release_plan.png')
 const personaCreationImage = require('../../content/images/included/persona_creation.png')
 
 const ContactPageLayout: React.StatelessComponent<Page.PageTemplateLayoutProps> = (props) => {
   return (
     <div>
-      <Page.default {...props}>
+      <PageComponent.default {...props}>
         <div className="columns" >
           <div className="column" >
             <div className="card">
@@ -22,7 +23,7 @@ const ContactPageLayout: React.StatelessComponent<Page.PageTemplateLayoutProps> 
                   </div>
                 </div>
 
-                <div className="content">
+                <div>
                   Plan how you can get things in your customer's hands quickly.
                   Releae planning helps the team understand how we get new stories or features to market.
               </div>
@@ -43,7 +44,7 @@ const ContactPageLayout: React.StatelessComponent<Page.PageTemplateLayoutProps> 
                   </div>
                 </div>
 
-                <div className="content">
+                <div>
                   Personas give us a way to think about who exists beyond the screen and what their life looks like,
                   what motivates them, frustrates them and what they are trying to do with our product. This helps us
                   make informed decisions about how to better serve them and drive adoption, referrals and retention.
@@ -52,29 +53,14 @@ const ContactPageLayout: React.StatelessComponent<Page.PageTemplateLayoutProps> 
             </div>
           </div>
         </div>
-      </Page.default>
+      </PageComponent.default>
     </div >
   )
 }
 
 export const ResourcesPageTemplateQuery = graphql`
   query ResourcesPageTemplateQuery($slug: String!, $heroImageSlug: String) {
-    imageSharp (fields: {slug: {eq: $heroImageSlug }} ) {
-      sizes(maxWidth: 1240 ) {
-        ...GatsbyImageSharpSizes
-      }
-    }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      frontmatter {
-        heroIsVideo
-        path
-        title
-        heroTitle
-        heroSubtitle
-        templateKey
-      }
-    }
+    ...PageQueryFragment
   }
 `
 

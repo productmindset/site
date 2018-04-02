@@ -1,7 +1,7 @@
 ---
 isPage: false
 type: speaker
-active: false
+active: true
 title: Rivers
 fullName: Jonathan Rivers
 jobTitle: Chief Technology Officer

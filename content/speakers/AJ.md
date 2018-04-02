@@ -4,7 +4,7 @@ type: speaker
 sortOrder: 40
 active: true
 title: AJ
-fulllName: Alok Jain
+fullName: Alok Jain
 jobTitle: Director of Industry Strategy
 company: 3Pillar Global
 description: >-

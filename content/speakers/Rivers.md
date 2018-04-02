@@ -4,7 +4,7 @@ type: speaker
 sortOrder: 10
 active: true
 title: Rivers
-fulllName: Jonathan Rivers
+fullName: Jonathan Rivers
 jobTitle: Chief Technology Officer
 company: 3Pillar Global
 description: >-

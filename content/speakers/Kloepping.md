@@ -4,7 +4,7 @@ type: speaker
 title: Kloepping
 sortOrder: 30
 active: true
-fulllName: Lindsay Kloepping
+fullName: Lindsay Kloepping
 jobTitle: Senior Product Manager
 company: 3Pillar Global
 description: >-

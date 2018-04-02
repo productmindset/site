@@ -4,7 +4,7 @@ type: workshop
 sortOrder: 20
 active: true
 title: Outcomes
-fulllTitle: Building for Outcomes
+fullTitle: Building for Outcomes
 time: 9:40 AM
 description: >-
   We don't just want to write code, we want to help businesses thrive and grow.

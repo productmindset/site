@@ -4,7 +4,7 @@ type: workshop
 sortOrder: 40
 active: true
 title: Value
-fulllTitle: Minimize Time to Value
+fullTitle: Minimize Time to Value
 time: 12:00 PM
 description: >-
   If you're not putting something tangible into stakeholders' - or better yet,

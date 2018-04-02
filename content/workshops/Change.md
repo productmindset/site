@@ -4,7 +4,7 @@ type: workshop
 sortOrder: 50
 active: true
 title: Change
-fulllTitle: Excel at Change
+fullTitle: Excel at Change
 time: 1:15 PM
 description: >-
   As we'll see during the previous hour, knowing how and when to respond to

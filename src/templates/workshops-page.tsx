@@ -27,9 +27,9 @@ const WorkshopsPageLayout: React.StatelessComponent<WorkshopPageTemplateLayoutPr
                   key={speakerKey}
                   description={speakerEdge.node!.frontmatter!.description!}
                   imageSrc={speakerEdge.node!.frontmatter!.image!}
-                  imageAlt={speakerEdge.node!.frontmatter!.fulllName!}
+                  imageAlt={speakerEdge.node!.frontmatter!.fullName!}
                 >
-                  <p className="title is-4">{speakerEdge.node!.frontmatter!.fulllName!}</p>
+                  <p className="title is-4">{speakerEdge.node!.frontmatter!.fullName!}</p>
                   <p className="subtitle is-6">{speakerEdge.node!.frontmatter!.jobTitle!}</p>
                   <p className="subtitle is-6">{speakerEdge.node!.frontmatter!.company!}</p>
                 </CardComponent>
@@ -45,13 +45,13 @@ const WorkshopsPageLayout: React.StatelessComponent<WorkshopPageTemplateLayoutPr
             key={workshopKey}
             description={workshopEdge.node!.frontmatter!.description!}
             imageSrc={workshopEdge.node!.frontmatter!.image!}
-            imageAlt={workshopEdge.node!.frontmatter!.fulllTitle!}
+            imageAlt={workshopEdge.node!.frontmatter!.fullTitle!}
           >
             <p className="subtitle is-6">
               <i className="far fa-clock fa-fw"></i>
               {workshopEdge.node!.frontmatter!.time!}
             </p>
-            <p className="title is-4">{workshopEdge.node!.frontmatter!.fulllTitle!}</p>
+            <p className="title is-4">{workshopEdge.node!.frontmatter!.fullTitle!}</p>
           </CardComponent>
         ))}
       </div>
@@ -68,7 +68,7 @@ export const WorkshopsPageTemplateQuery = graphql`
       edges {
         node {
           frontmatter {
-            fulllName
+            fullName
             jobTitle
             company
             description
@@ -83,7 +83,7 @@ export const WorkshopsPageTemplateQuery = graphql`
       edges {
         node {
           frontmatter {
-            fulllTitle
+            fullTitle
             time
             description
             image

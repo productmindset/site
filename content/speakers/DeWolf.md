@@ -4,7 +4,7 @@ type: speaker
 sortOrder: 1
 active: true
 title: DeWolf
-fulllName: David DeWolf
+fullName: David DeWolf
 jobTitle: Chief Executive Officer
 company: 3Pillar Global
 description: >-

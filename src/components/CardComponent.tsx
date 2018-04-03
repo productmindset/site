@@ -5,7 +5,6 @@ import Img from 'gatsby-image'
 interface CardComponentProps {
   children?: any
   description: string
-  imageSrc: string
   imageAlt: string
   imageSharp?: ImageSharp
 }
@@ -18,8 +17,8 @@ const CardComponent: React.StatelessComponent<CardComponentProps> = (props) => {
           <div className="media-left">
             <figure className="image is-128x128">
             <Img
-              title="Card image"
-              alt="Card image"
+              title={props.imageAlt}
+              alt={props.imageAlt}
               resolutions={props.imageSharp!.resolutions!}
             />
             </figure>

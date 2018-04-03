@@ -27,7 +27,6 @@ const WorkshopsPageLayout: React.StatelessComponent<WorkshopPageTemplateLayoutPr
                   key={speakerKey}
                   description={speakerEdge.node!.frontmatter!.description!}
                   imageSharp = {speakerEdge.node!.imageFile!.childImageSharp!}
-                  imageSrc={speakerEdge.node!.frontmatter!.image!}
                   imageAlt={speakerEdge.node!.frontmatter!.fullName!}
                 >
                   <p className="title is-4">{speakerEdge.node!.frontmatter!.fullName!}</p>
@@ -46,7 +45,6 @@ const WorkshopsPageLayout: React.StatelessComponent<WorkshopPageTemplateLayoutPr
             key={workshopKey}
             description={workshopEdge.node!.frontmatter!.description!}
             imageSharp = {workshopEdge.node!.imageFile!.childImageSharp!}
-            imageSrc={workshopEdge.node!.frontmatter!.image!}
             imageAlt={workshopEdge.node!.frontmatter!.fullTitle!}
           >
             <p className="subtitle is-6">

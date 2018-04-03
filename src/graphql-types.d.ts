@@ -269,8 +269,8 @@ export interface File extends Node {
   id: string /* The id of this node. */;
   parent?: Node | null /* The parent of this node. */;
   children?: Node[] | null /* The children of this node. */;
-  childMarkdownRemark?: MarkdownRemark | null /* The child of this node of type markdownRemark */;
   childImageSharp?: ImageSharp | null /* The child of this node of type imageSharp */;
+  childMarkdownRemark?: MarkdownRemark | null /* The child of this node of type markdownRemark */;
   internal?: internal_11 | null;
   sourceInstanceName?: string | null;
   absolutePath?: string | null;
@@ -309,81 +309,13 @@ export interface File extends Node {
     | string
     | null /* Copy file to static directory and return public url to it */;
 }
-/* Node of type MarkdownRemark */
-export interface MarkdownRemark extends Node {
-  id: string /* The id of this node. */;
-  parent?: Node | null /* The parent of this node. */;
-  children?: Node[] | null /* The children of this node. */;
-  internal?: internal_12 | null;
-  frontmatter?: frontmatter_2 | null;
-  excerpt?: string | null;
-  fileAbsolutePath?: string | null;
-  fields?: fields_3 | null;
-  html?: string | null;
-  htmlAst?: JSON | null;
-  headings?: MarkdownHeading[] | null;
-  timeToRead?: number | null;
-  tableOfContents?: string | null;
-  wordCount?: wordCount | null;
-}
-
-export interface internal_12 {
-  content?: string | null;
-  type?: string | null;
-  contentDigest?: string | null;
-  owner?: string | null;
-  fieldOwners?: fieldOwners_3 | null;
-}
-
-export interface fieldOwners_3 {
-  slug?: string | null;
-}
-
-export interface frontmatter_2 {
-  title?: string | null;
-  isPage?: boolean | null;
-  path?: string | null;
-  templateKey?: string | null;
-  heroTitle?: string | null;
-  heroSubtitle?: string | null;
-  heroIsVideo?: boolean | null;
-  _PARENT?: string | null;
-  parent?: string | null;
-  heroImage?: string | null;
-  heroVideo?: string | null;
-  type?: string | null;
-  sortOrder?: number | null;
-  active?: boolean | null;
-  fullName?: string | null;
-  jobTitle?: string | null;
-  company?: string | null;
-  description?: string | null;
-  image?: string | null;
-  fullTitle?: string | null;
-  time?: string | null;
-}
-
-export interface fields_3 {
-  slug?: string | null;
-}
-
-export interface MarkdownHeading {
-  value?: string | null;
-  depth?: number | null;
-}
-
-export interface wordCount {
-  paragraphs?: number | null;
-  sentences?: number | null;
-  words?: number | null;
-}
 /* Node of type ImageSharp */
 export interface ImageSharp extends Node {
   id: string /* The id of this node. */;
   parent?: Node | null /* The parent of this node. */;
   children?: Node[] | null /* The children of this node. */;
-  internal?: internal_13 | null;
-  fields?: fields_4 | null;
+  internal?: internal_12 | null;
+  fields?: fields_3 | null;
   original?: ImageSharpOriginal | null;
   resolutions?: ImageSharpResolutions | null;
   sizes?: ImageSharpSizes | null;
@@ -392,18 +324,18 @@ export interface ImageSharp extends Node {
   resize?: ImageSharpResize | null;
 }
 
-export interface internal_13 {
+export interface internal_12 {
   contentDigest?: string | null;
   type?: string | null;
   owner?: string | null;
-  fieldOwners?: fieldOwners_4 | null;
+  fieldOwners?: fieldOwners_3 | null;
 }
 
-export interface fieldOwners_4 {
+export interface fieldOwners_3 {
   slug?: string | null;
 }
 
-export interface fields_4 {
+export interface fields_3 {
   slug?: string | null;
 }
 
@@ -466,6 +398,76 @@ export interface ImageSharpResize {
   height?: number | null;
   aspectRatio?: number | null;
   originalName?: string | null;
+}
+/* Node of type MarkdownRemark */
+export interface MarkdownRemark extends Node {
+  id: string /* The id of this node. */;
+  parent?: Node | null /* The parent of this node. */;
+  children?: Node[] | null /* The children of this node. */;
+  internal?: internal_13 | null;
+  frontmatter?: frontmatter_2 | null;
+  excerpt?: string | null;
+  fileAbsolutePath?: string | null;
+  fields?: fields_4 | null;
+  imageFile?: File | null;
+  html?: string | null;
+  htmlAst?: JSON | null;
+  headings?: MarkdownHeading[] | null;
+  timeToRead?: number | null;
+  tableOfContents?: string | null;
+  wordCount?: wordCount | null;
+}
+
+export interface internal_13 {
+  content?: string | null;
+  type?: string | null;
+  contentDigest?: string | null;
+  owner?: string | null;
+  fieldOwners?: fieldOwners_4 | null;
+}
+
+export interface fieldOwners_4 {
+  slug?: string | null;
+}
+
+export interface frontmatter_2 {
+  title?: string | null;
+  isPage?: boolean | null;
+  path?: string | null;
+  templateKey?: string | null;
+  heroTitle?: string | null;
+  heroSubtitle?: string | null;
+  heroIsVideo?: boolean | null;
+  _PARENT?: string | null;
+  parent?: string | null;
+  heroImage?: string | null;
+  heroVideo?: string | null;
+  type?: string | null;
+  sortOrder?: number | null;
+  active?: boolean | null;
+  fullName?: string | null;
+  jobTitle?: string | null;
+  company?: string | null;
+  description?: string | null;
+  image?: string | null;
+  fullTitle?: string | null;
+  time?: string | null;
+  isTest?: boolean | null;
+}
+
+export interface fields_4 {
+  slug?: string | null;
+}
+
+export interface MarkdownHeading {
+  value?: string | null;
+  depth?: number | null;
+}
+
+export interface wordCount {
+  paragraphs?: number | null;
+  sentences?: number | null;
+  words?: number | null;
 }
 
 export interface internal_11 {
@@ -2255,6 +2257,7 @@ export interface filterMarkdownRemark {
   excerpt?: excerptQueryString_4 | null;
   fileAbsolutePath?: markdownRemarkConnectionFileAbsolutePathQueryString_2 | null;
   fields?: markdownRemarkConnectionFieldsInputObject_2 | null;
+  imageFile?: markdownRemarkConnectionImageFileInputObject_2 | null;
   html?: htmlQueryString_4 | null;
   headings?: headingsQueryList_4 | null;
   timeToRead?: timeToReadQueryInt_4 | null;
@@ -2338,6 +2341,7 @@ export interface markdownRemarkConnectionFrontmatterInputObject_2 {
   image?: markdownRemarkConnectionFrontmatterImageQueryString_2 | null;
   fullTitle?: markdownRemarkConnectionFrontmatterFullTitleQueryString_2 | null;
   time?: markdownRemarkConnectionFrontmatterTimeQueryString_2 | null;
+  isTest?: markdownRemarkConnectionFrontmatterIsTestQueryBoolean_2 | null;
 }
 
 export interface markdownRemarkConnectionFrontmatterTitleQueryString_2 {
@@ -2479,6 +2483,11 @@ export interface markdownRemarkConnectionFrontmatterTimeQueryString_2 {
   glob?: string | null;
 }
 
+export interface markdownRemarkConnectionFrontmatterIsTestQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
 export interface excerptQueryString_4 {
   eq?: string | null;
   ne?: string | null;
@@ -2498,6 +2507,306 @@ export interface markdownRemarkConnectionFieldsInputObject_2 {
 }
 
 export interface markdownRemarkConnectionFieldsSlugQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionImageFileInputObject_2 {
+  id?: markdownRemarkConnectionImageFileIdQueryString_2 | null;
+  children?: markdownRemarkConnectionImageFileChildrenQueryList_2 | null;
+  parent?: markdownRemarkConnectionImageFileParentQueryString_2 | null;
+  internal?: markdownRemarkConnectionImageFileInternalInputObject_2 | null;
+  sourceInstanceName?: markdownRemarkConnectionImageFileSourceInstanceNameQueryString_2 | null;
+  absolutePath?: markdownRemarkConnectionImageFileAbsolutePathQueryString_2 | null;
+  relativePath?: markdownRemarkConnectionImageFileRelativePathQueryString_2 | null;
+  extension?: markdownRemarkConnectionImageFileExtensionQueryString_2 | null;
+  size?: markdownRemarkConnectionImageFileSizeQueryInteger_2 | null;
+  prettySize?: markdownRemarkConnectionImageFilePrettySizeQueryString_2 | null;
+  modifiedTime?: markdownRemarkConnectionImageFileModifiedTimeQueryString_2 | null;
+  accessTime?: markdownRemarkConnectionImageFileAccessTimeQueryString_2 | null;
+  changeTime?: markdownRemarkConnectionImageFileChangeTimeQueryString_2 | null;
+  birthTime?: markdownRemarkConnectionImageFileBirthTimeQueryString_2 | null;
+  root?: markdownRemarkConnectionImageFileRootQueryString_2 | null;
+  dir?: markdownRemarkConnectionImageFileDirQueryString_2 | null;
+  base?: markdownRemarkConnectionImageFileBaseQueryString_2 | null;
+  ext?: markdownRemarkConnectionImageFileExtQueryString_2 | null;
+  name?: markdownRemarkConnectionImageFileNameQueryString_2 | null;
+  relativeDirectory?: markdownRemarkConnectionImageFileRelativeDirectoryQueryString_2 | null;
+  dev?: markdownRemarkConnectionImageFileDevQueryInteger_2 | null;
+  mode?: markdownRemarkConnectionImageFileModeQueryInteger_2 | null;
+  nlink?: markdownRemarkConnectionImageFileNlinkQueryInteger_2 | null;
+  uid?: markdownRemarkConnectionImageFileUidQueryInteger_2 | null;
+  gid?: markdownRemarkConnectionImageFileGidQueryInteger_2 | null;
+  rdev?: markdownRemarkConnectionImageFileRdevQueryInteger_2 | null;
+  blksize?: markdownRemarkConnectionImageFileBlksizeQueryInteger_2 | null;
+  ino?: markdownRemarkConnectionImageFileInoQueryInteger_2 | null;
+  blocks?: markdownRemarkConnectionImageFileBlocksQueryInteger_2 | null;
+  atimeMs?: markdownRemarkConnectionImageFileAtimeMsQueryInteger_2 | null;
+  mtimeMs?: markdownRemarkConnectionImageFileMtimeMsQueryInteger_2 | null;
+  ctimeMs?: markdownRemarkConnectionImageFileCtimeMsQueryInteger_2 | null;
+  birthtimeMs?: markdownRemarkConnectionImageFileBirthtimeMsQueryInteger_2 | null;
+  atime?: markdownRemarkConnectionImageFileAtimeQueryString_2 | null;
+  mtime?: markdownRemarkConnectionImageFileMtimeQueryString_2 | null;
+  ctime?: markdownRemarkConnectionImageFileCtimeQueryString_2 | null;
+  birthtime?: markdownRemarkConnectionImageFileBirthtimeQueryString_2 | null;
+}
+
+export interface markdownRemarkConnectionImageFileIdQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionImageFileChildrenQueryList_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface markdownRemarkConnectionImageFileParentQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionImageFileInternalInputObject_2 {
+  contentDigest?: markdownRemarkConnectionImageFileInternalContentDigestQueryString_2 | null;
+  mediaType?: markdownRemarkConnectionImageFileInternalMediaTypeQueryString_2 | null;
+  type?: markdownRemarkConnectionImageFileInternalTypeQueryString_2 | null;
+  owner?: markdownRemarkConnectionImageFileInternalOwnerQueryString_2 | null;
+}
+
+export interface markdownRemarkConnectionImageFileInternalContentDigestQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionImageFileInternalMediaTypeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionImageFileInternalTypeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionImageFileInternalOwnerQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionImageFileSourceInstanceNameQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionImageFileAbsolutePathQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionImageFileRelativePathQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionImageFileExtensionQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionImageFileSizeQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface markdownRemarkConnectionImageFilePrettySizeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionImageFileModifiedTimeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionImageFileAccessTimeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionImageFileChangeTimeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionImageFileBirthTimeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionImageFileRootQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionImageFileDirQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionImageFileBaseQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionImageFileExtQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionImageFileNameQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionImageFileRelativeDirectoryQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionImageFileDevQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface markdownRemarkConnectionImageFileModeQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface markdownRemarkConnectionImageFileNlinkQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface markdownRemarkConnectionImageFileUidQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface markdownRemarkConnectionImageFileGidQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface markdownRemarkConnectionImageFileRdevQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface markdownRemarkConnectionImageFileBlksizeQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface markdownRemarkConnectionImageFileInoQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface markdownRemarkConnectionImageFileBlocksQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface markdownRemarkConnectionImageFileAtimeMsQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface markdownRemarkConnectionImageFileMtimeMsQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface markdownRemarkConnectionImageFileCtimeMsQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface markdownRemarkConnectionImageFileBirthtimeMsQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface markdownRemarkConnectionImageFileAtimeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionImageFileMtimeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionImageFileCtimeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionImageFileBirthtimeQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -4236,6 +4545,7 @@ export interface markdownRemarkFrontmatterInputObject_2 {
   image?: markdownRemarkFrontmatterImageQueryString_2 | null;
   fullTitle?: markdownRemarkFrontmatterFullTitleQueryString_2 | null;
   time?: markdownRemarkFrontmatterTimeQueryString_2 | null;
+  isTest?: markdownRemarkFrontmatterIsTestQueryBoolean_2 | null;
 }
 
 export interface markdownRemarkFrontmatterTitleQueryString_2 {
@@ -4377,6 +4687,11 @@ export interface markdownRemarkFrontmatterTimeQueryString_2 {
   glob?: string | null;
 }
 
+export interface markdownRemarkFrontmatterIsTestQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
 export interface excerptQueryString_3 {
   eq?: string | null;
   ne?: string | null;
@@ -4396,6 +4711,306 @@ export interface markdownRemarkFieldsInputObject_2 {
 }
 
 export interface markdownRemarkFieldsSlugQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkImageFileInputObject_2 {
+  id?: markdownRemarkImageFileIdQueryString_2 | null;
+  children?: markdownRemarkImageFileChildrenQueryList_2 | null;
+  parent?: markdownRemarkImageFileParentQueryString_2 | null;
+  internal?: markdownRemarkImageFileInternalInputObject_2 | null;
+  sourceInstanceName?: markdownRemarkImageFileSourceInstanceNameQueryString_2 | null;
+  absolutePath?: markdownRemarkImageFileAbsolutePathQueryString_2 | null;
+  relativePath?: markdownRemarkImageFileRelativePathQueryString_2 | null;
+  extension?: markdownRemarkImageFileExtensionQueryString_2 | null;
+  size?: markdownRemarkImageFileSizeQueryInteger_2 | null;
+  prettySize?: markdownRemarkImageFilePrettySizeQueryString_2 | null;
+  modifiedTime?: markdownRemarkImageFileModifiedTimeQueryString_2 | null;
+  accessTime?: markdownRemarkImageFileAccessTimeQueryString_2 | null;
+  changeTime?: markdownRemarkImageFileChangeTimeQueryString_2 | null;
+  birthTime?: markdownRemarkImageFileBirthTimeQueryString_2 | null;
+  root?: markdownRemarkImageFileRootQueryString_2 | null;
+  dir?: markdownRemarkImageFileDirQueryString_2 | null;
+  base?: markdownRemarkImageFileBaseQueryString_2 | null;
+  ext?: markdownRemarkImageFileExtQueryString_2 | null;
+  name?: markdownRemarkImageFileNameQueryString_2 | null;
+  relativeDirectory?: markdownRemarkImageFileRelativeDirectoryQueryString_2 | null;
+  dev?: markdownRemarkImageFileDevQueryInteger_2 | null;
+  mode?: markdownRemarkImageFileModeQueryInteger_2 | null;
+  nlink?: markdownRemarkImageFileNlinkQueryInteger_2 | null;
+  uid?: markdownRemarkImageFileUidQueryInteger_2 | null;
+  gid?: markdownRemarkImageFileGidQueryInteger_2 | null;
+  rdev?: markdownRemarkImageFileRdevQueryInteger_2 | null;
+  blksize?: markdownRemarkImageFileBlksizeQueryInteger_2 | null;
+  ino?: markdownRemarkImageFileInoQueryInteger_2 | null;
+  blocks?: markdownRemarkImageFileBlocksQueryInteger_2 | null;
+  atimeMs?: markdownRemarkImageFileAtimeMsQueryInteger_2 | null;
+  mtimeMs?: markdownRemarkImageFileMtimeMsQueryInteger_2 | null;
+  ctimeMs?: markdownRemarkImageFileCtimeMsQueryInteger_2 | null;
+  birthtimeMs?: markdownRemarkImageFileBirthtimeMsQueryInteger_2 | null;
+  atime?: markdownRemarkImageFileAtimeQueryString_2 | null;
+  mtime?: markdownRemarkImageFileMtimeQueryString_2 | null;
+  ctime?: markdownRemarkImageFileCtimeQueryString_2 | null;
+  birthtime?: markdownRemarkImageFileBirthtimeQueryString_2 | null;
+}
+
+export interface markdownRemarkImageFileIdQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkImageFileChildrenQueryList_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+  in?: string[] | null;
+}
+
+export interface markdownRemarkImageFileParentQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkImageFileInternalInputObject_2 {
+  contentDigest?: markdownRemarkImageFileInternalContentDigestQueryString_2 | null;
+  mediaType?: markdownRemarkImageFileInternalMediaTypeQueryString_2 | null;
+  type?: markdownRemarkImageFileInternalTypeQueryString_2 | null;
+  owner?: markdownRemarkImageFileInternalOwnerQueryString_2 | null;
+}
+
+export interface markdownRemarkImageFileInternalContentDigestQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkImageFileInternalMediaTypeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkImageFileInternalTypeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkImageFileInternalOwnerQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkImageFileSourceInstanceNameQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkImageFileAbsolutePathQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkImageFileRelativePathQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkImageFileExtensionQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkImageFileSizeQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface markdownRemarkImageFilePrettySizeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkImageFileModifiedTimeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkImageFileAccessTimeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkImageFileChangeTimeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkImageFileBirthTimeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkImageFileRootQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkImageFileDirQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkImageFileBaseQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkImageFileExtQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkImageFileNameQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkImageFileRelativeDirectoryQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkImageFileDevQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface markdownRemarkImageFileModeQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface markdownRemarkImageFileNlinkQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface markdownRemarkImageFileUidQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface markdownRemarkImageFileGidQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface markdownRemarkImageFileRdevQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface markdownRemarkImageFileBlksizeQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface markdownRemarkImageFileInoQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface markdownRemarkImageFileBlocksQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface markdownRemarkImageFileAtimeMsQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface markdownRemarkImageFileMtimeMsQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface markdownRemarkImageFileCtimeMsQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface markdownRemarkImageFileBirthtimeMsQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+}
+
+export interface markdownRemarkImageFileAtimeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkImageFileMtimeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkImageFileCtimeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkImageFileBirthtimeQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -4630,6 +5245,7 @@ export interface MarkdownRemarkRootQueryTypeArgs {
   excerpt?: excerptQueryString_3 | null;
   fileAbsolutePath?: markdownRemarkFileAbsolutePathQueryString_2 | null;
   fields?: markdownRemarkFieldsInputObject_2 | null;
+  imageFile?: markdownRemarkImageFileInputObject_2 | null;
   html?: htmlQueryString_3 | null;
   headings?: headingsQueryList_3 | null;
   timeToRead?: timeToReadQueryInt_3 | null;
@@ -4892,12 +5508,6 @@ export interface BirthtimeFileArgs {
     | string
     | null /* Configures the locale Moment.js will use to format the date. */;
 }
-export interface ExcerptMarkdownRemarkArgs {
-  pruneLength?: number | null;
-}
-export interface HeadingsMarkdownRemarkArgs {
-  depth?: HeadingLevels | null;
-}
 export interface ResolutionsImageSharpArgs {
   width?: number | null;
   height?: number | null;
@@ -4957,6 +5567,12 @@ export interface ResizeImageSharpArgs {
   toFormat?: ImageFormat | null;
   cropFocus?: ImageCropFocus | null;
   rotate?: number | null;
+}
+export interface ExcerptMarkdownRemarkArgs {
+  pruneLength?: number | null;
+}
+export interface HeadingsMarkdownRemarkArgs {
+  depth?: HeadingLevels | null;
 }
 export interface DistinctImageSharpConnectionArgs {
   field?: imageSharpDistinctEnum | null;
@@ -5344,15 +5960,6 @@ export enum fileConnectionSortOrderValues {
   DESC = "DESC"
 }
 
-export enum HeadingLevels {
-  h1 = "h1",
-  h2 = "h2",
-  h3 = "h3",
-  h4 = "h4",
-  h5 = "h5",
-  h6 = "h6"
-}
-
 export enum PotraceTurnPolicy {
   TURNPOLICY_BLACK = "TURNPOLICY_BLACK",
   TURNPOLICY_WHITE = "TURNPOLICY_WHITE",
@@ -5381,6 +5988,15 @@ export enum ImageCropFocus {
   NORTHWEST = "NORTHWEST",
   ENTROPY = "ENTROPY",
   ATTENTION = "ATTENTION"
+}
+
+export enum HeadingLevels {
+  h1 = "h1",
+  h2 = "h2",
+  h3 = "h3",
+  h4 = "h4",
+  h5 = "h5",
+  h6 = "h6"
 }
 
 export enum fileDistinctEnum {
@@ -5578,9 +6194,11 @@ export enum MarkdownRemarkConnectionSortByFieldsEnum {
   frontmatter___image = "frontmatter___image",
   frontmatter___fullTitle = "frontmatter___fullTitle",
   frontmatter___time = "frontmatter___time",
+  frontmatter___isTest = "frontmatter___isTest",
   excerpt = "excerpt",
   fileAbsolutePath = "fileAbsolutePath",
   fields___slug = "fields___slug",
+  imageFile___NODE = "imageFile___NODE",
   html = "html",
   headings = "headings",
   timeToRead = "timeToRead",
@@ -5624,9 +6242,11 @@ export enum markdownRemarkDistinctEnum {
   frontmatter___image = "frontmatter___image",
   frontmatter___fullTitle = "frontmatter___fullTitle",
   frontmatter___time = "frontmatter___time",
+  frontmatter___isTest = "frontmatter___isTest",
   excerpt = "excerpt",
   fileAbsolutePath = "fileAbsolutePath",
-  fields___slug = "fields___slug"
+  fields___slug = "fields___slug",
+  imageFile___NODE = "imageFile___NODE"
 }
 
 export enum markdownRemarkGroupEnum {
@@ -5658,7 +6278,9 @@ export enum markdownRemarkGroupEnum {
   frontmatter___image = "frontmatter___image",
   frontmatter___fullTitle = "frontmatter___fullTitle",
   frontmatter___time = "frontmatter___time",
+  frontmatter___isTest = "frontmatter___isTest",
   excerpt = "excerpt",
   fileAbsolutePath = "fileAbsolutePath",
-  fields___slug = "fields___slug"
+  fields___slug = "fields___slug",
+  imageFile___NODE = "imageFile___NODE"
 }

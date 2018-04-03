@@ -4,7 +4,7 @@ backend:
   repo: product-mindset/site
 
 publish_mode: editorial_workflow
-media_folder: static/images
+media_folder: content/images
 public_folder: /images
 
 collections:

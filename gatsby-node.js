@@ -40,22 +40,33 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           `src/templates/${String(node.frontmatter.templateKey)}.tsx`
         ),
         // additional data can be passed via context
-        context: {slug: node.fields.slug, heroImageSlug: node.frontmatter.heroImage, pagePath: pagePath},
+        context: { slug: node.fields.slug, heroImageSlug: node.frontmatter.heroImage, pagePath: pagePath },
         path: pagePath
       })
     })
   })
 }
 
-exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
+exports.onCreateNode = ({ node, getNode, getNodes, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators
-  if (node.internal.type === `MarkdownRemark` && node.frontmatter.isPage === true) {
-    const slug = createFilePath({ node, getNode, basePath: `content/pages` })
-    createNodeField({
-      node,
-      name: `slug`,
-      value: slug
-    })
+  if (node.internal.type === `MarkdownRemark`) {
+    if (node.frontmatter.isPage === true) {
+      const slug = createFilePath({ node, getNode, basePath: `content/pages` })
+      createNodeField({
+        node,
+        name: `slug`,
+        value: slug
+      })
+    } else if (node.frontmatter.type === `workshop` || node.frontmatter.type === `speaker`) {
+      const pathToFile = path
+        .join(__dirname, `content`, node.frontmatter.image)
+        .split(path.sep)
+        .join(`/`)
+
+      // Find ID of File node
+      const fileNode = getNodes().find(n => n.absolutePath === pathToFile)
+      node.imageFile___NODE = fileNode.id
+    }
   } else if (node.internal.type === `ImageSharp`) {
     const slug = createFilePath({ node, getNode, basePath: `content/images` })
     createNodeField({

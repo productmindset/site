@@ -3,6 +3,8 @@ import Helmet from 'react-helmet'
 
 import '../../content/styles/site.scss'
 
+require('@fortawesome/fontawesome-free-webfonts/css/fontawesome.css')
+require('@fortawesome/fontawesome-free-webfonts/css/fa-solid.css')
 require('typeface-roboto')
 require('typeface-roboto-condensed')
 interface DefaultLayoutProps {
@@ -18,12 +20,7 @@ const DefaultLayout: React.StatelessComponent<DefaultLayoutProps> = (props) => {
           { name: 'description', content: 'Join the Product Mindset Workshops' },
           { name: 'keywords', content: 'product, mindset, agile, software, development' },
         ]}
-        script={[
-          {
-            defer: true,
-            src: 'https://use.fontawesome.com/releases/v5.0.6/js/all.js',
-          },
-        ]}>
+      >
         <html lang="en" />
       </Helmet>
       {props.children()}

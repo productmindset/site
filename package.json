@@ -15,7 +15,7 @@
     "@types/react-dom": "16.0.4",
     "@types/react-helmet": "5.0.5",
     "bulma": "0.6.2",
-    "emotion": "9.1.0",
+    "emotion": "9.1.1",
     "emotion-server": "9.1.0",
     "gatsby": "1.9.243",
     "gatsby-image": "1.0.42",

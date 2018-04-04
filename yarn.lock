@@ -31,6 +31,10 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
+"@emotion/is-prop-valid@^0.5.2":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.5.2.tgz#4f47717c2bcce8759e11997520e6bcb14326f54a"
+
 "@types/cheerio@*":
   version "0.22.7"
   resolved "https://registry.yarnpkg.com/@types/cheerio/-/cheerio-0.22.7.tgz#4a92eafedfb2b9f4437d3a4410006d81114c66ce"
@@ -2725,10 +2729,11 @@ create-emotion-server@^9.1.1:
     multipipe "^1.0.2"
     through "^2.3.8"
 
-create-emotion-styled@^9.1.0:
-  version "9.1.0"
-  resolved "https://registry.yarnpkg.com/create-emotion-styled/-/create-emotion-styled-9.1.0.tgz#ad6ee63e9be342e9d6339e4e4ee758028e9b967f"
+create-emotion-styled@^9.1.1:
+  version "9.1.1"
+  resolved "https://registry.yarnpkg.com/create-emotion-styled/-/create-emotion-styled-9.1.1.tgz#872911dde3d38871703be632580becd05e636f10"
   dependencies:
+    "@emotion/is-prop-valid" "^0.5.2"
     emotion-utils "^9.1.0"
 
 create-emotion@^9.1.1:
@@ -10573,12 +10578,12 @@ react-dom@^15.6.0:
     object-assign "^4.1.0"
     prop-types "^15.5.10"
 
-react-emotion@9.1.0:
-  version "9.1.0"
-  resolved "https://registry.yarnpkg.com/react-emotion/-/react-emotion-9.1.0.tgz#6d12de5990510740d03e2cd9be3a681183316e38"
+react-emotion@9.1.1:
+  version "9.1.1"
+  resolved "https://registry.yarnpkg.com/react-emotion/-/react-emotion-9.1.1.tgz#0b92fc9f5e5984cf35c3abf3f4ef2430bb57f3d9"
   dependencies:
     babel-plugin-emotion "^9.1.0"
-    create-emotion-styled "^9.1.0"
+    create-emotion-styled "^9.1.1"
 
 react-error-overlay@^3.0.0:
   version "3.0.0"

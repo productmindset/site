@@ -97,7 +97,7 @@ const PageComponent: React.StatelessComponent<Page.PageTemplateLayoutProps> = (p
             </div>
           </div>
         </nav>
-        <div className="has-text-centered container hero-body">
+        <div className="has-text-centered container hero-body" style={{ paddingBottom: 0 }}>
           <p className="title">
             {props.data!.markdownRemark!.frontmatter!.heroTitle!}
           </p>

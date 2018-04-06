@@ -1,15 +1,11 @@
 import * as React from 'react'
-import * as ReactDOM from 'react-dom'
-import { Link } from 'react-router-dom'
 import VideoPlayer from 'react-player'
 
 import {
-  Box,
   Button,
   Modal,
   ModalBackground,
   ModalClose,
-  withHelpersModifiers
 } from 'bloomer'
 
 interface VideoModalProps {
@@ -22,7 +18,7 @@ const LearnMoreModal = (props: VideoModalProps) => (
     <ModalBackground onClick={props.launchModal}>
       <VideoPlayer height="100%" width="100%" url="https://vimeo.com/223643114" playing={props.isActive} />
     </ModalBackground>
-  <ModalClose onClick={props.launchModal} />
+    <ModalClose onClick={props.launchModal} />
   </Modal >
 )
 
@@ -39,7 +35,7 @@ export class LearnMoreVideo extends React.Component<{}, { isActive: boolean, isA
     return (
       <div>
         <Button onClick={this.launchModal} isColor="info">
-        <span className="fas fa-play-circle fa-fw"></span>
+          <span className="fas fa-play-circle fa-fw"></span>
           Learn More
         </Button>
         <LearnMoreModal isActive={this.state.isActive} launchModal={this.launchModal} />

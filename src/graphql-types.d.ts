@@ -269,8 +269,8 @@ export interface File extends Node {
   id: string /* The id of this node. */;
   parent?: Node | null /* The parent of this node. */;
   children?: Node[] | null /* The children of this node. */;
-  childImageSharp?: ImageSharp | null /* The child of this node of type imageSharp */;
   childMarkdownRemark?: MarkdownRemark | null /* The child of this node of type markdownRemark */;
+  childImageSharp?: ImageSharp | null /* The child of this node of type imageSharp */;
   internal?: internal_11 | null;
   sourceInstanceName?: string | null;
   absolutePath?: string | null;
@@ -309,24 +309,29 @@ export interface File extends Node {
     | string
     | null /* Copy file to static directory and return public url to it */;
 }
-/* Node of type ImageSharp */
-export interface ImageSharp extends Node {
+/* Node of type MarkdownRemark */
+export interface MarkdownRemark extends Node {
   id: string /* The id of this node. */;
   parent?: Node | null /* The parent of this node. */;
   children?: Node[] | null /* The children of this node. */;
   internal?: internal_12 | null;
+  frontmatter?: frontmatter_2 | null;
+  excerpt?: string | null;
+  fileAbsolutePath?: string | null;
   fields?: fields_3 | null;
-  original?: ImageSharpOriginal | null;
-  resolutions?: ImageSharpResolutions | null;
-  sizes?: ImageSharpSizes | null;
-  responsiveResolution?: ImageSharpResponsiveResolution | null;
-  responsiveSizes?: ImageSharpResponsiveSizes | null;
-  resize?: ImageSharpResize | null;
+  imageFile?: File | null;
+  html?: string | null;
+  htmlAst?: JSON | null;
+  headings?: MarkdownHeading[] | null;
+  timeToRead?: number | null;
+  tableOfContents?: string | null;
+  wordCount?: wordCount | null;
 }
 
 export interface internal_12 {
-  contentDigest?: string | null;
+  content?: string | null;
   type?: string | null;
+  contentDigest?: string | null;
   owner?: string | null;
   fieldOwners?: fieldOwners_3 | null;
 }
@@ -335,7 +340,72 @@ export interface fieldOwners_3 {
   slug?: string | null;
 }
 
+export interface frontmatter_2 {
+  title?: string | null;
+  isPage?: boolean | null;
+  path?: string | null;
+  templateKey?: string | null;
+  heroTitle?: string | null;
+  heroSubtitle?: string | null;
+  heroIsVideo?: boolean | null;
+  _PARENT?: string | null;
+  parent?: string | null;
+  heroImage?: string | null;
+  type?: string | null;
+  sortOrder?: number | null;
+  active?: boolean | null;
+  fullName?: string | null;
+  jobTitle?: string | null;
+  company?: string | null;
+  description?: string | null;
+  image?: string | null;
+  fullTitle?: string | null;
+  time?: string | null;
+  heroVideo?: string | null;
+  includeLearnMore?: boolean | null;
+}
+
 export interface fields_3 {
+  slug?: string | null;
+}
+
+export interface MarkdownHeading {
+  value?: string | null;
+  depth?: number | null;
+}
+
+export interface wordCount {
+  paragraphs?: number | null;
+  sentences?: number | null;
+  words?: number | null;
+}
+/* Node of type ImageSharp */
+export interface ImageSharp extends Node {
+  id: string /* The id of this node. */;
+  parent?: Node | null /* The parent of this node. */;
+  children?: Node[] | null /* The children of this node. */;
+  internal?: internal_13 | null;
+  fields?: fields_4 | null;
+  original?: ImageSharpOriginal | null;
+  resolutions?: ImageSharpResolutions | null;
+  sizes?: ImageSharpSizes | null;
+  responsiveResolution?: ImageSharpResponsiveResolution | null;
+  responsiveSizes?: ImageSharpResponsiveSizes | null;
+  resize?: ImageSharpResize | null;
+}
+
+export interface internal_13 {
+  contentDigest?: string | null;
+  type?: string | null;
+  owner?: string | null;
+  fieldOwners?: fieldOwners_4 | null;
+}
+
+export interface fieldOwners_4 {
+  slug?: string | null;
+}
+
+export interface fields_4 {
   slug?: string | null;
 }
 
@@ -398,76 +468,6 @@ export interface ImageSharpResize {
   height?: number | null;
   aspectRatio?: number | null;
   originalName?: string | null;
-}
-/* Node of type MarkdownRemark */
-export interface MarkdownRemark extends Node {
-  id: string /* The id of this node. */;
-  parent?: Node | null /* The parent of this node. */;
-  children?: Node[] | null /* The children of this node. */;
-  internal?: internal_13 | null;
-  frontmatter?: frontmatter_2 | null;
-  excerpt?: string | null;
-  fileAbsolutePath?: string | null;
-  fields?: fields_4 | null;
-  imageFile?: File | null;
-  html?: string | null;
-  htmlAst?: JSON | null;
-  headings?: MarkdownHeading[] | null;
-  timeToRead?: number | null;
-  tableOfContents?: string | null;
-  wordCount?: wordCount | null;
-}
-
-export interface internal_13 {
-  content?: string | null;
-  type?: string | null;
-  contentDigest?: string | null;
-  owner?: string | null;
-  fieldOwners?: fieldOwners_4 | null;
-}
-
-export interface fieldOwners_4 {
-  slug?: string | null;
-}
-
-export interface frontmatter_2 {
-  title?: string | null;
-  isPage?: boolean | null;
-  path?: string | null;
-  templateKey?: string | null;
-  heroTitle?: string | null;
-  heroSubtitle?: string | null;
-  heroIsVideo?: boolean | null;
-  _PARENT?: string | null;
-  parent?: string | null;
-  heroImage?: string | null;
-  heroVideo?: string | null;
-  type?: string | null;
-  sortOrder?: number | null;
-  active?: boolean | null;
-  fullName?: string | null;
-  jobTitle?: string | null;
-  company?: string | null;
-  description?: string | null;
-  image?: string | null;
-  fullTitle?: string | null;
-  time?: string | null;
-  isTest?: boolean | null;
-}
-
-export interface fields_4 {
-  slug?: string | null;
-}
-
-export interface MarkdownHeading {
-  value?: string | null;
-  depth?: number | null;
-}
-
-export interface wordCount {
-  paragraphs?: number | null;
-  sentences?: number | null;
-  words?: number | null;
 }
 
 export interface internal_11 {
@@ -2330,7 +2330,6 @@ export interface markdownRemarkConnectionFrontmatterInputObject_2 {
   _PARENT?: markdownRemarkConnectionFrontmatterParentQueryString_3 | null;
   parent?: markdownRemarkConnectionFrontmatterParentQueryString_4 | null;
   heroImage?: markdownRemarkConnectionFrontmatterHeroImageQueryString_2 | null;
-  heroVideo?: markdownRemarkConnectionFrontmatterHeroVideoQueryString_2 | null;
   type?: markdownRemarkConnectionFrontmatterTypeQueryString_2 | null;
   sortOrder?: markdownRemarkConnectionFrontmatterSortOrderQueryInteger_2 | null;
   active?: markdownRemarkConnectionFrontmatterActiveQueryBoolean_2 | null;
@@ -2341,7 +2340,8 @@ export interface markdownRemarkConnectionFrontmatterInputObject_2 {
   image?: markdownRemarkConnectionFrontmatterImageQueryString_2 | null;
   fullTitle?: markdownRemarkConnectionFrontmatterFullTitleQueryString_2 | null;
   time?: markdownRemarkConnectionFrontmatterTimeQueryString_2 | null;
-  isTest?: markdownRemarkConnectionFrontmatterIsTestQueryBoolean_2 | null;
+  heroVideo?: markdownRemarkConnectionFrontmatterHeroVideoQueryString_2 | null;
+  includeLearnMore?: markdownRemarkConnectionFrontmatterIncludeLearnMoreQueryBoolean_2 | null;
 }
 
 export interface markdownRemarkConnectionFrontmatterTitleQueryString_2 {
@@ -2404,13 +2404,6 @@ export interface markdownRemarkConnectionFrontmatterParentQueryString_4 {
 }
 
 export interface markdownRemarkConnectionFrontmatterHeroImageQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface markdownRemarkConnectionFrontmatterHeroVideoQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -2483,7 +2476,14 @@ export interface markdownRemarkConnectionFrontmatterTimeQueryString_2 {
   glob?: string | null;
 }
 
-export interface markdownRemarkConnectionFrontmatterIsTestQueryBoolean_2 {
+export interface markdownRemarkConnectionFrontmatterHeroVideoQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionFrontmatterIncludeLearnMoreQueryBoolean_2 {
   eq?: boolean | null;
   ne?: boolean | null;
 }
@@ -4534,7 +4534,6 @@ export interface markdownRemarkFrontmatterInputObject_2 {
   _PARENT?: markdownRemarkFrontmatterParentQueryString_3 | null;
   parent?: markdownRemarkFrontmatterParentQueryString_4 | null;
   heroImage?: markdownRemarkFrontmatterHeroImageQueryString_2 | null;
-  heroVideo?: markdownRemarkFrontmatterHeroVideoQueryString_2 | null;
   type?: markdownRemarkFrontmatterTypeQueryString_2 | null;
   sortOrder?: markdownRemarkFrontmatterSortOrderQueryInteger_2 | null;
   active?: markdownRemarkFrontmatterActiveQueryBoolean_2 | null;
@@ -4545,7 +4544,8 @@ export interface markdownRemarkFrontmatterInputObject_2 {
   image?: markdownRemarkFrontmatterImageQueryString_2 | null;
   fullTitle?: markdownRemarkFrontmatterFullTitleQueryString_2 | null;
   time?: markdownRemarkFrontmatterTimeQueryString_2 | null;
-  isTest?: markdownRemarkFrontmatterIsTestQueryBoolean_2 | null;
+  heroVideo?: markdownRemarkFrontmatterHeroVideoQueryString_2 | null;
+  includeLearnMore?: markdownRemarkFrontmatterIncludeLearnMoreQueryBoolean_2 | null;
 }
 
 export interface markdownRemarkFrontmatterTitleQueryString_2 {
@@ -4608,13 +4608,6 @@ export interface markdownRemarkFrontmatterParentQueryString_4 {
 }
 
 export interface markdownRemarkFrontmatterHeroImageQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface markdownRemarkFrontmatterHeroVideoQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -4687,7 +4680,14 @@ export interface markdownRemarkFrontmatterTimeQueryString_2 {
   glob?: string | null;
 }
 
-export interface markdownRemarkFrontmatterIsTestQueryBoolean_2 {
+export interface markdownRemarkFrontmatterHeroVideoQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkFrontmatterIncludeLearnMoreQueryBoolean_2 {
   eq?: boolean | null;
   ne?: boolean | null;
 }
@@ -5508,6 +5508,12 @@ export interface BirthtimeFileArgs {
     | string
     | null /* Configures the locale Moment.js will use to format the date. */;
 }
+export interface ExcerptMarkdownRemarkArgs {
+  pruneLength?: number | null;
+}
+export interface HeadingsMarkdownRemarkArgs {
+  depth?: HeadingLevels | null;
+}
 export interface ResolutionsImageSharpArgs {
   width?: number | null;
   height?: number | null;
@@ -5567,12 +5573,6 @@ export interface ResizeImageSharpArgs {
   toFormat?: ImageFormat | null;
   cropFocus?: ImageCropFocus | null;
   rotate?: number | null;
-}
-export interface ExcerptMarkdownRemarkArgs {
-  pruneLength?: number | null;
-}
-export interface HeadingsMarkdownRemarkArgs {
-  depth?: HeadingLevels | null;
 }
 export interface DistinctImageSharpConnectionArgs {
   field?: imageSharpDistinctEnum | null;
@@ -5960,6 +5960,15 @@ export enum fileConnectionSortOrderValues {
   DESC = "DESC"
 }
 
+export enum HeadingLevels {
+  h1 = "h1",
+  h2 = "h2",
+  h3 = "h3",
+  h4 = "h4",
+  h5 = "h5",
+  h6 = "h6"
+}
+
 export enum PotraceTurnPolicy {
   TURNPOLICY_BLACK = "TURNPOLICY_BLACK",
   TURNPOLICY_WHITE = "TURNPOLICY_WHITE",
@@ -5988,15 +5997,6 @@ export enum ImageCropFocus {
   NORTHWEST = "NORTHWEST",
   ENTROPY = "ENTROPY",
   ATTENTION = "ATTENTION"
-}
-
-export enum HeadingLevels {
-  h1 = "h1",
-  h2 = "h2",
-  h3 = "h3",
-  h4 = "h4",
-  h5 = "h5",
-  h6 = "h6"
 }
 
 export enum fileDistinctEnum {
@@ -6183,7 +6183,6 @@ export enum MarkdownRemarkConnectionSortByFieldsEnum {
   frontmatter____PARENT = "frontmatter____PARENT",
   frontmatter___parent = "frontmatter___parent",
   frontmatter___heroImage = "frontmatter___heroImage",
-  frontmatter___heroVideo = "frontmatter___heroVideo",
   frontmatter___type = "frontmatter___type",
   frontmatter___sortOrder = "frontmatter___sortOrder",
   frontmatter___active = "frontmatter___active",
@@ -6194,7 +6193,8 @@ export enum MarkdownRemarkConnectionSortByFieldsEnum {
   frontmatter___image = "frontmatter___image",
   frontmatter___fullTitle = "frontmatter___fullTitle",
   frontmatter___time = "frontmatter___time",
-  frontmatter___isTest = "frontmatter___isTest",
+  frontmatter___heroVideo = "frontmatter___heroVideo",
+  frontmatter___includeLearnMore = "frontmatter___includeLearnMore",
   excerpt = "excerpt",
   fileAbsolutePath = "fileAbsolutePath",
   fields___slug = "fields___slug",
@@ -6231,7 +6231,6 @@ export enum markdownRemarkDistinctEnum {
   frontmatter____PARENT = "frontmatter____PARENT",
   frontmatter___parent = "frontmatter___parent",
   frontmatter___heroImage = "frontmatter___heroImage",
-  frontmatter___heroVideo = "frontmatter___heroVideo",
   frontmatter___type = "frontmatter___type",
   frontmatter___sortOrder = "frontmatter___sortOrder",
   frontmatter___active = "frontmatter___active",
@@ -6242,7 +6241,8 @@ export enum markdownRemarkDistinctEnum {
   frontmatter___image = "frontmatter___image",
   frontmatter___fullTitle = "frontmatter___fullTitle",
   frontmatter___time = "frontmatter___time",
-  frontmatter___isTest = "frontmatter___isTest",
+  frontmatter___heroVideo = "frontmatter___heroVideo",
+  frontmatter___includeLearnMore = "frontmatter___includeLearnMore",
   excerpt = "excerpt",
   fileAbsolutePath = "fileAbsolutePath",
   fields___slug = "fields___slug",
@@ -6267,7 +6267,6 @@ export enum markdownRemarkGroupEnum {
   frontmatter____PARENT = "frontmatter____PARENT",
   frontmatter___parent = "frontmatter___parent",
   frontmatter___heroImage = "frontmatter___heroImage",
-  frontmatter___heroVideo = "frontmatter___heroVideo",
   frontmatter___type = "frontmatter___type",
   frontmatter___sortOrder = "frontmatter___sortOrder",
   frontmatter___active = "frontmatter___active",
@@ -6278,7 +6277,8 @@ export enum markdownRemarkGroupEnum {
   frontmatter___image = "frontmatter___image",
   frontmatter___fullTitle = "frontmatter___fullTitle",
   frontmatter___time = "frontmatter___time",
-  frontmatter___isTest = "frontmatter___isTest",
+  frontmatter___heroVideo = "frontmatter___heroVideo",
+  frontmatter___includeLearnMore = "frontmatter___includeLearnMore",
   excerpt = "excerpt",
   fileAbsolutePath = "fileAbsolutePath",
   fields___slug = "fields___slug",

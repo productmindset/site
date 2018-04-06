@@ -7,6 +7,7 @@ heroTitle: LEARN HOW TO BUILD THE PRODUCT YOUR CUSTOMERS REALLY WANT
 heroSubtitle: Join the Product Mindset Workshops and help your team understand customers, get the right features to market quickly, and grow your company
 heroIsVideo: true
 heroVideo: landing_video.mp4
+includeLearnMore: true
 ---
 ### WHAT IS THE PRODUCT MINDSET
 

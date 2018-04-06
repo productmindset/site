@@ -17,6 +17,7 @@ collections:
     fields:
       - { name: isPage, label: Is Page, default: true, widget: hidden}
       - { name: templateKey, label: Template Key, default: page, widget: hidden}
+      - { name: includeLearnMore, label: Include Learn More Call to Action, default: false, widget: boolean}
       - { name: path, label: Path, widget: string, required: false}
       - { name: title, label: Title, widget: string }
       - { name: heroTitle, label: Hero Title, widget: string }

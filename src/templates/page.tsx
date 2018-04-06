@@ -39,6 +39,7 @@ export const PageQueryFragment = graphql`
         heroTitle
         heroSubtitle
         templateKey
+        includeLearnMore
       }
     }
   }

@@ -4,6 +4,7 @@ import Img from 'gatsby-image'
 import { MarkdownRemark, ImageSharp } from '../graphql-types'
 import * as Page from '../templates/page'
 import NavigationLinkComponent from './NavigationLinkComponent'
+import { LearnMoreVideo } from './LearnMoreVideo'
 
 const logo = require('../../content/images/included/logo.png')
 const landingVideo = require('../../content/media/landing_video.mp4')
@@ -21,7 +22,7 @@ const heroVideoStyle = {
 }
 
 const navIndex = {
-  zIndex: 99,
+  zIndex: 1,
 }
 
 const navigationMenuLinks = [
@@ -96,13 +97,16 @@ const PageComponent: React.StatelessComponent<Page.PageTemplateLayoutProps> = (p
             </div>
           </div>
         </nav>
-        <div className="container hero-body">
+        <div className="has-text-centered container hero-body" style={{ paddingBottom: 0 }}>
           <p className="title">
             {props.data!.markdownRemark!.frontmatter!.heroTitle!}
           </p>
           <p className="subtitle">
             {props.data!.markdownRemark!.frontmatter!.heroSubtitle!}
           </p>
+          {props.data!.markdownRemark!.frontmatter!.includeLearnMore && (
+            <LearnMoreVideo />
+          )}
         </div>
       </div>
       <div className="container section content"

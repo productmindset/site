@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:latest@sha256:8c909b496d13837354db2855e7fd8563599eb091304bdb7bdbfde0420621fe2f
+      - image: circleci/node:latest@sha256:ea3c1593ac982f88fb9f56a12a897f3cbf589ed35f6d53df455adbaebdb17365
     filters:
       branches:
         only: master

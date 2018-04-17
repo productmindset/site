@@ -35,9 +35,11 @@
   version "0.6.2"
   resolved "https://registry.yarnpkg.com/@emotion/hash/-/hash-0.6.2.tgz#4cfe6b57e251aa7f254750ddac7c449ff99c476f"
 
-"@emotion/is-prop-valid@^0.5.2":
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.5.2.tgz#4f47717c2bcce8759e11997520e6bcb14326f54a"
+"@emotion/is-prop-valid@^0.6.1":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.6.1.tgz#98a255ac341064ddcf0d84f823b45ae9fb228f91"
+  dependencies:
+    "@emotion/memoize" "^0.6.1"
 
 "@emotion/memoize@^0.6.1":
   version "0.6.1"
@@ -857,20 +859,6 @@ babel-plugin-check-es2015-constants@^6.22.0, babel-plugin-check-es2015-constants
   resolved "https://registry.yarnpkg.com/babel-plugin-check-es2015-constants/-/babel-plugin-check-es2015-constants-6.22.0.tgz#35157b101426fd2ffd3da3f75c7d1e91835bbf8a"
   dependencies:
     babel-runtime "^6.22.0"
-
-babel-plugin-emotion@^9.1.0:
-  version "9.1.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-emotion/-/babel-plugin-emotion-9.1.0.tgz#d0b7598168980f4fbc7b72fd86c49904b613fe79"
-  dependencies:
-    "@babel/helper-module-imports" "7.0.0-beta.32"
-    babel-plugin-macros "^2.0.0"
-    babel-plugin-syntax-jsx "^6.18.0"
-    convert-source-map "^1.5.0"
-    emotion-utils "^9.1.0"
-    find-root "^1.1.0"
-    mkdirp "^0.5.1"
-    source-map "^0.5.7"
-    touch "^1.0.0"
 
 babel-plugin-emotion@^9.1.2:
   version "9.1.2"
@@ -2783,12 +2771,11 @@ create-emotion-server@^9.1.2:
     multipipe "^1.0.2"
     through "^2.3.8"
 
-create-emotion-styled@^9.1.1:
-  version "9.1.1"
-  resolved "https://registry.yarnpkg.com/create-emotion-styled/-/create-emotion-styled-9.1.1.tgz#872911dde3d38871703be632580becd05e636f10"
+create-emotion-styled@^9.1.2:
+  version "9.1.2"
+  resolved "https://registry.yarnpkg.com/create-emotion-styled/-/create-emotion-styled-9.1.2.tgz#1528d9ff5ecc7e3abdf9986510a85ad2a9d73648"
   dependencies:
-    "@emotion/is-prop-valid" "^0.5.2"
-    emotion-utils "^9.1.0"
+    "@emotion/is-prop-valid" "^0.6.1"
 
 create-emotion@^9.1.2:
   version "9.1.2"
@@ -3621,10 +3608,6 @@ emotion-server@9.1.2:
   resolved "https://registry.yarnpkg.com/emotion-server/-/emotion-server-9.1.2.tgz#5ad85f9e98a44d058688ad920cabe89963f8fc6d"
   dependencies:
     create-emotion-server "^9.1.2"
-
-emotion-utils@^9.1.0:
-  version "9.1.0"
-  resolved "https://registry.yarnpkg.com/emotion-utils/-/emotion-utils-9.1.0.tgz#7484dbf18f3b1dc1de68559d1ff35a74caa998dc"
 
 emotion@9.1.2:
   version "9.1.2"
@@ -10696,12 +10679,12 @@ react-dom@^16.0.0:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
-react-emotion@9.1.1:
-  version "9.1.1"
-  resolved "https://registry.yarnpkg.com/react-emotion/-/react-emotion-9.1.1.tgz#0b92fc9f5e5984cf35c3abf3f4ef2430bb57f3d9"
+react-emotion@9.1.2:
+  version "9.1.2"
+  resolved "https://registry.yarnpkg.com/react-emotion/-/react-emotion-9.1.2.tgz#fca18bcb827809de2a5d73fb996b717ed4fada02"
   dependencies:
-    babel-plugin-emotion "^9.1.0"
-    create-emotion-styled "^9.1.1"
+    babel-plugin-emotion "^9.1.2"
+    create-emotion-styled "^9.1.2"
 
 react-error-overlay@^3.0.0:
   version "3.0.0"

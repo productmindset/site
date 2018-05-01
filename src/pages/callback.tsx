@@ -6,7 +6,7 @@ class Callback extends React.Component {
     const auth = new UserAuth()
     auth.handleAuthentication()
     return (
-      <div>Loading...</div>
+      <div>Loading....</div>
     )
   }
 }

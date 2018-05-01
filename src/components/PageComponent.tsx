@@ -4,6 +4,7 @@ import Img from 'gatsby-image'
 import { MarkdownRemark, ImageSharp } from '../graphql-types'
 import * as Page from '../templates/page'
 import NavigationLinkComponent from './NavigationLinkComponent'
+import UserLogin from './UserLogin'
 import { LearnMoreVideo } from './LearnMoreVideo'
 
 const logo = require('../../content/images/included/logo.png')
@@ -47,7 +48,7 @@ const navigationMenuLinks = [
 const PageComponent: React.StatelessComponent<Page.PageTemplateLayoutProps> = (props) => {
   return (
     <div>
-      <div className="hero is-primary is-medium" style={heroHeightStyle}>
+      <div className="hero is-transparent is-medium" style={heroHeightStyle}>
         <div className="hero-video is-transparent" style={heroHeightStyle}>
           {props.data!.markdownRemark!.frontmatter!.heroIsVideo && (
             <video className="is-transparent" playsInline autoPlay muted loop style={heroVideoStyle}>
@@ -93,11 +94,12 @@ const PageComponent: React.StatelessComponent<Page.PageTemplateLayoutProps> = (p
                     isActive={props.pathContext.pagePath === navigationLink.to}
                   />
                 ))}
+                <UserLogin/>
               </div>
             </div>
           </div>
         </nav>
-        <div className="has-text-centered container hero-body" style={{ paddingBottom: 0 }}>
+        <div className="container hero-body" style={{ paddingBottom: 0 }}>
           <p className="title">
             {props.data!.markdownRemark!.frontmatter!.heroTitle!}
           </p>

@@ -5,18 +5,18 @@
  */
 
 const path = require(`path`)
+const webpack = require(`webpack`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.modifyWebpackConfig = ({ config, stage }) => {
   switch (stage) {
-    case "build-html":
-      config.plugin('define', webpack.DefinePlugin, [ { "global.GENTLY": false } ]);
-
-        break;
+    case `build-html`:
+      config.plugin(`define`, webpack.DefinePlugin, [ { "global.GENTLY": false } ])
+      break
   }
 
-  return config;
-};
+  return config
+}
 
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators

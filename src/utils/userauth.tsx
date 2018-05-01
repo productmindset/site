@@ -30,16 +30,20 @@ export default class UserAuth {
   }
 
   handleAuthentication() {
-    this.auth0.parseHash((err, authResult) => {
-      if (authResult && authResult.accessToken && authResult.idToken) {
-        this.setSession(authResult)
-      } else if (err) {
-        console.log(err)
-      }
+    // this check is to prevent running at build time under node
+    // tslint:disable-next-line:strict-type-predicates
+    if (typeof window !== 'undefined') {
+      this.auth0.parseHash((err, authResult) => {
+        if (authResult && authResult.accessToken && authResult.idToken) {
+          this.setSession(authResult)
+        } else if (err) {
+          console.log(err)
+        }
 
-      // Return to the homepage after authentication.
-      navigateTo('/')
-    })
+        // Return to the homepage after authentication.
+        navigateTo('/')
+      })
+    }
   }
 
   isAuthenticated() {

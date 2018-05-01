@@ -1,6 +1,7 @@
 language: node_js
 node_js:
   - "lts/*"
+cache: yarn
 install:
   - npm install -g codecov
   - yarn install
@@ -9,3 +10,4 @@ script:
   - yarn lint
   - yarn test
   - codecov
+

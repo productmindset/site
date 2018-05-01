@@ -3,6 +3,7 @@ node_js:
   - "lts/*"
 install:
   - npm install -g codecov
+  - yarn install
 script:
   - yarn build
   - yarn lint

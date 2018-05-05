@@ -69,11 +69,12 @@
   dependencies:
     "@fortawesome/fontawesome-common-types" "^0.1.6"
 
-"@fortawesome/react-fontawesome@0.0.18":
-  version "0.0.18"
-  resolved "https://registry.yarnpkg.com/@fortawesome/react-fontawesome/-/react-fontawesome-0.0.18.tgz#4e0eb1cf9797715a67bb7705ae084fa0a410f185"
+"@fortawesome/react-fontawesome@0.0.19":
+  version "0.0.19"
+  resolved "https://registry.yarnpkg.com/@fortawesome/react-fontawesome/-/react-fontawesome-0.0.19.tgz#9c90c1aac0984687fffbea44aa4ad817c6f4356e"
   dependencies:
     humps "^2.0.1"
+    prop-types "^15.5.7"
 
 "@types/cheerio@*":
   version "0.22.7"

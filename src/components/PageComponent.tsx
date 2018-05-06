@@ -6,7 +6,7 @@ import * as Page from '../templates/page'
 import NavigationLinkComponent from './NavigationLinkComponent'
 import UserLogin from './UserLogin'
 import { LearnMoreVideo } from './LearnMoreVideo'
-import { Columns, Column, Container, Level, LevelLeft, LevelRight, Section } from 'bloomer'
+import { Columns, Column, Container, Section } from 'bloomer'
 
 const logo = require('../../content/images/included/logo.png')
 const landingVideo = require('../../content/media/landing_video.mp4')

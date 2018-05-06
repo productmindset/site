@@ -69,11 +69,12 @@
   dependencies:
     "@fortawesome/fontawesome-common-types" "^0.1.6"
 
-"@fortawesome/react-fontawesome@0.0.18":
-  version "0.0.18"
-  resolved "https://registry.yarnpkg.com/@fortawesome/react-fontawesome/-/react-fontawesome-0.0.18.tgz#4e0eb1cf9797715a67bb7705ae084fa0a410f185"
+"@fortawesome/react-fontawesome@0.0.19":
+  version "0.0.19"
+  resolved "https://registry.yarnpkg.com/@fortawesome/react-fontawesome/-/react-fontawesome-0.0.19.tgz#9c90c1aac0984687fffbea44aa4ad817c6f4356e"
   dependencies:
     humps "^2.0.1"
+    prop-types "^15.5.7"
 
 "@types/auth0-js@8.11.2":
   version "8.11.2"
@@ -142,9 +143,9 @@
   version "9.6.2"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-9.6.2.tgz#e49ac1adb458835e95ca6487bc20f916b37aff23"
 
-"@types/node@8.10.11":
-  version "8.10.11"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.10.11.tgz#971ea8cb91adbe0b74e3fbd867dec192d5893a5f"
+"@types/node@8.10.12":
+  version "8.10.12"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.10.12.tgz#dcb66f6de39074a296534bd1a256a3c6a1c8f5b5"
 
 "@types/node@^7.0.11":
   version "7.0.59"

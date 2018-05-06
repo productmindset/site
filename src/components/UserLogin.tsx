@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Control, Button, NavbarItem } from 'bloomer'
 import UserAuth from '../utils/userauth'
 
 const auth = new UserAuth()
@@ -35,31 +36,30 @@ export default class UserLogin extends React.Component {
 
   render() {
     return (
-      <div className="navbar-item">
-        {
-          !this.state.authenticated && (
-              <a className="navbar-item" href="#"
+      <NavbarItem>
+        <Control>
+        <Button isColor="info">
+          {
+            !this.state.authenticated && (
+              <a href="#"
                 onClick={this.userlogin.bind(this)}
               >
-                LOG IN
+                JOIN US
                 </a>
-          )
-        }
-        {
-          this.state.authenticated && (
-              <a className="navbar-item" href="#"
+            )
+          }
+          {
+            this.state.authenticated && (
+              <a href="#"
                 onClick={this.userlogout.bind(this)}
               >
                 LOG OUT
-                  {
-                  auth.getUserName() && (
-                    <span> ({auth.getUserName()})</span>
-                  )
-                }
               </a>
-          )
-        }
-      </div>
+            )
+          }
+        </Button>
+        </Control>
+      </NavbarItem>
     )
   }
 }

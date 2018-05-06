@@ -6,7 +6,7 @@ export default class UserAuth {
     audience: 'https://product-mindset.auth0.com/api/v2/',
     clientID: 'dQyBO6WzKfWj9PEEq8LZNIjeJvpRmXau',
     domain: 'product-mindset.auth0.com',
-    redirectUri: 'http://localhost:8000/callback',
+    redirectUri: 'https://product-mindset.netlify.com/callback',
     responseType: 'token id_token',
     scope: 'openid profile email',
   })

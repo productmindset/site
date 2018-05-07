@@ -50,6 +50,6 @@ module.exports = {
         // if false, then don't forget to manually add it to your codebase manually!
         trackPage: true
       }
-    },
+    }
   ]
 }

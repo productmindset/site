@@ -35,20 +35,20 @@ module.exports = {
     {
       resolve: `gatsby-plugin-segment-js`,
       options: {
-          // your segment write key for your production environment
-          // when process.env.NODE_ENV === 'production'
-          // required; non-empty string
-          prodKey: `w7UUvSNSMjO6PEWIwMSDDUdWaEAKIWok`,
+        // your segment write key for your production environment
+        // when process.env.NODE_ENV === 'production'
+        // required; non-empty string
+        prodKey: `w7UUvSNSMjO6PEWIwMSDDUdWaEAKIWok`,
 
-          // if you have a development env for your segment account, paste that key here
-          // when process.env.NODE_ENV === 'development'
-          // optional; non-empty string
-          devKey: `pYHBLk0Cnzt02FS3keymuYeqSx22iGRR`,
+        // if you have a development env for your segment account, paste that key here
+        // when process.env.NODE_ENV === 'development'
+        // optional; non-empty string
+        devKey: `pYHBLk0Cnzt02FS3keymuYeqSx22iGRR`,
 
-          // whether you want to include analytics.page()
-          // optional; boolean that defaults to true
-          // if false, then don't forget to manually add it to your codebase manually!
-          trackPage: true
+        // whether you want to include analytics.page()
+        // optional; boolean that defaults to true
+        // if false, then don't forget to manually add it to your codebase manually!
+        trackPage: true
       }
     },
   ]

@@ -2,7 +2,5 @@
   "extends": [
     "config:base",
     "docker:disable"
-  ],
-  "prConcurrentLimit": 3,
-  "schedule": ["after 11pm and before 5am on every weekday", "every weekend"]
+  ]
 }

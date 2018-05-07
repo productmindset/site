@@ -31,7 +31,7 @@ $orange: $color-orange;
 $primary: $color-blue-shadowed;
 $info: $orange;
 
-$body-background-color: #ffffff;
+$body-background-color: $color-white;
 
 @import '~bulma';
 
@@ -63,7 +63,7 @@ $body-background-color: #ffffff;
 }
 
 .content {
-  background-color: #ffffff;
+  background-color: $color-white;
 }
 
 .is-active {

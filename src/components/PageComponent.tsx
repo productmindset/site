@@ -13,10 +13,10 @@ const landingVideo = require('../../content/media/landing_video.mp4')
 
 const heroVideoStyle = {
   borderRadius: '50%',
-  height: '250px',
+  height: '480px',
   objectFit: 'cover',
   objectPosition: 'center top',
-  width: '250px',
+  width: '480px',
 }
 
 const navIndex = {
@@ -95,7 +95,8 @@ const PageComponent: React.StatelessComponent<Page.PageTemplateLayoutProps> = (p
               <LearnMoreVideo />
             )}
           </Column>
-          <Column isSize="1/3" isHidden="mobile">
+          <Column isHidden="mobile">
+            <div style={heroVideoStyle}>
             {props.data!.markdownRemark!.frontmatter!.heroIsVideo && (
               <video style={heroVideoStyle} className="is-transparent" playsInline autoPlay muted loop>
                 <source src={landingVideo} type="video/mp4" />
@@ -108,6 +109,7 @@ const PageComponent: React.StatelessComponent<Page.PageTemplateLayoutProps> = (p
                 sizes={props.data!.imageSharp!.sizes!}
               />
             )}
+            </div>
           </Column>
         </Columns>
         </Container>

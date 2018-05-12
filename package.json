@@ -12,7 +12,7 @@
   "dependencies": {
     "@fortawesome/fontawesome": "1.1.8",
     "@fortawesome/fontawesome-common-types": "0.1.7",
-    "@fortawesome/fontawesome-free-solid": "5.0.12",
+    "@fortawesome/fontawesome-free-solid": "5.0.13",
     "@fortawesome/react-fontawesome": "0.0.19",
     "auth0-js": "9.5.1",
     "bloomer": "0.6.3",

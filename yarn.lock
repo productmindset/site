@@ -69,9 +69,9 @@
   dependencies:
     "@fortawesome/fontawesome-common-types" "^0.1.7"
 
-"@fortawesome/react-fontawesome@0.0.19":
-  version "0.0.19"
-  resolved "https://registry.yarnpkg.com/@fortawesome/react-fontawesome/-/react-fontawesome-0.0.19.tgz#9c90c1aac0984687fffbea44aa4ad817c6f4356e"
+"@fortawesome/react-fontawesome@0.0.20":
+  version "0.0.20"
+  resolved "https://registry.yarnpkg.com/@fortawesome/react-fontawesome/-/react-fontawesome-0.0.20.tgz#5ec711f3a032c13643e454b360112b6346a276d6"
   dependencies:
     humps "^2.0.1"
     prop-types "^15.5.7"

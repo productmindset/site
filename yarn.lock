@@ -8730,9 +8730,9 @@ negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
 
-netlify-cms@1.8.2:
-  version "1.8.2"
-  resolved "https://registry.yarnpkg.com/netlify-cms/-/netlify-cms-1.8.2.tgz#0e0da79293bf0a4c10d9968f2ec27631078bce07"
+netlify-cms@1.8.4:
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/netlify-cms/-/netlify-cms-1.8.4.tgz#8386a3aa2df6823fbc7860957c980e66870474f3"
   dependencies:
     classnames "^2.2.5"
     create-react-class "^15.6.0"

@@ -112,7 +112,7 @@
     "jest": "23.0.1",
     "jest-cli": "23.0.1",
     "jest-junit": "4.0.0",
-    "npm": "6.0.1",
+    "npm": "6.1.0",
     "prettier": "1.13.0",
     "react-player": "1.6.2",
     "react-test-renderer": "16.4.0",

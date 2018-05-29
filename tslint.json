@@ -8,9 +8,10 @@
     ],
     "jsRules": {},
     "rules": {
+        "no-unused-variable": [false],
         "no-submodule-imports": [false],
         "no-implicit-dependencies": [false],
-        "quotemark": [true, "single", "avoid-escape", "jsx-double"],        
+        "quotemark": [true, "single", "avoid-escape", "jsx-double"],
         "semicolon": [true, "never"],
         "space-before-function-paren": [true, "never"],
         "trailing-comma": [

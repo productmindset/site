@@ -76,7 +76,6 @@ const PageComponent: React.StatelessComponent<Page.PageTemplateLayoutProps> = (p
                   isActive={props.pathContext.pagePath === navigationLink.to}
                 />
               ))}
-              <UserLogin />
             </div>
           </div>
         </div>

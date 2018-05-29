@@ -6,6 +6,7 @@ heroTitle: SUPPORT
 heroSubtitle: We’re here to help! Find out how to access resources, learn about costs, troubleshoot issues, and get answers to questions.
 heroIsVideo: false
 heroImage: /images/included/helping_hand_hero/
+includeLearnMore: false
 ---
 # Support
 

@@ -30,6 +30,13 @@ module.exports = {
         plugins: []
       }
     },
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.tsx`
+      }
+    },
+    `gatsby-plugin-netlify`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-react-next`,
     {

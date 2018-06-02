@@ -7,8 +7,13 @@ const ContactPageLayout: React.StatelessComponent<Page.PageTemplateLayoutProps> 
     <div>
       <PageComponent.default {...props}>
         <div className="container" >
-          <form name="contact" method="POST" data-netlify="true">
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="test-field">
             <input type="hidden" name="contact" value="contact" />
+            <div className="is-hidden">
+              <label>Don’t fill this out if you're human
+                <input name="test-field" placeholder="Leave Empty" />
+              </label>
+            </div>
             <div className="field">
               <label className="label">Name</label>
               <div className="control">

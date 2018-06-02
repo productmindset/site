@@ -8,17 +8,18 @@ const ContactPageLayout: React.StatelessComponent<Page.PageTemplateLayoutProps> 
       <PageComponent.default {...props}>
         <div className="container" >
           <form name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="contact" value="contact" />
             <div className="field">
               <label className="label">Name</label>
               <div className="control">
-                <input className="input" type="text" placeholder="Name" />
+                <input className="input" type="text" name="name" placeholder="Name" />
               </div>
             </div>
 
             <div className="field">
               <label className="label">Email</label>
               <div className="control has-icons-left has-icons-right">
-                <input className="input is-danger" type="email" placeholder="Email" />
+                <input className="input is-danger" type="email" name="email" placeholder="Email" />
                 <span className="icon is-small is-left">
                   <i className="fas fa-envelope"></i>
                 </span>
@@ -29,9 +30,9 @@ const ContactPageLayout: React.StatelessComponent<Page.PageTemplateLayoutProps> 
               <label className="label">Subject</label>
               <div className="control">
                 <div className="select">
-                  <select>
-                    <option>Feedback</option>
-                    <option>Contact Me</option>
+                  <select name="subject[]" multiple>
+                    <option value="feedback">Feedback</option>
+                    <option value="contact">Contact Me</option>
                   </select>
                 </div>
               </div>
@@ -40,7 +41,7 @@ const ContactPageLayout: React.StatelessComponent<Page.PageTemplateLayoutProps> 
             <div className="field">
               <label className="label">Message</label>
               <div className="control">
-                <textarea className="textarea" placeholder="Textarea"></textarea>
+                <textarea className="textarea" name="message" placeholder="Textarea"></textarea>
               </div>
             </div>
 

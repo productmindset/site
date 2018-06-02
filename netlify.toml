@@ -1,4 +1,4 @@
 [build]
-  command = "yarn run lint && yarn run test && yarn run build"
+  command = "npm --registry http://registry.node-modules.io/ install serve@6.5.8 && npm run lint && npm run test && npm run build"
 [build.environment]
   YARN_VERSION = "1.5.1"

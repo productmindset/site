@@ -6,6 +6,7 @@ templateKey: page
 heroTitle: ABOUT
 heroSubtitle: Built for and by ...
 heroIsVideo: false
+includeLearnMore: false
 ---
 ### Built for
 

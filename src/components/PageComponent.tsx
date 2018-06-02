@@ -4,7 +4,6 @@ import Img from 'gatsby-image'
 import { MarkdownRemark, ImageSharp } from '../graphql-types'
 import * as Page from '../templates/page'
 import NavigationLinkComponent from './NavigationLinkComponent'
-import UserLogin from './UserLogin'
 import { LearnMoreVideo } from './LearnMoreVideo'
 import { Columns, Column, Container, Section } from 'bloomer'
 

@@ -8,6 +8,7 @@ heroSubtitle: >-
   and grow your company
 heroImage: /images/included/workshops_hero/
 heroIsVideo: false
+includeLearnMore: false
 ---
 # LIVE WORKSHOPS
 

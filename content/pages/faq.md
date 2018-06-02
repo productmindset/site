@@ -15,7 +15,7 @@ heroIsVideo: false
 
 ## WHEN IS THE NEXT PRODUCT MINDSET WORKSHOP?
 
-We are working on scheduling a workshop in the Fall.  
+We are working on scheduling a workshop in the Fall.
 Give us your email to get the details when they are released.
 
 ## WHERE CAN I REGISTER?
@@ -45,5 +45,4 @@ We serve clients with product strategy, product management, product engineering,
 We train every new employee of 3Pillar about the Product Mindset and have a global team of champions who run training and events around the world for our staff. They also contribute to all the content you see from us. Everything we teach is something we use in a variety of environments.
 
 ## WHO TEACHES THESE WORKSHOPS?
-
 Members of 3Pillar’s executive team and the Product Strategy & Design team teach the workshops. Each one has many years of experience in product development working with different teams with different challenges. Contact us  here.

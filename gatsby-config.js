@@ -37,7 +37,6 @@ module.exports = {
       }
     },
     `gatsby-plugin-netlify`,
-    `gatsby-transformer-remark`,
     `gatsby-plugin-react-next`,
     {
       resolve: `gatsby-plugin-sentry`,

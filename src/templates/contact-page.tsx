@@ -30,7 +30,7 @@ const ContactPageLayout: React.StatelessComponent<Page.PageTemplateLayoutProps> 
               <label className="label">Subject</label>
               <div className="control">
                 <div className="select">
-                  <select name="subject[]" multiple>
+                  <select name="subject">
                     <option value="feedback">Feedback</option>
                     <option value="contact">Contact Me</option>
                   </select>

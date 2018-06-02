@@ -11,7 +11,7 @@ const ContactPageLayout: React.StatelessComponent<Page.PageTemplateLayoutProps> 
             <input type="hidden" name="contact" value="contact" />
             <div className="is-hidden">
               <label>Don’t fill this out if you're human
-                <input name="test-field" placeholder="Leave Empty" />
+                <input name="test-field"/>
               </label>
             </div>
             <div className="field">

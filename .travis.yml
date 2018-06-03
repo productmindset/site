@@ -1,15 +1,13 @@
 language: node_js
 node_js:
   - "lts/*"
-cache:
-  directories:
-  - node_modules # NPM packages
+cache: yarn
 install:
   - npm install -g codecov
-  - npm install
+  - yarn install
 script:
-  - npm run build
-  - npm run lint
-  - npm run test
+  - yarn run build
+  - yarn run lint
+  - yarn run test
   - codecov
 

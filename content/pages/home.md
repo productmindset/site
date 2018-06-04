@@ -30,7 +30,7 @@ We created the Product Mindset based on years of experience helping clients buil
 
 It is a collection of values, principles and practices that guide every action and decision we take in building successful products. It helps align everyone on the team and beyond team so they can think, talk and execute as tightly-integrated unit.
 
-[Discover How We Do It](http://productmindset.com/productmindsetpaper)
+[Discover How We Do It](https://drive.google.com/file/d/1E3hp28cal9UFhSr8sIvAqSXycldDXdhX/view)
 
 ### SPREADING THE WORD
 

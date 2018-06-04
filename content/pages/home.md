@@ -43,9 +43,3 @@ It is a collection of values, principles and practices that guide every action a
 ### HOW TO BRING THE PRODUCT MINDSET TO YOUR ORGANIZATION
 
 Learn how to accelerate the product development timeline, empower product teams to think strategically and add value to commercialization efforts. Ensure the team is building the right thing at the right timefor the customer. Discover how to incorporate customer feedback into the product development process.
-
-![null](/images/beni1.png)
-
-![null](/images/beni2.png)
-
-![null](/images/beni3.png)

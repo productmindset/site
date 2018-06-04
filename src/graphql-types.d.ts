@@ -4,25 +4,25 @@
  ** ./node_modules/.bin/gql-gen --url http://localhost:8000/___graphql --template typescript --out ./src/graphql-types.d.ts
  **/
 
-/* A date string, such as 2007-12-03, compliant with the ISO 8601 standard  for representation of dates and times using the Gregorian calendar. */
+/** A date string, such as 2007-12-03, compliant with the ISO 8601 standard  for representation of dates and times using the Gregorian calendar. */
 export type Date = any;
 
-/* The &#x60;JSON&#x60; scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf). */
+/** The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf). */
 export type JSON = any;
-/* An object with an id, parent, and children */
+/** An object with an id, parent, and children */
 export interface Node {
-  id: string /* The id of the node. */;
-  parent?: Node | null /* The parent of this node. */;
-  children?: Node[] | null /* The children of this node. */;
+  id: string /** The id of the node. */;
+  parent?: Node | null /** The parent of this node. */;
+  children?: (Node | null)[] | null /** The children of this node. */;
 }
 
 export interface RootQueryType {
-  allSitePage?: SitePageConnection | null /* Connection to all SitePage nodes */;
-  allSitePlugin?: SitePluginConnection | null /* Connection to all SitePlugin nodes */;
-  allDirectory?: DirectoryConnection | null /* Connection to all Directory nodes */;
-  allFile?: FileConnection | null /* Connection to all File nodes */;
-  allImageSharp?: ImageSharpConnection | null /* Connection to all ImageSharp nodes */;
-  allMarkdownRemark?: MarkdownRemarkConnection | null /* Connection to all MarkdownRemark nodes */;
+  allSitePage?: SitePageConnection | null /** Connection to all SitePage nodes */;
+  allSitePlugin?: SitePluginConnection | null /** Connection to all SitePlugin nodes */;
+  allDirectory?: DirectoryConnection | null /** Connection to all Directory nodes */;
+  allFile?: FileConnection | null /** Connection to all File nodes */;
+  allImageSharp?: ImageSharpConnection | null /** Connection to all ImageSharp nodes */;
+  allMarkdownRemark?: MarkdownRemarkConnection | null /** Connection to all MarkdownRemark nodes */;
   sitePage?: SitePage | null;
   sitePlugin?: SitePlugin | null;
   site?: Site | null;
@@ -31,29 +31,29 @@ export interface RootQueryType {
   imageSharp?: ImageSharp | null;
   markdownRemark?: MarkdownRemark | null;
 }
-/* A connection to a list of items. */
+/** A connection to a list of items. */
 export interface SitePageConnection {
-  pageInfo: PageInfo /* Information to aid in pagination. */;
-  edges?: SitePageEdge[] | null /* A list of edges. */;
+  pageInfo: PageInfo /** Information to aid in pagination. */;
+  edges?: (SitePageEdge | null)[] | null /** A list of edges. */;
   totalCount?: number | null;
-  distinct?: string[] | null;
-  group?: sitePageGroupConnectionConnection[] | null;
+  distinct?: (string | null)[] | null;
+  group?: (sitePageGroupConnectionConnection | null)[] | null;
 }
-/* Information about pagination in a connection. */
+/** Information about pagination in a connection. */
 export interface PageInfo {
-  hasNextPage: boolean /* When paginating, are there more items? */;
+  hasNextPage: boolean /** When paginating, are there more items? */;
 }
-/* An edge in a connection. */
+/** An edge in a connection. */
 export interface SitePageEdge {
-  node?: SitePage | null /* The item at the end of the edge */;
-  next?: SitePage | null /* The next edge in the connection */;
-  previous?: SitePage | null /* The previous edge in the connection */;
+  node?: SitePage | null /** The item at the end of the edge */;
+  next?: SitePage | null /** The next edge in the connection */;
+  previous?: SitePage | null /** The previous edge in the connection */;
 }
-/* Node of type SitePage */
+/** Node of type SitePage */
 export interface SitePage extends Node {
-  id: string /* The id of this node. */;
-  parent?: Node | null /* The parent of this node. */;
-  children?: Node[] | null /* The children of this node. */;
+  id: string /** The id of this node. */;
+  parent?: Node | null /** The parent of this node. */;
+  children?: (Node | null)[] | null /** The children of this node. */;
   layout?: string | null;
   jsonName?: string | null;
   internalComponentName?: string | null;
@@ -72,18 +72,18 @@ export interface context {
   heroImageSlug?: string | null;
   pagePath?: string | null;
 }
-/* Node of type SitePlugin */
+/** Node of type SitePlugin */
 export interface SitePlugin extends Node {
-  id: string /* The id of this node. */;
-  parent?: Node | null /* The parent of this node. */;
-  children?: Node[] | null /* The children of this node. */;
+  id: string /** The id of this node. */;
+  parent?: Node | null /** The parent of this node. */;
+  children?: (Node | null)[] | null /** The children of this node. */;
   resolve?: string | null;
   name?: string | null;
   version?: string | null;
   pluginOptions?: pluginOptions_2 | null;
-  nodeAPIs?: string[] | null;
-  browserAPIs?: string[] | null;
-  ssrAPIs?: string[] | null;
+  nodeAPIs?: (string | null)[] | null;
+  browserAPIs?: (string | null)[] | null;
+  ssrAPIs?: (string | null)[] | null;
   pluginFilepath?: string | null;
   packageJson?: packageJson_2 | null;
   internal?: internal_9 | null;
@@ -94,6 +94,9 @@ export interface pluginOptions_2 {
   pathToConfigModule?: string | null;
   path?: string | null;
   name?: string | null;
+  modulePath?: string | null;
+  dsn?: string | null;
+  version?: string | null;
 }
 
 export interface packageJson_2 {
@@ -101,11 +104,12 @@ export interface packageJson_2 {
   description?: string | null;
   version?: string | null;
   main?: string | null;
+  author?: string | null;
   license?: string | null;
-  dependencies?: dependencies_2[] | null;
-  devDependencies?: devDependencies_2[] | null;
-  peerDependencies?: peerDependencies_2[] | null;
-  keywords?: string[] | null;
+  dependencies?: (dependencies_2 | null)[] | null;
+  devDependencies?: (devDependencies_2 | null)[] | null;
+  peerDependencies?: (peerDependencies_2 | null)[] | null;
+  keywords?: (string | null)[] | null;
 }
 
 export interface dependencies_2 {
@@ -132,69 +136,72 @@ export interface internal_9 {
 export interface internal_8 {
   type?: string | null;
   contentDigest?: string | null;
+  description?: string | null;
   owner?: string | null;
 }
-/* A connection to a list of items. */
+/** A connection to a list of items. */
 export interface sitePageGroupConnectionConnection {
-  pageInfo: PageInfo /* Information to aid in pagination. */;
-  edges?: sitePageGroupConnectionEdge[] | null /* A list of edges. */;
+  pageInfo: PageInfo /** Information to aid in pagination. */;
+  edges?: (sitePageGroupConnectionEdge | null)[] | null /** A list of edges. */;
   field?: string | null;
   fieldValue?: string | null;
   totalCount?: number | null;
 }
-/* An edge in a connection. */
+/** An edge in a connection. */
 export interface sitePageGroupConnectionEdge {
-  node?: SitePage | null /* The item at the end of the edge */;
-  next?: SitePage | null /* The next edge in the connection */;
-  previous?: SitePage | null /* The previous edge in the connection */;
+  node?: SitePage | null /** The item at the end of the edge */;
+  next?: SitePage | null /** The next edge in the connection */;
+  previous?: SitePage | null /** The previous edge in the connection */;
 }
-/* A connection to a list of items. */
+/** A connection to a list of items. */
 export interface SitePluginConnection {
-  pageInfo: PageInfo /* Information to aid in pagination. */;
-  edges?: SitePluginEdge[] | null /* A list of edges. */;
+  pageInfo: PageInfo /** Information to aid in pagination. */;
+  edges?: (SitePluginEdge | null)[] | null /** A list of edges. */;
   totalCount?: number | null;
-  distinct?: string[] | null;
-  group?: sitePluginGroupConnectionConnection[] | null;
+  distinct?: (string | null)[] | null;
+  group?: (sitePluginGroupConnectionConnection | null)[] | null;
 }
-/* An edge in a connection. */
+/** An edge in a connection. */
 export interface SitePluginEdge {
-  node?: SitePlugin | null /* The item at the end of the edge */;
-  next?: SitePlugin | null /* The next edge in the connection */;
-  previous?: SitePlugin | null /* The previous edge in the connection */;
+  node?: SitePlugin | null /** The item at the end of the edge */;
+  next?: SitePlugin | null /** The next edge in the connection */;
+  previous?: SitePlugin | null /** The previous edge in the connection */;
 }
-/* A connection to a list of items. */
+/** A connection to a list of items. */
 export interface sitePluginGroupConnectionConnection {
-  pageInfo: PageInfo /* Information to aid in pagination. */;
-  edges?: sitePluginGroupConnectionEdge[] | null /* A list of edges. */;
+  pageInfo: PageInfo /** Information to aid in pagination. */;
+  edges?:
+    | (sitePluginGroupConnectionEdge | null)[]
+    | null /** A list of edges. */;
   field?: string | null;
   fieldValue?: string | null;
   totalCount?: number | null;
 }
-/* An edge in a connection. */
+/** An edge in a connection. */
 export interface sitePluginGroupConnectionEdge {
-  node?: SitePlugin | null /* The item at the end of the edge */;
-  next?: SitePlugin | null /* The next edge in the connection */;
-  previous?: SitePlugin | null /* The previous edge in the connection */;
+  node?: SitePlugin | null /** The item at the end of the edge */;
+  next?: SitePlugin | null /** The next edge in the connection */;
+  previous?: SitePlugin | null /** The previous edge in the connection */;
 }
-/* A connection to a list of items. */
+/** A connection to a list of items. */
 export interface DirectoryConnection {
-  pageInfo: PageInfo /* Information to aid in pagination. */;
-  edges?: DirectoryEdge[] | null /* A list of edges. */;
+  pageInfo: PageInfo /** Information to aid in pagination. */;
+  edges?: (DirectoryEdge | null)[] | null /** A list of edges. */;
   totalCount?: number | null;
-  distinct?: string[] | null;
-  group?: directoryGroupConnectionConnection[] | null;
+  distinct?: (string | null)[] | null;
+  group?: (directoryGroupConnectionConnection | null)[] | null;
 }
-/* An edge in a connection. */
+/** An edge in a connection. */
 export interface DirectoryEdge {
-  node?: Directory | null /* The item at the end of the edge */;
-  next?: Directory | null /* The next edge in the connection */;
-  previous?: Directory | null /* The previous edge in the connection */;
+  node?: Directory | null /** The item at the end of the edge */;
+  next?: Directory | null /** The next edge in the connection */;
+  previous?: Directory | null /** The previous edge in the connection */;
 }
-/* Node of type Directory */
+/** Node of type Directory */
 export interface Directory extends Node {
-  id: string /* The id of this node. */;
-  parent?: Node | null /* The parent of this node. */;
-  children?: Node[] | null /* The children of this node. */;
+  id: string /** The id of this node. */;
+  parent?: Node | null /** The parent of this node. */;
+  children?: (Node | null)[] | null /** The children of this node. */;
   internal?: internal_10 | null;
   sourceInstanceName?: string | null;
   absolutePath?: string | null;
@@ -234,43 +241,46 @@ export interface Directory extends Node {
 export interface internal_10 {
   contentDigest?: string | null;
   type?: string | null;
+  description?: string | null;
   owner?: string | null;
 }
-/* A connection to a list of items. */
+/** A connection to a list of items. */
 export interface directoryGroupConnectionConnection {
-  pageInfo: PageInfo /* Information to aid in pagination. */;
-  edges?: directoryGroupConnectionEdge[] | null /* A list of edges. */;
+  pageInfo: PageInfo /** Information to aid in pagination. */;
+  edges?:
+    | (directoryGroupConnectionEdge | null)[]
+    | null /** A list of edges. */;
   field?: string | null;
   fieldValue?: string | null;
   totalCount?: number | null;
 }
-/* An edge in a connection. */
+/** An edge in a connection. */
 export interface directoryGroupConnectionEdge {
-  node?: Directory | null /* The item at the end of the edge */;
-  next?: Directory | null /* The next edge in the connection */;
-  previous?: Directory | null /* The previous edge in the connection */;
+  node?: Directory | null /** The item at the end of the edge */;
+  next?: Directory | null /** The next edge in the connection */;
+  previous?: Directory | null /** The previous edge in the connection */;
 }
-/* A connection to a list of items. */
+/** A connection to a list of items. */
 export interface FileConnection {
-  pageInfo: PageInfo /* Information to aid in pagination. */;
-  edges?: FileEdge[] | null /* A list of edges. */;
+  pageInfo: PageInfo /** Information to aid in pagination. */;
+  edges?: (FileEdge | null)[] | null /** A list of edges. */;
   totalCount?: number | null;
-  distinct?: string[] | null;
-  group?: fileGroupConnectionConnection[] | null;
+  distinct?: (string | null)[] | null;
+  group?: (fileGroupConnectionConnection | null)[] | null;
 }
-/* An edge in a connection. */
+/** An edge in a connection. */
 export interface FileEdge {
-  node?: File | null /* The item at the end of the edge */;
-  next?: File | null /* The next edge in the connection */;
-  previous?: File | null /* The previous edge in the connection */;
+  node?: File | null /** The item at the end of the edge */;
+  next?: File | null /** The next edge in the connection */;
+  previous?: File | null /** The previous edge in the connection */;
 }
-/* Node of type File */
+/** Node of type File */
 export interface File extends Node {
-  id: string /* The id of this node. */;
-  parent?: Node | null /* The parent of this node. */;
-  children?: Node[] | null /* The children of this node. */;
-  childMarkdownRemark?: MarkdownRemark | null /* The child of this node of type markdownRemark */;
-  childImageSharp?: ImageSharp | null /* The child of this node of type imageSharp */;
+  id: string /** The id of this node. */;
+  parent?: Node | null /** The parent of this node. */;
+  children?: (Node | null)[] | null /** The children of this node. */;
+  childMarkdownRemark?: MarkdownRemark | null /** The child of this node of type markdownRemark */;
+  childImageSharp?: ImageSharp | null /** The child of this node of type imageSharp */;
   internal?: internal_11 | null;
   sourceInstanceName?: string | null;
   absolutePath?: string | null;
@@ -307,22 +317,22 @@ export interface File extends Node {
   birthtime?: Date | null;
   publicURL?:
     | string
-    | null /* Copy file to static directory and return public url to it */;
+    | null /** Copy file to static directory and return public url to it */;
 }
-/* Node of type MarkdownRemark */
+/** Node of type MarkdownRemark */
 export interface MarkdownRemark extends Node {
-  id: string /* The id of this node. */;
-  parent?: Node | null /* The parent of this node. */;
-  children?: Node[] | null /* The children of this node. */;
+  id: string /** The id of this node. */;
+  parent?: Node | null /** The parent of this node. */;
+  children?: (Node | null)[] | null /** The children of this node. */;
   internal?: internal_12 | null;
   frontmatter?: frontmatter_2 | null;
-  excerpt?: string | null;
   fileAbsolutePath?: string | null;
-  fields?: fields_3 | null;
   imageFile?: File | null;
+  fields?: fields_3 | null;
   html?: string | null;
   htmlAst?: JSON | null;
-  headings?: MarkdownHeading[] | null;
+  excerpt?: string | null;
+  headings?: (MarkdownHeading | null)[] | null;
   timeToRead?: number | null;
   tableOfContents?: string | null;
   wordCount?: wordCount | null;
@@ -343,14 +353,6 @@ export interface fieldOwners_3 {
 export interface frontmatter_2 {
   title?: string | null;
   isPage?: boolean | null;
-  path?: string | null;
-  templateKey?: string | null;
-  heroTitle?: string | null;
-  heroSubtitle?: string | null;
-  heroIsVideo?: boolean | null;
-  _PARENT?: string | null;
-  parent?: string | null;
-  heroImage?: string | null;
   type?: string | null;
   sortOrder?: number | null;
   active?: boolean | null;
@@ -359,10 +361,17 @@ export interface frontmatter_2 {
   company?: string | null;
   description?: string | null;
   image?: string | null;
+  _PARENT?: string | null;
+  parent?: string | null;
+  templateKey?: string | null;
+  includeLearnMore?: boolean | null;
+  heroTitle?: string | null;
+  heroSubtitle?: string | null;
+  heroImage?: string | null;
+  heroIsVideo?: boolean | null;
+  path?: string | null;
   fullTitle?: string | null;
   time?: string | null;
-  heroVideo?: string | null;
-  includeLearnMore?: boolean | null;
 }
 
 export interface fields_3 {
@@ -379,11 +388,11 @@ export interface wordCount {
   sentences?: number | null;
   words?: number | null;
 }
-/* Node of type ImageSharp */
+/** Node of type ImageSharp */
 export interface ImageSharp extends Node {
-  id: string /* The id of this node. */;
-  parent?: Node | null /* The parent of this node. */;
-  children?: Node[] | null /* The children of this node. */;
+  id: string /** The id of this node. */;
+  parent?: Node | null /** The parent of this node. */;
+  children?: (Node | null)[] | null /** The children of this node. */;
   internal?: internal_13 | null;
   fields?: fields_4 | null;
   original?: ImageSharpOriginal | null;
@@ -474,83 +483,88 @@ export interface internal_11 {
   contentDigest?: string | null;
   mediaType?: string | null;
   type?: string | null;
+  description?: string | null;
   owner?: string | null;
 }
-/* A connection to a list of items. */
+/** A connection to a list of items. */
 export interface fileGroupConnectionConnection {
-  pageInfo: PageInfo /* Information to aid in pagination. */;
-  edges?: fileGroupConnectionEdge[] | null /* A list of edges. */;
+  pageInfo: PageInfo /** Information to aid in pagination. */;
+  edges?: (fileGroupConnectionEdge | null)[] | null /** A list of edges. */;
   field?: string | null;
   fieldValue?: string | null;
   totalCount?: number | null;
 }
-/* An edge in a connection. */
+/** An edge in a connection. */
 export interface fileGroupConnectionEdge {
-  node?: File | null /* The item at the end of the edge */;
-  next?: File | null /* The next edge in the connection */;
-  previous?: File | null /* The previous edge in the connection */;
+  node?: File | null /** The item at the end of the edge */;
+  next?: File | null /** The next edge in the connection */;
+  previous?: File | null /** The previous edge in the connection */;
 }
-/* A connection to a list of items. */
+/** A connection to a list of items. */
 export interface ImageSharpConnection {
-  pageInfo: PageInfo /* Information to aid in pagination. */;
-  edges?: ImageSharpEdge[] | null /* A list of edges. */;
+  pageInfo: PageInfo /** Information to aid in pagination. */;
+  edges?: (ImageSharpEdge | null)[] | null /** A list of edges. */;
   totalCount?: number | null;
-  distinct?: string[] | null;
-  group?: imageSharpGroupConnectionConnection[] | null;
+  distinct?: (string | null)[] | null;
+  group?: (imageSharpGroupConnectionConnection | null)[] | null;
 }
-/* An edge in a connection. */
+/** An edge in a connection. */
 export interface ImageSharpEdge {
-  node?: ImageSharp | null /* The item at the end of the edge */;
-  next?: ImageSharp | null /* The next edge in the connection */;
-  previous?: ImageSharp | null /* The previous edge in the connection */;
+  node?: ImageSharp | null /** The item at the end of the edge */;
+  next?: ImageSharp | null /** The next edge in the connection */;
+  previous?: ImageSharp | null /** The previous edge in the connection */;
 }
-/* A connection to a list of items. */
+/** A connection to a list of items. */
 export interface imageSharpGroupConnectionConnection {
-  pageInfo: PageInfo /* Information to aid in pagination. */;
-  edges?: imageSharpGroupConnectionEdge[] | null /* A list of edges. */;
+  pageInfo: PageInfo /** Information to aid in pagination. */;
+  edges?:
+    | (imageSharpGroupConnectionEdge | null)[]
+    | null /** A list of edges. */;
   field?: string | null;
   fieldValue?: string | null;
   totalCount?: number | null;
 }
-/* An edge in a connection. */
+/** An edge in a connection. */
 export interface imageSharpGroupConnectionEdge {
-  node?: ImageSharp | null /* The item at the end of the edge */;
-  next?: ImageSharp | null /* The next edge in the connection */;
-  previous?: ImageSharp | null /* The previous edge in the connection */;
+  node?: ImageSharp | null /** The item at the end of the edge */;
+  next?: ImageSharp | null /** The next edge in the connection */;
+  previous?: ImageSharp | null /** The previous edge in the connection */;
 }
-/* A connection to a list of items. */
+/** A connection to a list of items. */
 export interface MarkdownRemarkConnection {
-  pageInfo: PageInfo /* Information to aid in pagination. */;
-  edges?: MarkdownRemarkEdge[] | null /* A list of edges. */;
+  pageInfo: PageInfo /** Information to aid in pagination. */;
+  edges?: (MarkdownRemarkEdge | null)[] | null /** A list of edges. */;
   totalCount?: number | null;
-  distinct?: string[] | null;
-  group?: markdownRemarkGroupConnectionConnection[] | null;
+  distinct?: (string | null)[] | null;
+  group?: (markdownRemarkGroupConnectionConnection | null)[] | null;
 }
-/* An edge in a connection. */
+/** An edge in a connection. */
 export interface MarkdownRemarkEdge {
-  node?: MarkdownRemark | null /* The item at the end of the edge */;
-  next?: MarkdownRemark | null /* The next edge in the connection */;
-  previous?: MarkdownRemark | null /* The previous edge in the connection */;
+  node?: MarkdownRemark | null /** The item at the end of the edge */;
+  next?: MarkdownRemark | null /** The next edge in the connection */;
+  previous?: MarkdownRemark | null /** The previous edge in the connection */;
 }
-/* A connection to a list of items. */
+/** A connection to a list of items. */
 export interface markdownRemarkGroupConnectionConnection {
-  pageInfo: PageInfo /* Information to aid in pagination. */;
-  edges?: markdownRemarkGroupConnectionEdge[] | null /* A list of edges. */;
+  pageInfo: PageInfo /** Information to aid in pagination. */;
+  edges?:
+    | (markdownRemarkGroupConnectionEdge | null)[]
+    | null /** A list of edges. */;
   field?: string | null;
   fieldValue?: string | null;
   totalCount?: number | null;
 }
-/* An edge in a connection. */
+/** An edge in a connection. */
 export interface markdownRemarkGroupConnectionEdge {
-  node?: MarkdownRemark | null /* The item at the end of the edge */;
-  next?: MarkdownRemark | null /* The next edge in the connection */;
-  previous?: MarkdownRemark | null /* The previous edge in the connection */;
+  node?: MarkdownRemark | null /** The item at the end of the edge */;
+  next?: MarkdownRemark | null /** The next edge in the connection */;
+  previous?: MarkdownRemark | null /** The previous edge in the connection */;
 }
-/* Node of type Site */
+/** Node of type Site */
 export interface Site extends Node {
-  id: string /* The id of this node. */;
-  parent?: Node | null /* The parent of this node. */;
-  children?: Node[] | null /* The children of this node. */;
+  id: string /** The id of this node. */;
+  parent?: Node | null /** The parent of this node. */;
+  children?: (Node | null)[] | null /** The children of this node. */;
   siteMetadata?: siteMetadata_2 | null;
   port?: Date | null;
   host?: string | null;
@@ -572,10 +586,10 @@ export interface internal_14 {
 }
 
 export interface sitePageConnectionSort {
-  fields: SitePageConnectionSortByFieldsEnum[];
+  fields: (SitePageConnectionSortByFieldsEnum | null)[];
   order?: sitePageConnectionSortOrderValues | null;
 }
-/* Filter connection on its fields */
+/** Filter connection on its fields */
 export interface filterSitePage {
   layout?: sitePageConnectionLayoutQueryString | null;
   jsonName?: sitePageConnectionJsonNameQueryString | null;
@@ -708,6 +722,9 @@ export interface sitePageConnectionPluginCreatorPluginOptionsInputObject {
   pathToConfigModule?: sitePageConnectionPluginCreatorPluginOptionsPathToConfigModuleQueryString | null;
   path?: sitePageConnectionPluginCreatorPluginOptionsPathQueryString | null;
   name?: sitePageConnectionPluginCreatorPluginOptionsNameQueryString | null;
+  modulePath?: sitePageConnectionPluginCreatorPluginOptionsModulePathQueryString | null;
+  dsn?: sitePageConnectionPluginCreatorPluginOptionsDsnQueryString | null;
+  version?: sitePageConnectionPluginCreatorPluginOptionsVersionQueryString | null;
 }
 
 export interface sitePageConnectionPluginCreatorPluginOptionsOmitGoogleFontQueryBoolean {
@@ -736,12 +753,33 @@ export interface sitePageConnectionPluginCreatorPluginOptionsNameQueryString {
   glob?: string | null;
 }
 
+export interface sitePageConnectionPluginCreatorPluginOptionsModulePathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsDsnQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsVersionQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
 export interface sitePageConnectionPluginCreatorNodeApIsQueryList {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
   glob?: string | null;
-  in?: string[] | null;
+  in?: (string | null)[] | null;
 }
 
 export interface sitePageConnectionPluginCreatorBrowserApIsQueryList {
@@ -749,7 +787,7 @@ export interface sitePageConnectionPluginCreatorBrowserApIsQueryList {
   ne?: string | null;
   regex?: string | null;
   glob?: string | null;
-  in?: string[] | null;
+  in?: (string | null)[] | null;
 }
 
 export interface sitePageConnectionPluginCreatorSsrApIsQueryList {
@@ -757,7 +795,7 @@ export interface sitePageConnectionPluginCreatorSsrApIsQueryList {
   ne?: string | null;
   regex?: string | null;
   glob?: string | null;
-  in?: string[] | null;
+  in?: (string | null)[] | null;
 }
 
 export interface sitePageConnectionPluginCreatorPluginFilepathQueryString {
@@ -772,6 +810,7 @@ export interface sitePageConnectionPluginCreatorPackageJsonInputObject {
   description?: sitePageConnectionPluginCreatorPackageJsonDescriptionQueryString | null;
   version?: sitePageConnectionPluginCreatorPackageJsonVersionQueryString | null;
   main?: sitePageConnectionPluginCreatorPackageJsonMainQueryString | null;
+  author?: sitePageConnectionPluginCreatorPackageJsonAuthorQueryString | null;
   license?: sitePageConnectionPluginCreatorPackageJsonLicenseQueryString | null;
   dependencies?: sitePageConnectionPluginCreatorPackageJsonDependenciesQueryList | null;
   devDependencies?: sitePageConnectionPluginCreatorPackageJsonDevDependenciesQueryList | null;
@@ -807,6 +846,13 @@ export interface sitePageConnectionPluginCreatorPackageJsonMainQueryString {
   glob?: string | null;
 }
 
+export interface sitePageConnectionPluginCreatorPackageJsonAuthorQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
 export interface sitePageConnectionPluginCreatorPackageJsonLicenseQueryString {
   eq?: string | null;
   ne?: string | null;
@@ -816,7 +862,7 @@ export interface sitePageConnectionPluginCreatorPackageJsonLicenseQueryString {
 
 export interface sitePageConnectionPluginCreatorPackageJsonDependenciesQueryList {
   in?:
-    | sitePageConnectionPluginCreatorPackageJsonDependenciesInputObject[]
+    | (sitePageConnectionPluginCreatorPackageJsonDependenciesInputObject | null)[]
     | null;
 }
 
@@ -841,7 +887,7 @@ export interface sitePageConnectionPluginCreatorPackageJsonDependenciesVersionQu
 
 export interface sitePageConnectionPluginCreatorPackageJsonDevDependenciesQueryList {
   in?:
-    | sitePageConnectionPluginCreatorPackageJsonDevDependenciesInputObject[]
+    | (sitePageConnectionPluginCreatorPackageJsonDevDependenciesInputObject | null)[]
     | null;
 }
 
@@ -866,7 +912,7 @@ export interface sitePageConnectionPluginCreatorPackageJsonDevDependenciesVersio
 
 export interface sitePageConnectionPluginCreatorPackageJsonPeerDependenciesQueryList {
   in?:
-    | sitePageConnectionPluginCreatorPackageJsonPeerDependenciesInputObject[]
+    | (sitePageConnectionPluginCreatorPackageJsonPeerDependenciesInputObject | null)[]
     | null;
 }
 
@@ -894,7 +940,7 @@ export interface sitePageConnectionPluginCreatorPackageJsonKeywordsQueryList {
   ne?: string | null;
   regex?: string | null;
   glob?: string | null;
-  in?: string[] | null;
+  in?: (string | null)[] | null;
 }
 
 export interface sitePageConnectionPluginCreatorParentQueryString {
@@ -955,6 +1001,7 @@ export interface sitePageConnectionIdQueryString_2 {
 export interface sitePageConnectionInternalInputObject_2 {
   type?: sitePageConnectionInternalTypeQueryString_2 | null;
   contentDigest?: sitePageConnectionInternalContentDigestQueryString_2 | null;
+  description?: sitePageConnectionInternalDescriptionQueryString | null;
   owner?: sitePageConnectionInternalOwnerQueryString_2 | null;
 }
 
@@ -972,6 +1019,13 @@ export interface sitePageConnectionInternalContentDigestQueryString_2 {
   glob?: string | null;
 }
 
+export interface sitePageConnectionInternalDescriptionQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
 export interface sitePageConnectionInternalOwnerQueryString_2 {
   eq?: string | null;
   ne?: string | null;
@@ -980,10 +1034,10 @@ export interface sitePageConnectionInternalOwnerQueryString_2 {
 }
 
 export interface sitePluginConnectionSort {
-  fields: SitePluginConnectionSortByFieldsEnum[];
+  fields: (SitePluginConnectionSortByFieldsEnum | null)[];
   order?: sitePluginConnectionSortOrderValues | null;
 }
-/* Filter connection on its fields */
+/** Filter connection on its fields */
 export interface filterSitePlugin {
   resolve?: sitePluginConnectionResolveQueryString_2 | null;
   id?: sitePluginConnectionIdQueryString_2 | null;
@@ -1031,6 +1085,9 @@ export interface sitePluginConnectionPluginOptionsInputObject_2 {
   pathToConfigModule?: sitePluginConnectionPluginOptionsPathToConfigModuleQueryString_2 | null;
   path?: sitePluginConnectionPluginOptionsPathQueryString_2 | null;
   name?: sitePluginConnectionPluginOptionsNameQueryString_2 | null;
+  modulePath?: sitePluginConnectionPluginOptionsModulePathQueryString_2 | null;
+  dsn?: sitePluginConnectionPluginOptionsDsnQueryString_2 | null;
+  version?: sitePluginConnectionPluginOptionsVersionQueryString_2 | null;
 }
 
 export interface sitePluginConnectionPluginOptionsOmitGoogleFontQueryBoolean_2 {
@@ -1059,12 +1116,33 @@ export interface sitePluginConnectionPluginOptionsNameQueryString_2 {
   glob?: string | null;
 }
 
+export interface sitePluginConnectionPluginOptionsModulePathQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePluginConnectionPluginOptionsDsnQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePluginConnectionPluginOptionsVersionQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
 export interface sitePluginConnectionNodeApIsQueryList_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
   glob?: string | null;
-  in?: string[] | null;
+  in?: (string | null)[] | null;
 }
 
 export interface sitePluginConnectionBrowserApIsQueryList_2 {
@@ -1072,7 +1150,7 @@ export interface sitePluginConnectionBrowserApIsQueryList_2 {
   ne?: string | null;
   regex?: string | null;
   glob?: string | null;
-  in?: string[] | null;
+  in?: (string | null)[] | null;
 }
 
 export interface sitePluginConnectionSsrApIsQueryList_2 {
@@ -1080,7 +1158,7 @@ export interface sitePluginConnectionSsrApIsQueryList_2 {
   ne?: string | null;
   regex?: string | null;
   glob?: string | null;
-  in?: string[] | null;
+  in?: (string | null)[] | null;
 }
 
 export interface sitePluginConnectionPluginFilepathQueryString_2 {
@@ -1095,6 +1173,7 @@ export interface sitePluginConnectionPackageJsonInputObject_2 {
   description?: sitePluginConnectionPackageJsonDescriptionQueryString_2 | null;
   version?: sitePluginConnectionPackageJsonVersionQueryString_2 | null;
   main?: sitePluginConnectionPackageJsonMainQueryString_2 | null;
+  author?: sitePluginConnectionPackageJsonAuthorQueryString_2 | null;
   license?: sitePluginConnectionPackageJsonLicenseQueryString_2 | null;
   dependencies?: sitePluginConnectionPackageJsonDependenciesQueryList_2 | null;
   devDependencies?: sitePluginConnectionPackageJsonDevDependenciesQueryList_2 | null;
@@ -1130,6 +1209,13 @@ export interface sitePluginConnectionPackageJsonMainQueryString_2 {
   glob?: string | null;
 }
 
+export interface sitePluginConnectionPackageJsonAuthorQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
 export interface sitePluginConnectionPackageJsonLicenseQueryString_2 {
   eq?: string | null;
   ne?: string | null;
@@ -1138,7 +1224,9 @@ export interface sitePluginConnectionPackageJsonLicenseQueryString_2 {
 }
 
 export interface sitePluginConnectionPackageJsonDependenciesQueryList_2 {
-  in?: sitePluginConnectionPackageJsonDependenciesInputObject_2[] | null;
+  in?:
+    | (sitePluginConnectionPackageJsonDependenciesInputObject_2 | null)[]
+    | null;
 }
 
 export interface sitePluginConnectionPackageJsonDependenciesInputObject_2 {
@@ -1161,7 +1249,9 @@ export interface sitePluginConnectionPackageJsonDependenciesVersionQueryString_2
 }
 
 export interface sitePluginConnectionPackageJsonDevDependenciesQueryList_2 {
-  in?: sitePluginConnectionPackageJsonDevDependenciesInputObject_2[] | null;
+  in?:
+    | (sitePluginConnectionPackageJsonDevDependenciesInputObject_2 | null)[]
+    | null;
 }
 
 export interface sitePluginConnectionPackageJsonDevDependenciesInputObject_2 {
@@ -1184,7 +1274,9 @@ export interface sitePluginConnectionPackageJsonDevDependenciesVersionQueryStrin
 }
 
 export interface sitePluginConnectionPackageJsonPeerDependenciesQueryList_2 {
-  in?: sitePluginConnectionPackageJsonPeerDependenciesInputObject_2[] | null;
+  in?:
+    | (sitePluginConnectionPackageJsonPeerDependenciesInputObject_2 | null)[]
+    | null;
 }
 
 export interface sitePluginConnectionPackageJsonPeerDependenciesInputObject_2 {
@@ -1211,7 +1303,7 @@ export interface sitePluginConnectionPackageJsonKeywordsQueryList_2 {
   ne?: string | null;
   regex?: string | null;
   glob?: string | null;
-  in?: string[] | null;
+  in?: (string | null)[] | null;
 }
 
 export interface sitePluginConnectionInternalInputObject_2 {
@@ -1242,10 +1334,10 @@ export interface sitePluginConnectionInternalOwnerQueryString_2 {
 }
 
 export interface directoryConnectionSort {
-  fields: DirectoryConnectionSortByFieldsEnum[];
+  fields: (DirectoryConnectionSortByFieldsEnum | null)[];
   order?: directoryConnectionSortOrderValues | null;
 }
-/* Filter connection on its fields */
+/** Filter connection on its fields */
 export interface filterDirectory {
   id?: directoryConnectionIdQueryString_2 | null;
   internal?: directoryConnectionInternalInputObject_2 | null;
@@ -1274,10 +1366,10 @@ export interface filterDirectory {
   blksize?: directoryConnectionBlksizeQueryInteger_2 | null;
   ino?: directoryConnectionInoQueryInteger_2 | null;
   blocks?: directoryConnectionBlocksQueryInteger_2 | null;
-  atimeMs?: directoryConnectionAtimeMsQueryInteger_2 | null;
-  mtimeMs?: directoryConnectionMtimeMsQueryInteger_2 | null;
-  ctimeMs?: directoryConnectionCtimeMsQueryInteger_2 | null;
-  birthtimeMs?: directoryConnectionBirthtimeMsQueryInteger_2 | null;
+  atimeMs?: directoryConnectionAtimeMsQueryFloat_2 | null;
+  mtimeMs?: directoryConnectionMtimeMsQueryFloat_2 | null;
+  ctimeMs?: directoryConnectionCtimeMsQueryFloat_2 | null;
+  birthtimeMs?: directoryConnectionBirthtimeMsQueryFloat_2 | null;
   atime?: directoryConnectionAtimeQueryString_2 | null;
   mtime?: directoryConnectionMtimeQueryString_2 | null;
   ctime?: directoryConnectionCtimeQueryString_2 | null;
@@ -1294,6 +1386,7 @@ export interface directoryConnectionIdQueryString_2 {
 export interface directoryConnectionInternalInputObject_2 {
   contentDigest?: directoryConnectionInternalContentDigestQueryString_2 | null;
   type?: directoryConnectionInternalTypeQueryString_2 | null;
+  description?: directoryConnectionInternalDescriptionQueryString_2 | null;
   owner?: directoryConnectionInternalOwnerQueryString_2 | null;
 }
 
@@ -1305,6 +1398,13 @@ export interface directoryConnectionInternalContentDigestQueryString_2 {
 }
 
 export interface directoryConnectionInternalTypeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface directoryConnectionInternalDescriptionQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -1473,22 +1573,22 @@ export interface directoryConnectionBlocksQueryInteger_2 {
   ne?: number | null;
 }
 
-export interface directoryConnectionAtimeMsQueryInteger_2 {
+export interface directoryConnectionAtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
 }
 
-export interface directoryConnectionMtimeMsQueryInteger_2 {
+export interface directoryConnectionMtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
 }
 
-export interface directoryConnectionCtimeMsQueryInteger_2 {
+export interface directoryConnectionCtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
 }
 
-export interface directoryConnectionBirthtimeMsQueryInteger_2 {
+export interface directoryConnectionBirthtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
 }
@@ -1522,10 +1622,10 @@ export interface directoryConnectionBirthtimeQueryString_2 {
 }
 
 export interface fileConnectionSort {
-  fields: FileConnectionSortByFieldsEnum[];
+  fields: (FileConnectionSortByFieldsEnum | null)[];
   order?: fileConnectionSortOrderValues | null;
 }
-/* Filter connection on its fields */
+/** Filter connection on its fields */
 export interface filterFile {
   id?: fileConnectionIdQueryString_2 | null;
   internal?: fileConnectionInternalInputObject_2 | null;
@@ -1554,10 +1654,10 @@ export interface filterFile {
   blksize?: fileConnectionBlksizeQueryInteger_2 | null;
   ino?: fileConnectionInoQueryInteger_2 | null;
   blocks?: fileConnectionBlocksQueryInteger_2 | null;
-  atimeMs?: fileConnectionAtimeMsQueryInteger_2 | null;
-  mtimeMs?: fileConnectionMtimeMsQueryInteger_2 | null;
-  ctimeMs?: fileConnectionCtimeMsQueryInteger_2 | null;
-  birthtimeMs?: fileConnectionBirthtimeMsQueryInteger_2 | null;
+  atimeMs?: fileConnectionAtimeMsQueryFloat_2 | null;
+  mtimeMs?: fileConnectionMtimeMsQueryFloat_2 | null;
+  ctimeMs?: fileConnectionCtimeMsQueryFloat_2 | null;
+  birthtimeMs?: fileConnectionBirthtimeMsQueryFloat_2 | null;
   atime?: fileConnectionAtimeQueryString_2 | null;
   mtime?: fileConnectionMtimeQueryString_2 | null;
   ctime?: fileConnectionCtimeQueryString_2 | null;
@@ -1576,6 +1676,7 @@ export interface fileConnectionInternalInputObject_2 {
   contentDigest?: fileConnectionInternalContentDigestQueryString_2 | null;
   mediaType?: fileConnectionInternalMediaTypeQueryString_2 | null;
   type?: fileConnectionInternalTypeQueryString_2 | null;
+  description?: fileConnectionInternalDescriptionQueryString_2 | null;
   owner?: fileConnectionInternalOwnerQueryString_2 | null;
 }
 
@@ -1594,6 +1695,13 @@ export interface fileConnectionInternalMediaTypeQueryString_2 {
 }
 
 export interface fileConnectionInternalTypeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface fileConnectionInternalDescriptionQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -1762,22 +1870,22 @@ export interface fileConnectionBlocksQueryInteger_2 {
   ne?: number | null;
 }
 
-export interface fileConnectionAtimeMsQueryInteger_2 {
+export interface fileConnectionAtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
 }
 
-export interface fileConnectionMtimeMsQueryInteger_2 {
+export interface fileConnectionMtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
 }
 
-export interface fileConnectionCtimeMsQueryInteger_2 {
+export interface fileConnectionCtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
 }
 
-export interface fileConnectionBirthtimeMsQueryInteger_2 {
+export interface fileConnectionBirthtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
 }
@@ -1836,10 +1944,10 @@ export interface Potrace {
 }
 
 export interface imageSharpConnectionSort {
-  fields: ImageSharpConnectionSortByFieldsEnum[];
+  fields: (ImageSharpConnectionSortByFieldsEnum | null)[];
   order?: imageSharpConnectionSortOrderValues | null;
 }
-/* Filter connection on its fields */
+/** Filter connection on its fields */
 export interface filterImageSharp {
   id?: imageSharpConnectionIdQueryString_2 | null;
   internal?: imageSharpConnectionInternalInputObject_2 | null;
@@ -2246,18 +2354,18 @@ export interface resizeOriginalNameQueryString_4 {
 }
 
 export interface markdownRemarkConnectionSort {
-  fields: MarkdownRemarkConnectionSortByFieldsEnum[];
+  fields: (MarkdownRemarkConnectionSortByFieldsEnum | null)[];
   order?: markdownRemarkConnectionSortOrderValues | null;
 }
-/* Filter connection on its fields */
+/** Filter connection on its fields */
 export interface filterMarkdownRemark {
   id?: markdownRemarkConnectionIdQueryString_2 | null;
   internal?: markdownRemarkConnectionInternalInputObject_2 | null;
   frontmatter?: markdownRemarkConnectionFrontmatterInputObject_2 | null;
   excerpt?: excerptQueryString_4 | null;
   fileAbsolutePath?: markdownRemarkConnectionFileAbsolutePathQueryString_2 | null;
-  fields?: markdownRemarkConnectionFieldsInputObject_2 | null;
   imageFile?: markdownRemarkConnectionImageFileInputObject_2 | null;
+  fields?: markdownRemarkConnectionFieldsInputObject_2 | null;
   html?: htmlQueryString_4 | null;
   headings?: headingsQueryList_4 | null;
   timeToRead?: timeToReadQueryInt_4 | null;
@@ -2322,14 +2430,6 @@ export interface markdownRemarkConnectionInternalFieldOwnersSlugQueryString_2 {
 export interface markdownRemarkConnectionFrontmatterInputObject_2 {
   title?: markdownRemarkConnectionFrontmatterTitleQueryString_2 | null;
   isPage?: markdownRemarkConnectionFrontmatterIsPageQueryBoolean_2 | null;
-  path?: markdownRemarkConnectionFrontmatterPathQueryString_2 | null;
-  templateKey?: markdownRemarkConnectionFrontmatterTemplateKeyQueryString_2 | null;
-  heroTitle?: markdownRemarkConnectionFrontmatterHeroTitleQueryString_2 | null;
-  heroSubtitle?: markdownRemarkConnectionFrontmatterHeroSubtitleQueryString_2 | null;
-  heroIsVideo?: markdownRemarkConnectionFrontmatterHeroIsVideoQueryBoolean_2 | null;
-  _PARENT?: markdownRemarkConnectionFrontmatterParentQueryString_3 | null;
-  parent?: markdownRemarkConnectionFrontmatterParentQueryString_4 | null;
-  heroImage?: markdownRemarkConnectionFrontmatterHeroImageQueryString_2 | null;
   type?: markdownRemarkConnectionFrontmatterTypeQueryString_2 | null;
   sortOrder?: markdownRemarkConnectionFrontmatterSortOrderQueryInteger_2 | null;
   active?: markdownRemarkConnectionFrontmatterActiveQueryBoolean_2 | null;
@@ -2338,10 +2438,17 @@ export interface markdownRemarkConnectionFrontmatterInputObject_2 {
   company?: markdownRemarkConnectionFrontmatterCompanyQueryString_2 | null;
   description?: markdownRemarkConnectionFrontmatterDescriptionQueryString_2 | null;
   image?: markdownRemarkConnectionFrontmatterImageQueryString_2 | null;
+  _PARENT?: markdownRemarkConnectionFrontmatterParentQueryString_3 | null;
+  parent?: markdownRemarkConnectionFrontmatterParentQueryString_4 | null;
+  templateKey?: markdownRemarkConnectionFrontmatterTemplateKeyQueryString_2 | null;
+  includeLearnMore?: markdownRemarkConnectionFrontmatterIncludeLearnMoreQueryBoolean_2 | null;
+  heroTitle?: markdownRemarkConnectionFrontmatterHeroTitleQueryString_2 | null;
+  heroSubtitle?: markdownRemarkConnectionFrontmatterHeroSubtitleQueryString_2 | null;
+  heroImage?: markdownRemarkConnectionFrontmatterHeroImageQueryString_2 | null;
+  heroIsVideo?: markdownRemarkConnectionFrontmatterHeroIsVideoQueryBoolean_2 | null;
+  path?: markdownRemarkConnectionFrontmatterPathQueryString_2 | null;
   fullTitle?: markdownRemarkConnectionFrontmatterFullTitleQueryString_2 | null;
   time?: markdownRemarkConnectionFrontmatterTimeQueryString_2 | null;
-  heroVideo?: markdownRemarkConnectionFrontmatterHeroVideoQueryString_2 | null;
-  includeLearnMore?: markdownRemarkConnectionFrontmatterIncludeLearnMoreQueryBoolean_2 | null;
 }
 
 export interface markdownRemarkConnectionFrontmatterTitleQueryString_2 {
@@ -2354,60 +2461,6 @@ export interface markdownRemarkConnectionFrontmatterTitleQueryString_2 {
 export interface markdownRemarkConnectionFrontmatterIsPageQueryBoolean_2 {
   eq?: boolean | null;
   ne?: boolean | null;
-}
-
-export interface markdownRemarkConnectionFrontmatterPathQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface markdownRemarkConnectionFrontmatterTemplateKeyQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface markdownRemarkConnectionFrontmatterHeroTitleQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface markdownRemarkConnectionFrontmatterHeroSubtitleQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface markdownRemarkConnectionFrontmatterHeroIsVideoQueryBoolean_2 {
-  eq?: boolean | null;
-  ne?: boolean | null;
-}
-
-export interface markdownRemarkConnectionFrontmatterParentQueryString_3 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface markdownRemarkConnectionFrontmatterParentQueryString_4 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface markdownRemarkConnectionFrontmatterHeroImageQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
 }
 
 export interface markdownRemarkConnectionFrontmatterTypeQueryString_2 {
@@ -2462,6 +2515,65 @@ export interface markdownRemarkConnectionFrontmatterImageQueryString_2 {
   glob?: string | null;
 }
 
+export interface markdownRemarkConnectionFrontmatterParentQueryString_3 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionFrontmatterParentQueryString_4 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionFrontmatterTemplateKeyQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionFrontmatterIncludeLearnMoreQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface markdownRemarkConnectionFrontmatterHeroTitleQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionFrontmatterHeroSubtitleQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionFrontmatterHeroImageQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionFrontmatterHeroIsVideoQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface markdownRemarkConnectionFrontmatterPathQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
 export interface markdownRemarkConnectionFrontmatterFullTitleQueryString_2 {
   eq?: string | null;
   ne?: string | null;
@@ -2476,18 +2588,6 @@ export interface markdownRemarkConnectionFrontmatterTimeQueryString_2 {
   glob?: string | null;
 }
 
-export interface markdownRemarkConnectionFrontmatterHeroVideoQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface markdownRemarkConnectionFrontmatterIncludeLearnMoreQueryBoolean_2 {
-  eq?: boolean | null;
-  ne?: boolean | null;
-}
-
 export interface excerptQueryString_4 {
   eq?: string | null;
   ne?: string | null;
@@ -2496,17 +2596,6 @@ export interface excerptQueryString_4 {
 }
 
 export interface markdownRemarkConnectionFileAbsolutePathQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface markdownRemarkConnectionFieldsInputObject_2 {
-  slug?: markdownRemarkConnectionFieldsSlugQueryString_2 | null;
-}
-
-export interface markdownRemarkConnectionFieldsSlugQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -2543,10 +2632,10 @@ export interface markdownRemarkConnectionImageFileInputObject_2 {
   blksize?: markdownRemarkConnectionImageFileBlksizeQueryInteger_2 | null;
   ino?: markdownRemarkConnectionImageFileInoQueryInteger_2 | null;
   blocks?: markdownRemarkConnectionImageFileBlocksQueryInteger_2 | null;
-  atimeMs?: markdownRemarkConnectionImageFileAtimeMsQueryInteger_2 | null;
-  mtimeMs?: markdownRemarkConnectionImageFileMtimeMsQueryInteger_2 | null;
-  ctimeMs?: markdownRemarkConnectionImageFileCtimeMsQueryInteger_2 | null;
-  birthtimeMs?: markdownRemarkConnectionImageFileBirthtimeMsQueryInteger_2 | null;
+  atimeMs?: markdownRemarkConnectionImageFileAtimeMsQueryFloat_2 | null;
+  mtimeMs?: markdownRemarkConnectionImageFileMtimeMsQueryFloat_2 | null;
+  ctimeMs?: markdownRemarkConnectionImageFileCtimeMsQueryFloat_2 | null;
+  birthtimeMs?: markdownRemarkConnectionImageFileBirthtimeMsQueryFloat_2 | null;
   atime?: markdownRemarkConnectionImageFileAtimeQueryString_2 | null;
   mtime?: markdownRemarkConnectionImageFileMtimeQueryString_2 | null;
   ctime?: markdownRemarkConnectionImageFileCtimeQueryString_2 | null;
@@ -2565,7 +2654,7 @@ export interface markdownRemarkConnectionImageFileChildrenQueryList_2 {
   ne?: string | null;
   regex?: string | null;
   glob?: string | null;
-  in?: string[] | null;
+  in?: (string | null)[] | null;
 }
 
 export interface markdownRemarkConnectionImageFileParentQueryString_2 {
@@ -2579,6 +2668,7 @@ export interface markdownRemarkConnectionImageFileInternalInputObject_2 {
   contentDigest?: markdownRemarkConnectionImageFileInternalContentDigestQueryString_2 | null;
   mediaType?: markdownRemarkConnectionImageFileInternalMediaTypeQueryString_2 | null;
   type?: markdownRemarkConnectionImageFileInternalTypeQueryString_2 | null;
+  description?: markdownRemarkConnectionImageFileInternalDescriptionQueryString_2 | null;
   owner?: markdownRemarkConnectionImageFileInternalOwnerQueryString_2 | null;
 }
 
@@ -2597,6 +2687,13 @@ export interface markdownRemarkConnectionImageFileInternalMediaTypeQueryString_2
 }
 
 export interface markdownRemarkConnectionImageFileInternalTypeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionImageFileInternalDescriptionQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -2765,22 +2862,22 @@ export interface markdownRemarkConnectionImageFileBlocksQueryInteger_2 {
   ne?: number | null;
 }
 
-export interface markdownRemarkConnectionImageFileAtimeMsQueryInteger_2 {
+export interface markdownRemarkConnectionImageFileAtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
 }
 
-export interface markdownRemarkConnectionImageFileMtimeMsQueryInteger_2 {
+export interface markdownRemarkConnectionImageFileMtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
 }
 
-export interface markdownRemarkConnectionImageFileCtimeMsQueryInteger_2 {
+export interface markdownRemarkConnectionImageFileCtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
 }
 
-export interface markdownRemarkConnectionImageFileBirthtimeMsQueryInteger_2 {
+export interface markdownRemarkConnectionImageFileBirthtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
 }
@@ -2813,6 +2910,17 @@ export interface markdownRemarkConnectionImageFileBirthtimeQueryString_2 {
   glob?: string | null;
 }
 
+export interface markdownRemarkConnectionFieldsInputObject_2 {
+  slug?: markdownRemarkConnectionFieldsSlugQueryString_2 | null;
+}
+
+export interface markdownRemarkConnectionFieldsSlugQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
 export interface htmlQueryString_4 {
   eq?: string | null;
   ne?: string | null;
@@ -2823,7 +2931,7 @@ export interface htmlQueryString_4 {
 export interface headingsQueryList_4 {
   value?: headingsListElemValueQueryString_4 | null;
   depth?: headingsListElemDepthQueryInt_4 | null;
-  in?: markdownHeadingInputObject_4[] | null;
+  in?: (markdownHeadingInputObject_4 | null)[] | null;
 }
 
 export interface headingsListElemValueQueryString_4 {
@@ -2993,6 +3101,9 @@ export interface sitePagePluginCreatorPluginOptionsInputObject {
   pathToConfigModule?: sitePagePluginCreatorPluginOptionsPathToConfigModuleQueryString | null;
   path?: sitePagePluginCreatorPluginOptionsPathQueryString | null;
   name?: sitePagePluginCreatorPluginOptionsNameQueryString | null;
+  modulePath?: sitePagePluginCreatorPluginOptionsModulePathQueryString | null;
+  dsn?: sitePagePluginCreatorPluginOptionsDsnQueryString | null;
+  version?: sitePagePluginCreatorPluginOptionsVersionQueryString | null;
 }
 
 export interface sitePagePluginCreatorPluginOptionsOmitGoogleFontQueryBoolean {
@@ -3021,12 +3132,33 @@ export interface sitePagePluginCreatorPluginOptionsNameQueryString {
   glob?: string | null;
 }
 
+export interface sitePagePluginCreatorPluginOptionsModulePathQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsDsnQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsVersionQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
 export interface sitePagePluginCreatorNodeApIsQueryList {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
   glob?: string | null;
-  in?: string[] | null;
+  in?: (string | null)[] | null;
 }
 
 export interface sitePagePluginCreatorBrowserApIsQueryList {
@@ -3034,7 +3166,7 @@ export interface sitePagePluginCreatorBrowserApIsQueryList {
   ne?: string | null;
   regex?: string | null;
   glob?: string | null;
-  in?: string[] | null;
+  in?: (string | null)[] | null;
 }
 
 export interface sitePagePluginCreatorSsrApIsQueryList {
@@ -3042,7 +3174,7 @@ export interface sitePagePluginCreatorSsrApIsQueryList {
   ne?: string | null;
   regex?: string | null;
   glob?: string | null;
-  in?: string[] | null;
+  in?: (string | null)[] | null;
 }
 
 export interface sitePagePluginCreatorPluginFilepathQueryString {
@@ -3057,6 +3189,7 @@ export interface sitePagePluginCreatorPackageJsonInputObject {
   description?: sitePagePluginCreatorPackageJsonDescriptionQueryString | null;
   version?: sitePagePluginCreatorPackageJsonVersionQueryString | null;
   main?: sitePagePluginCreatorPackageJsonMainQueryString | null;
+  author?: sitePagePluginCreatorPackageJsonAuthorQueryString | null;
   license?: sitePagePluginCreatorPackageJsonLicenseQueryString | null;
   dependencies?: sitePagePluginCreatorPackageJsonDependenciesQueryList | null;
   devDependencies?: sitePagePluginCreatorPackageJsonDevDependenciesQueryList | null;
@@ -3092,6 +3225,13 @@ export interface sitePagePluginCreatorPackageJsonMainQueryString {
   glob?: string | null;
 }
 
+export interface sitePagePluginCreatorPackageJsonAuthorQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
 export interface sitePagePluginCreatorPackageJsonLicenseQueryString {
   eq?: string | null;
   ne?: string | null;
@@ -3100,7 +3240,9 @@ export interface sitePagePluginCreatorPackageJsonLicenseQueryString {
 }
 
 export interface sitePagePluginCreatorPackageJsonDependenciesQueryList {
-  in?: sitePagePluginCreatorPackageJsonDependenciesInputObject[] | null;
+  in?:
+    | (sitePagePluginCreatorPackageJsonDependenciesInputObject | null)[]
+    | null;
 }
 
 export interface sitePagePluginCreatorPackageJsonDependenciesInputObject {
@@ -3123,7 +3265,9 @@ export interface sitePagePluginCreatorPackageJsonDependenciesVersionQueryString 
 }
 
 export interface sitePagePluginCreatorPackageJsonDevDependenciesQueryList {
-  in?: sitePagePluginCreatorPackageJsonDevDependenciesInputObject[] | null;
+  in?:
+    | (sitePagePluginCreatorPackageJsonDevDependenciesInputObject | null)[]
+    | null;
 }
 
 export interface sitePagePluginCreatorPackageJsonDevDependenciesInputObject {
@@ -3146,7 +3290,9 @@ export interface sitePagePluginCreatorPackageJsonDevDependenciesVersionQueryStri
 }
 
 export interface sitePagePluginCreatorPackageJsonPeerDependenciesQueryList {
-  in?: sitePagePluginCreatorPackageJsonPeerDependenciesInputObject[] | null;
+  in?:
+    | (sitePagePluginCreatorPackageJsonPeerDependenciesInputObject | null)[]
+    | null;
 }
 
 export interface sitePagePluginCreatorPackageJsonPeerDependenciesInputObject {
@@ -3173,7 +3319,7 @@ export interface sitePagePluginCreatorPackageJsonKeywordsQueryList {
   ne?: string | null;
   regex?: string | null;
   glob?: string | null;
-  in?: string[] | null;
+  in?: (string | null)[] | null;
 }
 
 export interface sitePagePluginCreatorParentQueryString {
@@ -3234,6 +3380,7 @@ export interface sitePageIdQueryString_2 {
 export interface sitePageInternalInputObject_2 {
   type?: sitePageInternalTypeQueryString_2 | null;
   contentDigest?: sitePageInternalContentDigestQueryString_2 | null;
+  description?: sitePageInternalDescriptionQueryString | null;
   owner?: sitePageInternalOwnerQueryString_2 | null;
 }
 
@@ -3245,6 +3392,13 @@ export interface sitePageInternalTypeQueryString_2 {
 }
 
 export interface sitePageInternalContentDigestQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageInternalDescriptionQueryString {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -3291,6 +3445,9 @@ export interface sitePluginPluginOptionsInputObject_2 {
   pathToConfigModule?: sitePluginPluginOptionsPathToConfigModuleQueryString_2 | null;
   path?: sitePluginPluginOptionsPathQueryString_2 | null;
   name?: sitePluginPluginOptionsNameQueryString_2 | null;
+  modulePath?: sitePluginPluginOptionsModulePathQueryString_2 | null;
+  dsn?: sitePluginPluginOptionsDsnQueryString_2 | null;
+  version?: sitePluginPluginOptionsVersionQueryString_2 | null;
 }
 
 export interface sitePluginPluginOptionsOmitGoogleFontQueryBoolean_2 {
@@ -3319,12 +3476,33 @@ export interface sitePluginPluginOptionsNameQueryString_2 {
   glob?: string | null;
 }
 
+export interface sitePluginPluginOptionsModulePathQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePluginPluginOptionsDsnQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePluginPluginOptionsVersionQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
 export interface sitePluginNodeApIsQueryList_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
   glob?: string | null;
-  in?: string[] | null;
+  in?: (string | null)[] | null;
 }
 
 export interface sitePluginBrowserApIsQueryList_2 {
@@ -3332,7 +3510,7 @@ export interface sitePluginBrowserApIsQueryList_2 {
   ne?: string | null;
   regex?: string | null;
   glob?: string | null;
-  in?: string[] | null;
+  in?: (string | null)[] | null;
 }
 
 export interface sitePluginSsrApIsQueryList_2 {
@@ -3340,7 +3518,7 @@ export interface sitePluginSsrApIsQueryList_2 {
   ne?: string | null;
   regex?: string | null;
   glob?: string | null;
-  in?: string[] | null;
+  in?: (string | null)[] | null;
 }
 
 export interface sitePluginPluginFilepathQueryString_2 {
@@ -3355,6 +3533,7 @@ export interface sitePluginPackageJsonInputObject_2 {
   description?: sitePluginPackageJsonDescriptionQueryString_2 | null;
   version?: sitePluginPackageJsonVersionQueryString_2 | null;
   main?: sitePluginPackageJsonMainQueryString_2 | null;
+  author?: sitePluginPackageJsonAuthorQueryString_2 | null;
   license?: sitePluginPackageJsonLicenseQueryString_2 | null;
   dependencies?: sitePluginPackageJsonDependenciesQueryList_2 | null;
   devDependencies?: sitePluginPackageJsonDevDependenciesQueryList_2 | null;
@@ -3390,6 +3569,13 @@ export interface sitePluginPackageJsonMainQueryString_2 {
   glob?: string | null;
 }
 
+export interface sitePluginPackageJsonAuthorQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
 export interface sitePluginPackageJsonLicenseQueryString_2 {
   eq?: string | null;
   ne?: string | null;
@@ -3398,7 +3584,7 @@ export interface sitePluginPackageJsonLicenseQueryString_2 {
 }
 
 export interface sitePluginPackageJsonDependenciesQueryList_2 {
-  in?: sitePluginPackageJsonDependenciesInputObject_2[] | null;
+  in?: (sitePluginPackageJsonDependenciesInputObject_2 | null)[] | null;
 }
 
 export interface sitePluginPackageJsonDependenciesInputObject_2 {
@@ -3421,7 +3607,7 @@ export interface sitePluginPackageJsonDependenciesVersionQueryString_2 {
 }
 
 export interface sitePluginPackageJsonDevDependenciesQueryList_2 {
-  in?: sitePluginPackageJsonDevDependenciesInputObject_2[] | null;
+  in?: (sitePluginPackageJsonDevDependenciesInputObject_2 | null)[] | null;
 }
 
 export interface sitePluginPackageJsonDevDependenciesInputObject_2 {
@@ -3444,7 +3630,7 @@ export interface sitePluginPackageJsonDevDependenciesVersionQueryString_2 {
 }
 
 export interface sitePluginPackageJsonPeerDependenciesQueryList_2 {
-  in?: sitePluginPackageJsonPeerDependenciesInputObject_2[] | null;
+  in?: (sitePluginPackageJsonPeerDependenciesInputObject_2 | null)[] | null;
 }
 
 export interface sitePluginPackageJsonPeerDependenciesInputObject_2 {
@@ -3471,7 +3657,7 @@ export interface sitePluginPackageJsonKeywordsQueryList_2 {
   ne?: string | null;
   regex?: string | null;
   glob?: string | null;
-  in?: string[] | null;
+  in?: (string | null)[] | null;
 }
 
 export interface sitePluginInternalInputObject_2 {
@@ -3597,6 +3783,7 @@ export interface directoryIdQueryString_2 {
 export interface directoryInternalInputObject_2 {
   contentDigest?: directoryInternalContentDigestQueryString_2 | null;
   type?: directoryInternalTypeQueryString_2 | null;
+  description?: directoryInternalDescriptionQueryString_2 | null;
   owner?: directoryInternalOwnerQueryString_2 | null;
 }
 
@@ -3608,6 +3795,13 @@ export interface directoryInternalContentDigestQueryString_2 {
 }
 
 export interface directoryInternalTypeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface directoryInternalDescriptionQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -3776,22 +3970,22 @@ export interface directoryBlocksQueryInteger_2 {
   ne?: number | null;
 }
 
-export interface directoryAtimeMsQueryInteger_2 {
+export interface directoryAtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
 }
 
-export interface directoryMtimeMsQueryInteger_2 {
+export interface directoryMtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
 }
 
-export interface directoryCtimeMsQueryInteger_2 {
+export interface directoryCtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
 }
 
-export interface directoryBirthtimeMsQueryInteger_2 {
+export interface directoryBirthtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
 }
@@ -3835,6 +4029,7 @@ export interface fileInternalInputObject_2 {
   contentDigest?: fileInternalContentDigestQueryString_2 | null;
   mediaType?: fileInternalMediaTypeQueryString_2 | null;
   type?: fileInternalTypeQueryString_2 | null;
+  description?: fileInternalDescriptionQueryString_2 | null;
   owner?: fileInternalOwnerQueryString_2 | null;
 }
 
@@ -3853,6 +4048,13 @@ export interface fileInternalMediaTypeQueryString_2 {
 }
 
 export interface fileInternalTypeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface fileInternalDescriptionQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -4021,22 +4223,22 @@ export interface fileBlocksQueryInteger_2 {
   ne?: number | null;
 }
 
-export interface fileAtimeMsQueryInteger_2 {
+export interface fileAtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
 }
 
-export interface fileMtimeMsQueryInteger_2 {
+export interface fileMtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
 }
 
-export interface fileCtimeMsQueryInteger_2 {
+export interface fileCtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
 }
 
-export interface fileBirthtimeMsQueryInteger_2 {
+export interface fileBirthtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
 }
@@ -4526,14 +4728,6 @@ export interface markdownRemarkInternalFieldOwnersSlugQueryString_2 {
 export interface markdownRemarkFrontmatterInputObject_2 {
   title?: markdownRemarkFrontmatterTitleQueryString_2 | null;
   isPage?: markdownRemarkFrontmatterIsPageQueryBoolean_2 | null;
-  path?: markdownRemarkFrontmatterPathQueryString_2 | null;
-  templateKey?: markdownRemarkFrontmatterTemplateKeyQueryString_2 | null;
-  heroTitle?: markdownRemarkFrontmatterHeroTitleQueryString_2 | null;
-  heroSubtitle?: markdownRemarkFrontmatterHeroSubtitleQueryString_2 | null;
-  heroIsVideo?: markdownRemarkFrontmatterHeroIsVideoQueryBoolean_2 | null;
-  _PARENT?: markdownRemarkFrontmatterParentQueryString_3 | null;
-  parent?: markdownRemarkFrontmatterParentQueryString_4 | null;
-  heroImage?: markdownRemarkFrontmatterHeroImageQueryString_2 | null;
   type?: markdownRemarkFrontmatterTypeQueryString_2 | null;
   sortOrder?: markdownRemarkFrontmatterSortOrderQueryInteger_2 | null;
   active?: markdownRemarkFrontmatterActiveQueryBoolean_2 | null;
@@ -4542,10 +4736,17 @@ export interface markdownRemarkFrontmatterInputObject_2 {
   company?: markdownRemarkFrontmatterCompanyQueryString_2 | null;
   description?: markdownRemarkFrontmatterDescriptionQueryString_2 | null;
   image?: markdownRemarkFrontmatterImageQueryString_2 | null;
+  _PARENT?: markdownRemarkFrontmatterParentQueryString_3 | null;
+  parent?: markdownRemarkFrontmatterParentQueryString_4 | null;
+  templateKey?: markdownRemarkFrontmatterTemplateKeyQueryString_2 | null;
+  includeLearnMore?: markdownRemarkFrontmatterIncludeLearnMoreQueryBoolean_2 | null;
+  heroTitle?: markdownRemarkFrontmatterHeroTitleQueryString_2 | null;
+  heroSubtitle?: markdownRemarkFrontmatterHeroSubtitleQueryString_2 | null;
+  heroImage?: markdownRemarkFrontmatterHeroImageQueryString_2 | null;
+  heroIsVideo?: markdownRemarkFrontmatterHeroIsVideoQueryBoolean_2 | null;
+  path?: markdownRemarkFrontmatterPathQueryString_2 | null;
   fullTitle?: markdownRemarkFrontmatterFullTitleQueryString_2 | null;
   time?: markdownRemarkFrontmatterTimeQueryString_2 | null;
-  heroVideo?: markdownRemarkFrontmatterHeroVideoQueryString_2 | null;
-  includeLearnMore?: markdownRemarkFrontmatterIncludeLearnMoreQueryBoolean_2 | null;
 }
 
 export interface markdownRemarkFrontmatterTitleQueryString_2 {
@@ -4558,60 +4759,6 @@ export interface markdownRemarkFrontmatterTitleQueryString_2 {
 export interface markdownRemarkFrontmatterIsPageQueryBoolean_2 {
   eq?: boolean | null;
   ne?: boolean | null;
-}
-
-export interface markdownRemarkFrontmatterPathQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface markdownRemarkFrontmatterTemplateKeyQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface markdownRemarkFrontmatterHeroTitleQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface markdownRemarkFrontmatterHeroSubtitleQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface markdownRemarkFrontmatterHeroIsVideoQueryBoolean_2 {
-  eq?: boolean | null;
-  ne?: boolean | null;
-}
-
-export interface markdownRemarkFrontmatterParentQueryString_3 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface markdownRemarkFrontmatterParentQueryString_4 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface markdownRemarkFrontmatterHeroImageQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
 }
 
 export interface markdownRemarkFrontmatterTypeQueryString_2 {
@@ -4666,6 +4813,65 @@ export interface markdownRemarkFrontmatterImageQueryString_2 {
   glob?: string | null;
 }
 
+export interface markdownRemarkFrontmatterParentQueryString_3 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkFrontmatterParentQueryString_4 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkFrontmatterTemplateKeyQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkFrontmatterIncludeLearnMoreQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface markdownRemarkFrontmatterHeroTitleQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkFrontmatterHeroSubtitleQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkFrontmatterHeroImageQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkFrontmatterHeroIsVideoQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface markdownRemarkFrontmatterPathQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
 export interface markdownRemarkFrontmatterFullTitleQueryString_2 {
   eq?: string | null;
   ne?: string | null;
@@ -4680,18 +4886,6 @@ export interface markdownRemarkFrontmatterTimeQueryString_2 {
   glob?: string | null;
 }
 
-export interface markdownRemarkFrontmatterHeroVideoQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface markdownRemarkFrontmatterIncludeLearnMoreQueryBoolean_2 {
-  eq?: boolean | null;
-  ne?: boolean | null;
-}
-
 export interface excerptQueryString_3 {
   eq?: string | null;
   ne?: string | null;
@@ -4700,17 +4894,6 @@ export interface excerptQueryString_3 {
 }
 
 export interface markdownRemarkFileAbsolutePathQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface markdownRemarkFieldsInputObject_2 {
-  slug?: markdownRemarkFieldsSlugQueryString_2 | null;
-}
-
-export interface markdownRemarkFieldsSlugQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -4747,10 +4930,10 @@ export interface markdownRemarkImageFileInputObject_2 {
   blksize?: markdownRemarkImageFileBlksizeQueryInteger_2 | null;
   ino?: markdownRemarkImageFileInoQueryInteger_2 | null;
   blocks?: markdownRemarkImageFileBlocksQueryInteger_2 | null;
-  atimeMs?: markdownRemarkImageFileAtimeMsQueryInteger_2 | null;
-  mtimeMs?: markdownRemarkImageFileMtimeMsQueryInteger_2 | null;
-  ctimeMs?: markdownRemarkImageFileCtimeMsQueryInteger_2 | null;
-  birthtimeMs?: markdownRemarkImageFileBirthtimeMsQueryInteger_2 | null;
+  atimeMs?: markdownRemarkImageFileAtimeMsQueryFloat_2 | null;
+  mtimeMs?: markdownRemarkImageFileMtimeMsQueryFloat_2 | null;
+  ctimeMs?: markdownRemarkImageFileCtimeMsQueryFloat_2 | null;
+  birthtimeMs?: markdownRemarkImageFileBirthtimeMsQueryFloat_2 | null;
   atime?: markdownRemarkImageFileAtimeQueryString_2 | null;
   mtime?: markdownRemarkImageFileMtimeQueryString_2 | null;
   ctime?: markdownRemarkImageFileCtimeQueryString_2 | null;
@@ -4769,7 +4952,7 @@ export interface markdownRemarkImageFileChildrenQueryList_2 {
   ne?: string | null;
   regex?: string | null;
   glob?: string | null;
-  in?: string[] | null;
+  in?: (string | null)[] | null;
 }
 
 export interface markdownRemarkImageFileParentQueryString_2 {
@@ -4783,6 +4966,7 @@ export interface markdownRemarkImageFileInternalInputObject_2 {
   contentDigest?: markdownRemarkImageFileInternalContentDigestQueryString_2 | null;
   mediaType?: markdownRemarkImageFileInternalMediaTypeQueryString_2 | null;
   type?: markdownRemarkImageFileInternalTypeQueryString_2 | null;
+  description?: markdownRemarkImageFileInternalDescriptionQueryString_2 | null;
   owner?: markdownRemarkImageFileInternalOwnerQueryString_2 | null;
 }
 
@@ -4801,6 +4985,13 @@ export interface markdownRemarkImageFileInternalMediaTypeQueryString_2 {
 }
 
 export interface markdownRemarkImageFileInternalTypeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkImageFileInternalDescriptionQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -4969,22 +5160,22 @@ export interface markdownRemarkImageFileBlocksQueryInteger_2 {
   ne?: number | null;
 }
 
-export interface markdownRemarkImageFileAtimeMsQueryInteger_2 {
+export interface markdownRemarkImageFileAtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
 }
 
-export interface markdownRemarkImageFileMtimeMsQueryInteger_2 {
+export interface markdownRemarkImageFileMtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
 }
 
-export interface markdownRemarkImageFileCtimeMsQueryInteger_2 {
+export interface markdownRemarkImageFileCtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
 }
 
-export interface markdownRemarkImageFileBirthtimeMsQueryInteger_2 {
+export interface markdownRemarkImageFileBirthtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
 }
@@ -5017,6 +5208,17 @@ export interface markdownRemarkImageFileBirthtimeQueryString_2 {
   glob?: string | null;
 }
 
+export interface markdownRemarkFieldsInputObject_2 {
+  slug?: markdownRemarkFieldsSlugQueryString_2 | null;
+}
+
+export interface markdownRemarkFieldsSlugQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
 export interface htmlQueryString_3 {
   eq?: string | null;
   ne?: string | null;
@@ -5027,7 +5229,7 @@ export interface htmlQueryString_3 {
 export interface headingsQueryList_3 {
   value?: headingsListElemValueQueryString_3 | null;
   depth?: headingsListElemDepthQueryInt_3 | null;
-  in?: markdownHeadingInputObject_3[] | null;
+  in?: (markdownHeadingInputObject_3 | null)[] | null;
 }
 
 export interface headingsListElemValueQueryString_3 {
@@ -5180,10 +5382,10 @@ export interface DirectoryRootQueryTypeArgs {
   blksize?: directoryBlksizeQueryInteger_2 | null;
   ino?: directoryInoQueryInteger_2 | null;
   blocks?: directoryBlocksQueryInteger_2 | null;
-  atimeMs?: directoryAtimeMsQueryInteger_2 | null;
-  mtimeMs?: directoryMtimeMsQueryInteger_2 | null;
-  ctimeMs?: directoryCtimeMsQueryInteger_2 | null;
-  birthtimeMs?: directoryBirthtimeMsQueryInteger_2 | null;
+  atimeMs?: directoryAtimeMsQueryFloat_2 | null;
+  mtimeMs?: directoryMtimeMsQueryFloat_2 | null;
+  ctimeMs?: directoryCtimeMsQueryFloat_2 | null;
+  birthtimeMs?: directoryBirthtimeMsQueryFloat_2 | null;
   atime?: directoryAtimeQueryString_2 | null;
   mtime?: directoryMtimeQueryString_2 | null;
   ctime?: directoryCtimeQueryString_2 | null;
@@ -5217,10 +5419,10 @@ export interface FileRootQueryTypeArgs {
   blksize?: fileBlksizeQueryInteger_2 | null;
   ino?: fileInoQueryInteger_2 | null;
   blocks?: fileBlocksQueryInteger_2 | null;
-  atimeMs?: fileAtimeMsQueryInteger_2 | null;
-  mtimeMs?: fileMtimeMsQueryInteger_2 | null;
-  ctimeMs?: fileCtimeMsQueryInteger_2 | null;
-  birthtimeMs?: fileBirthtimeMsQueryInteger_2 | null;
+  atimeMs?: fileAtimeMsQueryFloat_2 | null;
+  mtimeMs?: fileMtimeMsQueryFloat_2 | null;
+  ctimeMs?: fileCtimeMsQueryFloat_2 | null;
+  birthtimeMs?: fileBirthtimeMsQueryFloat_2 | null;
   atime?: fileAtimeQueryString_2 | null;
   mtime?: fileMtimeQueryString_2 | null;
   ctime?: fileCtimeQueryString_2 | null;
@@ -5244,8 +5446,8 @@ export interface MarkdownRemarkRootQueryTypeArgs {
   frontmatter?: markdownRemarkFrontmatterInputObject_2 | null;
   excerpt?: excerptQueryString_3 | null;
   fileAbsolutePath?: markdownRemarkFileAbsolutePathQueryString_2 | null;
-  fields?: markdownRemarkFieldsInputObject_2 | null;
   imageFile?: markdownRemarkImageFileInputObject_2 | null;
+  fields?: markdownRemarkFieldsInputObject_2 | null;
   html?: htmlQueryString_3 | null;
   headings?: headingsQueryList_3 | null;
   timeToRead?: timeToReadQueryInt_3 | null;
@@ -5279,114 +5481,114 @@ export interface GroupDirectoryConnectionArgs {
 export interface ModifiedTimeDirectoryArgs {
   formatString?:
     | string
-    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+    | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
   fromNow?:
     | boolean
-    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+    | null /** Returns a string generated with Moment.js' fromNow function */;
   difference?:
     | string
-    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+    | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
   locale?:
     | string
-    | null /* Configures the locale Moment.js will use to format the date. */;
+    | null /** Configures the locale Moment.js will use to format the date. */;
 }
 export interface AccessTimeDirectoryArgs {
   formatString?:
     | string
-    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+    | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
   fromNow?:
     | boolean
-    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+    | null /** Returns a string generated with Moment.js' fromNow function */;
   difference?:
     | string
-    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+    | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
   locale?:
     | string
-    | null /* Configures the locale Moment.js will use to format the date. */;
+    | null /** Configures the locale Moment.js will use to format the date. */;
 }
 export interface ChangeTimeDirectoryArgs {
   formatString?:
     | string
-    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+    | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
   fromNow?:
     | boolean
-    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+    | null /** Returns a string generated with Moment.js' fromNow function */;
   difference?:
     | string
-    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+    | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
   locale?:
     | string
-    | null /* Configures the locale Moment.js will use to format the date. */;
+    | null /** Configures the locale Moment.js will use to format the date. */;
 }
 export interface BirthTimeDirectoryArgs {
   formatString?:
     | string
-    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+    | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
   fromNow?:
     | boolean
-    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+    | null /** Returns a string generated with Moment.js' fromNow function */;
   difference?:
     | string
-    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+    | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
   locale?:
     | string
-    | null /* Configures the locale Moment.js will use to format the date. */;
+    | null /** Configures the locale Moment.js will use to format the date. */;
 }
 export interface AtimeDirectoryArgs {
   formatString?:
     | string
-    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+    | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
   fromNow?:
     | boolean
-    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+    | null /** Returns a string generated with Moment.js' fromNow function */;
   difference?:
     | string
-    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+    | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
   locale?:
     | string
-    | null /* Configures the locale Moment.js will use to format the date. */;
+    | null /** Configures the locale Moment.js will use to format the date. */;
 }
 export interface MtimeDirectoryArgs {
   formatString?:
     | string
-    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+    | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
   fromNow?:
     | boolean
-    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+    | null /** Returns a string generated with Moment.js' fromNow function */;
   difference?:
     | string
-    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+    | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
   locale?:
     | string
-    | null /* Configures the locale Moment.js will use to format the date. */;
+    | null /** Configures the locale Moment.js will use to format the date. */;
 }
 export interface CtimeDirectoryArgs {
   formatString?:
     | string
-    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+    | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
   fromNow?:
     | boolean
-    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+    | null /** Returns a string generated with Moment.js' fromNow function */;
   difference?:
     | string
-    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+    | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
   locale?:
     | string
-    | null /* Configures the locale Moment.js will use to format the date. */;
+    | null /** Configures the locale Moment.js will use to format the date. */;
 }
 export interface BirthtimeDirectoryArgs {
   formatString?:
     | string
-    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+    | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
   fromNow?:
     | boolean
-    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+    | null /** Returns a string generated with Moment.js' fromNow function */;
   difference?:
     | string
-    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+    | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
   locale?:
     | string
-    | null /* Configures the locale Moment.js will use to format the date. */;
+    | null /** Configures the locale Moment.js will use to format the date. */;
 }
 export interface DistinctFileConnectionArgs {
   field?: fileDistinctEnum | null;
@@ -5399,114 +5601,114 @@ export interface GroupFileConnectionArgs {
 export interface ModifiedTimeFileArgs {
   formatString?:
     | string
-    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+    | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
   fromNow?:
     | boolean
-    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+    | null /** Returns a string generated with Moment.js' fromNow function */;
   difference?:
     | string
-    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+    | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
   locale?:
     | string
-    | null /* Configures the locale Moment.js will use to format the date. */;
+    | null /** Configures the locale Moment.js will use to format the date. */;
 }
 export interface AccessTimeFileArgs {
   formatString?:
     | string
-    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+    | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
   fromNow?:
     | boolean
-    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+    | null /** Returns a string generated with Moment.js' fromNow function */;
   difference?:
     | string
-    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+    | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
   locale?:
     | string
-    | null /* Configures the locale Moment.js will use to format the date. */;
+    | null /** Configures the locale Moment.js will use to format the date. */;
 }
 export interface ChangeTimeFileArgs {
   formatString?:
     | string
-    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+    | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
   fromNow?:
     | boolean
-    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+    | null /** Returns a string generated with Moment.js' fromNow function */;
   difference?:
     | string
-    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+    | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
   locale?:
     | string
-    | null /* Configures the locale Moment.js will use to format the date. */;
+    | null /** Configures the locale Moment.js will use to format the date. */;
 }
 export interface BirthTimeFileArgs {
   formatString?:
     | string
-    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+    | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
   fromNow?:
     | boolean
-    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+    | null /** Returns a string generated with Moment.js' fromNow function */;
   difference?:
     | string
-    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+    | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
   locale?:
     | string
-    | null /* Configures the locale Moment.js will use to format the date. */;
+    | null /** Configures the locale Moment.js will use to format the date. */;
 }
 export interface AtimeFileArgs {
   formatString?:
     | string
-    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+    | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
   fromNow?:
     | boolean
-    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+    | null /** Returns a string generated with Moment.js' fromNow function */;
   difference?:
     | string
-    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+    | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
   locale?:
     | string
-    | null /* Configures the locale Moment.js will use to format the date. */;
+    | null /** Configures the locale Moment.js will use to format the date. */;
 }
 export interface MtimeFileArgs {
   formatString?:
     | string
-    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+    | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
   fromNow?:
     | boolean
-    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+    | null /** Returns a string generated with Moment.js' fromNow function */;
   difference?:
     | string
-    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+    | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
   locale?:
     | string
-    | null /* Configures the locale Moment.js will use to format the date. */;
+    | null /** Configures the locale Moment.js will use to format the date. */;
 }
 export interface CtimeFileArgs {
   formatString?:
     | string
-    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+    | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
   fromNow?:
     | boolean
-    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+    | null /** Returns a string generated with Moment.js' fromNow function */;
   difference?:
     | string
-    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+    | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
   locale?:
     | string
-    | null /* Configures the locale Moment.js will use to format the date. */;
+    | null /** Configures the locale Moment.js will use to format the date. */;
 }
 export interface BirthtimeFileArgs {
   formatString?:
     | string
-    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+    | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
   fromNow?:
     | boolean
-    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+    | null /** Returns a string generated with Moment.js' fromNow function */;
   difference?:
     | string
-    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+    | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
   locale?:
     | string
-    | null /* Configures the locale Moment.js will use to format the date. */;
+    | null /** Configures the locale Moment.js will use to format the date. */;
 }
 export interface ExcerptMarkdownRemarkArgs {
   pruneLength?: number | null;
@@ -5593,30 +5795,30 @@ export interface GroupMarkdownRemarkConnectionArgs {
 export interface PortSiteArgs {
   formatString?:
     | string
-    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+    | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
   fromNow?:
     | boolean
-    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+    | null /** Returns a string generated with Moment.js' fromNow function */;
   difference?:
     | string
-    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+    | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
   locale?:
     | string
-    | null /* Configures the locale Moment.js will use to format the date. */;
+    | null /** Configures the locale Moment.js will use to format the date. */;
 }
 export interface BuildTimeSiteArgs {
   formatString?:
     | string
-    | null /* Format the date using Moment.js&#x27; date tokens e.g. &quot;date(formatString: &quot;YYYY MMMM DD)&quot; See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
+    | null /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */;
   fromNow?:
     | boolean
-    | null /* Returns a string generated with Moment.js&#x27; fromNow function */;
+    | null /** Returns a string generated with Moment.js' fromNow function */;
   difference?:
     | string
-    | null /* Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
+    | null /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */;
   locale?:
     | string
-    | null /* Configures the locale Moment.js will use to format the date. */;
+    | null /** Configures the locale Moment.js will use to format the date. */;
 }
 
 export enum SitePageConnectionSortByFieldsEnum {
@@ -5624,7 +5826,6 @@ export enum SitePageConnectionSortByFieldsEnum {
   jsonName = "jsonName",
   internalComponentName = "internalComponentName",
   path = "path",
-  matchPath = "matchPath",
   component = "component",
   componentChunkName = "componentChunkName",
   context___slug = "context___slug",
@@ -5635,9 +5836,9 @@ export enum SitePageConnectionSortByFieldsEnum {
   componentPath = "componentPath",
   id = "id",
   parent = "parent",
-  children = "children",
   internal___type = "internal___type",
   internal___contentDigest = "internal___contentDigest",
+  internal___description = "internal___description",
   internal___owner = "internal___owner"
 }
 
@@ -5663,6 +5864,7 @@ export enum sitePageDistinctEnum {
   parent = "parent",
   internal___type = "internal___type",
   internal___contentDigest = "internal___contentDigest",
+  internal___description = "internal___description",
   internal___owner = "internal___owner"
 }
 
@@ -5683,6 +5885,7 @@ export enum sitePageGroupEnum {
   parent = "parent",
   internal___type = "internal___type",
   internal___contentDigest = "internal___contentDigest",
+  internal___description = "internal___description",
   internal___owner = "internal___owner"
 }
 
@@ -5691,11 +5894,13 @@ export enum SitePluginConnectionSortByFieldsEnum {
   id = "id",
   name = "name",
   version = "version",
-  pluginOptions___plugins = "pluginOptions___plugins",
   pluginOptions___omitGoogleFont = "pluginOptions___omitGoogleFont",
   pluginOptions___pathToConfigModule = "pluginOptions___pathToConfigModule",
   pluginOptions___path = "pluginOptions___path",
   pluginOptions___name = "pluginOptions___name",
+  pluginOptions___modulePath = "pluginOptions___modulePath",
+  pluginOptions___dsn = "pluginOptions___dsn",
+  pluginOptions___version = "pluginOptions___version",
   nodeAPIs = "nodeAPIs",
   browserAPIs = "browserAPIs",
   ssrAPIs = "ssrAPIs",
@@ -5709,11 +5914,8 @@ export enum SitePluginConnectionSortByFieldsEnum {
   packageJson___dependencies = "packageJson___dependencies",
   packageJson___devDependencies = "packageJson___devDependencies",
   packageJson___peerDependencies = "packageJson___peerDependencies",
-  packageJson___optionalDependecies = "packageJson___optionalDependecies",
-  packageJson___bundledDependecies = "packageJson___bundledDependecies",
   packageJson___keywords = "packageJson___keywords",
   parent = "parent",
-  children = "children",
   internal___contentDigest = "internal___contentDigest",
   internal___type = "internal___type",
   internal___owner = "internal___owner"
@@ -5733,6 +5935,9 @@ export enum sitePluginDistinctEnum {
   pluginOptions___pathToConfigModule = "pluginOptions___pathToConfigModule",
   pluginOptions___path = "pluginOptions___path",
   pluginOptions___name = "pluginOptions___name",
+  pluginOptions___modulePath = "pluginOptions___modulePath",
+  pluginOptions___dsn = "pluginOptions___dsn",
+  pluginOptions___version = "pluginOptions___version",
   nodeAPIs = "nodeAPIs",
   browserAPIs = "browserAPIs",
   ssrAPIs = "ssrAPIs",
@@ -5762,6 +5967,9 @@ export enum sitePluginGroupEnum {
   pluginOptions___pathToConfigModule = "pluginOptions___pathToConfigModule",
   pluginOptions___path = "pluginOptions___path",
   pluginOptions___name = "pluginOptions___name",
+  pluginOptions___modulePath = "pluginOptions___modulePath",
+  pluginOptions___dsn = "pluginOptions___dsn",
+  pluginOptions___version = "pluginOptions___version",
   nodeAPIs = "nodeAPIs",
   browserAPIs = "browserAPIs",
   ssrAPIs = "ssrAPIs",
@@ -5784,10 +5992,10 @@ export enum sitePluginGroupEnum {
 
 export enum DirectoryConnectionSortByFieldsEnum {
   id = "id",
-  children = "children",
   parent = "parent",
   internal___contentDigest = "internal___contentDigest",
   internal___type = "internal___type",
+  internal___description = "internal___description",
   internal___owner = "internal___owner",
   sourceInstanceName = "sourceInstanceName",
   absolutePath = "absolutePath",
@@ -5834,6 +6042,7 @@ export enum directoryDistinctEnum {
   parent = "parent",
   internal___contentDigest = "internal___contentDigest",
   internal___type = "internal___type",
+  internal___description = "internal___description",
   internal___owner = "internal___owner",
   sourceInstanceName = "sourceInstanceName",
   absolutePath = "absolutePath",
@@ -5875,6 +6084,7 @@ export enum directoryGroupEnum {
   parent = "parent",
   internal___contentDigest = "internal___contentDigest",
   internal___type = "internal___type",
+  internal___description = "internal___description",
   internal___owner = "internal___owner",
   sourceInstanceName = "sourceInstanceName",
   absolutePath = "absolutePath",
@@ -5918,6 +6128,7 @@ export enum FileConnectionSortByFieldsEnum {
   internal___contentDigest = "internal___contentDigest",
   internal___mediaType = "internal___mediaType",
   internal___type = "internal___type",
+  internal___description = "internal___description",
   internal___owner = "internal___owner",
   sourceInstanceName = "sourceInstanceName",
   absolutePath = "absolutePath",
@@ -6006,6 +6217,7 @@ export enum fileDistinctEnum {
   internal___contentDigest = "internal___contentDigest",
   internal___mediaType = "internal___mediaType",
   internal___type = "internal___type",
+  internal___description = "internal___description",
   internal___owner = "internal___owner",
   sourceInstanceName = "sourceInstanceName",
   absolutePath = "absolutePath",
@@ -6049,6 +6261,7 @@ export enum fileGroupEnum {
   internal___contentDigest = "internal___contentDigest",
   internal___mediaType = "internal___mediaType",
   internal___type = "internal___type",
+  internal___description = "internal___description",
   internal___owner = "internal___owner",
   sourceInstanceName = "sourceInstanceName",
   absolutePath = "absolutePath",
@@ -6087,7 +6300,6 @@ export enum fileGroupEnum {
 
 export enum ImageSharpConnectionSortByFieldsEnum {
   id = "id",
-  children = "children",
   parent = "parent",
   internal___contentDigest = "internal___contentDigest",
   internal___type = "internal___type",
@@ -6166,7 +6378,6 @@ export enum imageSharpGroupEnum {
 
 export enum MarkdownRemarkConnectionSortByFieldsEnum {
   id = "id",
-  children = "children",
   parent = "parent",
   internal___content = "internal___content",
   internal___type = "internal___type",
@@ -6175,14 +6386,6 @@ export enum MarkdownRemarkConnectionSortByFieldsEnum {
   internal___fieldOwners___slug = "internal___fieldOwners___slug",
   frontmatter___title = "frontmatter___title",
   frontmatter___isPage = "frontmatter___isPage",
-  frontmatter___path = "frontmatter___path",
-  frontmatter___templateKey = "frontmatter___templateKey",
-  frontmatter___heroTitle = "frontmatter___heroTitle",
-  frontmatter___heroSubtitle = "frontmatter___heroSubtitle",
-  frontmatter___heroIsVideo = "frontmatter___heroIsVideo",
-  frontmatter____PARENT = "frontmatter____PARENT",
-  frontmatter___parent = "frontmatter___parent",
-  frontmatter___heroImage = "frontmatter___heroImage",
   frontmatter___type = "frontmatter___type",
   frontmatter___sortOrder = "frontmatter___sortOrder",
   frontmatter___active = "frontmatter___active",
@@ -6191,14 +6394,21 @@ export enum MarkdownRemarkConnectionSortByFieldsEnum {
   frontmatter___company = "frontmatter___company",
   frontmatter___description = "frontmatter___description",
   frontmatter___image = "frontmatter___image",
+  frontmatter____PARENT = "frontmatter____PARENT",
+  frontmatter___parent = "frontmatter___parent",
+  frontmatter___templateKey = "frontmatter___templateKey",
+  frontmatter___includeLearnMore = "frontmatter___includeLearnMore",
+  frontmatter___heroTitle = "frontmatter___heroTitle",
+  frontmatter___heroSubtitle = "frontmatter___heroSubtitle",
+  frontmatter___heroImage = "frontmatter___heroImage",
+  frontmatter___heroIsVideo = "frontmatter___heroIsVideo",
+  frontmatter___path = "frontmatter___path",
   frontmatter___fullTitle = "frontmatter___fullTitle",
   frontmatter___time = "frontmatter___time",
-  frontmatter___heroVideo = "frontmatter___heroVideo",
-  frontmatter___includeLearnMore = "frontmatter___includeLearnMore",
   excerpt = "excerpt",
   fileAbsolutePath = "fileAbsolutePath",
-  fields___slug = "fields___slug",
   imageFile___NODE = "imageFile___NODE",
+  fields___slug = "fields___slug",
   html = "html",
   headings = "headings",
   timeToRead = "timeToRead",
@@ -6223,14 +6433,6 @@ export enum markdownRemarkDistinctEnum {
   internal___fieldOwners___slug = "internal___fieldOwners___slug",
   frontmatter___title = "frontmatter___title",
   frontmatter___isPage = "frontmatter___isPage",
-  frontmatter___path = "frontmatter___path",
-  frontmatter___templateKey = "frontmatter___templateKey",
-  frontmatter___heroTitle = "frontmatter___heroTitle",
-  frontmatter___heroSubtitle = "frontmatter___heroSubtitle",
-  frontmatter___heroIsVideo = "frontmatter___heroIsVideo",
-  frontmatter____PARENT = "frontmatter____PARENT",
-  frontmatter___parent = "frontmatter___parent",
-  frontmatter___heroImage = "frontmatter___heroImage",
   frontmatter___type = "frontmatter___type",
   frontmatter___sortOrder = "frontmatter___sortOrder",
   frontmatter___active = "frontmatter___active",
@@ -6239,14 +6441,21 @@ export enum markdownRemarkDistinctEnum {
   frontmatter___company = "frontmatter___company",
   frontmatter___description = "frontmatter___description",
   frontmatter___image = "frontmatter___image",
+  frontmatter____PARENT = "frontmatter____PARENT",
+  frontmatter___parent = "frontmatter___parent",
+  frontmatter___templateKey = "frontmatter___templateKey",
+  frontmatter___includeLearnMore = "frontmatter___includeLearnMore",
+  frontmatter___heroTitle = "frontmatter___heroTitle",
+  frontmatter___heroSubtitle = "frontmatter___heroSubtitle",
+  frontmatter___heroImage = "frontmatter___heroImage",
+  frontmatter___heroIsVideo = "frontmatter___heroIsVideo",
+  frontmatter___path = "frontmatter___path",
   frontmatter___fullTitle = "frontmatter___fullTitle",
   frontmatter___time = "frontmatter___time",
-  frontmatter___heroVideo = "frontmatter___heroVideo",
-  frontmatter___includeLearnMore = "frontmatter___includeLearnMore",
   excerpt = "excerpt",
   fileAbsolutePath = "fileAbsolutePath",
-  fields___slug = "fields___slug",
-  imageFile___NODE = "imageFile___NODE"
+  imageFile___NODE = "imageFile___NODE",
+  fields___slug = "fields___slug"
 }
 
 export enum markdownRemarkGroupEnum {
@@ -6259,14 +6468,6 @@ export enum markdownRemarkGroupEnum {
   internal___fieldOwners___slug = "internal___fieldOwners___slug",
   frontmatter___title = "frontmatter___title",
   frontmatter___isPage = "frontmatter___isPage",
-  frontmatter___path = "frontmatter___path",
-  frontmatter___templateKey = "frontmatter___templateKey",
-  frontmatter___heroTitle = "frontmatter___heroTitle",
-  frontmatter___heroSubtitle = "frontmatter___heroSubtitle",
-  frontmatter___heroIsVideo = "frontmatter___heroIsVideo",
-  frontmatter____PARENT = "frontmatter____PARENT",
-  frontmatter___parent = "frontmatter___parent",
-  frontmatter___heroImage = "frontmatter___heroImage",
   frontmatter___type = "frontmatter___type",
   frontmatter___sortOrder = "frontmatter___sortOrder",
   frontmatter___active = "frontmatter___active",
@@ -6275,12 +6476,19 @@ export enum markdownRemarkGroupEnum {
   frontmatter___company = "frontmatter___company",
   frontmatter___description = "frontmatter___description",
   frontmatter___image = "frontmatter___image",
+  frontmatter____PARENT = "frontmatter____PARENT",
+  frontmatter___parent = "frontmatter___parent",
+  frontmatter___templateKey = "frontmatter___templateKey",
+  frontmatter___includeLearnMore = "frontmatter___includeLearnMore",
+  frontmatter___heroTitle = "frontmatter___heroTitle",
+  frontmatter___heroSubtitle = "frontmatter___heroSubtitle",
+  frontmatter___heroImage = "frontmatter___heroImage",
+  frontmatter___heroIsVideo = "frontmatter___heroIsVideo",
+  frontmatter___path = "frontmatter___path",
   frontmatter___fullTitle = "frontmatter___fullTitle",
   frontmatter___time = "frontmatter___time",
-  frontmatter___heroVideo = "frontmatter___heroVideo",
-  frontmatter___includeLearnMore = "frontmatter___includeLearnMore",
   excerpt = "excerpt",
   fileAbsolutePath = "fileAbsolutePath",
-  fields___slug = "fields___slug",
-  imageFile___NODE = "imageFile___NODE"
+  imageFile___NODE = "imageFile___NODE",
+  fields___slug = "fields___slug"
 }

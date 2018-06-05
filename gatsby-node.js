@@ -68,7 +68,8 @@ exports.onCreateNode = ({ node, getNode, getNodes, boundActionCreators }) => {
         name: `slug`,
         value: slug
       })
-    } else if (node.frontmatter.type === `workshop` || node.frontmatter.type === `speaker` || node.frontmatter.type === `benefit`) {
+    } else if (node.frontmatter.type === `workshop` ||
+      node.frontmatter.type === `speaker` || node.frontmatter.type === `benefit` || node.frontmatter.type === `resource`) {
       const pathToFile = path
         .join(__dirname, `content`, node.frontmatter.image)
         .split(path.sep)

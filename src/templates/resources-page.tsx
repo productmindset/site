@@ -41,10 +41,9 @@ const ContactPageLayout: React.StatelessComponent<ResourcePageTemplateLayoutProp
                           {resourceEdge!.node!.frontmatter!.resourceType!}
                         </CardHeaderTitle>
                       </CardHeader>
-                      <br />
-                      <CardImage className="is-16by9">
+                      <CardImage className="is-3by2">
                         <figure className="is-flex is-horizontally-centered">
-                          <Img className="image is-16by9 is-flex is-horizontally-centered"
+                          <Img className="image is-3by2 is-flex is-horizontally-centered"
                             title={resourceEdge!.node!.frontmatter!.fullTitle!}
                             alt={resourceEdge!.node!.frontmatter!.fullTitle!}
                             resolutions={resourceEdge!.node!.imageFile!.childImageSharp!.resolutions!}
@@ -87,7 +86,7 @@ export const ResourcesPageTemplateQuery = graphql`
       node {
         imageFile {
           childImageSharp {
-          resolutions(width: 256, height: 256 ) {
+          resolutions(width: 240, height: 160 ) {
             ...GatsbyImageSharpResolutions_withWebp
           }
           }

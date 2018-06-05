@@ -104,7 +104,6 @@ export interface packageJson_2 {
   description?: string | null;
   version?: string | null;
   main?: string | null;
-  author?: string | null;
   license?: string | null;
   dependencies?: (dependencies_2 | null)[] | null;
   devDependencies?: (devDependencies_2 | null)[] | null;
@@ -356,22 +355,23 @@ export interface frontmatter_2 {
   type?: string | null;
   sortOrder?: number | null;
   active?: boolean | null;
-  fullName?: string | null;
-  jobTitle?: string | null;
-  company?: string | null;
+  fullTitle?: string | null;
   description?: string | null;
   image?: string | null;
   _PARENT?: string | null;
   parent?: string | null;
+  fullName?: string | null;
+  jobTitle?: string | null;
+  company?: string | null;
+  time?: string | null;
+  path?: string | null;
   templateKey?: string | null;
-  includeLearnMore?: boolean | null;
   heroTitle?: string | null;
   heroSubtitle?: string | null;
-  heroImage?: string | null;
   heroIsVideo?: boolean | null;
-  path?: string | null;
-  fullTitle?: string | null;
-  time?: string | null;
+  includeLearnMore?: boolean | null;
+  subColumns?: number | null;
+  heroImage?: string | null;
 }
 
 export interface fields_3 {
@@ -810,7 +810,6 @@ export interface sitePageConnectionPluginCreatorPackageJsonInputObject {
   description?: sitePageConnectionPluginCreatorPackageJsonDescriptionQueryString | null;
   version?: sitePageConnectionPluginCreatorPackageJsonVersionQueryString | null;
   main?: sitePageConnectionPluginCreatorPackageJsonMainQueryString | null;
-  author?: sitePageConnectionPluginCreatorPackageJsonAuthorQueryString | null;
   license?: sitePageConnectionPluginCreatorPackageJsonLicenseQueryString | null;
   dependencies?: sitePageConnectionPluginCreatorPackageJsonDependenciesQueryList | null;
   devDependencies?: sitePageConnectionPluginCreatorPackageJsonDevDependenciesQueryList | null;
@@ -840,13 +839,6 @@ export interface sitePageConnectionPluginCreatorPackageJsonVersionQueryString {
 }
 
 export interface sitePageConnectionPluginCreatorPackageJsonMainQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorPackageJsonAuthorQueryString {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -1173,7 +1165,6 @@ export interface sitePluginConnectionPackageJsonInputObject_2 {
   description?: sitePluginConnectionPackageJsonDescriptionQueryString_2 | null;
   version?: sitePluginConnectionPackageJsonVersionQueryString_2 | null;
   main?: sitePluginConnectionPackageJsonMainQueryString_2 | null;
-  author?: sitePluginConnectionPackageJsonAuthorQueryString_2 | null;
   license?: sitePluginConnectionPackageJsonLicenseQueryString_2 | null;
   dependencies?: sitePluginConnectionPackageJsonDependenciesQueryList_2 | null;
   devDependencies?: sitePluginConnectionPackageJsonDevDependenciesQueryList_2 | null;
@@ -1203,13 +1194,6 @@ export interface sitePluginConnectionPackageJsonVersionQueryString_2 {
 }
 
 export interface sitePluginConnectionPackageJsonMainQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePluginConnectionPackageJsonAuthorQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -2433,22 +2417,23 @@ export interface markdownRemarkConnectionFrontmatterInputObject_2 {
   type?: markdownRemarkConnectionFrontmatterTypeQueryString_2 | null;
   sortOrder?: markdownRemarkConnectionFrontmatterSortOrderQueryInteger_2 | null;
   active?: markdownRemarkConnectionFrontmatterActiveQueryBoolean_2 | null;
-  fullName?: markdownRemarkConnectionFrontmatterFullNameQueryString_2 | null;
-  jobTitle?: markdownRemarkConnectionFrontmatterJobTitleQueryString_2 | null;
-  company?: markdownRemarkConnectionFrontmatterCompanyQueryString_2 | null;
+  fullTitle?: markdownRemarkConnectionFrontmatterFullTitleQueryString_2 | null;
   description?: markdownRemarkConnectionFrontmatterDescriptionQueryString_2 | null;
   image?: markdownRemarkConnectionFrontmatterImageQueryString_2 | null;
   _PARENT?: markdownRemarkConnectionFrontmatterParentQueryString_3 | null;
   parent?: markdownRemarkConnectionFrontmatterParentQueryString_4 | null;
+  fullName?: markdownRemarkConnectionFrontmatterFullNameQueryString_2 | null;
+  jobTitle?: markdownRemarkConnectionFrontmatterJobTitleQueryString_2 | null;
+  company?: markdownRemarkConnectionFrontmatterCompanyQueryString_2 | null;
+  time?: markdownRemarkConnectionFrontmatterTimeQueryString_2 | null;
+  path?: markdownRemarkConnectionFrontmatterPathQueryString_2 | null;
   templateKey?: markdownRemarkConnectionFrontmatterTemplateKeyQueryString_2 | null;
-  includeLearnMore?: markdownRemarkConnectionFrontmatterIncludeLearnMoreQueryBoolean_2 | null;
   heroTitle?: markdownRemarkConnectionFrontmatterHeroTitleQueryString_2 | null;
   heroSubtitle?: markdownRemarkConnectionFrontmatterHeroSubtitleQueryString_2 | null;
-  heroImage?: markdownRemarkConnectionFrontmatterHeroImageQueryString_2 | null;
   heroIsVideo?: markdownRemarkConnectionFrontmatterHeroIsVideoQueryBoolean_2 | null;
-  path?: markdownRemarkConnectionFrontmatterPathQueryString_2 | null;
-  fullTitle?: markdownRemarkConnectionFrontmatterFullTitleQueryString_2 | null;
-  time?: markdownRemarkConnectionFrontmatterTimeQueryString_2 | null;
+  includeLearnMore?: markdownRemarkConnectionFrontmatterIncludeLearnMoreQueryBoolean_2 | null;
+  subColumns?: markdownRemarkConnectionFrontmatterSubColumnsQueryInteger_2 | null;
+  heroImage?: markdownRemarkConnectionFrontmatterHeroImageQueryString_2 | null;
 }
 
 export interface markdownRemarkConnectionFrontmatterTitleQueryString_2 {
@@ -2480,21 +2465,7 @@ export interface markdownRemarkConnectionFrontmatterActiveQueryBoolean_2 {
   ne?: boolean | null;
 }
 
-export interface markdownRemarkConnectionFrontmatterFullNameQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface markdownRemarkConnectionFrontmatterJobTitleQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface markdownRemarkConnectionFrontmatterCompanyQueryString_2 {
+export interface markdownRemarkConnectionFrontmatterFullTitleQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -2529,16 +2500,46 @@ export interface markdownRemarkConnectionFrontmatterParentQueryString_4 {
   glob?: string | null;
 }
 
-export interface markdownRemarkConnectionFrontmatterTemplateKeyQueryString_2 {
+export interface markdownRemarkConnectionFrontmatterFullNameQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
   glob?: string | null;
 }
 
-export interface markdownRemarkConnectionFrontmatterIncludeLearnMoreQueryBoolean_2 {
-  eq?: boolean | null;
-  ne?: boolean | null;
+export interface markdownRemarkConnectionFrontmatterJobTitleQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionFrontmatterCompanyQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionFrontmatterTimeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionFrontmatterPathQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionFrontmatterTemplateKeyQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
 }
 
 export interface markdownRemarkConnectionFrontmatterHeroTitleQueryString_2 {
@@ -2555,33 +2556,22 @@ export interface markdownRemarkConnectionFrontmatterHeroSubtitleQueryString_2 {
   glob?: string | null;
 }
 
-export interface markdownRemarkConnectionFrontmatterHeroImageQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
 export interface markdownRemarkConnectionFrontmatterHeroIsVideoQueryBoolean_2 {
   eq?: boolean | null;
   ne?: boolean | null;
 }
 
-export interface markdownRemarkConnectionFrontmatterPathQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
+export interface markdownRemarkConnectionFrontmatterIncludeLearnMoreQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
 }
 
-export interface markdownRemarkConnectionFrontmatterFullTitleQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
+export interface markdownRemarkConnectionFrontmatterSubColumnsQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
 }
 
-export interface markdownRemarkConnectionFrontmatterTimeQueryString_2 {
+export interface markdownRemarkConnectionFrontmatterHeroImageQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -3189,7 +3179,6 @@ export interface sitePagePluginCreatorPackageJsonInputObject {
   description?: sitePagePluginCreatorPackageJsonDescriptionQueryString | null;
   version?: sitePagePluginCreatorPackageJsonVersionQueryString | null;
   main?: sitePagePluginCreatorPackageJsonMainQueryString | null;
-  author?: sitePagePluginCreatorPackageJsonAuthorQueryString | null;
   license?: sitePagePluginCreatorPackageJsonLicenseQueryString | null;
   dependencies?: sitePagePluginCreatorPackageJsonDependenciesQueryList | null;
   devDependencies?: sitePagePluginCreatorPackageJsonDevDependenciesQueryList | null;
@@ -3219,13 +3208,6 @@ export interface sitePagePluginCreatorPackageJsonVersionQueryString {
 }
 
 export interface sitePagePluginCreatorPackageJsonMainQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorPackageJsonAuthorQueryString {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -3533,7 +3515,6 @@ export interface sitePluginPackageJsonInputObject_2 {
   description?: sitePluginPackageJsonDescriptionQueryString_2 | null;
   version?: sitePluginPackageJsonVersionQueryString_2 | null;
   main?: sitePluginPackageJsonMainQueryString_2 | null;
-  author?: sitePluginPackageJsonAuthorQueryString_2 | null;
   license?: sitePluginPackageJsonLicenseQueryString_2 | null;
   dependencies?: sitePluginPackageJsonDependenciesQueryList_2 | null;
   devDependencies?: sitePluginPackageJsonDevDependenciesQueryList_2 | null;
@@ -3563,13 +3544,6 @@ export interface sitePluginPackageJsonVersionQueryString_2 {
 }
 
 export interface sitePluginPackageJsonMainQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePluginPackageJsonAuthorQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -4731,22 +4705,23 @@ export interface markdownRemarkFrontmatterInputObject_2 {
   type?: markdownRemarkFrontmatterTypeQueryString_2 | null;
   sortOrder?: markdownRemarkFrontmatterSortOrderQueryInteger_2 | null;
   active?: markdownRemarkFrontmatterActiveQueryBoolean_2 | null;
-  fullName?: markdownRemarkFrontmatterFullNameQueryString_2 | null;
-  jobTitle?: markdownRemarkFrontmatterJobTitleQueryString_2 | null;
-  company?: markdownRemarkFrontmatterCompanyQueryString_2 | null;
+  fullTitle?: markdownRemarkFrontmatterFullTitleQueryString_2 | null;
   description?: markdownRemarkFrontmatterDescriptionQueryString_2 | null;
   image?: markdownRemarkFrontmatterImageQueryString_2 | null;
   _PARENT?: markdownRemarkFrontmatterParentQueryString_3 | null;
   parent?: markdownRemarkFrontmatterParentQueryString_4 | null;
+  fullName?: markdownRemarkFrontmatterFullNameQueryString_2 | null;
+  jobTitle?: markdownRemarkFrontmatterJobTitleQueryString_2 | null;
+  company?: markdownRemarkFrontmatterCompanyQueryString_2 | null;
+  time?: markdownRemarkFrontmatterTimeQueryString_2 | null;
+  path?: markdownRemarkFrontmatterPathQueryString_2 | null;
   templateKey?: markdownRemarkFrontmatterTemplateKeyQueryString_2 | null;
-  includeLearnMore?: markdownRemarkFrontmatterIncludeLearnMoreQueryBoolean_2 | null;
   heroTitle?: markdownRemarkFrontmatterHeroTitleQueryString_2 | null;
   heroSubtitle?: markdownRemarkFrontmatterHeroSubtitleQueryString_2 | null;
-  heroImage?: markdownRemarkFrontmatterHeroImageQueryString_2 | null;
   heroIsVideo?: markdownRemarkFrontmatterHeroIsVideoQueryBoolean_2 | null;
-  path?: markdownRemarkFrontmatterPathQueryString_2 | null;
-  fullTitle?: markdownRemarkFrontmatterFullTitleQueryString_2 | null;
-  time?: markdownRemarkFrontmatterTimeQueryString_2 | null;
+  includeLearnMore?: markdownRemarkFrontmatterIncludeLearnMoreQueryBoolean_2 | null;
+  subColumns?: markdownRemarkFrontmatterSubColumnsQueryInteger_2 | null;
+  heroImage?: markdownRemarkFrontmatterHeroImageQueryString_2 | null;
 }
 
 export interface markdownRemarkFrontmatterTitleQueryString_2 {
@@ -4778,21 +4753,7 @@ export interface markdownRemarkFrontmatterActiveQueryBoolean_2 {
   ne?: boolean | null;
 }
 
-export interface markdownRemarkFrontmatterFullNameQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface markdownRemarkFrontmatterJobTitleQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface markdownRemarkFrontmatterCompanyQueryString_2 {
+export interface markdownRemarkFrontmatterFullTitleQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -4827,16 +4788,46 @@ export interface markdownRemarkFrontmatterParentQueryString_4 {
   glob?: string | null;
 }
 
-export interface markdownRemarkFrontmatterTemplateKeyQueryString_2 {
+export interface markdownRemarkFrontmatterFullNameQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
   glob?: string | null;
 }
 
-export interface markdownRemarkFrontmatterIncludeLearnMoreQueryBoolean_2 {
-  eq?: boolean | null;
-  ne?: boolean | null;
+export interface markdownRemarkFrontmatterJobTitleQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkFrontmatterCompanyQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkFrontmatterTimeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkFrontmatterPathQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkFrontmatterTemplateKeyQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
 }
 
 export interface markdownRemarkFrontmatterHeroTitleQueryString_2 {
@@ -4853,33 +4844,22 @@ export interface markdownRemarkFrontmatterHeroSubtitleQueryString_2 {
   glob?: string | null;
 }
 
-export interface markdownRemarkFrontmatterHeroImageQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
 export interface markdownRemarkFrontmatterHeroIsVideoQueryBoolean_2 {
   eq?: boolean | null;
   ne?: boolean | null;
 }
 
-export interface markdownRemarkFrontmatterPathQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
+export interface markdownRemarkFrontmatterIncludeLearnMoreQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
 }
 
-export interface markdownRemarkFrontmatterFullTitleQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
+export interface markdownRemarkFrontmatterSubColumnsQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
 }
 
-export interface markdownRemarkFrontmatterTimeQueryString_2 {
+export interface markdownRemarkFrontmatterHeroImageQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -6389,22 +6369,23 @@ export enum MarkdownRemarkConnectionSortByFieldsEnum {
   frontmatter___type = "frontmatter___type",
   frontmatter___sortOrder = "frontmatter___sortOrder",
   frontmatter___active = "frontmatter___active",
-  frontmatter___fullName = "frontmatter___fullName",
-  frontmatter___jobTitle = "frontmatter___jobTitle",
-  frontmatter___company = "frontmatter___company",
+  frontmatter___fullTitle = "frontmatter___fullTitle",
   frontmatter___description = "frontmatter___description",
   frontmatter___image = "frontmatter___image",
   frontmatter____PARENT = "frontmatter____PARENT",
   frontmatter___parent = "frontmatter___parent",
+  frontmatter___fullName = "frontmatter___fullName",
+  frontmatter___jobTitle = "frontmatter___jobTitle",
+  frontmatter___company = "frontmatter___company",
+  frontmatter___time = "frontmatter___time",
+  frontmatter___path = "frontmatter___path",
   frontmatter___templateKey = "frontmatter___templateKey",
-  frontmatter___includeLearnMore = "frontmatter___includeLearnMore",
   frontmatter___heroTitle = "frontmatter___heroTitle",
   frontmatter___heroSubtitle = "frontmatter___heroSubtitle",
-  frontmatter___heroImage = "frontmatter___heroImage",
   frontmatter___heroIsVideo = "frontmatter___heroIsVideo",
-  frontmatter___path = "frontmatter___path",
-  frontmatter___fullTitle = "frontmatter___fullTitle",
-  frontmatter___time = "frontmatter___time",
+  frontmatter___includeLearnMore = "frontmatter___includeLearnMore",
+  frontmatter___subColumns = "frontmatter___subColumns",
+  frontmatter___heroImage = "frontmatter___heroImage",
   excerpt = "excerpt",
   fileAbsolutePath = "fileAbsolutePath",
   imageFile___NODE = "imageFile___NODE",
@@ -6436,22 +6417,23 @@ export enum markdownRemarkDistinctEnum {
   frontmatter___type = "frontmatter___type",
   frontmatter___sortOrder = "frontmatter___sortOrder",
   frontmatter___active = "frontmatter___active",
-  frontmatter___fullName = "frontmatter___fullName",
-  frontmatter___jobTitle = "frontmatter___jobTitle",
-  frontmatter___company = "frontmatter___company",
+  frontmatter___fullTitle = "frontmatter___fullTitle",
   frontmatter___description = "frontmatter___description",
   frontmatter___image = "frontmatter___image",
   frontmatter____PARENT = "frontmatter____PARENT",
   frontmatter___parent = "frontmatter___parent",
+  frontmatter___fullName = "frontmatter___fullName",
+  frontmatter___jobTitle = "frontmatter___jobTitle",
+  frontmatter___company = "frontmatter___company",
+  frontmatter___time = "frontmatter___time",
+  frontmatter___path = "frontmatter___path",
   frontmatter___templateKey = "frontmatter___templateKey",
-  frontmatter___includeLearnMore = "frontmatter___includeLearnMore",
   frontmatter___heroTitle = "frontmatter___heroTitle",
   frontmatter___heroSubtitle = "frontmatter___heroSubtitle",
-  frontmatter___heroImage = "frontmatter___heroImage",
   frontmatter___heroIsVideo = "frontmatter___heroIsVideo",
-  frontmatter___path = "frontmatter___path",
-  frontmatter___fullTitle = "frontmatter___fullTitle",
-  frontmatter___time = "frontmatter___time",
+  frontmatter___includeLearnMore = "frontmatter___includeLearnMore",
+  frontmatter___subColumns = "frontmatter___subColumns",
+  frontmatter___heroImage = "frontmatter___heroImage",
   excerpt = "excerpt",
   fileAbsolutePath = "fileAbsolutePath",
   imageFile___NODE = "imageFile___NODE",
@@ -6471,22 +6453,23 @@ export enum markdownRemarkGroupEnum {
   frontmatter___type = "frontmatter___type",
   frontmatter___sortOrder = "frontmatter___sortOrder",
   frontmatter___active = "frontmatter___active",
-  frontmatter___fullName = "frontmatter___fullName",
-  frontmatter___jobTitle = "frontmatter___jobTitle",
-  frontmatter___company = "frontmatter___company",
+  frontmatter___fullTitle = "frontmatter___fullTitle",
   frontmatter___description = "frontmatter___description",
   frontmatter___image = "frontmatter___image",
   frontmatter____PARENT = "frontmatter____PARENT",
   frontmatter___parent = "frontmatter___parent",
+  frontmatter___fullName = "frontmatter___fullName",
+  frontmatter___jobTitle = "frontmatter___jobTitle",
+  frontmatter___company = "frontmatter___company",
+  frontmatter___time = "frontmatter___time",
+  frontmatter___path = "frontmatter___path",
   frontmatter___templateKey = "frontmatter___templateKey",
-  frontmatter___includeLearnMore = "frontmatter___includeLearnMore",
   frontmatter___heroTitle = "frontmatter___heroTitle",
   frontmatter___heroSubtitle = "frontmatter___heroSubtitle",
-  frontmatter___heroImage = "frontmatter___heroImage",
   frontmatter___heroIsVideo = "frontmatter___heroIsVideo",
-  frontmatter___path = "frontmatter___path",
-  frontmatter___fullTitle = "frontmatter___fullTitle",
-  frontmatter___time = "frontmatter___time",
+  frontmatter___includeLearnMore = "frontmatter___includeLearnMore",
+  frontmatter___subColumns = "frontmatter___subColumns",
+  frontmatter___heroImage = "frontmatter___heroImage",
   excerpt = "excerpt",
   fileAbsolutePath = "fileAbsolutePath",
   imageFile___NODE = "imageFile___NODE",

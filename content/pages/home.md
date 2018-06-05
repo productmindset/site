@@ -9,6 +9,7 @@ heroSubtitle: >-
   Join the Product Mindset Workshops and help your team understand customers,
   get the right features to market quickly, and grow your company
 heroIsVideo: true
+subColumns: 2
 ---
 ### WHAT IS THE PRODUCT MINDSET
 

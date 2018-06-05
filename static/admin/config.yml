@@ -40,6 +40,7 @@ collections:
       - { name: heroSubtitle, label: Hero Subtitle, widget: string }
       - { name: heroImage, label: Hero Image, required: false, widget: hidden }
       - { name: heroIsVideo, label: Hero Video, widget: boolean, default: false }
+      - { name: subColumns, label: Sub Columns, widget: number, default: 2, valueType: int }
       - { name: body, label: Body, widget: markdown }
 
   - name: speakers

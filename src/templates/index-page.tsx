@@ -28,7 +28,8 @@ const IndexPageLayout: React.StatelessComponent<HomePageTemplateLayoutProps> = (
     <PageComponent.default {...props}>
       <Container>
         <Section>
-          {_.chunk(props.data!.benefit!.edges!, 2).map((chunkedEdges, key) => (
+          {_.chunk(props.data!.benefit!.edges!, props.data!.markdownRemark!.frontmatter!.subColumns!)
+            .map((chunkedEdges, key) => (
             <Columns key={key}>
               {...chunkedEdges.map((benefitEdge, benefitKey) => (
                 <Column key={benefitKey}>

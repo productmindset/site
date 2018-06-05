@@ -7,6 +7,7 @@ heroTitle: ABOUT
 heroSubtitle: Built for and by ...
 heroIsVideo: false
 includeLearnMore: false
+subColumns: 2
 ---
 ### Built for
 

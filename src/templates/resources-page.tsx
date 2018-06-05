@@ -38,7 +38,7 @@ const ContactPageLayout: React.StatelessComponent<ResourcePageTemplateLayoutProp
                     <Card className="has-text-centered">
                       <CardHeader>
                         <CardHeaderTitle className="is-flex is-horizontally-centered">
-                          Tool
+                          {resourceEdge!.node!.frontmatter!.resourceType!}
                         </CardHeaderTitle>
                       </CardHeader>
                       <br />
@@ -93,6 +93,7 @@ export const ResourcesPageTemplateQuery = graphql`
           }
         }
         frontmatter {
+          resourceType
           url,
           buttonText,
           buttonFAIcon,

@@ -2,7 +2,7 @@
 isPage: false
 type: resource
 title: ReleasePlan
-sortOrder: 10
+sortOrder: 30
 active: true
 fullTitle: Release Plan
 description: >-

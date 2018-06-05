@@ -97,6 +97,21 @@ export interface pluginOptions_2 {
   modulePath?: string | null;
   dsn?: string | null;
   version?: string | null;
+  logo?: string | null;
+  injectHTML?: boolean | null;
+  icons?: icons_2 | null;
+}
+
+export interface icons_2 {
+  android?: boolean | null;
+  appleIcon?: boolean | null;
+  appleStartup?: boolean | null;
+  coast?: boolean | null;
+  favicons?: boolean | null;
+  firefox?: boolean | null;
+  twitter?: boolean | null;
+  yandex?: boolean | null;
+  windows?: boolean | null;
 }
 
 export interface packageJson_2 {
@@ -104,6 +119,7 @@ export interface packageJson_2 {
   description?: string | null;
   version?: string | null;
   main?: string | null;
+  author?: string | null;
   license?: string | null;
   dependencies?: (dependencies_2 | null)[] | null;
   devDependencies?: (devDependencies_2 | null)[] | null;
@@ -360,10 +376,6 @@ export interface frontmatter_2 {
   image?: string | null;
   _PARENT?: string | null;
   parent?: string | null;
-  fullName?: string | null;
-  jobTitle?: string | null;
-  company?: string | null;
-  time?: string | null;
   path?: string | null;
   templateKey?: string | null;
   heroTitle?: string | null;
@@ -372,6 +384,14 @@ export interface frontmatter_2 {
   includeLearnMore?: boolean | null;
   subColumns?: number | null;
   heroImage?: string | null;
+  resourceType?: string | null;
+  url?: string | null;
+  buttonText?: string | null;
+  buttonFAIcon?: string | null;
+  fullName?: string | null;
+  jobTitle?: string | null;
+  company?: string | null;
+  time?: string | null;
 }
 
 export interface fields_3 {
@@ -725,6 +745,9 @@ export interface sitePageConnectionPluginCreatorPluginOptionsInputObject {
   modulePath?: sitePageConnectionPluginCreatorPluginOptionsModulePathQueryString | null;
   dsn?: sitePageConnectionPluginCreatorPluginOptionsDsnQueryString | null;
   version?: sitePageConnectionPluginCreatorPluginOptionsVersionQueryString | null;
+  logo?: sitePageConnectionPluginCreatorPluginOptionsLogoQueryString | null;
+  injectHTML?: sitePageConnectionPluginCreatorPluginOptionsInjectHtmlQueryBoolean | null;
+  icons?: sitePageConnectionPluginCreatorPluginOptionsIconsInputObject | null;
 }
 
 export interface sitePageConnectionPluginCreatorPluginOptionsOmitGoogleFontQueryBoolean {
@@ -774,6 +797,75 @@ export interface sitePageConnectionPluginCreatorPluginOptionsVersionQueryString 
   glob?: string | null;
 }
 
+export interface sitePageConnectionPluginCreatorPluginOptionsLogoQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsInjectHtmlQueryBoolean {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsIconsInputObject {
+  android?: sitePageConnectionPluginCreatorPluginOptionsIconsAndroidQueryBoolean | null;
+  appleIcon?: sitePageConnectionPluginCreatorPluginOptionsIconsAppleIconQueryBoolean | null;
+  appleStartup?: sitePageConnectionPluginCreatorPluginOptionsIconsAppleStartupQueryBoolean | null;
+  coast?: sitePageConnectionPluginCreatorPluginOptionsIconsCoastQueryBoolean | null;
+  favicons?: sitePageConnectionPluginCreatorPluginOptionsIconsFaviconsQueryBoolean | null;
+  firefox?: sitePageConnectionPluginCreatorPluginOptionsIconsFirefoxQueryBoolean | null;
+  twitter?: sitePageConnectionPluginCreatorPluginOptionsIconsTwitterQueryBoolean | null;
+  yandex?: sitePageConnectionPluginCreatorPluginOptionsIconsYandexQueryBoolean | null;
+  windows?: sitePageConnectionPluginCreatorPluginOptionsIconsWindowsQueryBoolean | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsIconsAndroidQueryBoolean {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsIconsAppleIconQueryBoolean {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsIconsAppleStartupQueryBoolean {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsIconsCoastQueryBoolean {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsIconsFaviconsQueryBoolean {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsIconsFirefoxQueryBoolean {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsIconsTwitterQueryBoolean {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsIconsYandexQueryBoolean {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePageConnectionPluginCreatorPluginOptionsIconsWindowsQueryBoolean {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
 export interface sitePageConnectionPluginCreatorNodeApIsQueryList {
   eq?: string | null;
   ne?: string | null;
@@ -810,6 +902,7 @@ export interface sitePageConnectionPluginCreatorPackageJsonInputObject {
   description?: sitePageConnectionPluginCreatorPackageJsonDescriptionQueryString | null;
   version?: sitePageConnectionPluginCreatorPackageJsonVersionQueryString | null;
   main?: sitePageConnectionPluginCreatorPackageJsonMainQueryString | null;
+  author?: sitePageConnectionPluginCreatorPackageJsonAuthorQueryString | null;
   license?: sitePageConnectionPluginCreatorPackageJsonLicenseQueryString | null;
   dependencies?: sitePageConnectionPluginCreatorPackageJsonDependenciesQueryList | null;
   devDependencies?: sitePageConnectionPluginCreatorPackageJsonDevDependenciesQueryList | null;
@@ -839,6 +932,13 @@ export interface sitePageConnectionPluginCreatorPackageJsonVersionQueryString {
 }
 
 export interface sitePageConnectionPluginCreatorPackageJsonMainQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePageConnectionPluginCreatorPackageJsonAuthorQueryString {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -1080,6 +1180,9 @@ export interface sitePluginConnectionPluginOptionsInputObject_2 {
   modulePath?: sitePluginConnectionPluginOptionsModulePathQueryString_2 | null;
   dsn?: sitePluginConnectionPluginOptionsDsnQueryString_2 | null;
   version?: sitePluginConnectionPluginOptionsVersionQueryString_2 | null;
+  logo?: sitePluginConnectionPluginOptionsLogoQueryString_2 | null;
+  injectHTML?: sitePluginConnectionPluginOptionsInjectHtmlQueryBoolean_2 | null;
+  icons?: sitePluginConnectionPluginOptionsIconsInputObject_2 | null;
 }
 
 export interface sitePluginConnectionPluginOptionsOmitGoogleFontQueryBoolean_2 {
@@ -1129,6 +1232,75 @@ export interface sitePluginConnectionPluginOptionsVersionQueryString_2 {
   glob?: string | null;
 }
 
+export interface sitePluginConnectionPluginOptionsLogoQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePluginConnectionPluginOptionsInjectHtmlQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePluginConnectionPluginOptionsIconsInputObject_2 {
+  android?: sitePluginConnectionPluginOptionsIconsAndroidQueryBoolean_2 | null;
+  appleIcon?: sitePluginConnectionPluginOptionsIconsAppleIconQueryBoolean_2 | null;
+  appleStartup?: sitePluginConnectionPluginOptionsIconsAppleStartupQueryBoolean_2 | null;
+  coast?: sitePluginConnectionPluginOptionsIconsCoastQueryBoolean_2 | null;
+  favicons?: sitePluginConnectionPluginOptionsIconsFaviconsQueryBoolean_2 | null;
+  firefox?: sitePluginConnectionPluginOptionsIconsFirefoxQueryBoolean_2 | null;
+  twitter?: sitePluginConnectionPluginOptionsIconsTwitterQueryBoolean_2 | null;
+  yandex?: sitePluginConnectionPluginOptionsIconsYandexQueryBoolean_2 | null;
+  windows?: sitePluginConnectionPluginOptionsIconsWindowsQueryBoolean_2 | null;
+}
+
+export interface sitePluginConnectionPluginOptionsIconsAndroidQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePluginConnectionPluginOptionsIconsAppleIconQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePluginConnectionPluginOptionsIconsAppleStartupQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePluginConnectionPluginOptionsIconsCoastQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePluginConnectionPluginOptionsIconsFaviconsQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePluginConnectionPluginOptionsIconsFirefoxQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePluginConnectionPluginOptionsIconsTwitterQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePluginConnectionPluginOptionsIconsYandexQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePluginConnectionPluginOptionsIconsWindowsQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
 export interface sitePluginConnectionNodeApIsQueryList_2 {
   eq?: string | null;
   ne?: string | null;
@@ -1165,6 +1337,7 @@ export interface sitePluginConnectionPackageJsonInputObject_2 {
   description?: sitePluginConnectionPackageJsonDescriptionQueryString_2 | null;
   version?: sitePluginConnectionPackageJsonVersionQueryString_2 | null;
   main?: sitePluginConnectionPackageJsonMainQueryString_2 | null;
+  author?: sitePluginConnectionPackageJsonAuthorQueryString_2 | null;
   license?: sitePluginConnectionPackageJsonLicenseQueryString_2 | null;
   dependencies?: sitePluginConnectionPackageJsonDependenciesQueryList_2 | null;
   devDependencies?: sitePluginConnectionPackageJsonDevDependenciesQueryList_2 | null;
@@ -1194,6 +1367,13 @@ export interface sitePluginConnectionPackageJsonVersionQueryString_2 {
 }
 
 export interface sitePluginConnectionPackageJsonMainQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePluginConnectionPackageJsonAuthorQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -2422,10 +2602,6 @@ export interface markdownRemarkConnectionFrontmatterInputObject_2 {
   image?: markdownRemarkConnectionFrontmatterImageQueryString_2 | null;
   _PARENT?: markdownRemarkConnectionFrontmatterParentQueryString_3 | null;
   parent?: markdownRemarkConnectionFrontmatterParentQueryString_4 | null;
-  fullName?: markdownRemarkConnectionFrontmatterFullNameQueryString_2 | null;
-  jobTitle?: markdownRemarkConnectionFrontmatterJobTitleQueryString_2 | null;
-  company?: markdownRemarkConnectionFrontmatterCompanyQueryString_2 | null;
-  time?: markdownRemarkConnectionFrontmatterTimeQueryString_2 | null;
   path?: markdownRemarkConnectionFrontmatterPathQueryString_2 | null;
   templateKey?: markdownRemarkConnectionFrontmatterTemplateKeyQueryString_2 | null;
   heroTitle?: markdownRemarkConnectionFrontmatterHeroTitleQueryString_2 | null;
@@ -2434,6 +2610,14 @@ export interface markdownRemarkConnectionFrontmatterInputObject_2 {
   includeLearnMore?: markdownRemarkConnectionFrontmatterIncludeLearnMoreQueryBoolean_2 | null;
   subColumns?: markdownRemarkConnectionFrontmatterSubColumnsQueryInteger_2 | null;
   heroImage?: markdownRemarkConnectionFrontmatterHeroImageQueryString_2 | null;
+  resourceType?: markdownRemarkConnectionFrontmatterResourceTypeQueryString_2 | null;
+  url?: markdownRemarkConnectionFrontmatterUrlQueryString_2 | null;
+  buttonText?: markdownRemarkConnectionFrontmatterButtonTextQueryString_2 | null;
+  buttonFAIcon?: markdownRemarkConnectionFrontmatterButtonFaIconQueryString_2 | null;
+  fullName?: markdownRemarkConnectionFrontmatterFullNameQueryString_2 | null;
+  jobTitle?: markdownRemarkConnectionFrontmatterJobTitleQueryString_2 | null;
+  company?: markdownRemarkConnectionFrontmatterCompanyQueryString_2 | null;
+  time?: markdownRemarkConnectionFrontmatterTimeQueryString_2 | null;
 }
 
 export interface markdownRemarkConnectionFrontmatterTitleQueryString_2 {
@@ -2500,34 +2684,6 @@ export interface markdownRemarkConnectionFrontmatterParentQueryString_4 {
   glob?: string | null;
 }
 
-export interface markdownRemarkConnectionFrontmatterFullNameQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface markdownRemarkConnectionFrontmatterJobTitleQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface markdownRemarkConnectionFrontmatterCompanyQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface markdownRemarkConnectionFrontmatterTimeQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
 export interface markdownRemarkConnectionFrontmatterPathQueryString_2 {
   eq?: string | null;
   ne?: string | null;
@@ -2572,6 +2728,62 @@ export interface markdownRemarkConnectionFrontmatterSubColumnsQueryInteger_2 {
 }
 
 export interface markdownRemarkConnectionFrontmatterHeroImageQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionFrontmatterResourceTypeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionFrontmatterUrlQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionFrontmatterButtonTextQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionFrontmatterButtonFaIconQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionFrontmatterFullNameQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionFrontmatterJobTitleQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionFrontmatterCompanyQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionFrontmatterTimeQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -3094,6 +3306,9 @@ export interface sitePagePluginCreatorPluginOptionsInputObject {
   modulePath?: sitePagePluginCreatorPluginOptionsModulePathQueryString | null;
   dsn?: sitePagePluginCreatorPluginOptionsDsnQueryString | null;
   version?: sitePagePluginCreatorPluginOptionsVersionQueryString | null;
+  logo?: sitePagePluginCreatorPluginOptionsLogoQueryString | null;
+  injectHTML?: sitePagePluginCreatorPluginOptionsInjectHtmlQueryBoolean | null;
+  icons?: sitePagePluginCreatorPluginOptionsIconsInputObject | null;
 }
 
 export interface sitePagePluginCreatorPluginOptionsOmitGoogleFontQueryBoolean {
@@ -3143,6 +3358,75 @@ export interface sitePagePluginCreatorPluginOptionsVersionQueryString {
   glob?: string | null;
 }
 
+export interface sitePagePluginCreatorPluginOptionsLogoQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsInjectHtmlQueryBoolean {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsIconsInputObject {
+  android?: sitePagePluginCreatorPluginOptionsIconsAndroidQueryBoolean | null;
+  appleIcon?: sitePagePluginCreatorPluginOptionsIconsAppleIconQueryBoolean | null;
+  appleStartup?: sitePagePluginCreatorPluginOptionsIconsAppleStartupQueryBoolean | null;
+  coast?: sitePagePluginCreatorPluginOptionsIconsCoastQueryBoolean | null;
+  favicons?: sitePagePluginCreatorPluginOptionsIconsFaviconsQueryBoolean | null;
+  firefox?: sitePagePluginCreatorPluginOptionsIconsFirefoxQueryBoolean | null;
+  twitter?: sitePagePluginCreatorPluginOptionsIconsTwitterQueryBoolean | null;
+  yandex?: sitePagePluginCreatorPluginOptionsIconsYandexQueryBoolean | null;
+  windows?: sitePagePluginCreatorPluginOptionsIconsWindowsQueryBoolean | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsIconsAndroidQueryBoolean {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsIconsAppleIconQueryBoolean {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsIconsAppleStartupQueryBoolean {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsIconsCoastQueryBoolean {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsIconsFaviconsQueryBoolean {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsIconsFirefoxQueryBoolean {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsIconsTwitterQueryBoolean {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsIconsYandexQueryBoolean {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePagePluginCreatorPluginOptionsIconsWindowsQueryBoolean {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
 export interface sitePagePluginCreatorNodeApIsQueryList {
   eq?: string | null;
   ne?: string | null;
@@ -3179,6 +3463,7 @@ export interface sitePagePluginCreatorPackageJsonInputObject {
   description?: sitePagePluginCreatorPackageJsonDescriptionQueryString | null;
   version?: sitePagePluginCreatorPackageJsonVersionQueryString | null;
   main?: sitePagePluginCreatorPackageJsonMainQueryString | null;
+  author?: sitePagePluginCreatorPackageJsonAuthorQueryString | null;
   license?: sitePagePluginCreatorPackageJsonLicenseQueryString | null;
   dependencies?: sitePagePluginCreatorPackageJsonDependenciesQueryList | null;
   devDependencies?: sitePagePluginCreatorPackageJsonDevDependenciesQueryList | null;
@@ -3208,6 +3493,13 @@ export interface sitePagePluginCreatorPackageJsonVersionQueryString {
 }
 
 export interface sitePagePluginCreatorPackageJsonMainQueryString {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePagePluginCreatorPackageJsonAuthorQueryString {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -3430,6 +3722,9 @@ export interface sitePluginPluginOptionsInputObject_2 {
   modulePath?: sitePluginPluginOptionsModulePathQueryString_2 | null;
   dsn?: sitePluginPluginOptionsDsnQueryString_2 | null;
   version?: sitePluginPluginOptionsVersionQueryString_2 | null;
+  logo?: sitePluginPluginOptionsLogoQueryString_2 | null;
+  injectHTML?: sitePluginPluginOptionsInjectHtmlQueryBoolean_2 | null;
+  icons?: sitePluginPluginOptionsIconsInputObject_2 | null;
 }
 
 export interface sitePluginPluginOptionsOmitGoogleFontQueryBoolean_2 {
@@ -3479,6 +3774,75 @@ export interface sitePluginPluginOptionsVersionQueryString_2 {
   glob?: string | null;
 }
 
+export interface sitePluginPluginOptionsLogoQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePluginPluginOptionsInjectHtmlQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePluginPluginOptionsIconsInputObject_2 {
+  android?: sitePluginPluginOptionsIconsAndroidQueryBoolean_2 | null;
+  appleIcon?: sitePluginPluginOptionsIconsAppleIconQueryBoolean_2 | null;
+  appleStartup?: sitePluginPluginOptionsIconsAppleStartupQueryBoolean_2 | null;
+  coast?: sitePluginPluginOptionsIconsCoastQueryBoolean_2 | null;
+  favicons?: sitePluginPluginOptionsIconsFaviconsQueryBoolean_2 | null;
+  firefox?: sitePluginPluginOptionsIconsFirefoxQueryBoolean_2 | null;
+  twitter?: sitePluginPluginOptionsIconsTwitterQueryBoolean_2 | null;
+  yandex?: sitePluginPluginOptionsIconsYandexQueryBoolean_2 | null;
+  windows?: sitePluginPluginOptionsIconsWindowsQueryBoolean_2 | null;
+}
+
+export interface sitePluginPluginOptionsIconsAndroidQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePluginPluginOptionsIconsAppleIconQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePluginPluginOptionsIconsAppleStartupQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePluginPluginOptionsIconsCoastQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePluginPluginOptionsIconsFaviconsQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePluginPluginOptionsIconsFirefoxQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePluginPluginOptionsIconsTwitterQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePluginPluginOptionsIconsYandexQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface sitePluginPluginOptionsIconsWindowsQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
 export interface sitePluginNodeApIsQueryList_2 {
   eq?: string | null;
   ne?: string | null;
@@ -3515,6 +3879,7 @@ export interface sitePluginPackageJsonInputObject_2 {
   description?: sitePluginPackageJsonDescriptionQueryString_2 | null;
   version?: sitePluginPackageJsonVersionQueryString_2 | null;
   main?: sitePluginPackageJsonMainQueryString_2 | null;
+  author?: sitePluginPackageJsonAuthorQueryString_2 | null;
   license?: sitePluginPackageJsonLicenseQueryString_2 | null;
   dependencies?: sitePluginPackageJsonDependenciesQueryList_2 | null;
   devDependencies?: sitePluginPackageJsonDevDependenciesQueryList_2 | null;
@@ -3544,6 +3909,13 @@ export interface sitePluginPackageJsonVersionQueryString_2 {
 }
 
 export interface sitePluginPackageJsonMainQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface sitePluginPackageJsonAuthorQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -4710,10 +5082,6 @@ export interface markdownRemarkFrontmatterInputObject_2 {
   image?: markdownRemarkFrontmatterImageQueryString_2 | null;
   _PARENT?: markdownRemarkFrontmatterParentQueryString_3 | null;
   parent?: markdownRemarkFrontmatterParentQueryString_4 | null;
-  fullName?: markdownRemarkFrontmatterFullNameQueryString_2 | null;
-  jobTitle?: markdownRemarkFrontmatterJobTitleQueryString_2 | null;
-  company?: markdownRemarkFrontmatterCompanyQueryString_2 | null;
-  time?: markdownRemarkFrontmatterTimeQueryString_2 | null;
   path?: markdownRemarkFrontmatterPathQueryString_2 | null;
   templateKey?: markdownRemarkFrontmatterTemplateKeyQueryString_2 | null;
   heroTitle?: markdownRemarkFrontmatterHeroTitleQueryString_2 | null;
@@ -4722,6 +5090,14 @@ export interface markdownRemarkFrontmatterInputObject_2 {
   includeLearnMore?: markdownRemarkFrontmatterIncludeLearnMoreQueryBoolean_2 | null;
   subColumns?: markdownRemarkFrontmatterSubColumnsQueryInteger_2 | null;
   heroImage?: markdownRemarkFrontmatterHeroImageQueryString_2 | null;
+  resourceType?: markdownRemarkFrontmatterResourceTypeQueryString_2 | null;
+  url?: markdownRemarkFrontmatterUrlQueryString_2 | null;
+  buttonText?: markdownRemarkFrontmatterButtonTextQueryString_2 | null;
+  buttonFAIcon?: markdownRemarkFrontmatterButtonFaIconQueryString_2 | null;
+  fullName?: markdownRemarkFrontmatterFullNameQueryString_2 | null;
+  jobTitle?: markdownRemarkFrontmatterJobTitleQueryString_2 | null;
+  company?: markdownRemarkFrontmatterCompanyQueryString_2 | null;
+  time?: markdownRemarkFrontmatterTimeQueryString_2 | null;
 }
 
 export interface markdownRemarkFrontmatterTitleQueryString_2 {
@@ -4788,34 +5164,6 @@ export interface markdownRemarkFrontmatterParentQueryString_4 {
   glob?: string | null;
 }
 
-export interface markdownRemarkFrontmatterFullNameQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface markdownRemarkFrontmatterJobTitleQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface markdownRemarkFrontmatterCompanyQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface markdownRemarkFrontmatterTimeQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
 export interface markdownRemarkFrontmatterPathQueryString_2 {
   eq?: string | null;
   ne?: string | null;
@@ -4860,6 +5208,62 @@ export interface markdownRemarkFrontmatterSubColumnsQueryInteger_2 {
 }
 
 export interface markdownRemarkFrontmatterHeroImageQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkFrontmatterResourceTypeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkFrontmatterUrlQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkFrontmatterButtonTextQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkFrontmatterButtonFaIconQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkFrontmatterFullNameQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkFrontmatterJobTitleQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkFrontmatterCompanyQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkFrontmatterTimeQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -5881,6 +6285,17 @@ export enum SitePluginConnectionSortByFieldsEnum {
   pluginOptions___modulePath = "pluginOptions___modulePath",
   pluginOptions___dsn = "pluginOptions___dsn",
   pluginOptions___version = "pluginOptions___version",
+  pluginOptions___logo = "pluginOptions___logo",
+  pluginOptions___injectHTML = "pluginOptions___injectHTML",
+  pluginOptions___icons___android = "pluginOptions___icons___android",
+  pluginOptions___icons___appleIcon = "pluginOptions___icons___appleIcon",
+  pluginOptions___icons___appleStartup = "pluginOptions___icons___appleStartup",
+  pluginOptions___icons___coast = "pluginOptions___icons___coast",
+  pluginOptions___icons___favicons = "pluginOptions___icons___favicons",
+  pluginOptions___icons___firefox = "pluginOptions___icons___firefox",
+  pluginOptions___icons___twitter = "pluginOptions___icons___twitter",
+  pluginOptions___icons___yandex = "pluginOptions___icons___yandex",
+  pluginOptions___icons___windows = "pluginOptions___icons___windows",
   nodeAPIs = "nodeAPIs",
   browserAPIs = "browserAPIs",
   ssrAPIs = "ssrAPIs",
@@ -5918,6 +6333,17 @@ export enum sitePluginDistinctEnum {
   pluginOptions___modulePath = "pluginOptions___modulePath",
   pluginOptions___dsn = "pluginOptions___dsn",
   pluginOptions___version = "pluginOptions___version",
+  pluginOptions___logo = "pluginOptions___logo",
+  pluginOptions___injectHTML = "pluginOptions___injectHTML",
+  pluginOptions___icons___android = "pluginOptions___icons___android",
+  pluginOptions___icons___appleIcon = "pluginOptions___icons___appleIcon",
+  pluginOptions___icons___appleStartup = "pluginOptions___icons___appleStartup",
+  pluginOptions___icons___coast = "pluginOptions___icons___coast",
+  pluginOptions___icons___favicons = "pluginOptions___icons___favicons",
+  pluginOptions___icons___firefox = "pluginOptions___icons___firefox",
+  pluginOptions___icons___twitter = "pluginOptions___icons___twitter",
+  pluginOptions___icons___yandex = "pluginOptions___icons___yandex",
+  pluginOptions___icons___windows = "pluginOptions___icons___windows",
   nodeAPIs = "nodeAPIs",
   browserAPIs = "browserAPIs",
   ssrAPIs = "ssrAPIs",
@@ -5950,6 +6376,17 @@ export enum sitePluginGroupEnum {
   pluginOptions___modulePath = "pluginOptions___modulePath",
   pluginOptions___dsn = "pluginOptions___dsn",
   pluginOptions___version = "pluginOptions___version",
+  pluginOptions___logo = "pluginOptions___logo",
+  pluginOptions___injectHTML = "pluginOptions___injectHTML",
+  pluginOptions___icons___android = "pluginOptions___icons___android",
+  pluginOptions___icons___appleIcon = "pluginOptions___icons___appleIcon",
+  pluginOptions___icons___appleStartup = "pluginOptions___icons___appleStartup",
+  pluginOptions___icons___coast = "pluginOptions___icons___coast",
+  pluginOptions___icons___favicons = "pluginOptions___icons___favicons",
+  pluginOptions___icons___firefox = "pluginOptions___icons___firefox",
+  pluginOptions___icons___twitter = "pluginOptions___icons___twitter",
+  pluginOptions___icons___yandex = "pluginOptions___icons___yandex",
+  pluginOptions___icons___windows = "pluginOptions___icons___windows",
   nodeAPIs = "nodeAPIs",
   browserAPIs = "browserAPIs",
   ssrAPIs = "ssrAPIs",
@@ -6374,10 +6811,6 @@ export enum MarkdownRemarkConnectionSortByFieldsEnum {
   frontmatter___image = "frontmatter___image",
   frontmatter____PARENT = "frontmatter____PARENT",
   frontmatter___parent = "frontmatter___parent",
-  frontmatter___fullName = "frontmatter___fullName",
-  frontmatter___jobTitle = "frontmatter___jobTitle",
-  frontmatter___company = "frontmatter___company",
-  frontmatter___time = "frontmatter___time",
   frontmatter___path = "frontmatter___path",
   frontmatter___templateKey = "frontmatter___templateKey",
   frontmatter___heroTitle = "frontmatter___heroTitle",
@@ -6386,6 +6819,14 @@ export enum MarkdownRemarkConnectionSortByFieldsEnum {
   frontmatter___includeLearnMore = "frontmatter___includeLearnMore",
   frontmatter___subColumns = "frontmatter___subColumns",
   frontmatter___heroImage = "frontmatter___heroImage",
+  frontmatter___resourceType = "frontmatter___resourceType",
+  frontmatter___url = "frontmatter___url",
+  frontmatter___buttonText = "frontmatter___buttonText",
+  frontmatter___buttonFAIcon = "frontmatter___buttonFAIcon",
+  frontmatter___fullName = "frontmatter___fullName",
+  frontmatter___jobTitle = "frontmatter___jobTitle",
+  frontmatter___company = "frontmatter___company",
+  frontmatter___time = "frontmatter___time",
   excerpt = "excerpt",
   fileAbsolutePath = "fileAbsolutePath",
   imageFile___NODE = "imageFile___NODE",
@@ -6422,10 +6863,6 @@ export enum markdownRemarkDistinctEnum {
   frontmatter___image = "frontmatter___image",
   frontmatter____PARENT = "frontmatter____PARENT",
   frontmatter___parent = "frontmatter___parent",
-  frontmatter___fullName = "frontmatter___fullName",
-  frontmatter___jobTitle = "frontmatter___jobTitle",
-  frontmatter___company = "frontmatter___company",
-  frontmatter___time = "frontmatter___time",
   frontmatter___path = "frontmatter___path",
   frontmatter___templateKey = "frontmatter___templateKey",
   frontmatter___heroTitle = "frontmatter___heroTitle",
@@ -6434,6 +6871,14 @@ export enum markdownRemarkDistinctEnum {
   frontmatter___includeLearnMore = "frontmatter___includeLearnMore",
   frontmatter___subColumns = "frontmatter___subColumns",
   frontmatter___heroImage = "frontmatter___heroImage",
+  frontmatter___resourceType = "frontmatter___resourceType",
+  frontmatter___url = "frontmatter___url",
+  frontmatter___buttonText = "frontmatter___buttonText",
+  frontmatter___buttonFAIcon = "frontmatter___buttonFAIcon",
+  frontmatter___fullName = "frontmatter___fullName",
+  frontmatter___jobTitle = "frontmatter___jobTitle",
+  frontmatter___company = "frontmatter___company",
+  frontmatter___time = "frontmatter___time",
   excerpt = "excerpt",
   fileAbsolutePath = "fileAbsolutePath",
   imageFile___NODE = "imageFile___NODE",
@@ -6458,10 +6903,6 @@ export enum markdownRemarkGroupEnum {
   frontmatter___image = "frontmatter___image",
   frontmatter____PARENT = "frontmatter____PARENT",
   frontmatter___parent = "frontmatter___parent",
-  frontmatter___fullName = "frontmatter___fullName",
-  frontmatter___jobTitle = "frontmatter___jobTitle",
-  frontmatter___company = "frontmatter___company",
-  frontmatter___time = "frontmatter___time",
   frontmatter___path = "frontmatter___path",
   frontmatter___templateKey = "frontmatter___templateKey",
   frontmatter___heroTitle = "frontmatter___heroTitle",
@@ -6470,6 +6911,14 @@ export enum markdownRemarkGroupEnum {
   frontmatter___includeLearnMore = "frontmatter___includeLearnMore",
   frontmatter___subColumns = "frontmatter___subColumns",
   frontmatter___heroImage = "frontmatter___heroImage",
+  frontmatter___resourceType = "frontmatter___resourceType",
+  frontmatter___url = "frontmatter___url",
+  frontmatter___buttonText = "frontmatter___buttonText",
+  frontmatter___buttonFAIcon = "frontmatter___buttonFAIcon",
+  frontmatter___fullName = "frontmatter___fullName",
+  frontmatter___jobTitle = "frontmatter___jobTitle",
+  frontmatter___company = "frontmatter___company",
+  frontmatter___time = "frontmatter___time",
   excerpt = "excerpt",
   fileAbsolutePath = "fileAbsolutePath",
   imageFile___NODE = "imageFile___NODE",

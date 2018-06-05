@@ -8,6 +8,6 @@ heroSubtitle: Help your team understand customers, get the right features to mar
 heroIsVideo: false
 heroImage: /images/included/resources_hero/
 includeLearnMore: false
-subColumns: 2
+subColumns: 3
 ---
 # Resources

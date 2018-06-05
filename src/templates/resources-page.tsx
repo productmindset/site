@@ -1,66 +1,108 @@
 import * as React from 'react'
 import * as Page from './page'
+import * as _ from 'lodash'
 import * as PageComponent from '../components/PageComponent'
-const releasePlanImage = require('../../content/images/included/release_plan.png')
-const personaCreationImage = require('../../content/images/included/persona_creation.png')
+import Img from 'gatsby-image'
+import { MarkdownRemark, MarkdownRemarkConnection, ImageSharp } from '../graphql-types'
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardHeaderTitle,
+  CardImage,
+  Column,
+  Columns,
+  Container,
+  Section,
+  Title
+} from 'bloomer'
 
-const ContactPageLayout: React.StatelessComponent<Page.PageTemplateLayoutProps> = (props) => {
+interface ResourcePageTemplateLayoutProps extends Page.PageTemplateLayoutProps {
+  data?: {
+    imageSharp?: ImageSharp
+    markdownRemark?: MarkdownRemark
+    resource?: MarkdownRemarkConnection
+  },
+}
+
+const ContactPageLayout: React.StatelessComponent<ResourcePageTemplateLayoutProps> = (props) => {
   return (
-    <div>
-      <PageComponent.default {...props}>
-        <div className="columns" >
-          <div className="column" >
-            <div className="card">
-              <div className="card-image">
-                <figure className="image is-4x3">
-                  <img src={releasePlanImage} alt="Rlease Plan image" />
-                </figure>
-              </div>
-              <div className="card-content">
-                <div className="media">
-                  <div className="media-content">
-                    <p className="title is-4">Release Plan</p>
-                  </div>
-                </div>
+    <PageComponent.default {...props}>
+      <Container>
+        <Section>
+          {_.chunk(props.data!.resource!.edges!, props.data!.markdownRemark!.frontmatter!.subColumns!)
+            .map((chunkedEdges, key) => (
+              <Columns key={key}>
+                {...chunkedEdges.map((resourceEdge, resourceKey) => (
+                  <Column key={resourceKey}>
+                    <Card className="has-text-centered">
+                      <CardHeader>
+                        <CardHeaderTitle className="is-flex is-horizontally-centered">
+                          Tool
+                        </CardHeaderTitle>
+                      </CardHeader>
+                      <br />
+                      <CardImage className="is-16by9">
+                        <figure className="is-flex is-horizontally-centered">
+                          <Img className="image is-16by9 is-flex is-horizontally-centered"
+                            title={resourceEdge!.node!.frontmatter!.fullTitle!}
+                            alt={resourceEdge!.node!.frontmatter!.fullTitle!}
+                            resolutions={resourceEdge!.node!.imageFile!.childImageSharp!.resolutions!}
+                          />
+                        </figure>
 
-                <div>
-                  Plan how you can get things in your customer's hands quickly.
-                  Releae planning helps the team understand how we get new stories or features to market.
-              </div>
-              </div>
-            </div>
-          </div>
-          <div className="column" >
-            <div className="card">
-              <div className="card-image">
-                <figure className="image is-4x3">
-                  <img src={personaCreationImage} alt="Persona Creation image" />
-                </figure>
-              </div>
-              <div className="card-content">
-                <div className="media">
-                  <div className="media-content">
-                    <p className="title is-4">Persona Creation</p>
-                  </div>
-                </div>
-
-                <div>
-                  Personas give us a way to think about who exists beyond the screen and what their life looks like,
-                  what motivates them, frustrates them and what they are trying to do with our product. This helps us
-                  make informed decisions about how to better serve them and drive adoption, referrals and retention.
-              </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </PageComponent.default>
-    </div >
+                      </CardImage>
+                      <CardContent className="is-centered">
+                        <Title className="is-4 is-centered">{resourceEdge!.node!.frontmatter!.fullTitle!}</Title>
+                        <div>
+                          {resourceEdge!.node!.frontmatter!.description!}
+                        </div>
+                        <div>
+                          <a href={resourceEdge!.node!.frontmatter!.url!}
+                            className="has-text-info has-text-weight-bold">
+                            <span className={`fas fa-fw fa-` + resourceEdge!.node!.frontmatter!.buttonFAIcon!}></span>
+                            {resourceEdge!.node!.frontmatter!.buttonText!}
+                          </a>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </Column>
+                ))}
+              </Columns>
+            ))}
+        </Section>
+      </Container>
+    </PageComponent.default>
   )
 }
 
 export const ResourcesPageTemplateQuery = graphql`
   query ResourcesPageTemplateQuery($slug: String!, $heroImageSlug: String) {
     ...PageQueryFragment
+    ...PageQueryFragment
+    resource: allMarkdownRemark(
+      filter: {frontmatter: {type: {eq: "resource"}, active: {eq: true}}},
+      sort: {fields: [frontmatter___sortOrder], order: ASC}) {
+    edges {
+      node {
+        imageFile {
+          childImageSharp {
+          resolutions(width: 256, height: 256 ) {
+            ...GatsbyImageSharpResolutions_withWebp
+          }
+          }
+        }
+        frontmatter {
+          url,
+          buttonText,
+          buttonFAIcon,
+          description
+          fullTitle
+          image
+        }
+        }
+      }
+    }
   }
 `
 

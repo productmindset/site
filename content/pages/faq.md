@@ -10,6 +10,7 @@ heroSubtitle: >-
   troubleshoot issues, and get answers to questions.
 heroImage: /images/included/helping_hand_hero/
 heroIsVideo: false
+subColumns: 2
 ---
 # FAQ
 

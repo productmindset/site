@@ -8,6 +8,22 @@ media_folder: content/images
 public_folder: /images
 
 collections:
+  - name: benefits
+    label: Benefits
+    label_singular: Benefit
+    folder: content/benefits
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: isPage, label: Is Page, default: false, widget: hidden}
+      - { name: type, label: Type, default: benefit, widget: hidden}
+      - { name: active, label: Active, default: true, widget: boolean }
+      - { name: title, label: Short Name (Unique), widget: string }
+      - { name: fullTitle, label: Full Title, widget: string }
+      - { name: description, label: Description, widget: text }
+      - { name: sortOrder, label: Sort Order, valueType: int, widget: number }
+      - { name: image, label: Image, widget: image }
+
   - name: pages
     label: Pages
     label_singular: Page
@@ -24,6 +40,7 @@ collections:
       - { name: heroSubtitle, label: Hero Subtitle, widget: string }
       - { name: heroImage, label: Hero Image, required: false, widget: hidden }
       - { name: heroIsVideo, label: Hero Video, widget: boolean, default: false }
+      - { name: subColumns, label: Sub Columns, widget: number, default: 2, valueType: int }
       - { name: body, label: Body, widget: markdown }
 
   - name: speakers

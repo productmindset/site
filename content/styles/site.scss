@@ -69,3 +69,8 @@ $body-background-color: $color-white;
 .is-active {
   font-weight: 700;
 }
+
+.is-horizontally-centered {
+  align-items: center;
+  justify-content: center;
+}

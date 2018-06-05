@@ -9,6 +9,7 @@ heroSubtitle: >-
   Join the Product Mindset Workshops and help your team understand customers,
   get the right features to market quickly, and grow your company
 heroIsVideo: true
+subColumns: 2
 ---
 ### WHAT IS THE PRODUCT MINDSET
 
@@ -30,7 +31,7 @@ We created the Product Mindset based on years of experience helping clients buil
 
 It is a collection of values, principles and practices that guide every action and decision we take in building successful products. It helps align everyone on the team and beyond team so they can think, talk and execute as tightly-integrated unit.
 
-[Discover How We Do It](http://productmindset.com/productmindsetpaper)
+[Discover How We Do It](https://drive.google.com/file/d/1E3hp28cal9UFhSr8sIvAqSXycldDXdhX/view)
 
 ### SPREADING THE WORD
 
@@ -43,9 +44,3 @@ It is a collection of values, principles and practices that guide every action a
 ### HOW TO BRING THE PRODUCT MINDSET TO YOUR ORGANIZATION
 
 Learn how to accelerate the product development timeline, empower product teams to think strategically and add value to commercialization efforts. Ensure the team is building the right thing at the right timefor the customer. Discover how to incorporate customer feedback into the product development process.
-
-![null](/images/beni1.png)
-
-![null](/images/beni2.png)
-
-![null](/images/beni3.png)

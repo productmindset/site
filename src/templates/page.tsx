@@ -40,6 +40,7 @@ export const PageQueryFragment = graphql`
         heroSubtitle
         templateKey
         includeLearnMore
+        subColumns
       }
     }
   }

@@ -9,6 +9,7 @@ heroSubtitle: >-
 heroImage: /images/included/workshops_hero/
 heroIsVideo: false
 includeLearnMore: false
+subColumns: 2
 ---
 # LIVE WORKSHOPS
 

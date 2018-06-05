@@ -6,7 +6,7 @@ const ContactPageLayout: React.StatelessComponent<Page.PageTemplateLayoutProps> 
   return (
     <div>
       <PageComponent.default {...props}>
-        <div className="container" >
+        <div className="container section" >
           <form name="contact" method="POST" data-netlify="true" netlify-honeypot="test-field">
             <input type="hidden" name="contact" value="contact" />
             <div className="is-hidden">

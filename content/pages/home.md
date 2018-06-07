@@ -19,7 +19,7 @@ are constantly changing. If your product isn’t easy to use and engaging, custo
 Strategy alone can’t keep up with all the technical, design, and business decisions necessary to build software products with impact. We believe that if you give your team the right mindset - the Product Mindset - they can see opportunity, move quickly,
 and create products customers want to buy and use.
 
-We created the Product Mindset based on years of experience helping clients build world-class products, combined with best practices from Agile, Lean Startup and Design Thinking.  lkjasdf
+We created the Product Mindset based on years of experience helping clients build world-class products, combined with best practices from Agile, Lean Startup and Design Thinking.
 
 It is a collection of values, principles and practices that guide every action and decision we take in building successful products. It helps align everyone on the team and beyond team so they can think, talk and execute as tightly-integrated unit.
 

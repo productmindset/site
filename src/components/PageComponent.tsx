@@ -112,9 +112,9 @@ const PageComponent: React.StatelessComponent<Page.PageTemplateLayoutProps> = (p
         </Columns>
         </Container>
         <Container>
-        <Content
-          dangerouslySetInnerHTML={{ __html: props.data!.markdownRemark!.html! }} />
-        </Container>
+          <Content
+            dangerouslySetInnerHTML={{ __html: props.data!.markdownRemark!.html! }} />
+          </Container>
         {props.children}
       </Section>
     </div >

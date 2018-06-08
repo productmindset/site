@@ -5,7 +5,7 @@ import { MarkdownRemark, ImageSharp } from '../graphql-types'
 import * as Page from '../templates/page'
 import NavigationLinkComponent from './NavigationLinkComponent'
 import { LearnMoreVideo } from './LearnMoreVideo'
-import { Columns, Column, Container, Section } from 'bloomer'
+import { Columns, Column, Container, Content, Section } from 'bloomer'
 
 const logo = require('../../content/images/included/logo.png')
 const landingVideo = require('../../content/media/landing_video.mp4')
@@ -111,10 +111,12 @@ const PageComponent: React.StatelessComponent<Page.PageTemplateLayoutProps> = (p
           </Column>
         </Columns>
         </Container>
+        <Container>
+          <Content
+            dangerouslySetInnerHTML={{ __html: props.data!.markdownRemark!.html! }} />
+        </Container>
+        {props.children}
       </Section>
-      <div className="container section content"
-        dangerouslySetInnerHTML={{ __html: props.data!.markdownRemark!.html! }} />
-      {props.children}
     </div >
   )
 }

@@ -29,7 +29,6 @@ const ContactPageLayout: React.StatelessComponent<ResourcePageTemplateLayoutProp
   return (
     <PageComponent.default {...props}>
       <Container>
-        <Section>
           {_.chunk(props.data!.resource!.edges!, props.data!.markdownRemark!.frontmatter!.subColumns!)
             .map((chunkedEdges, key) => (
               <Columns key={key}>
@@ -69,7 +68,6 @@ const ContactPageLayout: React.StatelessComponent<ResourcePageTemplateLayoutProp
                 ))}
               </Columns>
             ))}
-        </Section>
       </Container>
     </PageComponent.default>
   )

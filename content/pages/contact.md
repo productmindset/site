@@ -11,4 +11,5 @@ heroImage: /images/included/helping_hand_hero/
 heroIsVideo: false
 subColumns: 2
 ---
-## For all inquiries, use the form below and we will get back to you as quickly as possible. Promise!
+## For all inquiries,
+## use the form below and we will get back to you as quickly as possible. Promise!

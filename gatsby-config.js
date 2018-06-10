@@ -18,6 +18,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `images`,
+        path: `${__dirname}/static/images/`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         path: `${__dirname}/content`,
         name: `content`
       }
@@ -49,7 +56,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-favicon`,
       options: {
-        logo: `./content/images/included/favicon.png`,
+        logo: `./static/images/included/favicon.png`,
         injectHTML: true,
         icons: {
           android: true,

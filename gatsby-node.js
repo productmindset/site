@@ -71,7 +71,7 @@ exports.onCreateNode = ({ node, getNode, getNodes, boundActionCreators }) => {
     } else if (node.frontmatter.type === `workshop` ||
       node.frontmatter.type === `speaker` || node.frontmatter.type === `benefit` || node.frontmatter.type === `resource`) {
       const pathToFile = path
-        .join(__dirname, `content`, node.frontmatter.image)
+        .join(__dirname, `static`, node.frontmatter.image)
         .split(path.sep)
         .join(`/`)
 
@@ -80,7 +80,11 @@ exports.onCreateNode = ({ node, getNode, getNodes, boundActionCreators }) => {
       node.imageFile___NODE = fileNode.id
     }
   } else if (node.internal.type === `ImageSharp`) {
-    const slug = createFilePath({ node, getNode, basePath: `content/images` })
+    console.log(`Node`)
+    console.log(node)
+    const slug = `/images` + createFilePath({ node, getNode, basePath: `static` })
+    console.log(`slug`)
+    console.log(slug)
     createNodeField({
       node,
       name: `slug`,

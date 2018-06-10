@@ -7,7 +7,7 @@ import NavigationLinkComponent from './NavigationLinkComponent'
 import { LearnMoreVideo } from './LearnMoreVideo'
 import { Columns, Column, Container, Content, Section } from 'bloomer'
 
-const logo = require('../../content/images/included/logo.png')
+const logo = require('../../static/images/included/logo.png')
 const landingVideo = require('../../content/media/landing_video.mp4')
 
 const heroVideoStyle = {

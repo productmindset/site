@@ -80,11 +80,7 @@ exports.onCreateNode = ({ node, getNode, getNodes, boundActionCreators }) => {
       node.imageFile___NODE = fileNode.id
     }
   } else if (node.internal.type === `ImageSharp`) {
-    console.log(`Node`)
-    console.log(node)
     const slug = `/images` + createFilePath({ node, getNode, basePath: `static` })
-    console.log(`slug`)
-    console.log(slug)
     createNodeField({
       node,
       name: `slug`,

@@ -24,6 +24,20 @@ collections:
       - { name: sortOrder, label: Sort Order, valueType: int, widget: number }
       - { name: image, label: Image, widget: image }
 
+  - name: footer
+    label: Footers
+    label_singular: Footer
+    create: false
+    delete: false
+    files:
+      - label: "Page Footer"
+        name: "pagefooter"
+        file: "content/pagefooter.md"
+        fields:
+          - {label: Top Color, name: topColor, widget: color, required: false }
+          - {label: Bottom Color, name: botomColor, widget: color, required: false }
+          - { name: image, label: Image, widget: image, required: false }
+
   - name: pages
     label: Pages
     label_singular: Page

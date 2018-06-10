@@ -1,0 +1,5 @@
+---
+bottomColor:
+image:
+topColor:
+---

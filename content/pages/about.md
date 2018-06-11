@@ -1,12 +1,12 @@
 ---
 isPage: true
-title: About
-path: about
 templateKey: page
+includeLearnMore: false
+path: about
+title: About
 heroTitle: ABOUT
 heroSubtitle: Built for and by ...
 heroIsVideo: false
-includeLearnMore: false
 subColumns: 2
 ---
 ### Built for

@@ -57,25 +57,25 @@ export class PageFooter extends React.Component<{}, {}> {
             </Link>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Link className="has-text-white"
-              to={'workshops'}
+              to={'/workshops/'}
             >
               LIVE WORKSHOPS
             </Link>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Link className="has-text-white"
-              to={'resources'}
+              to={'/resources/'}
             >
               ONLINE RESOURCES
             </Link>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Link className="has-text-white"
-              to={'faq'}
+              to={'/faq/'}
             >
               SUPPORT
             </Link>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Link className="has-text-white"
-              to={'contact'}
+              to={'/contact/'}
             >
               CONTACT
             </Link>

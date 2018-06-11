@@ -4,6 +4,7 @@ import Img from 'gatsby-image'
 import { MarkdownRemark, ImageSharp } from '../graphql-types'
 import * as Page from '../templates/page'
 import NavigationLinkComponent from './NavigationLinkComponent'
+import { Footer } from './FooterComponent'
 import { LearnMoreVideo } from './LearnMoreVideo'
 import { Columns, Column, Container, Content, Section } from 'bloomer'
 
@@ -116,6 +117,11 @@ const PageComponent: React.StatelessComponent<Page.PageTemplateLayoutProps> = (p
             dangerouslySetInnerHTML={{ __html: props.data!.markdownRemark!.html! }} />
         </Container>
         {props.children}
+      </Section>
+      <Section className="has-background-light">
+        <Container>
+          <Footer/>
+        </Container>
       </Section>
     </div >
   )

@@ -12,5 +12,5 @@ image: /images/included/release_plan.png
 resourceType: Tool
 url: https://drive.google.com/file/d/1rvigEC1W78ylENhyprFfWfoKE1kWm4as/view
 buttonText: Download
-buttonFAIcon: arrow-circle-down
+buttonFAIcon: fa arrow-circle-down
 ---

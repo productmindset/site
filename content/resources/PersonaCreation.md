@@ -11,5 +11,5 @@ image: /images/included/persona_creation.png
 resourceType: Tool
 url: https://drive.google.com/file/d/1MYRVFJ77-d_QIVmJHzMcKycRlXVD7Sp7/view
 buttonText: Download
-buttonFAIcon: arrow-circle-down
+buttonFAIcon: fa arrow-circle-down
 ---

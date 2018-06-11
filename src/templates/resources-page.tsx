@@ -58,7 +58,8 @@ const ContactPageLayout: React.StatelessComponent<ResourcePageTemplateLayoutProp
                         <div>
                           <a href={resourceEdge!.node!.frontmatter!.url!}
                             className="has-text-info has-text-weight-bold">
-                            <span className={`fas fa-fw fa-` + resourceEdge!.node!.frontmatter!.buttonFAIcon!}></span>
+                            <span className={`fas fa-fw fa-` +
+                              resourceEdge!.node!.frontmatter!.buttonFAIcon!.replace(`fa `, ``)}></span>
                             {resourceEdge!.node!.frontmatter!.buttonText!}
                           </a>
                         </div>

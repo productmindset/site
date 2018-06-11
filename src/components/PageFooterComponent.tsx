@@ -48,49 +48,45 @@ export class PageFooter extends React.Component<{}, {}> {
             </div>
           </Container>
         </Section>
-        <Section className="has-background-primary has-text-white">
-          <Container className="has-background-primary">
-            <Footer className="has-text-white">
-            <p>
+        <Footer className="has-text-white">
+          <p>
             <Link className="has-text-white"
-                to={'/'}
-              >
-                HOME
-              </Link>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <Link className="has-text-white"
-                to={'workshops'}
-              >
-                LIVE WORKSHOPS
-              </Link>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <Link className="has-text-white"
-                to={'resources'}
-              >
-                ONLINE RESOURCES
-              </Link>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <Link className="has-text-white"
-                to={'faq'}
-              >
-                SUPPORT
-              </Link>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <Link className="has-text-white"
-                to={'contact'}
-              >
-                CONTACT
-              </Link>
-              </p>
-              <p className="is-size-7">
-                Copyright &copy; Product Mindset, Powered by &nbsp;
+              to={'/'}
+            >
+              HOME
+            </Link>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <Link className="has-text-white"
+              to={'workshops'}
+            >
+              LIVE WORKSHOPS
+            </Link>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <Link className="has-text-white"
+              to={'resources'}
+            >
+              ONLINE RESOURCES
+            </Link>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <Link className="has-text-white"
+              to={'faq'}
+            >
+              SUPPORT
+            </Link>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <Link className="has-text-white"
+              to={'contact'}
+            >
+              CONTACT
+            </Link>
+          </p>
+          <p className="is-size-7">
+            Copyright &copy; Product Mindset, Powered by &nbsp;
                 <a className="has-text-white" href="https://www.3pillarglobal.com">
-                  <u>3Pillar Global</u>
-                </a>
-              </p>
-            </Footer>
-          </Container>
-        </Section>
+              <u>3Pillar Global</u>
+            </a>
+          </p>
+        </Footer>
       </div>
     )
   }

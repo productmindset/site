@@ -34,8 +34,6 @@ collections:
         name: "pagefooter"
         file: "content/pagefooter.md"
         fields:
-          - {label: Top Color, name: topColor, widget: color, required: false }
-          - {label: Bottom Color, name: botomColor, widget: color, required: false }
           - { name: image, label: Image, widget: image, required: false }
 
   - name: pages

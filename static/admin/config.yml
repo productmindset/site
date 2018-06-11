@@ -2,6 +2,9 @@ backend:
   name: git-gateway
   branch: master
   repo: productmindset/site
+  accept_roles:
+    - admin
+    - contributor
 
 publish_mode: editorial_workflow
 media_folder: static/images

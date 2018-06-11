@@ -12,5 +12,5 @@ image: /images/included/product_mindset_paper.png
 resourceType: Paper
 url: https://drive.google.com/file/d/1E3hp28cal9UFhSr8sIvAqSXycldDXdhX/view
 buttonText: Download
-buttonFAIcon: arrow-circle-down
+buttonFAIcon: fa arrow-circle-down
 ---

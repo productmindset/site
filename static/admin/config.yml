@@ -27,6 +27,18 @@ collections:
       - { name: sortOrder, label: Sort Order, valueType: int, widget: number }
       - { name: image, label: Image, widget: image }
 
+  - name: footer
+    label: Footers
+    label_singular: Footer
+    create: false
+    delete: false
+    files:
+      - label: "Page Footer"
+        name: "pagefooter"
+        file: "content/pagefooter.md"
+        fields:
+          - { name: image, label: Image, widget: image, required: false }
+
   - name: pages
     label: Pages
     label_singular: Page
@@ -62,7 +74,7 @@ collections:
       - { name: fullTitle, label: Full Title, widget: string }
       - { name: url, label: URL, widget: string }
       - { name: buttonText, label: Button Text, widget: string }
-      - { name: buttonFAIcon, label: Button FA Icon, widget: string }
+      - { name: buttonFAIcon, label: Button FA Icon, widget: fontawesome }
       - { name: description, label: Description, widget: text }
       - { name: sortOrder, label: Sort Order, valueType: int, widget: number }
       - { name: image, label: Image, widget: image }

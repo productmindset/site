@@ -16,5 +16,3 @@ https://productmindset.com
 ### Built by
 
 https://3PillarGlobal.com
-
-this is a test

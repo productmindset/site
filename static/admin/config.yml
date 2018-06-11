@@ -72,7 +72,7 @@ collections:
       - { name: title, label: Short Name (Unique), widget: string }
       - { name: fullTitle, label: Full Title, widget: string }
       - { name: url, label: URL, widget: string }
-      - { name: buttonText, label: Button Text, widget: fontawesome-solid }
+      - { name: buttonText, label: Button Text, widget: fontawesome }
       - { name: buttonFAIcon, label: Button FA Icon, widget: string }
       - { name: description, label: Description, widget: text }
       - { name: sortOrder, label: Sort Order, valueType: int, widget: number }

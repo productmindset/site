@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: PMS-11_page_footer
+  branch: master
   repo: productmindset/site
 
 publish_mode: editorial_workflow

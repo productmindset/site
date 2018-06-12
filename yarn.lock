@@ -8975,9 +8975,9 @@ negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
 
-netlify-cms-widget-color@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/netlify-cms-widget-color/-/netlify-cms-widget-color-2.2.0.tgz#dda9709d1f1a9d0aeab567085fb42598fe2d005f"
+netlify-cms-widget-color@2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/netlify-cms-widget-color/-/netlify-cms-widget-color-2.3.0.tgz#df15f3fb2e18ad5c9569083eecdd0e747dc89b64"
 
 netlify-cms-widget-fontawesome@1.2.1:
   version "1.2.1"

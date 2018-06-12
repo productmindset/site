@@ -8979,9 +8979,9 @@ netlify-cms-widget-color@2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/netlify-cms-widget-color/-/netlify-cms-widget-color-2.2.0.tgz#dda9709d1f1a9d0aeab567085fb42598fe2d005f"
 
-netlify-cms-widget-fontawesome@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/netlify-cms-widget-fontawesome/-/netlify-cms-widget-fontawesome-1.2.0.tgz#04e0543c015d93ac9cd67cce845b044648a35726"
+netlify-cms-widget-fontawesome@1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/netlify-cms-widget-fontawesome/-/netlify-cms-widget-fontawesome-1.2.1.tgz#802f84da76aca17beddf1abb26e22fcd3e73d9ae"
 
 netlify-cms@1.9.0:
   version "1.9.0"

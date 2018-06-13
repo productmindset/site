@@ -76,7 +76,8 @@ export default class ResourceComponent extends React.Component<ResourceComponent
                   <span className="fas fa-fw fa-arrow-circle-right"></span>
                   More
                 </a>
-                <Modal className={'has-text-left ' + (this.state.isModalOpen ? 'is-active' : '')}>
+                <Modal className={'has-text-left has-text-weight-normal ' +
+                    (this.state.isModalOpen ? 'is-active' : '')}>
                   <ModalBackground></ModalBackground>
                   <ModalCard>
                     <ModalCardHeader>

@@ -2,7 +2,7 @@
 isPage: false
 type: resource
 title: PersonaCreation
-sortOrder: 20
+sortOrder: 15
 active: true
 fullTitle: Persona Creation
 description: >-

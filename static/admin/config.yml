@@ -70,14 +70,15 @@ collections:
       - { name: type, label: Type, default: resource, widget: hidden}
       - { name: active, label: Active, default: true, widget: boolean }
       - { name: resourceType, label: Resource Type, widget: string }
+      - { name: sortOrder, label: Sort Order, valueType: int, widget: number }
       - { name: title, label: Short Name (Unique), widget: string }
       - { name: fullTitle, label: Full Title, widget: string }
       - { name: url, label: URL, widget: string }
+      - { name: description, label: Description, widget: text }
+      - { name: image, label: Image, widget: image }
+      - { name: body, label: More, widget: markdown, required: false }
       - { name: buttonText, label: Button Text, widget: string }
       - { name: buttonFAIcon, label: Button FA Icon, widget: fontawesome }
-      - { name: description, label: Description, widget: text }
-      - { name: sortOrder, label: Sort Order, valueType: int, widget: number }
-      - { name: image, label: Image, widget: image }
 
   - name: speakers
     label: Speakers

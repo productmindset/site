@@ -56,6 +56,24 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       })
     })
   })
+
+  //resourceGroups GraphQL
+  //return graphql(`
+  //{
+  //  allMarkdownRemark(filter: {frontmatter: {type: {eq: "resource"}}}, limit: 1000) {
+  //    listOfGroups: distinct(field: frontmatter___resourceGroup)
+  //    group(field: frontmatter___resourceGroup) {
+  //      edges {
+  //        node {
+  //          frontmatter {
+  //            resourceGroup
+  //          }
+  //        }
+  //      }
+  //    }
+  //  }
+  //}
+  // `
 }
 
 exports.onCreateNode = ({ node, getNode, getNodes, boundActionCreators }) => {

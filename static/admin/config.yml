@@ -75,7 +75,7 @@ collections:
       - { name: description, label: Description, widget: text }
       - { name: sortOrder, label: Sort Order, valueType: int, widget: number }
       - { name: image, label: Image, widget: image }
-      - { name: more, label: More, widget: markdown, required: false }
+      - { name: body, label: More, widget: markdown, required: false }
 
   - name: speakers
     label: Speakers

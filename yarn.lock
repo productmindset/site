@@ -8996,9 +8996,9 @@ netlify-cms-widget-fontawesome@1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/netlify-cms-widget-fontawesome/-/netlify-cms-widget-fontawesome-1.2.1.tgz#802f84da76aca17beddf1abb26e22fcd3e73d9ae"
 
-netlify-cms@1.9.0:
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/netlify-cms/-/netlify-cms-1.9.0.tgz#f1a2246431de4a0635bac251d14c35d9a401b738"
+netlify-cms@1.9.1:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/netlify-cms/-/netlify-cms-1.9.1.tgz#4a2676c5979f8f5af9f4e33891d2b2c075e834f5"
   dependencies:
     classnames "^2.2.5"
     create-react-class "^15.6.0"

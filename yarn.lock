@@ -5010,9 +5010,9 @@ gatsby-cli@1.1.58, gatsby-cli@^1.1.58:
     yargs "^11.1.0"
     yurnalist "^0.2.1"
 
-gatsby-image@1.0.52:
-  version "1.0.52"
-  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-1.0.52.tgz#f4fd8ba3a3c3d3b369bc7ed3383a37fec5a514ae"
+gatsby-image@1.0.53:
+  version "1.0.53"
+  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-1.0.53.tgz#9bb74c48319e63b0af11b76a8f2178bf936138ce"
   dependencies:
     babel-runtime "^6.26.0"
     prop-types "^15.6.0"
@@ -5063,6 +5063,18 @@ gatsby-plugin-netlify@1.0.21:
     fs-extra "^4.0.2"
     lodash "^4.17.4"
     webpack-assets-manifest "^1.0.0"
+
+gatsby-plugin-page-creator@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-1.0.1.tgz#6bad33a7f46cb5b87dbdaacc3c1bbd81ac63bc20"
+  dependencies:
+    babel-runtime "^6.26.0"
+    bluebird "^3.5.0"
+    chokidar "^1.7.0"
+    glob "^7.1.1"
+    lodash "^4.17.4"
+    parse-filepath "^1.0.1"
+    slash "^1.0.0"
 
 gatsby-plugin-react-helmet@2.0.11:
   version "2.0.11"
@@ -5167,9 +5179,9 @@ gatsby-source-filesystem@1.5.38:
     slash "^1.0.0"
     valid-url "^1.0.9"
 
-gatsby-transformer-remark@1.7.42:
-  version "1.7.42"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-1.7.42.tgz#c7446dd1d1d98a799e1019476ea05fa170c6afe7"
+gatsby-transformer-remark@1.7.43:
+  version "1.7.43"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-1.7.43.tgz#7642aa1912b41017cbf2634f9356efb1aa904736"
   dependencies:
     babel-runtime "^6.26.0"
     bluebird "^3.5.0"
@@ -5201,9 +5213,9 @@ gatsby-transformer-sharp@1.6.26:
     fs-extra "^4.0.2"
     probe-image-size "^4.0.0"
 
-gatsby@1.9.270:
-  version "1.9.270"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.9.270.tgz#9a0635c588618dbc11a34bb530c4390c26ef840f"
+gatsby@1.9.271:
+  version "1.9.271"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.9.271.tgz#7cc454c67244a2e9997671507b1e24bb3fbf1085"
   dependencies:
     async "^2.1.2"
     babel-code-frame "^6.22.0"
@@ -5248,6 +5260,7 @@ gatsby@1.9.270:
     gatsby-cli "^1.1.58"
     gatsby-link "^1.6.44"
     gatsby-module-loader "^1.0.11"
+    gatsby-plugin-page-creator "^1.0.1"
     gatsby-react-router-scroll "^1.0.17"
     glob "^7.1.1"
     graphql "^0.11.7"

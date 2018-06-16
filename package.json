@@ -39,7 +39,7 @@
     "gatsby-transformer-remark": "1.7.43",
     "gatsby-transformer-sharp": "1.6.26",
     "lodash": "4.17.10",
-    "netlify-cms": "1.9.1",
+    "netlify-cms": "1.9.2",
     "netlify-cms-widget-color": "2.3.0",
     "netlify-cms-widget-fontawesome": "1.2.1",
     "prop-types": "15.6.1",

@@ -20,6 +20,7 @@ interface ResourcePageTemplateLayoutProps extends Page.PageTemplateLayoutProps {
 }
 
 interface ResourcePageLayoutState {
+  filter?: string
   resourceEdges?: Array<(MarkdownRemarkEdge | null)> | null /** A list of edges. */
 }
 
@@ -31,6 +32,7 @@ class ResourcePageLayout extends React.Component<ResourcePageTemplateLayoutProps
 
   handleFilter = (filter: string) => () => {
     this.setState({
+      filter,
       resourceEdges: this.props.data!.resource!.edges!.filter((edge) =>
         edge!.node!.frontmatter!.resourceGroup === filter),
     })
@@ -38,6 +40,7 @@ class ResourcePageLayout extends React.Component<ResourcePageTemplateLayoutProps
 
   clearFilter = () => () => {
     this.setState({
+      filter: undefined,
       resourceEdges: this.props.data!.resource!.edges,
     })
   }
@@ -46,14 +49,17 @@ class ResourcePageLayout extends React.Component<ResourcePageTemplateLayoutProps
     return (
       <PageComponent.default {...this.props}>
         <Container>
-        Filter these resources by:<br/>
-        <a onClick={this.clearFilter()}>All</a>
+          <p className="has-text-weight-bold has-text-primary">
+            Filter these resources by:<br/>
+          </p>
+        <a onClick={this.clearFilter()} className={this.state.filter ? '' : 'has-text-info'}>All</a>
         {this.props.data!.allResourceGroupsMarkdown!.allResourceGroups.map((resourceGroup, index) => (
           <React.Fragment key={index}>
-            &nbsp;|&nbsp;<a onClick={this.handleFilter(resourceGroup)}>{resourceGroup}</a>
+            &nbsp;|&nbsp;<a className={this.state.filter === resourceGroup ? 'has-text-info' : ''}
+              onClick={this.handleFilter(resourceGroup)}>{resourceGroup}</a>
           </React.Fragment>
         ))}
-        {_.chunk(this.state.resourceEdges!, this.props.data!.markdownRemark!.frontmatter!.subColumns!)
+        {_.chunk(this.state.resourceEdges!, 3)
             .map((chunkedEdges, key) => (
               <Columns key={key}>
                 {...chunkedEdges.map((resourceEdge, resourceKey) => (

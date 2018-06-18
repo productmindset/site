@@ -48,7 +48,7 @@ class ResourcePageLayout extends React.Component<ResourcePageTemplateLayoutProps
         <Container>
         Filter these resources by:<br/>
         <a onClick={this.clearFilter()}>All</a>
-        {this.props.data!.allResourceGroupsMarkdown!.allResourceGroups!.map((resourceGroup, index) => (
+        {this.props.data!.allResourceGroupsMarkdown!.allResourceGroups.map((resourceGroup, index) => (
           <React.Fragment key={index}>
             &nbsp;|&nbsp;<a onClick={this.handleFilter(resourceGroup)}>{resourceGroup}</a>
           </React.Fragment>

@@ -115,7 +115,7 @@
     "eslint-plugin-standard": "3.1.0",
     "gatsby-cli": "1.1.58",
     "gatsby-plugin-favicon": "2.1.1",
-    "graphql-code-generator": "0.9.2",
+    "graphql-code-generator": "0.9.3",
     "graphql-codegen-typescript-template": "0.9.2",
     "jest": "23.1.0",
     "jest-cli": "23.1.0",

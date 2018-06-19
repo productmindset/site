@@ -119,7 +119,6 @@ export interface packageJson_2 {
   description?: string | null;
   version?: string | null;
   main?: string | null;
-  author?: string | null;
   license?: string | null;
   dependencies?: (dependencies_2 | null)[] | null;
   devDependencies?: (devDependencies_2 | null)[] | null;
@@ -294,8 +293,8 @@ export interface File extends Node {
   id: string /** The id of this node. */;
   parent?: Node | null /** The parent of this node. */;
   children?: (Node | null)[] | null /** The children of this node. */;
-  childMarkdownRemark?: MarkdownRemark | null /** The child of this node of type markdownRemark */;
   childImageSharp?: ImageSharp | null /** The child of this node of type imageSharp */;
+  childMarkdownRemark?: MarkdownRemark | null /** The child of this node of type markdownRemark */;
   internal?: internal_11 | null;
   sourceInstanceName?: string | null;
   absolutePath?: string | null;
@@ -334,87 +333,13 @@ export interface File extends Node {
     | string
     | null /** Copy file to static directory and return public url to it */;
 }
-/** Node of type MarkdownRemark */
-export interface MarkdownRemark extends Node {
-  id: string /** The id of this node. */;
-  parent?: Node | null /** The parent of this node. */;
-  children?: (Node | null)[] | null /** The children of this node. */;
-  internal?: internal_12 | null;
-  frontmatter?: frontmatter_2 | null;
-  fileAbsolutePath?: string | null;
-  imageFile?: File | null;
-  fields?: fields_3 | null;
-  html?: string | null;
-  htmlAst?: JSON | null;
-  excerpt?: string | null;
-  headings?: (MarkdownHeading | null)[] | null;
-  timeToRead?: number | null;
-  tableOfContents?: string | null;
-  wordCount?: wordCount | null;
-}
-
-export interface internal_12 {
-  content?: string | null;
-  type?: string | null;
-  contentDigest?: string | null;
-  owner?: string | null;
-  fieldOwners?: fieldOwners_3 | null;
-}
-
-export interface fieldOwners_3 {
-  slug?: string | null;
-}
-
-export interface frontmatter_2 {
-  title?: string | null;
-  isPage?: boolean | null;
-  type?: string | null;
-  sortOrder?: number | null;
-  active?: boolean | null;
-  fullTitle?: string | null;
-  description?: string | null;
-  image?: string | null;
-  _PARENT?: string | null;
-  parent?: string | null;
-  path?: string | null;
-  templateKey?: string | null;
-  heroTitle?: string | null;
-  heroSubtitle?: string | null;
-  heroIsVideo?: boolean | null;
-  includeLearnMore?: boolean | null;
-  subColumns?: number | null;
-  heroImage?: string | null;
-  resourceType?: string | null;
-  url?: string | null;
-  buttonText?: string | null;
-  buttonFAIcon?: string | null;
-  fullName?: string | null;
-  jobTitle?: string | null;
-  company?: string | null;
-  time?: string | null;
-}
-
-export interface fields_3 {
-  slug?: string | null;
-}
-
-export interface MarkdownHeading {
-  value?: string | null;
-  depth?: number | null;
-}
-
-export interface wordCount {
-  paragraphs?: number | null;
-  sentences?: number | null;
-  words?: number | null;
-}
 /** Node of type ImageSharp */
 export interface ImageSharp extends Node {
   id: string /** The id of this node. */;
   parent?: Node | null /** The parent of this node. */;
   children?: (Node | null)[] | null /** The children of this node. */;
-  internal?: internal_13 | null;
-  fields?: fields_4 | null;
+  internal?: internal_12 | null;
+  fields?: fields_3 | null;
   original?: ImageSharpOriginal | null;
   resolutions?: ImageSharpResolutions | null;
   sizes?: ImageSharpSizes | null;
@@ -423,18 +348,18 @@ export interface ImageSharp extends Node {
   resize?: ImageSharpResize | null;
 }
 
-export interface internal_13 {
+export interface internal_12 {
   contentDigest?: string | null;
   type?: string | null;
   owner?: string | null;
-  fieldOwners?: fieldOwners_4 | null;
+  fieldOwners?: fieldOwners_3 | null;
 }
 
-export interface fieldOwners_4 {
+export interface fieldOwners_3 {
   slug?: string | null;
 }
 
-export interface fields_4 {
+export interface fields_3 {
   slug?: string | null;
 }
 
@@ -497,6 +422,82 @@ export interface ImageSharpResize {
   height?: number | null;
   aspectRatio?: number | null;
   originalName?: string | null;
+}
+/** Node of type MarkdownRemark */
+export interface MarkdownRemark extends Node {
+  id: string /** The id of this node. */;
+  parent?: Node | null /** The parent of this node. */;
+  children?: (Node | null)[] | null /** The children of this node. */;
+  internal?: internal_13 | null;
+  frontmatter?: frontmatter_2 | null;
+  rawMarkdownBody?: string | null;
+  fileAbsolutePath?: string | null;
+  imageFile?: File | null;
+  fields?: fields_4 | null;
+  html?: string | null;
+  htmlAst?: JSON | null;
+  excerpt?: string | null;
+  headings?: (MarkdownHeading | null)[] | null;
+  timeToRead?: number | null;
+  tableOfContents?: string | null;
+  wordCount?: wordCount | null;
+}
+
+export interface internal_13 {
+  content?: string | null;
+  type?: string | null;
+  contentDigest?: string | null;
+  owner?: string | null;
+  fieldOwners?: fieldOwners_4 | null;
+}
+
+export interface fieldOwners_4 {
+  slug?: string | null;
+}
+
+export interface frontmatter_2 {
+  title?: string | null;
+  image?: string | null;
+  _PARENT?: string | null;
+  parent?: string | null;
+  isPage?: boolean | null;
+  type?: string | null;
+  sortOrder?: number | null;
+  active?: boolean | null;
+  fullTitle?: string | null;
+  description?: string | null;
+  templateKey?: string | null;
+  includeLearnMore?: boolean | null;
+  path?: string | null;
+  heroTitle?: string | null;
+  heroSubtitle?: string | null;
+  heroIsVideo?: boolean | null;
+  subColumns?: number | null;
+  heroImage?: string | null;
+  resourceGroup?: string | null;
+  resourceType?: string | null;
+  url?: string | null;
+  buttonText?: string | null;
+  buttonFAIcon?: string | null;
+  fullName?: string | null;
+  jobTitle?: string | null;
+  company?: string | null;
+  time?: string | null;
+}
+
+export interface fields_4 {
+  slug?: string | null;
+}
+
+export interface MarkdownHeading {
+  value?: string | null;
+  depth?: number | null;
+}
+
+export interface wordCount {
+  paragraphs?: number | null;
+  sentences?: number | null;
+  words?: number | null;
 }
 
 export interface internal_11 {
@@ -902,7 +903,6 @@ export interface sitePageConnectionPluginCreatorPackageJsonInputObject {
   description?: sitePageConnectionPluginCreatorPackageJsonDescriptionQueryString | null;
   version?: sitePageConnectionPluginCreatorPackageJsonVersionQueryString | null;
   main?: sitePageConnectionPluginCreatorPackageJsonMainQueryString | null;
-  author?: sitePageConnectionPluginCreatorPackageJsonAuthorQueryString | null;
   license?: sitePageConnectionPluginCreatorPackageJsonLicenseQueryString | null;
   dependencies?: sitePageConnectionPluginCreatorPackageJsonDependenciesQueryList | null;
   devDependencies?: sitePageConnectionPluginCreatorPackageJsonDevDependenciesQueryList | null;
@@ -932,13 +932,6 @@ export interface sitePageConnectionPluginCreatorPackageJsonVersionQueryString {
 }
 
 export interface sitePageConnectionPluginCreatorPackageJsonMainQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePageConnectionPluginCreatorPackageJsonAuthorQueryString {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -1337,7 +1330,6 @@ export interface sitePluginConnectionPackageJsonInputObject_2 {
   description?: sitePluginConnectionPackageJsonDescriptionQueryString_2 | null;
   version?: sitePluginConnectionPackageJsonVersionQueryString_2 | null;
   main?: sitePluginConnectionPackageJsonMainQueryString_2 | null;
-  author?: sitePluginConnectionPackageJsonAuthorQueryString_2 | null;
   license?: sitePluginConnectionPackageJsonLicenseQueryString_2 | null;
   dependencies?: sitePluginConnectionPackageJsonDependenciesQueryList_2 | null;
   devDependencies?: sitePluginConnectionPackageJsonDevDependenciesQueryList_2 | null;
@@ -1367,13 +1359,6 @@ export interface sitePluginConnectionPackageJsonVersionQueryString_2 {
 }
 
 export interface sitePluginConnectionPackageJsonMainQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePluginConnectionPackageJsonAuthorQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -1613,6 +1598,10 @@ export interface directoryConnectionExtensionQueryString_2 {
 export interface directoryConnectionSizeQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface directoryConnectionPrettySizeQueryString_2 {
@@ -1695,66 +1684,118 @@ export interface directoryConnectionRelativeDirectoryQueryString_2 {
 export interface directoryConnectionDevQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface directoryConnectionModeQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface directoryConnectionNlinkQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface directoryConnectionUidQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface directoryConnectionGidQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface directoryConnectionRdevQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface directoryConnectionBlksizeQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface directoryConnectionInoQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface directoryConnectionBlocksQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface directoryConnectionAtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface directoryConnectionMtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface directoryConnectionCtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface directoryConnectionBirthtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface directoryConnectionAtimeQueryString_2 {
@@ -1910,6 +1951,10 @@ export interface fileConnectionExtensionQueryString_2 {
 export interface fileConnectionSizeQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface fileConnectionPrettySizeQueryString_2 {
@@ -1992,66 +2037,118 @@ export interface fileConnectionRelativeDirectoryQueryString_2 {
 export interface fileConnectionDevQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface fileConnectionModeQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface fileConnectionNlinkQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface fileConnectionUidQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface fileConnectionGidQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface fileConnectionRdevQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface fileConnectionBlksizeQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface fileConnectionInoQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface fileConnectionBlocksQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface fileConnectionAtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface fileConnectionMtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface fileConnectionCtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface fileConnectionBirthtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface fileConnectionAtimeQueryString_2 {
@@ -2190,11 +2287,19 @@ export interface originalTypeName_4 {
 export interface originalWidthQueryFloat_4 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface originalHeightQueryFloat_4 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface originalSrcQueryString_4 {
@@ -2234,16 +2339,28 @@ export interface resolutionsTracedSvgQueryString_4 {
 export interface resolutionsAspectRatioQueryFloat_4 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface resolutionsWidthQueryFloat_4 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface resolutionsHeightQueryFloat_4 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface resolutionsSrcQueryString_4 {
@@ -2311,6 +2428,10 @@ export interface sizesTracedSvgQueryString_4 {
 export interface sizesAspectRatioQueryFloat_4 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface sizesSrcQueryString_4 {
@@ -2382,16 +2503,28 @@ export interface responsiveResolutionBase64QueryString_4 {
 export interface responsiveResolutionAspectRatioQueryFloat_4 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface responsiveResolutionWidthQueryFloat_4 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface responsiveResolutionHeightQueryFloat_4 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface responsiveResolutionSrcQueryString_4 {
@@ -2435,6 +2568,10 @@ export interface responsiveSizesBase64QueryString_4 {
 export interface responsiveSizesAspectRatioQueryFloat_4 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface responsiveSizesSrcQueryString_4 {
@@ -2498,16 +2635,28 @@ export interface resizeTracedSvgQueryString_4 {
 export interface resizeWidthQueryInt_4 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface resizeHeightQueryInt_4 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface resizeAspectRatioQueryFloat_4 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface resizeOriginalNameQueryString_4 {
@@ -2527,6 +2676,7 @@ export interface filterMarkdownRemark {
   internal?: markdownRemarkConnectionInternalInputObject_2 | null;
   frontmatter?: markdownRemarkConnectionFrontmatterInputObject_2 | null;
   excerpt?: excerptQueryString_4 | null;
+  rawMarkdownBody?: markdownRemarkConnectionRawMarkdownBodyQueryString_2 | null;
   fileAbsolutePath?: markdownRemarkConnectionFileAbsolutePathQueryString_2 | null;
   imageFile?: markdownRemarkConnectionImageFileInputObject_2 | null;
   fields?: markdownRemarkConnectionFieldsInputObject_2 | null;
@@ -2593,23 +2743,24 @@ export interface markdownRemarkConnectionInternalFieldOwnersSlugQueryString_2 {
 
 export interface markdownRemarkConnectionFrontmatterInputObject_2 {
   title?: markdownRemarkConnectionFrontmatterTitleQueryString_2 | null;
+  image?: markdownRemarkConnectionFrontmatterImageQueryString_2 | null;
+  _PARENT?: markdownRemarkConnectionFrontmatterParentQueryString_3 | null;
+  parent?: markdownRemarkConnectionFrontmatterParentQueryString_4 | null;
   isPage?: markdownRemarkConnectionFrontmatterIsPageQueryBoolean_2 | null;
   type?: markdownRemarkConnectionFrontmatterTypeQueryString_2 | null;
   sortOrder?: markdownRemarkConnectionFrontmatterSortOrderQueryInteger_2 | null;
   active?: markdownRemarkConnectionFrontmatterActiveQueryBoolean_2 | null;
   fullTitle?: markdownRemarkConnectionFrontmatterFullTitleQueryString_2 | null;
   description?: markdownRemarkConnectionFrontmatterDescriptionQueryString_2 | null;
-  image?: markdownRemarkConnectionFrontmatterImageQueryString_2 | null;
-  _PARENT?: markdownRemarkConnectionFrontmatterParentQueryString_3 | null;
-  parent?: markdownRemarkConnectionFrontmatterParentQueryString_4 | null;
-  path?: markdownRemarkConnectionFrontmatterPathQueryString_2 | null;
   templateKey?: markdownRemarkConnectionFrontmatterTemplateKeyQueryString_2 | null;
+  includeLearnMore?: markdownRemarkConnectionFrontmatterIncludeLearnMoreQueryBoolean_2 | null;
+  path?: markdownRemarkConnectionFrontmatterPathQueryString_2 | null;
   heroTitle?: markdownRemarkConnectionFrontmatterHeroTitleQueryString_2 | null;
   heroSubtitle?: markdownRemarkConnectionFrontmatterHeroSubtitleQueryString_2 | null;
   heroIsVideo?: markdownRemarkConnectionFrontmatterHeroIsVideoQueryBoolean_2 | null;
-  includeLearnMore?: markdownRemarkConnectionFrontmatterIncludeLearnMoreQueryBoolean_2 | null;
   subColumns?: markdownRemarkConnectionFrontmatterSubColumnsQueryInteger_2 | null;
   heroImage?: markdownRemarkConnectionFrontmatterHeroImageQueryString_2 | null;
+  resourceGroup?: markdownRemarkConnectionFrontmatterResourceGroupQueryString_2 | null;
   resourceType?: markdownRemarkConnectionFrontmatterResourceTypeQueryString_2 | null;
   url?: markdownRemarkConnectionFrontmatterUrlQueryString_2 | null;
   buttonText?: markdownRemarkConnectionFrontmatterButtonTextQueryString_2 | null;
@@ -2621,42 +2772,6 @@ export interface markdownRemarkConnectionFrontmatterInputObject_2 {
 }
 
 export interface markdownRemarkConnectionFrontmatterTitleQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface markdownRemarkConnectionFrontmatterIsPageQueryBoolean_2 {
-  eq?: boolean | null;
-  ne?: boolean | null;
-}
-
-export interface markdownRemarkConnectionFrontmatterTypeQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface markdownRemarkConnectionFrontmatterSortOrderQueryInteger_2 {
-  eq?: number | null;
-  ne?: number | null;
-}
-
-export interface markdownRemarkConnectionFrontmatterActiveQueryBoolean_2 {
-  eq?: boolean | null;
-  ne?: boolean | null;
-}
-
-export interface markdownRemarkConnectionFrontmatterFullTitleQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface markdownRemarkConnectionFrontmatterDescriptionQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -2684,7 +2799,40 @@ export interface markdownRemarkConnectionFrontmatterParentQueryString_4 {
   glob?: string | null;
 }
 
-export interface markdownRemarkConnectionFrontmatterPathQueryString_2 {
+export interface markdownRemarkConnectionFrontmatterIsPageQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface markdownRemarkConnectionFrontmatterTypeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionFrontmatterSortOrderQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
+}
+
+export interface markdownRemarkConnectionFrontmatterActiveQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface markdownRemarkConnectionFrontmatterFullTitleQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionFrontmatterDescriptionQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -2692,6 +2840,18 @@ export interface markdownRemarkConnectionFrontmatterPathQueryString_2 {
 }
 
 export interface markdownRemarkConnectionFrontmatterTemplateKeyQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionFrontmatterIncludeLearnMoreQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface markdownRemarkConnectionFrontmatterPathQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -2717,17 +2877,23 @@ export interface markdownRemarkConnectionFrontmatterHeroIsVideoQueryBoolean_2 {
   ne?: boolean | null;
 }
 
-export interface markdownRemarkConnectionFrontmatterIncludeLearnMoreQueryBoolean_2 {
-  eq?: boolean | null;
-  ne?: boolean | null;
-}
-
 export interface markdownRemarkConnectionFrontmatterSubColumnsQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface markdownRemarkConnectionFrontmatterHeroImageQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionFrontmatterResourceGroupQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -2791,6 +2957,13 @@ export interface markdownRemarkConnectionFrontmatterTimeQueryString_2 {
 }
 
 export interface excerptQueryString_4 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkConnectionRawMarkdownBodyQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -2940,6 +3113,10 @@ export interface markdownRemarkConnectionImageFileExtensionQueryString_2 {
 export interface markdownRemarkConnectionImageFileSizeQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface markdownRemarkConnectionImageFilePrettySizeQueryString_2 {
@@ -3022,66 +3199,118 @@ export interface markdownRemarkConnectionImageFileRelativeDirectoryQueryString_2
 export interface markdownRemarkConnectionImageFileDevQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface markdownRemarkConnectionImageFileModeQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface markdownRemarkConnectionImageFileNlinkQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface markdownRemarkConnectionImageFileUidQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface markdownRemarkConnectionImageFileGidQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface markdownRemarkConnectionImageFileRdevQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface markdownRemarkConnectionImageFileBlksizeQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface markdownRemarkConnectionImageFileInoQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface markdownRemarkConnectionImageFileBlocksQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface markdownRemarkConnectionImageFileAtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface markdownRemarkConnectionImageFileMtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface markdownRemarkConnectionImageFileCtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface markdownRemarkConnectionImageFileBirthtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface markdownRemarkConnectionImageFileAtimeQueryString_2 {
@@ -3146,6 +3375,10 @@ export interface headingsListElemValueQueryString_4 {
 export interface headingsListElemDepthQueryInt_4 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface markdownHeadingInputObject_4 {
@@ -3156,6 +3389,10 @@ export interface markdownHeadingInputObject_4 {
 export interface timeToReadQueryInt_4 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface tableOfContentsQueryString_4 {
@@ -3174,16 +3411,28 @@ export interface wordCountTypeName_4 {
 export interface wordCountParagraphsQueryInt_4 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface wordCountSentencesQueryInt_4 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface wordCountWordsQueryInt_4 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface sitePageLayoutQueryString {
@@ -3463,7 +3712,6 @@ export interface sitePagePluginCreatorPackageJsonInputObject {
   description?: sitePagePluginCreatorPackageJsonDescriptionQueryString | null;
   version?: sitePagePluginCreatorPackageJsonVersionQueryString | null;
   main?: sitePagePluginCreatorPackageJsonMainQueryString | null;
-  author?: sitePagePluginCreatorPackageJsonAuthorQueryString | null;
   license?: sitePagePluginCreatorPackageJsonLicenseQueryString | null;
   dependencies?: sitePagePluginCreatorPackageJsonDependenciesQueryList | null;
   devDependencies?: sitePagePluginCreatorPackageJsonDevDependenciesQueryList | null;
@@ -3493,13 +3741,6 @@ export interface sitePagePluginCreatorPackageJsonVersionQueryString {
 }
 
 export interface sitePagePluginCreatorPackageJsonMainQueryString {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePagePluginCreatorPackageJsonAuthorQueryString {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -3879,7 +4120,6 @@ export interface sitePluginPackageJsonInputObject_2 {
   description?: sitePluginPackageJsonDescriptionQueryString_2 | null;
   version?: sitePluginPackageJsonVersionQueryString_2 | null;
   main?: sitePluginPackageJsonMainQueryString_2 | null;
-  author?: sitePluginPackageJsonAuthorQueryString_2 | null;
   license?: sitePluginPackageJsonLicenseQueryString_2 | null;
   dependencies?: sitePluginPackageJsonDependenciesQueryList_2 | null;
   devDependencies?: sitePluginPackageJsonDevDependenciesQueryList_2 | null;
@@ -3909,13 +4149,6 @@ export interface sitePluginPackageJsonVersionQueryString_2 {
 }
 
 export interface sitePluginPackageJsonMainQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface sitePluginPackageJsonAuthorQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -4192,6 +4425,10 @@ export interface directoryExtensionQueryString_2 {
 export interface directorySizeQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface directoryPrettySizeQueryString_2 {
@@ -4274,66 +4511,118 @@ export interface directoryRelativeDirectoryQueryString_2 {
 export interface directoryDevQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface directoryModeQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface directoryNlinkQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface directoryUidQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface directoryGidQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface directoryRdevQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface directoryBlksizeQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface directoryInoQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface directoryBlocksQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface directoryAtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface directoryMtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface directoryCtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface directoryBirthtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface directoryAtimeQueryString_2 {
@@ -4445,6 +4734,10 @@ export interface fileExtensionQueryString_2 {
 export interface fileSizeQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface filePrettySizeQueryString_2 {
@@ -4527,66 +4820,118 @@ export interface fileRelativeDirectoryQueryString_2 {
 export interface fileDevQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface fileModeQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface fileNlinkQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface fileUidQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface fileGidQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface fileRdevQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface fileBlksizeQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface fileInoQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface fileBlocksQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface fileAtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface fileMtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface fileCtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface fileBirthtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface fileAtimeQueryString_2 {
@@ -4690,11 +5035,19 @@ export interface originalTypeName_3 {
 export interface originalWidthQueryFloat_3 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface originalHeightQueryFloat_3 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface originalSrcQueryString_3 {
@@ -4734,16 +5087,28 @@ export interface resolutionsTracedSvgQueryString_3 {
 export interface resolutionsAspectRatioQueryFloat_3 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface resolutionsWidthQueryFloat_3 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface resolutionsHeightQueryFloat_3 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface resolutionsSrcQueryString_3 {
@@ -4811,6 +5176,10 @@ export interface sizesTracedSvgQueryString_3 {
 export interface sizesAspectRatioQueryFloat_3 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface sizesSrcQueryString_3 {
@@ -4882,16 +5251,28 @@ export interface responsiveResolutionBase64QueryString_3 {
 export interface responsiveResolutionAspectRatioQueryFloat_3 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface responsiveResolutionWidthQueryFloat_3 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface responsiveResolutionHeightQueryFloat_3 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface responsiveResolutionSrcQueryString_3 {
@@ -4935,6 +5316,10 @@ export interface responsiveSizesBase64QueryString_3 {
 export interface responsiveSizesAspectRatioQueryFloat_3 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface responsiveSizesSrcQueryString_3 {
@@ -4998,16 +5383,28 @@ export interface resizeTracedSvgQueryString_3 {
 export interface resizeWidthQueryInt_3 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface resizeHeightQueryInt_3 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface resizeAspectRatioQueryFloat_3 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface resizeOriginalNameQueryString_3 {
@@ -5073,23 +5470,24 @@ export interface markdownRemarkInternalFieldOwnersSlugQueryString_2 {
 
 export interface markdownRemarkFrontmatterInputObject_2 {
   title?: markdownRemarkFrontmatterTitleQueryString_2 | null;
+  image?: markdownRemarkFrontmatterImageQueryString_2 | null;
+  _PARENT?: markdownRemarkFrontmatterParentQueryString_3 | null;
+  parent?: markdownRemarkFrontmatterParentQueryString_4 | null;
   isPage?: markdownRemarkFrontmatterIsPageQueryBoolean_2 | null;
   type?: markdownRemarkFrontmatterTypeQueryString_2 | null;
   sortOrder?: markdownRemarkFrontmatterSortOrderQueryInteger_2 | null;
   active?: markdownRemarkFrontmatterActiveQueryBoolean_2 | null;
   fullTitle?: markdownRemarkFrontmatterFullTitleQueryString_2 | null;
   description?: markdownRemarkFrontmatterDescriptionQueryString_2 | null;
-  image?: markdownRemarkFrontmatterImageQueryString_2 | null;
-  _PARENT?: markdownRemarkFrontmatterParentQueryString_3 | null;
-  parent?: markdownRemarkFrontmatterParentQueryString_4 | null;
-  path?: markdownRemarkFrontmatterPathQueryString_2 | null;
   templateKey?: markdownRemarkFrontmatterTemplateKeyQueryString_2 | null;
+  includeLearnMore?: markdownRemarkFrontmatterIncludeLearnMoreQueryBoolean_2 | null;
+  path?: markdownRemarkFrontmatterPathQueryString_2 | null;
   heroTitle?: markdownRemarkFrontmatterHeroTitleQueryString_2 | null;
   heroSubtitle?: markdownRemarkFrontmatterHeroSubtitleQueryString_2 | null;
   heroIsVideo?: markdownRemarkFrontmatterHeroIsVideoQueryBoolean_2 | null;
-  includeLearnMore?: markdownRemarkFrontmatterIncludeLearnMoreQueryBoolean_2 | null;
   subColumns?: markdownRemarkFrontmatterSubColumnsQueryInteger_2 | null;
   heroImage?: markdownRemarkFrontmatterHeroImageQueryString_2 | null;
+  resourceGroup?: markdownRemarkFrontmatterResourceGroupQueryString_2 | null;
   resourceType?: markdownRemarkFrontmatterResourceTypeQueryString_2 | null;
   url?: markdownRemarkFrontmatterUrlQueryString_2 | null;
   buttonText?: markdownRemarkFrontmatterButtonTextQueryString_2 | null;
@@ -5101,42 +5499,6 @@ export interface markdownRemarkFrontmatterInputObject_2 {
 }
 
 export interface markdownRemarkFrontmatterTitleQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface markdownRemarkFrontmatterIsPageQueryBoolean_2 {
-  eq?: boolean | null;
-  ne?: boolean | null;
-}
-
-export interface markdownRemarkFrontmatterTypeQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface markdownRemarkFrontmatterSortOrderQueryInteger_2 {
-  eq?: number | null;
-  ne?: number | null;
-}
-
-export interface markdownRemarkFrontmatterActiveQueryBoolean_2 {
-  eq?: boolean | null;
-  ne?: boolean | null;
-}
-
-export interface markdownRemarkFrontmatterFullTitleQueryString_2 {
-  eq?: string | null;
-  ne?: string | null;
-  regex?: string | null;
-  glob?: string | null;
-}
-
-export interface markdownRemarkFrontmatterDescriptionQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -5164,7 +5526,40 @@ export interface markdownRemarkFrontmatterParentQueryString_4 {
   glob?: string | null;
 }
 
-export interface markdownRemarkFrontmatterPathQueryString_2 {
+export interface markdownRemarkFrontmatterIsPageQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface markdownRemarkFrontmatterTypeQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkFrontmatterSortOrderQueryInteger_2 {
+  eq?: number | null;
+  ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
+}
+
+export interface markdownRemarkFrontmatterActiveQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface markdownRemarkFrontmatterFullTitleQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkFrontmatterDescriptionQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -5172,6 +5567,18 @@ export interface markdownRemarkFrontmatterPathQueryString_2 {
 }
 
 export interface markdownRemarkFrontmatterTemplateKeyQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkFrontmatterIncludeLearnMoreQueryBoolean_2 {
+  eq?: boolean | null;
+  ne?: boolean | null;
+}
+
+export interface markdownRemarkFrontmatterPathQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -5197,17 +5604,23 @@ export interface markdownRemarkFrontmatterHeroIsVideoQueryBoolean_2 {
   ne?: boolean | null;
 }
 
-export interface markdownRemarkFrontmatterIncludeLearnMoreQueryBoolean_2 {
-  eq?: boolean | null;
-  ne?: boolean | null;
-}
-
 export interface markdownRemarkFrontmatterSubColumnsQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface markdownRemarkFrontmatterHeroImageQueryString_2 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkFrontmatterResourceGroupQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -5271,6 +5684,13 @@ export interface markdownRemarkFrontmatterTimeQueryString_2 {
 }
 
 export interface excerptQueryString_3 {
+  eq?: string | null;
+  ne?: string | null;
+  regex?: string | null;
+  glob?: string | null;
+}
+
+export interface markdownRemarkRawMarkdownBodyQueryString_2 {
   eq?: string | null;
   ne?: string | null;
   regex?: string | null;
@@ -5420,6 +5840,10 @@ export interface markdownRemarkImageFileExtensionQueryString_2 {
 export interface markdownRemarkImageFileSizeQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface markdownRemarkImageFilePrettySizeQueryString_2 {
@@ -5502,66 +5926,118 @@ export interface markdownRemarkImageFileRelativeDirectoryQueryString_2 {
 export interface markdownRemarkImageFileDevQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface markdownRemarkImageFileModeQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface markdownRemarkImageFileNlinkQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface markdownRemarkImageFileUidQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface markdownRemarkImageFileGidQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface markdownRemarkImageFileRdevQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface markdownRemarkImageFileBlksizeQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface markdownRemarkImageFileInoQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface markdownRemarkImageFileBlocksQueryInteger_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface markdownRemarkImageFileAtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface markdownRemarkImageFileMtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface markdownRemarkImageFileCtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface markdownRemarkImageFileBirthtimeMsQueryFloat_2 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface markdownRemarkImageFileAtimeQueryString_2 {
@@ -5626,6 +6102,10 @@ export interface headingsListElemValueQueryString_3 {
 export interface headingsListElemDepthQueryInt_3 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface markdownHeadingInputObject_3 {
@@ -5636,6 +6116,10 @@ export interface markdownHeadingInputObject_3 {
 export interface timeToReadQueryInt_3 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface tableOfContentsQueryString_3 {
@@ -5654,16 +6138,28 @@ export interface wordCountTypeName_3 {
 export interface wordCountParagraphsQueryInt_3 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface wordCountSentencesQueryInt_3 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 
 export interface wordCountWordsQueryInt_3 {
   eq?: number | null;
   ne?: number | null;
+  gt?: number | null;
+  gte?: number | null;
+  lt?: number | null;
+  lte?: number | null;
 }
 export interface AllSitePageRootQueryTypeArgs {
   skip?: number | null;
@@ -5829,6 +6325,7 @@ export interface MarkdownRemarkRootQueryTypeArgs {
   internal?: markdownRemarkInternalInputObject_2 | null;
   frontmatter?: markdownRemarkFrontmatterInputObject_2 | null;
   excerpt?: excerptQueryString_3 | null;
+  rawMarkdownBody?: markdownRemarkRawMarkdownBodyQueryString_2 | null;
   fileAbsolutePath?: markdownRemarkFileAbsolutePathQueryString_2 | null;
   imageFile?: markdownRemarkImageFileInputObject_2 | null;
   fields?: markdownRemarkFieldsInputObject_2 | null;
@@ -6094,12 +6591,6 @@ export interface BirthtimeFileArgs {
     | string
     | null /** Configures the locale Moment.js will use to format the date. */;
 }
-export interface ExcerptMarkdownRemarkArgs {
-  pruneLength?: number | null;
-}
-export interface HeadingsMarkdownRemarkArgs {
-  depth?: HeadingLevels | null;
-}
 export interface ResolutionsImageSharpArgs {
   width?: number | null;
   height?: number | null;
@@ -6159,6 +6650,12 @@ export interface ResizeImageSharpArgs {
   toFormat?: ImageFormat | null;
   cropFocus?: ImageCropFocus | null;
   rotate?: number | null;
+}
+export interface ExcerptMarkdownRemarkArgs {
+  pruneLength?: number | null;
+}
+export interface HeadingsMarkdownRemarkArgs {
+  depth?: HeadingLevels | null;
 }
 export interface DistinctImageSharpConnectionArgs {
   field?: imageSharpDistinctEnum | null;
@@ -6588,15 +7085,6 @@ export enum fileConnectionSortOrderValues {
   DESC = "DESC"
 }
 
-export enum HeadingLevels {
-  h1 = "h1",
-  h2 = "h2",
-  h3 = "h3",
-  h4 = "h4",
-  h5 = "h5",
-  h6 = "h6"
-}
-
 export enum PotraceTurnPolicy {
   TURNPOLICY_BLACK = "TURNPOLICY_BLACK",
   TURNPOLICY_WHITE = "TURNPOLICY_WHITE",
@@ -6625,6 +7113,15 @@ export enum ImageCropFocus {
   NORTHWEST = "NORTHWEST",
   ENTROPY = "ENTROPY",
   ATTENTION = "ATTENTION"
+}
+
+export enum HeadingLevels {
+  h1 = "h1",
+  h2 = "h2",
+  h3 = "h3",
+  h4 = "h4",
+  h5 = "h5",
+  h6 = "h6"
 }
 
 export enum fileDistinctEnum {
@@ -6802,23 +7299,24 @@ export enum MarkdownRemarkConnectionSortByFieldsEnum {
   internal___owner = "internal___owner",
   internal___fieldOwners___slug = "internal___fieldOwners___slug",
   frontmatter___title = "frontmatter___title",
+  frontmatter___image = "frontmatter___image",
+  frontmatter____PARENT = "frontmatter____PARENT",
+  frontmatter___parent = "frontmatter___parent",
   frontmatter___isPage = "frontmatter___isPage",
   frontmatter___type = "frontmatter___type",
   frontmatter___sortOrder = "frontmatter___sortOrder",
   frontmatter___active = "frontmatter___active",
   frontmatter___fullTitle = "frontmatter___fullTitle",
   frontmatter___description = "frontmatter___description",
-  frontmatter___image = "frontmatter___image",
-  frontmatter____PARENT = "frontmatter____PARENT",
-  frontmatter___parent = "frontmatter___parent",
-  frontmatter___path = "frontmatter___path",
   frontmatter___templateKey = "frontmatter___templateKey",
+  frontmatter___includeLearnMore = "frontmatter___includeLearnMore",
+  frontmatter___path = "frontmatter___path",
   frontmatter___heroTitle = "frontmatter___heroTitle",
   frontmatter___heroSubtitle = "frontmatter___heroSubtitle",
   frontmatter___heroIsVideo = "frontmatter___heroIsVideo",
-  frontmatter___includeLearnMore = "frontmatter___includeLearnMore",
   frontmatter___subColumns = "frontmatter___subColumns",
   frontmatter___heroImage = "frontmatter___heroImage",
+  frontmatter___resourceGroup = "frontmatter___resourceGroup",
   frontmatter___resourceType = "frontmatter___resourceType",
   frontmatter___url = "frontmatter___url",
   frontmatter___buttonText = "frontmatter___buttonText",
@@ -6828,6 +7326,7 @@ export enum MarkdownRemarkConnectionSortByFieldsEnum {
   frontmatter___company = "frontmatter___company",
   frontmatter___time = "frontmatter___time",
   excerpt = "excerpt",
+  rawMarkdownBody = "rawMarkdownBody",
   fileAbsolutePath = "fileAbsolutePath",
   imageFile___NODE = "imageFile___NODE",
   fields___slug = "fields___slug",
@@ -6854,23 +7353,24 @@ export enum markdownRemarkDistinctEnum {
   internal___owner = "internal___owner",
   internal___fieldOwners___slug = "internal___fieldOwners___slug",
   frontmatter___title = "frontmatter___title",
+  frontmatter___image = "frontmatter___image",
+  frontmatter____PARENT = "frontmatter____PARENT",
+  frontmatter___parent = "frontmatter___parent",
   frontmatter___isPage = "frontmatter___isPage",
   frontmatter___type = "frontmatter___type",
   frontmatter___sortOrder = "frontmatter___sortOrder",
   frontmatter___active = "frontmatter___active",
   frontmatter___fullTitle = "frontmatter___fullTitle",
   frontmatter___description = "frontmatter___description",
-  frontmatter___image = "frontmatter___image",
-  frontmatter____PARENT = "frontmatter____PARENT",
-  frontmatter___parent = "frontmatter___parent",
-  frontmatter___path = "frontmatter___path",
   frontmatter___templateKey = "frontmatter___templateKey",
+  frontmatter___includeLearnMore = "frontmatter___includeLearnMore",
+  frontmatter___path = "frontmatter___path",
   frontmatter___heroTitle = "frontmatter___heroTitle",
   frontmatter___heroSubtitle = "frontmatter___heroSubtitle",
   frontmatter___heroIsVideo = "frontmatter___heroIsVideo",
-  frontmatter___includeLearnMore = "frontmatter___includeLearnMore",
   frontmatter___subColumns = "frontmatter___subColumns",
   frontmatter___heroImage = "frontmatter___heroImage",
+  frontmatter___resourceGroup = "frontmatter___resourceGroup",
   frontmatter___resourceType = "frontmatter___resourceType",
   frontmatter___url = "frontmatter___url",
   frontmatter___buttonText = "frontmatter___buttonText",
@@ -6880,6 +7380,7 @@ export enum markdownRemarkDistinctEnum {
   frontmatter___company = "frontmatter___company",
   frontmatter___time = "frontmatter___time",
   excerpt = "excerpt",
+  rawMarkdownBody = "rawMarkdownBody",
   fileAbsolutePath = "fileAbsolutePath",
   imageFile___NODE = "imageFile___NODE",
   fields___slug = "fields___slug"
@@ -6894,23 +7395,24 @@ export enum markdownRemarkGroupEnum {
   internal___owner = "internal___owner",
   internal___fieldOwners___slug = "internal___fieldOwners___slug",
   frontmatter___title = "frontmatter___title",
+  frontmatter___image = "frontmatter___image",
+  frontmatter____PARENT = "frontmatter____PARENT",
+  frontmatter___parent = "frontmatter___parent",
   frontmatter___isPage = "frontmatter___isPage",
   frontmatter___type = "frontmatter___type",
   frontmatter___sortOrder = "frontmatter___sortOrder",
   frontmatter___active = "frontmatter___active",
   frontmatter___fullTitle = "frontmatter___fullTitle",
   frontmatter___description = "frontmatter___description",
-  frontmatter___image = "frontmatter___image",
-  frontmatter____PARENT = "frontmatter____PARENT",
-  frontmatter___parent = "frontmatter___parent",
-  frontmatter___path = "frontmatter___path",
   frontmatter___templateKey = "frontmatter___templateKey",
+  frontmatter___includeLearnMore = "frontmatter___includeLearnMore",
+  frontmatter___path = "frontmatter___path",
   frontmatter___heroTitle = "frontmatter___heroTitle",
   frontmatter___heroSubtitle = "frontmatter___heroSubtitle",
   frontmatter___heroIsVideo = "frontmatter___heroIsVideo",
-  frontmatter___includeLearnMore = "frontmatter___includeLearnMore",
   frontmatter___subColumns = "frontmatter___subColumns",
   frontmatter___heroImage = "frontmatter___heroImage",
+  frontmatter___resourceGroup = "frontmatter___resourceGroup",
   frontmatter___resourceType = "frontmatter___resourceType",
   frontmatter___url = "frontmatter___url",
   frontmatter___buttonText = "frontmatter___buttonText",
@@ -6920,6 +7422,7 @@ export enum markdownRemarkGroupEnum {
   frontmatter___company = "frontmatter___company",
   frontmatter___time = "frontmatter___time",
   excerpt = "excerpt",
+  rawMarkdownBody = "rawMarkdownBody",
   fileAbsolutePath = "fileAbsolutePath",
   imageFile___NODE = "imageFile___NODE",
   fields___slug = "fields___slug"

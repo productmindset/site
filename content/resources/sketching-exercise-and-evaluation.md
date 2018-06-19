@@ -2,6 +2,7 @@
 isPage: false
 type: resource
 active: true
+resourceGroup: Tools
 resourceType: Tool
 title: Sketching Exercise and Evaluation
 fullTitle: Sketching Exercise and Evaluation

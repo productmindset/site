@@ -2,6 +2,7 @@
 isPage: false
 type: resource
 active: true
+resourceGroup: Tools
 resourceType: Tool
 title: Prioritization (Evaluation) Matrix
 fullTitle: Prioritization (Evaluation) Matrix

@@ -67,6 +67,7 @@ collections:
       - { name: type, label: Type, default: resource, widget: hidden}
       - { name: active, label: Active, default: true, widget: boolean }
       - { name: resourceType, label: Resource Type, widget: string }
+      - { name: resourceGroup, label: Resource Group, widget: string }
       - { name: sortOrder, label: Sort Order, valueType: int, widget: number }
       - { name: title, label: Short Name (Unique), widget: string }
       - { name: fullTitle, label: Full Title, widget: string }

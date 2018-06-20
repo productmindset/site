@@ -64,8 +64,8 @@ export default class ResourceComponent extends React.Component<ResourceComponent
             {this.props.node!.html!.length === 0 &&
               <a href={this.props.node!.frontmatter!.url!}
                 className="has-text-info has-text-weight-bold">
-                <span className={`fas fa-fw fa-` +
-                  this.props.node!.frontmatter!.buttonFAIcon!.replace(`fa `, ``)}></span>
+                <span className={`fas fa-fw ` +
+                  this.props.node!.frontmatter!.buttonFAIcon!.replace(` `, ` fa-`)}></span>
                 {this.props.node!.frontmatter!.buttonText!}
               </a>
             }
@@ -90,8 +90,8 @@ export default class ResourceComponent extends React.Component<ResourceComponent
                     </ModalCardBody>
                     <ModalCardFooter>
                       <a href={this.props.node!.frontmatter!.url!} className="button is-info">
-                        <span className={`fas fa-fw fa-` +
-                          this.props.node!.frontmatter!.buttonFAIcon!.replace(`fa `, ``)}></span>
+                        <span className={`fas fa-fw ` +
+                          this.props.node!.frontmatter!.buttonFAIcon!.replace(` `, ` fa-`)}></span>
                         {this.props.node!.frontmatter!.buttonText!}
                       </a>
                       <button className="button" onClick={this.handleClick}>Close</button>

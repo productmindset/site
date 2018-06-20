@@ -3,6 +3,7 @@ isPage: false
 type: resource
 active: true
 resourceType: Tool
+resourceGroup: Tools
 sortOrder: 15
 title: PersonaCreation
 fullTitle: Persona Creation

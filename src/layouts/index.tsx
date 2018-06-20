@@ -22,8 +22,8 @@ const DefaultLayout: React.StatelessComponent<DefaultLayoutProps> = (props) => {
           {
             crossorigin: 'anonymous',
             defer: true,
-            integrity: 'sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl',
-            src: 'https://use.fontawesome.com/releases/v5.0.9/js/all.js',
+            integrity: 'sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe',
+            src: 'https://use.fontawesome.com/releases/v5.0.13/js/all.js',
           },
         ]}>
         <html lang="en" />

@@ -8,7 +8,7 @@ title: ProductMindsetPaper
 fullTitle: Product Mindset Paper
 url: 'https://drive.google.com/file/d/1E3hp28cal9UFhSr8sIvAqSXycldDXdhX/view'
 description: >-
-  A lof of companies know how to guild a product. But only the best know how to
+  A lot of companies know how to guild a product. But only the best know how to
   build the right product the right way.
 image: /images/included/product_mindset_paper.png
 buttonText: Download

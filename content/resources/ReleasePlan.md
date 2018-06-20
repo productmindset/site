@@ -3,6 +3,7 @@ isPage: false
 type: resource
 active: true
 resourceType: Tool
+resourceGroup: Tools
 sortOrder: 30
 title: ReleasePlan
 fullTitle: Release Plan

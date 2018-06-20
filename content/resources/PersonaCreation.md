@@ -1,18 +1,19 @@
 ---
 isPage: false
 type: resource
-title: PersonaCreation
-sortOrder: 15
 active: true
-fullTitle: Persona Creation
-description: >-
-  Personas give us a way to think about who exists beyond the screen and what their life looks like, what motivates them, frustrates them and what they are trying to do with our product.
-image: /images/included/persona_creation.png
-resourceGroup: Tools
 resourceType: Tool
-url: https://drive.google.com/file/d/1MYRVFJ77-d_QIVmJHzMcKycRlXVD7Sp7/view
+sortOrder: 15
+title: PersonaCreation
+fullTitle: Persona Creation
+url: 'https://drive.google.com/file/d/1MYRVFJ77-d_QIVmJHzMcKycRlXVD7Sp7/view'
+description: >-
+  Better understand your customers and their needs.  Personas give us a way to
+  think about who exists beyond the screen and what their life looks like, what
+  motivated them, frustrates them and delights them.
+image: /images/included/persona_creation.png
 buttonText: Download
-buttonFAIcon: fa arrow-circle-down
+buttonFAIcon: fas arrow-down
 ---
 Personas give us a way to think about who exists beyond the screen and what their life looks like, what motivates them, frustrates them and what they are trying to do with our product. This helps us make informed decisions about how to better serve them and drive adoption, referrals and retention
 

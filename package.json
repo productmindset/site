@@ -126,7 +126,7 @@
     "react-test-renderer": "16.4.1",
     "ts-jest": "22.4.6",
     "tslint": "5.10.0",
-    "tslint-config-standard": "7.0.0",
+    "tslint-config-standard": "7.1.0",
     "tslint-eslint-rules": "5.3.1",
     "tslint-microsoft-contrib": "5.0.3",
     "tslint-sonarts": "1.7.0",

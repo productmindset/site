@@ -45,7 +45,7 @@
     "prop-types": "15.6.2",
     "react": "16.4.1",
     "react-dom": "16.4.1",
-    "react-emotion": "9.2.3",
+    "react-emotion": "9.2.4",
     "react-helmet": "5.2.0",
     "react-typography": "0.16.13",
     "react-virtualized-select": "3.1.3",

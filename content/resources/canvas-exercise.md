@@ -18,11 +18,11 @@ buttonFAIcon: fas arrow-alt-circle-down
 ---
 Canvas exercises like the Business Model Canvas, Lean Canvas or our version have many benefits:
 
-**UNDERSTANDING THE PRODUCT **
+**UNDERSTANDING THE PRODUCT**
 
 Who is the customer? What is their problem? How do we make money? What assumptions have been made? See how the pieces are intended to fit together.
 
-**ALIGNING STAKEHOLDERS **
+**ALIGNING STAKEHOLDERS**
 
 These sessions help stakeholders discover they aren’t quite as aligned as they think they are. They use words differently, they see the customer differently, prioritize differently and it often goes unnoticed or unresolved.
 

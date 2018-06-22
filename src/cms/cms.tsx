@@ -8,8 +8,6 @@ import * as FontawesomeWidget from 'netlify-cms-widget-fontawesome'
 import 'react-select/dist/react-select.css'
 import 'react-virtualized/styles.css'
 import 'react-virtualized-select/styles.css'
-import * as ColorWidget from 'netlify-cms-widget-color'
-CMS.registerWidget('color', ColorWidget.Control)
 CMS.registerWidget(
   'fontawesome',
   FontawesomeWidget.Solid,

@@ -54,7 +54,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --parser typescript --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.ts*\"",
-    "lint": "tslint --project tsconfig.json -c ./tslint.json './src/**/*.ts*' && eslint *.js && eslint --ext .js, .jsx ./tests/**",
+    "lint": "tslint --project tsconfig.json -c ./tslint.json './src/**/*.ts*' && eslint *.js && eslint --ext .js ./tests/**",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"

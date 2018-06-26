@@ -2,5 +2,9 @@
   "extends": [
     "config:base",
     "docker:disable"
-  ]
+  ],
+  "packageRules": [{
+    "packageNames": ["@fortawesome/react-fontawesome"],
+    "allowedVersions": "<0.1"
+  }]
 }

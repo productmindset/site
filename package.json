@@ -44,7 +44,8 @@
     "react-typography": "0.16.13",
     "react-virtualized-select": "3.1.3",
     "typeface-roboto": "0.0.54",
-    "typeface-roboto-condensed": "0.0.54"
+    "typeface-roboto-condensed": "0.0.54",
+    "snyk": "^1.88.0"
   },
   "keywords": [
     "gatsby, typescript"
@@ -57,7 +58,9 @@
     "lint": "tslint --project tsconfig.json -c ./tslint.json './src/**/*.ts*' && eslint *.js && eslint --ext .js ./tests/**",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "jest": {
     "globals": {
@@ -131,5 +134,6 @@
     "Kyle Mathews <mathews.kyle@gmail.com>",
     "fabien0102 <fabien0102@gmail.com>",
     "Hays Clark <hays.clark@gmail.com>"
-  ]
+  ],
+  "snyk": true
 }

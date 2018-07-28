@@ -55,9 +55,9 @@
     humps "^2.0.1"
     prop-types "^15.5.7"
 
-"@types/auth0-js@8.11.2":
-  version "8.11.2"
-  resolved "https://registry.yarnpkg.com/@types/auth0-js/-/auth0-js-8.11.2.tgz#4890c662d40c41bea42d9e7b8490e9d88eac78c1"
+"@types/auth0-js@8.11.3":
+  version "8.11.3"
+  resolved "https://registry.yarnpkg.com/@types/auth0-js/-/auth0-js-8.11.3.tgz#d9e3a6c9d16f1d47504ffadc1b59af8ce260a997"
 
 "@types/babel-types@*":
   version "7.0.2"

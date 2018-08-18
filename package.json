@@ -88,7 +88,7 @@
   },
   "devDependencies": {
     "@types/auth0-js": "8.11.2",
-    "@types/enzyme": "3.1.11",
+    "@types/enzyme": "3.1.13",
     "@types/jest": "23.3.1",
     "@types/lodash": "4.14.116",
     "@types/node": "8.10.21",
@@ -98,7 +98,7 @@
     "@types/react-test-renderer": "16.0.1",
     "@types/webpack-env": "1.13.6",
     "babel-core": "6.26.3",
-    "enzyme": "3.3.0",
+    "enzyme": "3.4.4",
     "enzyme-adapter-react-16": "1.1.1",
     "enzyme-to-json": "3.3.4",
     "eslint": "5.4.0",

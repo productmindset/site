@@ -8861,9 +8861,9 @@ negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
 
-netlify-cms-widget-fontawesome@1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/netlify-cms-widget-fontawesome/-/netlify-cms-widget-fontawesome-1.2.1.tgz#802f84da76aca17beddf1abb26e22fcd3e73d9ae"
+netlify-cms-widget-fontawesome@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/netlify-cms-widget-fontawesome/-/netlify-cms-widget-fontawesome-2.1.0.tgz#4d6105ded95a72b841f4509cde0ebd1f39034dbb"
 
 netlify-cms@1.9.3:
   version "1.9.3"

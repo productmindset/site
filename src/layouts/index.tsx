@@ -16,6 +16,7 @@ const DefaultLayout: React.StatelessComponent<DefaultLayoutProps> = (props) => {
         title="3Pillar Global Product Mindset Workshop"
         meta={[
           { name: 'description', content: 'Join the Product Mindset Workshops' },
+          { name: 'google-site-verification', content: 'MdbbrwLbl0mQMwn2vb9rR6BbSJa_vr_ZV9U9kEseuUo' },
           { name: 'keywords', content: 'product, mindset, agile, software, development' },
         ]}
         script={[

@@ -5691,9 +5691,9 @@ graceful-fs@^4.0.0, graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.3,
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
 
-graphql-code-generator@0.12.1:
-  version "0.12.1"
-  resolved "https://registry.yarnpkg.com/graphql-code-generator/-/graphql-code-generator-0.12.1.tgz#bcaecc60350c51cd96e97c69dfafd84a40d35b0b"
+graphql-code-generator@0.12.2:
+  version "0.12.2"
+  resolved "https://registry.yarnpkg.com/graphql-code-generator/-/graphql-code-generator-0.12.2.tgz#00b10776a4f9ac67d896b8946839501e5ad46074"
   dependencies:
     "@graphql-modules/epoxy" "0.1.6"
     "@types/babylon" "6.16.3"
@@ -5705,8 +5705,8 @@ graphql-code-generator@0.12.1:
     commander "2.18.0"
     fb-watchman "2.0.0"
     glob "7.1.3"
-    graphql-codegen-compiler "0.12.1"
-    graphql-codegen-core "0.12.1"
+    graphql-codegen-compiler "0.12.2"
+    graphql-codegen-core "0.12.2"
     graphql-import "0.7.1"
     is-glob "4.0.0"
     is-valid-path "0.1.1"
@@ -5716,20 +5716,20 @@ graphql-code-generator@0.12.1:
     request "2.88.0"
     valid-url "1.0.9"
 
-graphql-codegen-compiler@0.12.1:
-  version "0.12.1"
-  resolved "https://registry.yarnpkg.com/graphql-codegen-compiler/-/graphql-codegen-compiler-0.12.1.tgz#89b2608ff07b5ac3a6c6fe4c0c7b79afde666243"
+graphql-codegen-compiler@0.12.2:
+  version "0.12.2"
+  resolved "https://registry.yarnpkg.com/graphql-codegen-compiler/-/graphql-codegen-compiler-0.12.2.tgz#b8e869382a07e7aabad3adb02a3086468648e03c"
   dependencies:
     "@types/handlebars" "4.0.39"
     change-case "3.0.2"
     common-tags "1.8.0"
-    graphql-codegen-core "0.12.1"
+    graphql-codegen-core "0.12.2"
     handlebars "4.0.12"
     moment "2.22.2"
 
-graphql-codegen-core@0.12.1:
-  version "0.12.1"
-  resolved "https://registry.yarnpkg.com/graphql-codegen-core/-/graphql-codegen-core-0.12.1.tgz#e53716142d17c2115d59866f97115008e04f2fd5"
+graphql-codegen-core@0.12.2:
+  version "0.12.2"
+  resolved "https://registry.yarnpkg.com/graphql-codegen-core/-/graphql-codegen-core-0.12.2.tgz#c7e44ed5f9e1e1d511e0f5ce996d5738278a6438"
   dependencies:
     graphql-tag "2.9.2"
     graphql-tools "3.1.1"

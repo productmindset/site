@@ -116,7 +116,7 @@
     "jest-cli": "23.6.0",
     "jest-junit": "5.1.0",
     "npm": "6.4.1",
-    "prettier": "1.14.2",
+    "prettier": "1.14.3",
     "react-player": "1.6.4",
     "react-test-renderer": "16.5.2",
     "ts-jest": "23.1.4",

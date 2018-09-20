@@ -11390,9 +11390,9 @@ react-onclickoutside@^6.5.0:
   version "6.7.1"
   resolved "https://registry.yarnpkg.com/react-onclickoutside/-/react-onclickoutside-6.7.1.tgz#6a5b5b8b4eae6b776259712c89c8a2b36b17be93"
 
-react-player@1.6.4:
-  version "1.6.4"
-  resolved "https://registry.yarnpkg.com/react-player/-/react-player-1.6.4.tgz#a7410a23ae849aec1f1854040d3f56ccab054c21"
+react-player@1.6.6:
+  version "1.6.6"
+  resolved "https://registry.yarnpkg.com/react-player/-/react-player-1.6.6.tgz#336de320fc8c0610d8f2292ec16b0056312a1964"
   dependencies:
     deepmerge "^2.0.1"
     load-script "^1.0.0"

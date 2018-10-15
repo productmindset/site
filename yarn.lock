@@ -452,6 +452,13 @@ apollo-link@^1.2.2:
     apollo-utilities "^1.0.0"
     zen-observable-ts "^0.8.9"
 
+apollo-link@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/apollo-link/-/apollo-link-1.2.3.tgz#9bd8d5fe1d88d31dc91dae9ecc22474d451fb70d"
+  dependencies:
+    apollo-utilities "^1.0.0"
+    zen-observable-ts "^0.8.10"
+
 apollo-utilities@^1.0.0, apollo-utilities@^1.0.1:
   version "1.0.13"
   resolved "https://registry.yarnpkg.com/apollo-utilities/-/apollo-utilities-1.0.13.tgz#793c858bb42243f7254d3c2961c64a7158e51022"
@@ -5682,9 +5689,9 @@ graceful-fs@^4.0.0, graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.3,
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
 
-graphql-code-generator@0.12.5:
-  version "0.12.5"
-  resolved "https://registry.yarnpkg.com/graphql-code-generator/-/graphql-code-generator-0.12.5.tgz#0c280dd87a3e393836148d974cf63f2ef630b264"
+graphql-code-generator@0.12.6:
+  version "0.12.6"
+  resolved "https://registry.yarnpkg.com/graphql-code-generator/-/graphql-code-generator-0.12.6.tgz#72835046d6c833834d616135c59ad19b7af85d24"
   dependencies:
     "@graphql-modules/epoxy" "0.1.6"
     "@types/babylon" "6.16.3"
@@ -5696,34 +5703,34 @@ graphql-code-generator@0.12.5:
     commander "2.18.0"
     fb-watchman "2.0.0"
     glob "7.1.3"
-    graphql-codegen-compiler "0.12.5"
-    graphql-codegen-core "0.12.5"
+    graphql-codegen-compiler "0.12.6"
+    graphql-codegen-core "0.12.6"
     graphql-import "0.7.1"
     is-glob "4.0.0"
     is-valid-path "0.1.1"
     mkdirp "0.5.1"
     pify "4.0.0"
-    prettier "1.14.2"
+    prettier "1.14.3"
     request "2.88.0"
     valid-url "1.0.9"
 
-graphql-codegen-compiler@0.12.5:
-  version "0.12.5"
-  resolved "https://registry.yarnpkg.com/graphql-codegen-compiler/-/graphql-codegen-compiler-0.12.5.tgz#b7bb9a9b83139a79ebba88c65bb70e45b02a43f1"
+graphql-codegen-compiler@0.12.6:
+  version "0.12.6"
+  resolved "https://registry.yarnpkg.com/graphql-codegen-compiler/-/graphql-codegen-compiler-0.12.6.tgz#26b8e4c0fe4003c7feb9091d6b259c2505dd837d"
   dependencies:
     "@types/handlebars" "4.0.39"
     change-case "3.0.2"
     common-tags "1.8.0"
-    graphql-codegen-core "0.12.5"
+    graphql-codegen-core "0.12.6"
     handlebars "4.0.12"
     moment "2.22.2"
 
-graphql-codegen-core@0.12.5:
-  version "0.12.5"
-  resolved "https://registry.yarnpkg.com/graphql-codegen-core/-/graphql-codegen-core-0.12.5.tgz#1d6376e28f8e5b1b57595d4b202aa5da1ca4bbb1"
+graphql-codegen-core@0.12.6:
+  version "0.12.6"
+  resolved "https://registry.yarnpkg.com/graphql-codegen-core/-/graphql-codegen-core-0.12.6.tgz#ab3d4d9b0bd10268de749ae215eba84f7bb98fdb"
   dependencies:
     graphql-tag "2.9.2"
-    graphql-tools "3.1.1"
+    graphql-tools "4.0.0"
     ts-log "2.1.3"
     winston "3.1.0"
 
@@ -5758,6 +5765,16 @@ graphql-tools@3.1.1:
   resolved "https://registry.yarnpkg.com/graphql-tools/-/graphql-tools-3.1.1.tgz#d593358f01e7c8b1671a17b70ddb034dea9dbc50"
   dependencies:
     apollo-link "^1.2.2"
+    apollo-utilities "^1.0.1"
+    deprecated-decorator "^0.1.6"
+    iterall "^1.1.3"
+    uuid "^3.1.0"
+
+graphql-tools@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/graphql-tools/-/graphql-tools-4.0.0.tgz#6ea01937c6f947212f83567ba687e97c22fdd2a6"
+  dependencies:
+    apollo-link "^1.2.3"
     apollo-utilities "^1.0.1"
     deprecated-decorator "^0.1.6"
     iterall "^1.1.3"
@@ -10860,10 +10877,6 @@ preserve@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
-prettier@1.14.2:
-  version "1.14.2"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.14.2.tgz#0ac1c6e1a90baa22a62925f41963c841983282f9"
-
 prettier@1.14.3:
   version "1.14.3"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.14.3.tgz#90238dd4c0684b7edce5f83b0fb7328e48bd0895"
@@ -15353,6 +15366,12 @@ yurnalist@^0.2.1:
     rimraf "^2.5.0"
     semver "^5.1.0"
     strip-bom "^3.0.0"
+
+zen-observable-ts@^0.8.10:
+  version "0.8.10"
+  resolved "https://registry.yarnpkg.com/zen-observable-ts/-/zen-observable-ts-0.8.10.tgz#18e2ce1c89fe026e9621fd83cc05168228fce829"
+  dependencies:
+    zen-observable "^0.8.0"
 
 zen-observable-ts@^0.8.9:
   version "0.8.9"

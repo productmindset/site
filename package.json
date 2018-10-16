@@ -99,7 +99,7 @@
     "@types/react-test-renderer": "16.0.2",
     "@types/webpack-env": "1.13.6",
     "babel-core": "6.26.3",
-    "enzyme": "3.6.0",
+    "enzyme": "3.7.0",
     "enzyme-adapter-react-16": "1.5.0",
     "enzyme-to-json": "3.3.4",
     "eslint": "5.7.0",

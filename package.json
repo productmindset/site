@@ -96,7 +96,7 @@
     "@types/react": "16.4.18",
     "@types/react-dom": "16.0.9",
     "@types/react-helmet": "5.0.7",
-    "@types/react-test-renderer": "16.0.2",
+    "@types/react-test-renderer": "16.0.3",
     "@types/webpack-env": "1.13.6",
     "babel-core": "6.26.3",
     "enzyme": "3.7.0",

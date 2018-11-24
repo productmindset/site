@@ -17,7 +17,7 @@
     "@fortawesome/fontawesome-free-solid": "5.0.13",
     "@fortawesome/react-fontawesome": "0.0.20",
     "auth0-js": "9.8.1",
-    "bloomer": "0.6.3",
+    "bloomer": "0.6.5",
     "bulma": "0.7.2",
     "gatsby": "1.9.279",
     "gatsby-image": "1.0.55",

@@ -85,9 +85,9 @@
     moment "2.22.2"
     winston "3.0.0"
 
-"@types/auth0-js@8.11.6":
-  version "8.11.6"
-  resolved "https://registry.yarnpkg.com/@types/auth0-js/-/auth0-js-8.11.6.tgz#7ef798c69a2aa31bb0b4971c452ddb5a0bb2c29d"
+"@types/auth0-js@8.11.7":
+  version "8.11.7"
+  resolved "https://registry.yarnpkg.com/@types/auth0-js/-/auth0-js-8.11.7.tgz#8d6255be9ca9cca35dd664ad07e6d774e5198fdc"
 
 "@types/babel-types@*":
   version "7.0.2"

@@ -91,7 +91,7 @@
     "@types/auth0-js": "8.11.7",
     "@types/enzyme": "3.1.15",
     "@types/jest": "23.3.9",
-    "@types/lodash": "4.14.118",
+    "@types/lodash": "4.14.119",
     "@types/node": "8.10.38",
     "@types/react": "16.4.18",
     "@types/react-dom": "16.0.10",

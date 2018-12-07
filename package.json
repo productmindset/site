@@ -125,7 +125,7 @@
     "tslint-eslint-rules": "5.4.0",
     "tslint-microsoft-contrib": "5.2.1",
     "tslint-sonarts": "1.8.0",
-    "typescript": "3.1.6"
+    "typescript": "3.2.2"
   },
   "contributors": [
     "Derek Tiffany <derek.tiffany+product-mindset@3pillarglobal.com>",

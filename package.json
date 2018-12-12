@@ -123,7 +123,7 @@
     "tslint": "5.11.0",
     "tslint-config-standard": "8.0.1",
     "tslint-eslint-rules": "5.4.0",
-    "tslint-microsoft-contrib": "5.2.1",
+    "tslint-microsoft-contrib": "6.0.0",
     "tslint-sonarts": "1.8.0",
     "typescript": "3.2.2"
   },

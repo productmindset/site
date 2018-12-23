@@ -31,7 +31,7 @@
     "gatsby-plugin-sitemap": "1.2.25",
     "gatsby-plugin-typescript": "1.4.20",
     "gatsby-plugin-typography": "1.7.19",
-    "gatsby-remark-images": "1.5.67",
+    "gatsby-remark-images": "2.0.1",
     "gatsby-source-filesystem": "1.5.39",
     "gatsby-transformer-remark": "1.7.44",
     "gatsby-transformer-sharp": "1.6.27",

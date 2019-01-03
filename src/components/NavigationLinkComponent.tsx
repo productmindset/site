@@ -7,7 +7,7 @@ interface NavigationLinkComponentProps {
   to: string
 }
 
-const NavigationLinkComponent: React.StatelessComponent<NavigationLinkComponentProps> = (props) => {
+const NavigationLinkComponent: React.SFC<NavigationLinkComponentProps> = (props) => {
   return (
     <Link className={'navbar-item' + (props.isActive ? ' is-active' : '')}
       to={props.to}

@@ -9,7 +9,7 @@ interface CardComponentProps {
   imageSharp?: ImageSharp
 }
 
-const CardComponent: React.StatelessComponent<CardComponentProps> = (props) => {
+const CardComponent: React.SFC<CardComponentProps> = (props) => {
   return (
     <div className="card">
       <div className="card-content">

@@ -15,7 +15,7 @@ export interface PageTemplateLayoutProps {
   children?: any
 }
 
-const PageTemplateLayout: React.StatelessComponent<PageTemplateLayoutProps> = (props) => {
+const PageTemplateLayout: React.SFC<PageTemplateLayoutProps> = (props) => {
   return (
       <PageComponent.default {...props}/>
   )

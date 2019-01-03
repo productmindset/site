@@ -14,7 +14,7 @@ interface WorkshopPageTemplateLayoutProps extends Page.PageTemplateLayoutProps {
   },
 }
 
-const WorkshopsPageLayout: React.StatelessComponent<WorkshopPageTemplateLayoutProps> = (props) => {
+const WorkshopsPageLayout: React.SFC<WorkshopPageTemplateLayoutProps> = (props) => {
   return (
     <PageComponent.default {...props}>
       <div className="section container" >

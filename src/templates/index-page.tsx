@@ -23,7 +23,7 @@ interface HomePageTemplateLayoutProps extends Page.PageTemplateLayoutProps {
   },
 }
 
-const IndexPageLayout: React.StatelessComponent<HomePageTemplateLayoutProps> = (props) => {
+const IndexPageLayout: React.SFC<HomePageTemplateLayoutProps> = (props) => {
   return (
     <PageComponent.default {...props}>
       <Container>

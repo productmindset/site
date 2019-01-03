@@ -42,7 +42,7 @@ const navigationMenuLinks = [
   },
 ]
 
-const PageComponent: React.StatelessComponent<Page.PageTemplateLayoutProps> = (props) => {
+const PageComponent: React.SFC<Page.PageTemplateLayoutProps> = (props) => {
   return (
     <div>
       <nav className="navbar is-overlay is-transparent" style={navIndex}>

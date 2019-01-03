@@ -88,7 +88,7 @@
     ]
   },
   "devDependencies": {
-    "@types/auth0-js": "8.11.7",
+    "@types/auth0-js": "8.11.8",
     "@types/enzyme": "3.1.15",
     "@types/jest": "23.3.9",
     "@types/lodash": "4.14.118",

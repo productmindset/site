@@ -9,7 +9,7 @@ interface DefaultLayoutProps {
   children(): React.ReactNode,
 }
 
-const DefaultLayout: React.SFC<DefaultLayoutProps> = (props) => {
+const DefaultLayout: React.FunctionComponent<DefaultLayoutProps> = (props) => {
   return (
     <div>
       <Helmet

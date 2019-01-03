@@ -23,12 +23,12 @@ interface HomePageTemplateLayoutProps extends Page.PageTemplateLayoutProps {
   },
 }
 
-const IndexPageLayout: React.SFC<HomePageTemplateLayoutProps> = (props) => {
+const IndexPageLayout: React.FunctionComponent<HomePageTemplateLayoutProps> = (props) => {
   return (
     <PageComponent.default {...props}>
       <Container>
         <Section>
-          {_.chunk(props.data!.benefit!.edges!, props.data!.markdownRemark!.frontmatter!.subColumns!)
+          {_.chunk(props.data.benefit.edges, props.data.markdownRemark.frontmatter.subColumns)
             .map((chunkedEdges, key) => (
             <Columns key={key}>
               {...chunkedEdges.map((benefitEdge, benefitKey) => (
@@ -38,17 +38,17 @@ const IndexPageLayout: React.SFC<HomePageTemplateLayoutProps> = (props) => {
                     <CardImage className="is-64x64">
                       <figure className="is-flex is-horizontally-centered">
                         <Img className="image is-64x64 is-flex is-horizontally-centered"
-                          title={benefitEdge!.node!.frontmatter!.fullTitle!}
-                          alt={benefitEdge!.node!.frontmatter!.fullTitle!}
-                          resolutions={benefitEdge!.node!.imageFile!.childImageSharp!.resolutions!}
+                          title={benefitEdge.node.frontmatter.fullTitle}
+                          alt={benefitEdge.node.frontmatter.fullTitle}
+                          resolutions={benefitEdge.node.imageFile.childImageSharp.resolutions}
                         />
                       </figure>
 
                     </CardImage>
                     <CardContent className="is-centered">
-                      <Title className="is-4 is-centered">{benefitEdge!.node!.frontmatter!.fullTitle!}</Title>
+                      <Title className="is-4 is-centered">{benefitEdge.node.frontmatter.fullTitle}</Title>
                       <div>
-                        {benefitEdge!.node!.frontmatter!.description!}
+                        {benefitEdge.node.frontmatter.description}
                       </div>
                     </CardContent>
                   </Card>

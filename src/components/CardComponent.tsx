@@ -9,7 +9,7 @@ interface CardComponentProps {
   imageSharp?: ImageSharp
 }
 
-const CardComponent: React.SFC<CardComponentProps> = (props) => {
+const CardComponent: React.FunctionComponent<CardComponentProps> = (props) => {
   return (
     <div className="card">
       <div className="card-content">
@@ -19,7 +19,7 @@ const CardComponent: React.SFC<CardComponentProps> = (props) => {
             <Img
               title={props.imageAlt}
               alt={props.imageAlt}
-              resolutions={props.imageSharp!.resolutions!}
+              resolutions={props.imageSharp.resolutions}
             />
             </figure>
           </div>

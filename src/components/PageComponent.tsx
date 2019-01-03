@@ -42,7 +42,7 @@ const navigationMenuLinks = [
   },
 ]
 
-const PageComponent: React.SFC<Page.PageTemplateLayoutProps> = (props) => {
+const PageComponent: React.FunctionComponent<Page.PageTemplateLayoutProps> = (props) => {
   return (
     <div>
       <nav className="navbar is-overlay is-transparent" style={navIndex}>
@@ -85,27 +85,27 @@ const PageComponent: React.SFC<Page.PageTemplateLayoutProps> = (props) => {
         <Columns isCentered isVCentered>
           <Column>
             <p className="title">
-              {props.data!.markdownRemark!.frontmatter!.heroTitle!}
+              {props.data.markdownRemark.frontmatter.heroTitle}
             </p>
             <p className="subtitle">
-            {props.data!.markdownRemark!.frontmatter!.heroSubtitle!}
+            {props.data.markdownRemark.frontmatter.heroSubtitle}
             </p>
-            {props.data!.markdownRemark!.frontmatter!.includeLearnMore && (
+            {props.data.markdownRemark.frontmatter.includeLearnMore && (
               <LearnMoreVideo />
             )}
           </Column>
           <Column isHidden="mobile">
             <div style={heroVideoStyle}>
-            {props.data!.markdownRemark!.frontmatter!.heroIsVideo && (
+            {props.data.markdownRemark.frontmatter.heroIsVideo && (
               <video style={heroVideoStyle} className="is-transparent" playsInline autoPlay muted loop>
                 <source src={landingVideo} type="video/mp4" />
               </video>
             )}
-            {props.data!.imageSharp && (
+            {props.data.imageSharp && (
               <Img style={heroVideoStyle}
                 title="Header image"
                 alt="Header image"
-                sizes={props.data!.imageSharp!.sizes!}
+                sizes={props.data.imageSharp.sizes}
               />
             )}
             </div>
@@ -114,7 +114,7 @@ const PageComponent: React.SFC<Page.PageTemplateLayoutProps> = (props) => {
         </Container>
         <Container>
           <Content
-            dangerouslySetInnerHTML={{ __html: props.data!.markdownRemark!.html! }} />
+            dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }} />
         </Container>
         {props.children}
       </Section>

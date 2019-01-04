@@ -37,7 +37,7 @@
     "gatsby-transformer-sharp": "1.6.27",
     "lodash": "4.17.11",
     "netlify-cms": "1.9.3",
-    "netlify-cms-widget-fontawesome": "1.2.1",
+    "netlify-cms-widget-fontawesome": "1.3.1",
     "prop-types": "15.6.2",
     "react": "16.7.0",
     "react-dom": "16.7.0",

@@ -153,6 +153,12 @@
     graphql-tools "4.0.3"
     tslib "1.9.3"
 
+"@pake/react-list@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@pake/react-list/-/react-list-1.0.0.tgz#5b549c3cf4d7d839e915bd8dd19914e536b636ed"
+  dependencies:
+    prop-types "15"
+
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@samverschueren/stream-to-observable/-/stream-to-observable-0.3.0.tgz#ecdf48d532c58ea477acfcab80348424f8d0662f"
@@ -9162,9 +9168,11 @@ negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
 
-netlify-cms-widget-fontawesome@1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/netlify-cms-widget-fontawesome/-/netlify-cms-widget-fontawesome-1.2.1.tgz#802f84da76aca17beddf1abb26e22fcd3e73d9ae"
+netlify-cms-widget-fontawesome@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/netlify-cms-widget-fontawesome/-/netlify-cms-widget-fontawesome-3.1.0.tgz#01b9d09a7cc5d91134ab985090f98f039abbbd22"
+  dependencies:
+    "@pake/react-list" "^1.0.0"
 
 netlify-cms@1.9.3:
   version "1.9.3"
@@ -11104,7 +11112,7 @@ promzard@^0.3.0:
   dependencies:
     read "1"
 
-prop-types@15.6.2, prop-types@^15.6.2:
+prop-types@15, prop-types@15.6.2, prop-types@^15.6.2:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.2.tgz#05d5ca77b4453e985d60fc7ff8c859094a497102"
   dependencies:

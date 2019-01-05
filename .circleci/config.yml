@@ -11,20 +11,20 @@ jobs:
             - v1-dependencies-
       - run:
           name: Install
-          command: yarn install
+          command: npm install
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run:
           name: Lint
-          command: yarn lint
+          command: npm run lint
       - run:
           name: Gatsby build site
-          command: yarn build
+          command: npm run build
       - run:
           name: Tests
-          command: yarn jest tests --runInBand --ci --testResultsProcessor="jest-junit"
+          command: npm run jest tests --runInBand --ci --testResultsProcessor="jest-junit"
           environment:
             JEST_JUNIT_OUTPUT: "reports/junit/js-test-results.xml"
       - store_test_results:

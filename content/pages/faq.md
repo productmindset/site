@@ -2,7 +2,7 @@
 isPage: true
 templateKey: page
 includeLearnMore: true
-path: /faq
+path: /faq/
 title: FAQ
 heroTitle: SUPPORT
 heroSubtitle: >-

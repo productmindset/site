@@ -27,19 +27,19 @@ const navIndex = {
 const navigationMenuLinks = [
   {
     title: `LIVE WORKSHOPS`,
-    to: `/workshops`,
+    to: `/workshops/`,
   },
   {
     title: `ONLINE RESOURCES`,
-    to: `/resources`,
+    to: `/resources/`,
   },
   {
     title: `SUPPORT`,
-    to: `/faq`,
+    to: `/faq/`,
   },
   {
     title: `CONTACT`,
-    to: `/contact`,
+    to: `/contact/`,
   },
 ]
 

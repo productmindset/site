@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Link } from "gatsby"
+import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import { MarkdownRemark, ImageSharp } from '../graphql-types'
 import * as Page from '../templates/page'

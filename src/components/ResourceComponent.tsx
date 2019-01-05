@@ -51,7 +51,7 @@ export default class ResourceComponent extends React.Component<ResourceComponent
             <Img
               title={this.props.node!.frontmatter!.fullTitle!}
               alt={this.props.node!.frontmatter!.fullTitle!}
-              fluid={this.props.node!.imageFile!.childImageSharp!.fluid!}
+              fluid={this.props.node!.imageFile!.childImageSharp!.fluid}
             />
           </figure>
 

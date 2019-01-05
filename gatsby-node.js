@@ -4,23 +4,8 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-// import { graphql } from 'gatsby'
-const { graphql } = require(`gatsby`)
-
 const path = require(`path`)
-const webpack = require(`webpack`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
-
-//exports.onCreateWebpackConfig = ({ stage, actions }) => {
-//  switch (stage) {
-//    case `build-html`:
-//      actions.setWebpaclConfig({})
-//      config.plugin(`define`, webpack.DefinePlugin, [ { "global.GENTLY": false } ])
-//      break
-//  }
-//
-//  return config
-//}
 
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators

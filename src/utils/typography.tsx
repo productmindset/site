@@ -26,7 +26,7 @@ const typography = new Typography({
   headerFontFamily: ['Roboto Condensed', 'Roboto', 'Arial', 'sans-serif'],
   headerGray: 50,
   headerWeight: 700,
-  overrideStyles: (scale: Typography.TypographyOptions, rhythm: Typography.rhythm) => ({
+  overrideStyles: (_scale: Typography.TypographyOptions, _rhythm: Typography.rhythm) => ({
     body: {
       letterSpacing: '.05em',
     },
@@ -34,7 +34,5 @@ const typography = new Typography({
   scaleRatio: 2.5,
 })
 
-const { rhythm, scale } = typography;
-export { rhythm, scale, typography as default };
-
-//export default typography
+const { rhythm, scale } = typography
+export { rhythm, scale, typography as default }

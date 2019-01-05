@@ -51,7 +51,7 @@ const PageComponent: React.FunctionComponent<Page.PageTemplateLayoutProps> = (pr
         <div className="container">
           <div className="navbar-brand">
             <Link className="navbar-item"
-              to="/"
+              to=""
             >
               <img src={logo} alt="Logo" />
             </Link>

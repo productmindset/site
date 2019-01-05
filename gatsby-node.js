@@ -46,7 +46,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     }
 
     return result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      const pagePath = `/` + (node.frontmatter.path || node.frontmatter.title.split(` `, 1)[0].toLowerCase())
+      const pagePath = (node.frontmatter.path || `/` + node.frontmatter.title.split(` `, 1)[0].toLowerCase())
       createPage({
         component: path.resolve(
           `src/templates/${String(node.frontmatter.templateKey)}.tsx`

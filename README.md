@@ -65,7 +65,7 @@ yarn test
 
 They can be run locally to resolve any build issues.
 
-Preview deploys are available from `Netlify` on each branch / pull request. Note that CMS Admin functionality is not available on these previewes.
+Preview deploys are available from `Netlify` on each branch / pull request. CMS Admin functionality is available on these previews, however the backend will still point to the master branch and not the branch from the pull request.
 
 There are several additional automation checks run on branches. Some may be helpful.
 

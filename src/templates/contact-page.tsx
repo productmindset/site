@@ -1,8 +1,9 @@
 import * as React from 'react'
 import * as Page from './page'
 import * as PageComponent from '../components/PageComponent'
+import { StaticQuery, graphql } from 'gatsby'
 
-const ContactPageLayout: React.StatelessComponent<Page.PageTemplateLayoutProps> = (props) => {
+const ContactPageLayout: React.FunctionComponent<Page.PageTemplateLayoutProps> = (props) => {
   return (
     <div>
       <PageComponent.default {...props}>

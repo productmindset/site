@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { MarkdownRemark, ImageSharp } from '../graphql-types'
 import * as PageComponent from '../components/PageComponent'
+import { StaticQuery, graphql } from 'gatsby'
 
 export interface PageTemplateLayoutProps {
   headerTitle: string
@@ -15,7 +16,7 @@ export interface PageTemplateLayoutProps {
   children?: any
 }
 
-const PageTemplateLayout: React.StatelessComponent<PageTemplateLayoutProps> = (props) => {
+const PageTemplateLayout: React.FunctionComponent<PageTemplateLayoutProps> = (props) => {
   return (
       <PageComponent.default {...props}/>
   )
@@ -24,10 +25,10 @@ const PageTemplateLayout: React.StatelessComponent<PageTemplateLayoutProps> = (p
 export default PageTemplateLayout
 
 export const PageQueryFragment = graphql`
-  fragment PageQueryFragment on RootQueryType {
+  fragment PageQueryFragment on Query {
     imageSharp (fields: {slug: {eq: $heroImageSlug }} ) {
-      sizes(maxWidth: 1240 ) {
-        ...GatsbyImageSharpSizes_withWebp
+      fluid(maxWidth: 1240 ) {
+        ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {

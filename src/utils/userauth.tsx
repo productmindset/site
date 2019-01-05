@@ -1,5 +1,5 @@
 import * as auth0 from 'auth0-js'
-import { navigateTo } from 'gatsby-link'
+import { navigate } from 'gatsby'
 
 export default class UserAuth {
   auth0 = new auth0.WebAuth({
@@ -41,7 +41,7 @@ export default class UserAuth {
         }
 
         // Return to the homepage after authentication.
-        navigateTo('/')
+        navigate('/')
       })
     }
   }

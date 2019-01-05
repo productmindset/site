@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `3Pillar Global Product Mindset Workshop`,
-    siteName: `Product Mindset`
+    siteName: `Product Mindset`,
+    siteUrl: `https://www.productmindset.com`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -43,7 +44,6 @@ module.exports = {
       }
     },
     `gatsby-plugin-netlify`,
-    `gatsby-plugin-react-next`,
     {
       resolve: `gatsby-plugin-sentry`,
       options: {
@@ -69,6 +69,9 @@ module.exports = {
           windows: false
         }
       }
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`
     }
   ]
 }

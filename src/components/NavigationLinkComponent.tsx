@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 
 interface NavigationLinkComponentProps {
   isActive: boolean
@@ -7,7 +7,7 @@ interface NavigationLinkComponentProps {
   to: string
 }
 
-const NavigationLinkComponent: React.StatelessComponent<NavigationLinkComponentProps> = (props) => {
+const NavigationLinkComponent: React.FunctionComponent<NavigationLinkComponentProps> = (props) => {
   return (
     <Link className={'navbar-item' + (props.isActive ? ' is-active' : '')}
       to={props.to}

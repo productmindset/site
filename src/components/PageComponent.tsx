@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import { MarkdownRemark, ImageSharp } from '../graphql-types'
 import * as Page from '../templates/page'
@@ -7,6 +7,7 @@ import NavigationLinkComponent from './NavigationLinkComponent'
 import { PageFooter } from './PageFooterComponent'
 import { LearnMoreVideo } from './LearnMoreVideo'
 import { Columns, Column, Container, Content, Section } from 'bloomer'
+import DefaultLayout from './layout'
 
 const logo = require('../../static/images/included/logo.png')
 const landingVideo = require('../../content/media/landing_video.mp4')
@@ -42,8 +43,9 @@ const navigationMenuLinks = [
   },
 ]
 
-const PageComponent: React.StatelessComponent<Page.PageTemplateLayoutProps> = (props) => {
+const PageComponent: React.FunctionComponent<Page.PageTemplateLayoutProps> = (props) => {
   return (
+    <DefaultLayout>
     <div>
       <nav className="navbar is-overlay is-transparent" style={navIndex}>
         <div className="container">
@@ -85,27 +87,27 @@ const PageComponent: React.StatelessComponent<Page.PageTemplateLayoutProps> = (p
         <Columns isCentered isVCentered>
           <Column>
             <p className="title">
-              {props.data!.markdownRemark!.frontmatter!.heroTitle!}
+              {props.data.markdownRemark.frontmatter.heroTitle}
             </p>
             <p className="subtitle">
-            {props.data!.markdownRemark!.frontmatter!.heroSubtitle!}
+            {props.data.markdownRemark.frontmatter.heroSubtitle}
             </p>
-            {props.data!.markdownRemark!.frontmatter!.includeLearnMore && (
+            {props.data.markdownRemark.frontmatter.includeLearnMore && (
               <LearnMoreVideo />
             )}
           </Column>
           <Column isHidden="mobile">
             <div style={heroVideoStyle}>
-            {props.data!.markdownRemark!.frontmatter!.heroIsVideo && (
+            {props.data.markdownRemark.frontmatter.heroIsVideo && (
               <video style={heroVideoStyle} className="is-transparent" playsInline autoPlay muted loop>
                 <source src={landingVideo} type="video/mp4" />
               </video>
             )}
-            {props.data!.imageSharp && (
+            {props.data.imageSharp && (
               <Img style={heroVideoStyle}
                 title="Header image"
                 alt="Header image"
-                sizes={props.data!.imageSharp!.sizes!}
+                fluid={props.data.imageSharp.fluid}
               />
             )}
             </div>
@@ -114,12 +116,13 @@ const PageComponent: React.StatelessComponent<Page.PageTemplateLayoutProps> = (p
         </Container>
         <Container>
           <Content
-            dangerouslySetInnerHTML={{ __html: props.data!.markdownRemark!.html! }} />
+            dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }} />
         </Container>
         {props.children}
       </Section>
       <PageFooter/>
     </div >
+    </DefaultLayout>
   )
 }
 

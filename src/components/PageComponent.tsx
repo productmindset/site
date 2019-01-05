@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Link from 'gatsby-link'
+import { Link } from "gatsby"
 import Img from 'gatsby-image'
 import { MarkdownRemark, ImageSharp } from '../graphql-types'
 import * as Page from '../templates/page'
@@ -105,7 +105,7 @@ const PageComponent: React.FunctionComponent<Page.PageTemplateLayoutProps> = (pr
               <Img style={heroVideoStyle}
                 title="Header image"
                 alt="Header image"
-                sizes={props.data.imageSharp.sizes}
+                fluid={props.data.imageSharp.fluid}
               />
             )}
             </div>

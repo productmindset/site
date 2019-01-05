@@ -33,4 +33,7 @@ const typography = new Typography({
   scaleRatio: 2.5,
 })
 
-export default typography
+const { rhythm, scale } = typography;
+export { rhythm, scale, typography as default };
+
+//export default typography

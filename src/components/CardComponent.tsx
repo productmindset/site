@@ -19,7 +19,7 @@ const CardComponent: React.FunctionComponent<CardComponentProps> = (props) => {
             <Img
               title={props.imageAlt}
               alt={props.imageAlt}
-              resolutions={props.imageSharp.resolutions}
+              fixed={props.imageSharp.fixed}
             />
             </figure>
           </div>

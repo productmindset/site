@@ -4,6 +4,7 @@ import * as _ from 'lodash'
 import * as PageComponent from '../components/PageComponent'
 import * as ResourceComponent from '../components/ResourceComponent'
 import { MarkdownRemark, MarkdownRemarkEdge, MarkdownRemarkConnection, ImageSharp } from '../graphql-types'
+import { StaticQuery, graphql } from 'gatsby'
 import {
   Column,
   Columns,
@@ -62,10 +63,10 @@ class ResourcePageLayout extends React.Component<ResourcePageTemplateLayoutProps
         {_.chunk(this.state.resourceEdges!, 3)
             .map((chunkedEdges, key) => (
               <Columns key={key}>
-                {...chunkedEdges.map((resourceEdge, resourceKey) => (
-                  <Column isSize={4} key={resourceKey}>
-                    <ResourceComponent.default node={resourceEdge!.node!} />
-                  </Column>
+                {...chunkedEdges!.map((resourceEdge, resourceKey) => (
+                <Column isSize={4} key={resourceKey}>
+                  <ResourceComponent.default node={resourceEdge!.node!} />
+                </Column>
                 ))}
               </Columns>
             ))}
@@ -88,8 +89,8 @@ export const ResourcesPageTemplateQuery = graphql`
         html,
         imageFile {
           childImageSharp {
-            sizes(maxWidth: 700) {
-              ...GatsbyImageSharpSizes_withWebp
+            fluid(maxWidth: 700) {
+              ...GatsbyImageSharpFluid_withWebp
           }
           }
         }

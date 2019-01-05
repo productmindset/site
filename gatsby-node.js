@@ -6,6 +6,18 @@
 
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const { fmImagesToRelative } = require(`gatsby-remark-relative-images`)
+
+/**
+ * Helps gatsby-remark-images process images uploaded by cms users
+ * and included in markdown.
+ *
+ * See: https://github.com/danielmahon/gatsby-remark-relative-images
+ *
+ */
+exports.onCreateNode = ({ node }) => {
+  fmImagesToRelative(node)
+}
 
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators
@@ -34,7 +46,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     }
 
     return result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      const pagePath = `/` + (node.frontmatter.path || node.frontmatter.title.split(` `, 1)[0].toLowerCase())
+      const pagePath = (node.frontmatter.path || `/` + node.frontmatter.title.split(` `, 1)[0].toLowerCase() + `/`)
       createPage({
         component: path.resolve(
           `src/templates/${String(node.frontmatter.templateKey)}.tsx`

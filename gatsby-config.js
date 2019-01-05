@@ -34,7 +34,22 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: []
+        plugins: [
+          // gatsby-remark-relative-images must
+          // go before gatsby-remark-images
+          {
+            resolve: `gatsby-remark-relative-images`
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 1026
+            }
+          }
+        ]
       }
     },
     {
@@ -49,7 +64,7 @@ module.exports = {
       options: {
         dsn: `https://61f7cd75771243b585e25962eef08863@sentry.io/1202850`,
         // Raven.js version
-        version: `3.19.1`
+        version: `3.27.0`
       }
     },
     {

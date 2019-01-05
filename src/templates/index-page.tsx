@@ -42,6 +42,7 @@ const IndexPageLayout: React.FunctionComponent<HomePageTemplateLayoutProps> = (p
                           title={benefitEdge.node.frontmatter.fullTitle}
                           alt={benefitEdge.node.frontmatter.fullTitle}
                           fixed={benefitEdge.node.imageFile.childImageSharp.fixed}
+                          fadeIn={false}
                         />
                       </figure>
 

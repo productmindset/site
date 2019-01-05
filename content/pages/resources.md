@@ -1,6 +1,6 @@
 ---
 isPage: true
-path: resources
+path: /resources/
 templateKey: resources-page
 title: resources
 heroTitle: TOOLS FOR A PRODUCT MINDSET

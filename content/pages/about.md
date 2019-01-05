@@ -2,7 +2,7 @@
 isPage: true
 templateKey: page
 includeLearnMore: false
-path: about
+path: /about/
 title: About
 heroTitle: ABOUT
 heroSubtitle: Built for and by ...

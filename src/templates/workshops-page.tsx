@@ -4,6 +4,7 @@ import * as Page from './page'
 import * as PageComponent from '../components/PageComponent'
 import CardComponent from '../components/CardComponent'
 import { MarkdownRemark, MarkdownRemarkConnection, ImageSharp } from '../graphql-types'
+import { StaticQuery, graphql } from 'gatsby'
 
 interface WorkshopPageTemplateLayoutProps extends Page.PageTemplateLayoutProps {
   data?: {
@@ -21,7 +22,7 @@ const WorkshopsPageLayout: React.FunctionComponent<WorkshopPageTemplateLayoutPro
         <h3 className="title">EVENT SPEAKERS</h3>
         {_.chunk(props.data.speakers.edges, 2).map((chunkedEdges, key) => (
           <div className="columns" key={key}>
-            {...chunkedEdges.map((speakerEdge, speakerKey) => (
+            {chunkedEdges.map((speakerEdge, speakerKey) => (
               <div className="column" key={speakerKey}>
                 <CardComponent
                   key={speakerKey}
@@ -69,8 +70,8 @@ export const WorkshopsPageTemplateQuery = graphql`
         node {
           imageFile {
             childImageSharp {
-            resolutions(width: 128, height: 128 ) {
-              ...GatsbyImageSharpResolutions_withWebp
+            fixed(width: 128, height: 128 ) {
+              ...GatsbyImageSharpFixed_withWebp_noBase64
             }
             }
           }
@@ -91,8 +92,8 @@ export const WorkshopsPageTemplateQuery = graphql`
         node {
           imageFile {
             childImageSharp {
-            resolutions(width: 128, height: 128 ) {
-              ...GatsbyImageSharpResolutions_withWebp
+            fixed(width: 128, height: 128 ) {
+              ...GatsbyImageSharpFixed_withWebp_noBase64
             }
             }
           }

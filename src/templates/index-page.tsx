@@ -4,6 +4,7 @@ import * as _ from 'lodash'
 import * as PageComponent from '../components/PageComponent'
 import Img from 'gatsby-image'
 import { MarkdownRemark, MarkdownRemarkConnection, ImageSharp } from '../graphql-types'
+import { StaticQuery, graphql } from 'gatsby'
 import {
   Card,
   CardContent,
@@ -23,15 +24,15 @@ interface HomePageTemplateLayoutProps extends Page.PageTemplateLayoutProps {
   },
 }
 
-const IndexPageLayout: React.FunctionComponent<HomePageTemplateLayoutProps> = (props) => {
+const IndexPageLayout: React.FunctionComponent<HomePageTemplateLayoutProps> = (props: HomePageTemplateLayoutProps) => {
   return (
     <PageComponent.default {...props}>
       <Container>
         <Section>
-          {_.chunk(props.data.benefit.edges, props.data.markdownRemark.frontmatter.subColumns)
+        {_.chunk(props.data.benefit.edges, props.data.markdownRemark.frontmatter.subColumns)
             .map((chunkedEdges, key) => (
             <Columns key={key}>
-              {...chunkedEdges.map((benefitEdge, benefitKey) => (
+              {chunkedEdges.map((benefitEdge, benefitKey) => (
                 <Column key={benefitKey}>
                   <Card className="has-text-centered">
                     <br />
@@ -40,7 +41,7 @@ const IndexPageLayout: React.FunctionComponent<HomePageTemplateLayoutProps> = (p
                         <Img className="image is-64x64 is-flex is-horizontally-centered"
                           title={benefitEdge.node.frontmatter.fullTitle}
                           alt={benefitEdge.node.frontmatter.fullTitle}
-                          resolutions={benefitEdge.node.imageFile.childImageSharp.resolutions}
+                          fixed={benefitEdge.node.imageFile.childImageSharp.fixed}
                         />
                       </figure>
 
@@ -72,8 +73,8 @@ export const WorkshopsPageTemplateQuery = graphql`
       node {
         imageFile {
           childImageSharp {
-          resolutions(width: 64, height: 64 ) {
-            ...GatsbyImageSharpResolutions_withWebp
+          fixed(width: 64, height: 64 ) {
+            ...GatsbyImageSharpFixed_withWebp_noBase64
           }
           }
         }

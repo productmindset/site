@@ -44,7 +44,6 @@ module.exports = {
       }
     },
     `gatsby-plugin-netlify`,
-    `gatsby-plugin-react-next`,
     {
       resolve: `gatsby-plugin-sentry`,
       options: {

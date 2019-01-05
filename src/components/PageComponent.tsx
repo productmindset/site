@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import { MarkdownRemark, ImageSharp } from '../graphql-types'
 import * as Page from '../templates/page'
@@ -7,6 +7,7 @@ import NavigationLinkComponent from './NavigationLinkComponent'
 import { PageFooter } from './PageFooterComponent'
 import { LearnMoreVideo } from './LearnMoreVideo'
 import { Columns, Column, Container, Content, Section } from 'bloomer'
+import DefaultLayout from './layout'
 
 const logo = require('../../static/images/included/logo.png')
 const landingVideo = require('../../content/media/landing_video.mp4')
@@ -44,6 +45,7 @@ const navigationMenuLinks = [
 
 const PageComponent: React.FunctionComponent<Page.PageTemplateLayoutProps> = (props) => {
   return (
+    <DefaultLayout>
     <div>
       <nav className="navbar is-overlay is-transparent" style={navIndex}>
         <div className="container">
@@ -105,7 +107,7 @@ const PageComponent: React.FunctionComponent<Page.PageTemplateLayoutProps> = (pr
               <Img style={heroVideoStyle}
                 title="Header image"
                 alt="Header image"
-                sizes={props.data.imageSharp.sizes}
+                fluid={props.data.imageSharp.fluid}
               />
             )}
             </div>
@@ -120,6 +122,7 @@ const PageComponent: React.FunctionComponent<Page.PageTemplateLayoutProps> = (pr
       </Section>
       <PageFooter/>
     </div >
+    </DefaultLayout>
   )
 }
 

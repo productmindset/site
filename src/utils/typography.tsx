@@ -2,9 +2,10 @@
 import * as Typography from 'typography'
 
 const typography = new Typography({
-  baseFontSize: '15px',
+  baseFontSize: '16px',
   baseLineHeight: 1.5,
-  bodyFontFamily: ['Roboto Condensed', 'Roboto', 'Arial', 'sans-serif'],
+  blockMarginBottom: 0,
+  bodyFontFamily: ['Roboto', 'Roboto Condensed', 'Arial', 'sans-serif'],
   bodyGray: 50,
   boldWeight: 700,
   googleFonts: [
@@ -25,7 +26,7 @@ const typography = new Typography({
   headerFontFamily: ['Roboto Condensed', 'Roboto', 'Arial', 'sans-serif'],
   headerGray: 50,
   headerWeight: 700,
-  overrideStyles: (scale: Typography.TypographyOptions, rhythm: Typography.rhythm) => ({
+  overrideStyles: (_scale: Typography.TypographyOptions, _rhythm: Typography.rhythm) => ({
     body: {
       letterSpacing: '.05em',
     },
@@ -33,4 +34,5 @@ const typography = new Typography({
   scaleRatio: 2.5,
 })
 
-export default typography
+const { rhythm, scale } = typography
+export { rhythm, scale, typography as default }

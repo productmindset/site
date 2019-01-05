@@ -76,7 +76,7 @@ collections:
       - { name: image, label: Image, widget: image }
       - { name: body, label: More, widget: markdown, required: false }
       - { name: buttonText, label: Button Text, widget: string }
-      - { name: buttonFAIcon, label: Button FA Icon, widget: fontawesome }
+      - { name: buttonFAIcon, label: Button FA Icon, widget: fontawesome-solid }
 
   - name: speakers
     label: Speakers

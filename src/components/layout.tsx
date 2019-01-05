@@ -6,7 +6,7 @@ import '../../content/styles/site.scss'
 require('typeface-roboto')
 require('typeface-roboto-condensed')
 interface DefaultLayoutProps {
-  children(): React.ReactNode,
+  children: React.ReactNode,
 }
 
 const DefaultLayout: React.FunctionComponent<DefaultLayoutProps> = (props) => {
@@ -29,7 +29,7 @@ const DefaultLayout: React.FunctionComponent<DefaultLayoutProps> = (props) => {
         ]}>
         <html lang="en" />
       </Helmet>
-      {props.children()}
+      {props.children}
     </div>
   )
 }

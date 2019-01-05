@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import React from "react"
+const React = require(`react`)
 
 exports.onRenderBody = ({ setHeadComponents }, pluginOptions) => {
   const prodKey = `w7UUvSNSMjO6PEWIwMSDDUdWaEAKIWok`

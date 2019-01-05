@@ -19,7 +19,7 @@ export class PageFooter extends React.Component<{}, {}> {
                 <p className="is-size-1">
                   Find out the latest
               </p>
-                <p>
+                <p id="subscribe-now">
                   Subscribe now to receive news and updates about next events,
                   free resources, exclusive trainings and workshops.
               </p>
@@ -34,7 +34,7 @@ export class PageFooter extends React.Component<{}, {}> {
 
                 <div className="field is-grouped">
                   <div className="control has-icons-left has-icons-right is-expanded">
-                    <input className="input" type="email" name="email" placeholder="Email" />
+                    <input className="input" type="email" name="email" placeholder="Email" aria-label="email to subscribe" aria-labelledby="subscribe-now" />
                     <span className="icon is-small is-left">
                       <i className="fas fa-envelope"></i>
                     </span>

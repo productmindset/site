@@ -16,16 +16,16 @@ const ContactPageLayout: React.FunctionComponent<Page.PageTemplateLayoutProps> =
               </label>
             </div>
             <div className="field">
-              <label className="label">Name</label>
+              <label className="label" id="name-label">Name</label>
               <div className="control">
-                <input className="input" type="text" name="name" placeholder="Name" />
+                <input className="input" type="text" name="name" placeholder="Name" aria-label="name" aria-labelledby="name-label" />
               </div>
             </div>
 
             <div className="field">
-              <label className="label">Email</label>
+              <label className="label" id="email-label">Email</label>
               <div className="control has-icons-left has-icons-right">
-                <input className="input is-danger" type="email" name="email" placeholder="Email" />
+                <input className="input is-danger" type="email" name="email" placeholder="Email" aria-label="email" aria-labelledby="email-label" />
                 <span className="icon is-small is-left">
                   <i className="fas fa-envelope"></i>
                 </span>
@@ -33,10 +33,10 @@ const ContactPageLayout: React.FunctionComponent<Page.PageTemplateLayoutProps> =
             </div>
 
             <div className="field">
-              <label className="label">Subject</label>
+              <label className="label" id="subject-label">Subject</label>
               <div className="control">
                 <div className="select">
-                  <select name="subject">
+                  <select name="subject" aria-label="subject" aria-labelledby="subject-label">
                     <option value="feedback">Feedback</option>
                     <option value="contact">Contact Me</option>
                   </select>
@@ -45,9 +45,9 @@ const ContactPageLayout: React.FunctionComponent<Page.PageTemplateLayoutProps> =
             </div>
 
             <div className="field">
-              <label className="label">Message</label>
+              <label className="label" id="message-label">Message</label>
               <div className="control">
-                <textarea className="textarea" name="message" placeholder="Textarea"></textarea>
+                <textarea className="textarea" name="message" placeholder="Textarea" aria-label="massage" aria-labelledby="message-label"></textarea>
               </div>
             </div>
 

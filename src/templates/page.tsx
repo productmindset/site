@@ -28,7 +28,7 @@ export const PageQueryFragment = graphql`
   fragment PageQueryFragment on Query {
     imageSharp (fields: {slug: {eq: $heroImageSlug }} ) {
       fluid(maxWidth: 1240 ) {
-        ...GatsbyImageSharpFluid_withWebp
+        ...GatsbyImageSharpFluid_withWebp_noBase64
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {

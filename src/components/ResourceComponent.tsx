@@ -52,6 +52,7 @@ export default class ResourceComponent extends React.Component<ResourceComponent
               title={this.props.node!.frontmatter!.fullTitle!}
               alt={this.props.node!.frontmatter!.fullTitle!}
               fluid={this.props.node!.imageFile!.childImageSharp!.fluid}
+              fadeIn={false}
             />
           </figure>
 

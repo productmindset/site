@@ -71,7 +71,7 @@ export const WorkshopsPageTemplateQuery = graphql`
           imageFile {
             childImageSharp {
             fixed(width: 128, height: 128 ) {
-              ...GatsbyImageSharpFixed_withWebp
+              ...GatsbyImageSharpFixed_withWebp_noBase64
             }
             }
           }
@@ -93,7 +93,7 @@ export const WorkshopsPageTemplateQuery = graphql`
           imageFile {
             childImageSharp {
             fixed(width: 128, height: 128 ) {
-              ...GatsbyImageSharpFixed_withWebp
+              ...GatsbyImageSharpFixed_withWebp_noBase64
             }
             }
           }

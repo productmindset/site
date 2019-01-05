@@ -90,7 +90,7 @@ export const ResourcesPageTemplateQuery = graphql`
         imageFile {
           childImageSharp {
             fluid(maxWidth: 700) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid_withWebp_noBase64
           }
           }
         }

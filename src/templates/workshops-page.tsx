@@ -22,7 +22,7 @@ const WorkshopsPageLayout: React.FunctionComponent<WorkshopPageTemplateLayoutPro
         <h3 className="title">EVENT SPEAKERS</h3>
         {_.chunk(props.data.speakers.edges, 2).map((chunkedEdges, key) => (
           <div className="columns" key={key}>
-            {...chunkedEdges.map((speakerEdge, speakerKey) => (
+            {chunkedEdges.map((speakerEdge, speakerKey) => (
               <div className="column" key={speakerKey}>
                 <CardComponent
                   key={speakerKey}

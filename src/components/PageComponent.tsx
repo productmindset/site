@@ -7,6 +7,7 @@ import NavigationLinkComponent from './NavigationLinkComponent'
 import { PageFooter } from './PageFooterComponent'
 import { LearnMoreVideo } from './LearnMoreVideo'
 import { Columns, Column, Container, Content, Section } from 'bloomer'
+import DefaultLayout from './layout'
 
 const logo = require('../../static/images/included/logo.png')
 const landingVideo = require('../../content/media/landing_video.mp4')
@@ -44,6 +45,7 @@ const navigationMenuLinks = [
 
 const PageComponent: React.FunctionComponent<Page.PageTemplateLayoutProps> = (props) => {
   return (
+    <DefaultLayout>
     <div>
       <nav className="navbar is-overlay is-transparent" style={navIndex}>
         <div className="container">
@@ -120,6 +122,7 @@ const PageComponent: React.FunctionComponent<Page.PageTemplateLayoutProps> = (pr
       </Section>
       <PageFooter/>
     </div >
+    </DefaultLayout>
   )
 }
 

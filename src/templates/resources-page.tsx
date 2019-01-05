@@ -63,7 +63,7 @@ class ResourcePageLayout extends React.Component<ResourcePageTemplateLayoutProps
         {_.chunk(this.state.resourceEdges!, 3)
             .map((chunkedEdges, key) => (
               <Columns key={key}>
-                {...chunkedEdges!.map((resourceEdge, resourceKey) => (
+                {chunkedEdges!.map((resourceEdge, resourceKey) => (
                 <Column isSize={4} key={resourceKey}>
                   <ResourceComponent.default node={resourceEdge!.node!} />
                 </Column>

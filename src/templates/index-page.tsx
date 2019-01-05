@@ -32,7 +32,7 @@ const IndexPageLayout: React.FunctionComponent<HomePageTemplateLayoutProps> = (p
         {_.chunk(props.data.benefit.edges, props.data.markdownRemark.frontmatter.subColumns)
             .map((chunkedEdges, key) => (
             <Columns key={key}>
-              {...chunkedEdges.map((benefitEdge, benefitKey) => (
+              {chunkedEdges.map((benefitEdge, benefitKey) => (
                 <Column key={benefitKey}>
                   <Card className="has-text-centered">
                     <br />

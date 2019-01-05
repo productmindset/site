@@ -2,9 +2,10 @@
 import * as Typography from 'typography'
 
 const typography = new Typography({
-  baseFontSize: '15px',
+  baseFontSize: '16px',
   baseLineHeight: 1.5,
-  bodyFontFamily: ['Roboto Condensed', 'Roboto', 'Arial', 'sans-serif'],
+  blockMarginBottom: 0,
+  bodyFontFamily: ['Roboto', 'Roboto Condensed', 'Arial', 'sans-serif'],
   bodyGray: 50,
   boldWeight: 700,
   googleFonts: [

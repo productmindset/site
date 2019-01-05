@@ -6,9 +6,15 @@
 
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
-// gatsby-node.js
 const { fmImagesToRelative } = require(`gatsby-remark-relative-images`)
 
+/**
+ * Helps gatsby-remark-images process images uploaded by cms users
+ * and included in markdown.
+ *
+ * See: https://github.com/danielmahon/gatsby-remark-relative-images
+ *
+ */
 exports.onCreateNode = ({ node }) => {
   fmImagesToRelative(node)
 }

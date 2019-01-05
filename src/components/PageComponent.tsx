@@ -27,19 +27,19 @@ const navIndex = {
 const navigationMenuLinks = [
   {
     title: `LIVE WORKSHOPS`,
-    to: `/workshops`,
+    to: `/workshops/`,
   },
   {
     title: `ONLINE RESOURCES`,
-    to: `/resources`,
+    to: `/resources/`,
   },
   {
     title: `SUPPORT`,
-    to: `/faq`,
+    to: `/faq/`,
   },
   {
     title: `CONTACT`,
-    to: `/contact`,
+    to: `/contact/`,
   },
 ]
 
@@ -51,7 +51,7 @@ const PageComponent: React.FunctionComponent<Page.PageTemplateLayoutProps> = (pr
         <div className="container">
           <div className="navbar-brand">
             <Link className="navbar-item"
-              to="/"
+              to=""
             >
               <img src={logo} alt="Logo" />
             </Link>

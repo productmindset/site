@@ -60,7 +60,8 @@
     "lint": "tslint --project tsconfig.json -c ./tslint.json './src/**/*.ts*' && eslint *.js && eslint --ext .js ./tests/**",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "test:coverage:inline": "node ./tools/inline-coverage-report.js"
   },
   "jest": {
     "globals": {
@@ -86,7 +87,8 @@
     "coverageReporters": [
       "lcov",
       "text",
-      "html"
+      "html",
+      "cobertura"
     ]
   },
   "devDependencies": {
@@ -123,7 +125,8 @@
     "tslint-eslint-rules": "5.4.0",
     "tslint-microsoft-contrib": "6.0.0",
     "tslint-sonarts": "1.8.0",
-    "typescript": "3.2.2"
+    "typescript": "3.2.2",
+    "vsts-coverage-styles": "1.0.7"
   },
   "contributors": [
     "Derek Tiffany <derek.tiffany+product-mindset@3pillarglobal.com>",

@@ -18,7 +18,7 @@ steps:
 - script: |
     npm install
     npm run build
-    JEST_JUNIT_OUTPUT="./reports/junit/js-test-results.xml" npm run test tests --runInBand --ci --testResultsProcessor="jest-junit"
+    JEST_JUNIT_OUTPUT="./reports/junit/js-test-results.xml" npm run test -- tests --runInBand --ci --testResultsProcessor="jest-junit"
   displayName: 'npm install, build, and test'
 
 # Publish Test Results

@@ -24,7 +24,7 @@ jobs:
           command: npm run build
       - run:
           name: Tests
-          command: npm run test tests --runInBand --ci --testResultsProcessor="jest-junit"
+          command: npm run test -- tests --runInBand --ci --testResultsProcessor="jest-junit"
           environment:
             JEST_JUNIT_OUTPUT: "reports/junit/js-test-results.xml"
       - store_test_results:

@@ -3,13 +3,13 @@ jest.mock(`path`)
 const { onCreateNode } = require(`../gatsby-node`)
 
 describe(`gatsby-node`, () => {
-  const boundActionCreators = {}
+  const actions = {}
 
   describe(`onCreateNode`, () => {
     let getNode
 
     beforeEach(() => {
-      boundActionCreators.createNodeField = jest.fn()
+      ations.createNodeField = jest.fn()
       getNode = jest.fn()
     })
 
@@ -25,9 +25,9 @@ describe(`gatsby-node`, () => {
         },
         parent: `parent`
       }
-      onCreateNode({ node, boundActionCreators, getNode })
+      onCreateNode({ node, actions, getNode })
 
-      expect(boundActionCreators.createNodeField.mock.calls.length).toBe(0)
+      expect(actions.createNodeField.mock.calls.length).toBe(0)
     })
   })
 })

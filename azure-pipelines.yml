@@ -3,6 +3,9 @@
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
+variables:
+  JEST_JUNIT_OUTPUT: reports/junit/js-test-results.xml
+
 trigger:
 - master
 
@@ -26,5 +29,5 @@ steps:
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit' # Options: JUnit, NUnit, VSTest, xUnit
-    testResultsFiles: '**/TEST-*.xml'
+    testResultsFiles: '**/*test-results.xml'
 

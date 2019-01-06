@@ -19,8 +19,8 @@ exports.onCreateNode = ({ node }) => {
   fmImagesToRelative(node)
 }
 
-exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions
+exports.createPages = ({ boundActionCreators, graphql }) => {
+  const { createPage } = boundActionCreators
   return graphql(`
       {
        allMarkdownRemark(filter: { frontmatter: { isPage: {eq: true} } }, limit: 1000) {
@@ -59,8 +59,8 @@ exports.createPages = ({ actions, graphql }) => {
   })
 }
 
-exports.onCreateNode = ({ node, getNode, getNodes, actions }) => {
-  const { createNodeField } = actions
+exports.onCreateNode = ({ node, getNode, getNodes, boundActionCreators }) => {
+  const { createNodeField } = boundActionCreators
   if (node.internal.type === `MarkdownRemark`) {
     if (node.frontmatter.isPage === true) {
       const slug = createFilePath({ node, getNode, basePath: `content/pages` })

@@ -86,7 +86,8 @@
     "coverageReporters": [
       "lcov",
       "text",
-      "html"
+      "html",
+      "cobertura"
     ]
   },
   "devDependencies": {

@@ -84,8 +84,6 @@
     ],
     "collectCoverage": true,
     "coverageReporters": [
-      "lcov",
-      "text",
       "html",
       "cobertura"
     ]

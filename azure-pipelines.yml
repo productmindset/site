@@ -3,9 +3,6 @@
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
-variables:
-  JEST_JUNIT_OUTPUT: reports/junit/js-test-results.xml
-
 trigger:
 - master
 
@@ -21,7 +18,7 @@ steps:
 - script: |
     npm install
     npm run build
-    npm run test tests --runInBand --ci --testResultsProcessor="jest-junit"
+    JEST_JUNIT_OUTPUT="./reports/junit/js-test-results.xml" npm run test tests --runInBand --ci --testResultsProcessor="jest-junit"
   displayName: 'npm install, build, and test'
 
 # Publish Test Results
@@ -29,5 +26,5 @@ steps:
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit' # Options: JUnit, NUnit, VSTest, xUnit
-    testResultsFiles: '**/*test-results.xml'
+    testResultsFiles: './reports/junit/js-test-results.xml'
 

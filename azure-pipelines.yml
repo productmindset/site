@@ -18,4 +18,13 @@ steps:
 - script: |
     npm install
     npm run build
-  displayName: 'npm install and build'
+    npm run test tests --runInBand --ci --testResultsProcessor="jest-junit"
+  displayName: 'npm install, build, and test'
+
+# Publish Test Results
+# Publish Test Results to Azure Pipelines/TFS
+- task: PublishTestResults@2
+  inputs:
+    #testResultsFormat: 'JUnit' # Options: JUnit, NUnit, VSTest, xUnit
+    #testResultsFiles: '**/TEST-*.xml' 
+

@@ -5,6 +5,7 @@ import * as PageComponent from '../components/PageComponent'
 import CardComponent from '../components/CardComponent'
 import { MarkdownRemark, MarkdownRemarkConnection, ImageSharp } from '../graphql-types'
 import { StaticQuery, graphql } from 'gatsby'
+import Helmet from 'react-helmet'
 
 interface WorkshopPageTemplateLayoutProps extends Page.PageTemplateLayoutProps {
   data?: {
@@ -18,6 +19,12 @@ interface WorkshopPageTemplateLayoutProps extends Page.PageTemplateLayoutProps {
 const WorkshopsPageLayout: React.FunctionComponent<WorkshopPageTemplateLayoutProps> = (props) => {
   return (
     <PageComponent.default {...props}>
+      <Helmet
+        title="3Pillar Global Product Mindset Workshop - Workshops"
+        meta={[
+          { name: 'description', content: 'Product Mindset Workshops - Workshops' }
+        ]}>
+      </Helmet>
       <div className="section container" >
         <h3 className="title">EVENT SPEAKERS</h3>
         {_.chunk(props.data.speakers.edges, 2).map((chunkedEdges, key) => (
@@ -30,9 +37,9 @@ const WorkshopsPageLayout: React.FunctionComponent<WorkshopPageTemplateLayoutPro
                   imageSharp = {speakerEdge.node.imageFile.childImageSharp}
                   imageAlt={speakerEdge.node.frontmatter.fullName}
                 >
-                  <p className="title is-4">{speakerEdge.node.frontmatter.fullName}</p>
-                  <p className="subtitle is-6">{speakerEdge.node.frontmatter.jobTitle}</p>
-                  <p className="subtitle is-6">{speakerEdge.node.frontmatter.company}</p>
+                  <p className="title is-4 is-size-6-mobile">{speakerEdge.node.frontmatter.fullName}</p>
+                  <p className="subtitle is-6 is-size-7-mobile">{speakerEdge.node.frontmatter.jobTitle}</p>
+                  <p className="subtitle is-6 is-size-7-mobile">{speakerEdge.node.frontmatter.company}</p>
                 </CardComponent>
               </div>
             ))}
@@ -52,7 +59,7 @@ const WorkshopsPageLayout: React.FunctionComponent<WorkshopPageTemplateLayoutPro
               <i className="far fa-clock fa-fw"></i>
               {workshopEdge.node.frontmatter.time}
             </p>
-            <p className="title is-4">{workshopEdge.node.frontmatter.fullTitle}</p>
+            <p className="title is-4 is-size-6-mobile">{workshopEdge.node.frontmatter.fullTitle}</p>
           </CardComponent>
         ))}
       </div>

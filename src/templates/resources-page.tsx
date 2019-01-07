@@ -53,7 +53,7 @@ class ResourcePageLayout extends React.Component<ResourcePageTemplateLayoutProps
         <Helmet
           title="3Pillar Global Product Mindset Workshop - Resources"
           meta={[
-            { name: 'description', content: 'Product Mindset Workshops - Resources' }
+            { name: 'description', content: 'Product Mindset Workshops - Resources' },
           ]}>
         </Helmet>
         <Container>

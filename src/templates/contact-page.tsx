@@ -11,7 +11,7 @@ const ContactPageLayout: React.FunctionComponent<Page.PageTemplateLayoutProps> =
         <Helmet
           title="3Pillar Global Product Mindset Workshop - Contact Us"
           meta={[
-            { name: 'description', content: 'Product Mindset Workshops - Contact Us' }
+            { name: 'description', content: 'Product Mindset Workshops - Contact Us' },
           ]}>
         </Helmet>
         <div className="container section">

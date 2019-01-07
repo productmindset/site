@@ -22,7 +22,7 @@ const WorkshopsPageLayout: React.FunctionComponent<WorkshopPageTemplateLayoutPro
       <Helmet
         title="3Pillar Global Product Mindset Workshop - Workshops"
         meta={[
-          { name: 'description', content: 'Product Mindset Workshops - Workshops' }
+          { name: 'description', content: 'Product Mindset Workshops - Workshops' },
         ]}>
       </Helmet>
       <div className="section container" >

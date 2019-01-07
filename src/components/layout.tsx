@@ -3,6 +3,8 @@ import Helmet from 'react-helmet'
 
 import '../../content/styles/site.scss'
 
+require('typeface-roboto')
+require('typeface-roboto-condensed')
 interface DefaultLayoutProps {
   children: React.ReactNode,
 }

@@ -1,8 +1,12 @@
 # Product Mindset Site
 
-Web site for: <http://productmindset.com>
+Web site for: <https://www.productmindset.com>
 
-Currently deployed to: <https://product-mindset.netlify.com/>
+Currently deployed to:
+
+* site / primary domain - <https://www.productmindset.com/>
+* redirects to primary domain - <https://productmindset.com/>
+* default build subdomain - <https://product-mindset.netlify.com/>
 
 ## Getting Started
 
@@ -53,6 +57,13 @@ yarn build
 gatsby serve
 ```
 
+#### Concepts
+
+This project uses the [Gatsby]<https://www.gatsbyjs.org/> [React.js]<https://reactjs.org/> Static Site Generator (SSG).
+
+* [Gatsby Docs]<https://www.gatsbyjs.org/docs/>
+* [Gatsby Project Structure]<https://www.gatsbyjs.org/docs/gatsby-project-structure/>
+
 #### Automated Build
 
 The following commands are run durng the automated build and are required to be completed successfully.
@@ -70,6 +81,8 @@ Preview deploys are available from `Netlify` on each branch / pull request. CMS 
 There are several additional automation checks run on branches. Some may be helpful.
 
 #### CMS Development
+
+This project uses the [Netlify CMS]<https://www.netlifycms.org/>.
 
 Netlify CMS options are configured in `/static/admin/config.yml`.
 
@@ -105,7 +118,7 @@ Modifying these settings *locally* should allow for a useful CMS development env
 
 ### Deployment
 
-Merges to `master` will automatically be deployed.
+Merges to `master` will automatically be deployed to the [Netlify]<https://www.netlify.com/> hosting service. [Netlify Identity]<https://www.netlify.com/docs/identity/> and [Netlify Forms]<https://www.netlify.com/docs/form-handling/> are used.
 
 ## Deploying a new instance
 

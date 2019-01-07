@@ -5,6 +5,7 @@ import * as PageComponent from '../components/PageComponent'
 import * as ResourceComponent from '../components/ResourceComponent'
 import { MarkdownRemark, MarkdownRemarkEdge, MarkdownRemarkConnection, ImageSharp } from '../graphql-types'
 import { StaticQuery, graphql } from 'gatsby'
+import Helmet from 'react-helmet'
 import {
   Column,
   Columns,
@@ -49,6 +50,12 @@ class ResourcePageLayout extends React.Component<ResourcePageTemplateLayoutProps
   render() {
     return (
       <PageComponent.default {...this.props}>
+        <Helmet
+          title="3Pillar Global Product Mindset Workshop - Resources"
+          meta={[
+            { name: 'description', content: 'Product Mindset Workshops - Resources' },
+          ]}>
+        </Helmet>
         <Container>
           <p className="has-text-weight-bold has-text-primary">
             Filter these resources by:<br/>

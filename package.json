@@ -25,11 +25,10 @@
     "gatsby-plugin-netlify-cms": "3.0.9",
     "gatsby-plugin-react-helmet": "3.0.5",
     "gatsby-plugin-sass": "2.0.7",
-    "gatsby-plugin-sentry": "1.0.0",
     "gatsby-plugin-sharp": "2.0.17",
     "gatsby-plugin-sitemap": "2.0.4",
     "gatsby-plugin-typescript": "2.0.3",
-    "gatsby-plugin-typography": "2.2.4",
+    "gatsby-plugin-typography": "2.2.5",
     "gatsby-remark-images": "3.0.1",
     "gatsby-remark-relative-images": "0.2.1",
     "gatsby-source-filesystem": "2.0.12",
@@ -60,7 +59,8 @@
     "lint": "tslint --project tsconfig.json -c ./tslint.json './src/**/*.ts*' && eslint *.js && eslint --ext .js ./tests/**",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "test:coverage:inline": "node ./tools/inline-coverage-report.js"
   },
   "jest": {
     "globals": {
@@ -86,13 +86,14 @@
     "coverageReporters": [
       "lcov",
       "text",
-      "html"
+      "html",
+      "cobertura"
     ]
   },
   "devDependencies": {
     "@babel/core": "7.2.2",
     "@types/auth0-js": "8.11.8",
-    "@types/jest": "23.3.11",
+    "@types/jest": "23.3.12",
     "@types/lodash": "4.14.119",
     "@types/react": "16.7.18",
     "@types/react-dom": "16.0.11",
@@ -123,7 +124,8 @@
     "tslint-eslint-rules": "5.4.0",
     "tslint-microsoft-contrib": "6.0.0",
     "tslint-sonarts": "1.8.0",
-    "typescript": "3.2.2"
+    "typescript": "3.2.2",
+    "vsts-coverage-styles": "1.0.7"
   },
   "contributors": [
     "Derek Tiffany <derek.tiffany+product-mindset@3pillarglobal.com>",

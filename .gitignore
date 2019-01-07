@@ -5,6 +5,7 @@ node_modules
 # Generated output
 .cache/
 coverage/
+reports/
 yarn-error.log
 
 # Build directory
@@ -17,6 +18,9 @@ public/
 .idea/
 *.iml
 .vscode/
+
+# Default test output
+junit.xml
 
 # Sonar
 .scannerwork/

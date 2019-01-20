@@ -114,7 +114,7 @@
     "graphql-codegen-typescript-template": "0.15.2",
     "jest": "23.6.0",
     "jest-cli": "23.6.0",
-    "jest-junit": "5.2.0",
+    "jest-junit": "6.0.1",
     "prettier": "1.15.3",
     "react-player": "1.8.0",
     "react-test-renderer": "16.7.0",

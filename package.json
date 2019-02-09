@@ -46,7 +46,7 @@
     "typeface-roboto": "0.0.54",
     "typeface-roboto-condensed": "0.0.54",
     "typography": "0.16.18",
-    "webpack": "4.28.3"
+    "webpack": "4.29.3"
   },
   "keywords": [
     "gatsby, typescript"

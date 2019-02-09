@@ -1212,9 +1212,9 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
-"@types/react@16.7.20":
-  version "16.7.20"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.7.20.tgz#13ae752c012710d0fa800985ca809814b51d3b58"
+"@types/react@16.8.2":
+  version "16.8.2"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.8.2.tgz#3b7a7f7ea89d1c7d68b00849fb5de839011c077b"
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"

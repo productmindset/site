@@ -111,7 +111,7 @@
     "gatsby-cli": "2.4.9",
     "gatsby-plugin-favicon": "3.1.5",
     "graphql-code-generator": "0.16.1",
-    "graphql-codegen-typescript-template": "0.16.0",
+    "graphql-codegen-typescript-template": "0.16.1",
     "jest": "24.1.0",
     "jest-cli": "24.1.0",
     "jest-junit": "6.2.1",

@@ -11,7 +11,7 @@ heroSubtitle: >-
 heroIsVideo: true
 subColumns: 2
 ---
-### WHAT IS THE PRODUCT MINDSET
+### WHAT IS THE PRODUCT MINDSET?
 
 Creating software products is risky, expensive and hard. Customer needs and markets
 are constantly changing. If your product isn’t easy to use and engaging, customers will be gone in seconds.

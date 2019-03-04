@@ -99,7 +99,7 @@
     "@types/react-dom": "16.8.2",
     "@types/react-helmet": "5.0.8",
     "@types/react-test-renderer": "16.8.1",
-    "@types/webpack-env": "1.13.7",
+    "@types/webpack-env": "1.13.8",
     "babel-eslint": "10.0.1",
     "core-js": "2.6.5",
     "eslint": "5.15.0",

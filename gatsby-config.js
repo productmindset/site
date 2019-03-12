@@ -21,7 +21,7 @@ module.exports = {
         display: `standalone`,
         icon: `static/images/included/favicon.png`, // This path is relative to the root of the site.
         include_favicon: true // Include favicon
-      },
+      }
     },
     `gatsby-plugin-offline`,
     {

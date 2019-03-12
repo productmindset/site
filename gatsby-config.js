@@ -9,6 +9,22 @@ module.exports = {
     `gatsby-plugin-typescript`,
     `gatsby-plugin-sass`,
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `3Pillar Global Product Mindset`,
+        short_name: `prodmindset`,
+        start_url: `/`,
+        background_color: `#818a8f`,
+        theme_color: `#002f5f`,
+        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
+        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        display: `standalone`,
+        icon: `static/images/included/favicon.png`, // This path is relative to the root of the site.
+        include_favicon: true, // Include favicon
+      },
+    },
+    `gatsby-plugin-offline`,
+    {
       resolve: `gatsby-plugin-typography`,
       options: {
         omitGoogleFont: true,

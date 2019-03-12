@@ -20,7 +20,7 @@ module.exports = {
         // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
         display: `standalone`,
         icon: `static/images/included/favicon.png`, // This path is relative to the root of the site.
-        include_favicon: true, // Include favicon
+        include_favicon: true // Include favicon
       },
     },
     `gatsby-plugin-offline`,

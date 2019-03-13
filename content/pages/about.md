@@ -16,3 +16,7 @@ https://productmindset.com
 ### Built by
 
 https://3PillarGlobal.com
+
+### Recently added
+
+Progressive Web Ap

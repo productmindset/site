@@ -22,6 +22,7 @@ steps:
     JEST_JUNIT_OUTPUT="./reports/junit/js-test-results.xml" npm run test -- tests --runInBand --ci --testResultsProcessor="jest-junit"
     npm run test:coverage:inline
   displayName: 'npm install, build, lint, and test'
+  failOnStderr: true
 
 # Publish Code Coverage Results
 # Publish Cobertura or JaCoCo code coverage results from a build

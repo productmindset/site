@@ -5952,9 +5952,9 @@ fuzzy@^0.1.1:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/fuzzy/-/fuzzy-0.1.3.tgz#4c76ec2ff0ac1a36a9dccf9a00df8623078d4ed8"
 
-gatsby-cli@2.5.0, gatsby-cli@^2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.5.0.tgz#c9598bb119e1fbef2e460de7ffb03aa3395285c7"
+gatsby-cli@2.5.3, gatsby-cli@^2.5.3:
+  version "2.5.3"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.5.3.tgz#111f87e6f2955379a907bfc7c731840a3df06bcc"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/runtime" "^7.0.0"
@@ -5966,7 +5966,7 @@ gatsby-cli@2.5.0, gatsby-cli@^2.5.0:
     execa "^0.8.0"
     fs-exists-cached "^1.0.0"
     fs-extra "^4.0.1"
-    gatsby-telemetry "^1.0.0"
+    gatsby-telemetry "^1.0.3"
     hosted-git-info "^2.6.0"
     lodash "^4.17.10"
     meant "^1.0.1"
@@ -5981,11 +5981,12 @@ gatsby-cli@2.5.0, gatsby-cli@^2.5.0:
     yargs "^12.0.5"
     yurnalist "^1.0.2"
 
-gatsby-image@2.0.34:
-  version "2.0.34"
-  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.0.34.tgz#b4f33c3b9391d55fe2648fb629fee9db2d524a86"
+gatsby-image@2.0.35:
+  version "2.0.35"
+  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.0.35.tgz#8c19b4920df9a33bb17c2db1d5c83cc062b96e39"
   dependencies:
     "@babel/runtime" "^7.0.0"
+    object-fit-images "^3.2.4"
     prop-types "^15.6.1"
 
 gatsby-link@^2.0.16:
@@ -6004,9 +6005,9 @@ gatsby-plugin-favicon@3.1.5:
     html-react-parser "^0.4.6"
     lodash "^4.17.10"
 
-gatsby-plugin-manifest@2.0.24:
-  version "2.0.24"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.0.24.tgz#5a14f83d137d1978bf54c727d452af571414de65"
+gatsby-plugin-manifest@2.0.25:
+  version "2.0.25"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.0.25.tgz#4eb52e2d7273a4e4a3d074a445d732df42610130"
   dependencies:
     "@babel/runtime" "^7.0.0"
     bluebird "^3.5.0"
@@ -6044,9 +6045,9 @@ gatsby-plugin-offline@2.0.25:
     lodash "^4.17.10"
     workbox-build "^3.6.3"
 
-gatsby-plugin-page-creator@^2.0.11:
-  version "2.0.11"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-2.0.11.tgz#fa21e8911c75c5810bd15f3b1f27ab23abee6238"
+gatsby-plugin-page-creator@^2.0.12:
+  version "2.0.12"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-2.0.12.tgz#00a5103715881e141c81b68b670ad8fb06291b7d"
   dependencies:
     "@babel/runtime" "^7.0.0"
     bluebird "^3.5.0"
@@ -6071,14 +6072,13 @@ gatsby-plugin-sass@2.0.11:
     "@babel/runtime" "^7.0.0"
     sass-loader "^7.0.1"
 
-gatsby-plugin-sharp@2.0.31:
-  version "2.0.31"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.0.31.tgz#2b6a291b3acc3918d05eb6a910f38cf0905ffb7b"
+gatsby-plugin-sharp@2.0.32:
+  version "2.0.32"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.0.32.tgz#47ebf2e44ece58560fa8bc604e7904ff9dca1386"
   dependencies:
     "@babel/runtime" "^7.0.0"
     async "^2.1.2"
     bluebird "^3.5.0"
-    fs-exists-cached "^1.0.0"
     fs-extra "^7.0.0"
     imagemin "^6.0.0"
     imagemin-mozjpeg "^8.0.0"
@@ -6170,9 +6170,9 @@ gatsby-source-filesystem@2.0.28:
     valid-url "^1.0.9"
     xstate "^3.1.0"
 
-gatsby-telemetry@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-1.0.0.tgz#36e78af2c249e20f4ab443e77e2854e09665e4ba"
+gatsby-telemetry@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-1.0.3.tgz#b5db21d081c7ed1ecda6d86ac15f56ad7e448db9"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/runtime" "^7.0.0"
@@ -6223,9 +6223,9 @@ gatsby-transformer-sharp@2.1.17:
     probe-image-size "^4.0.0"
     sharp "^0.21.3"
 
-gatsby@2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.3.0.tgz#7c4d19333bc1c1fc621c178da46d598195444c71"
+gatsby@2.3.3:
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.3.3.tgz#edae95bd9075dac9ea5285573e148898d5c8ee4d"
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
@@ -6281,11 +6281,11 @@ gatsby@2.3.0:
     flat "^4.0.0"
     fs-exists-cached "1.0.0"
     fs-extra "^5.0.0"
-    gatsby-cli "^2.5.0"
+    gatsby-cli "^2.5.3"
     gatsby-link "^2.0.16"
-    gatsby-plugin-page-creator "^2.0.11"
+    gatsby-plugin-page-creator "^2.0.12"
     gatsby-react-router-scroll "^2.0.6"
-    gatsby-telemetry "^1.0.0"
+    gatsby-telemetry "^1.0.3"
     glob "^7.1.1"
     graphql "^14.1.1"
     graphql-compose "^6.0.3"
@@ -10270,6 +10270,10 @@ object-copy@^0.1.0:
     copy-descriptor "^0.1.0"
     define-property "^0.2.5"
     kind-of "^3.0.3"
+
+object-fit-images@^3.2.4:
+  version "3.2.4"
+  resolved "https://registry.yarnpkg.com/object-fit-images/-/object-fit-images-3.2.4.tgz#6c299d38fdf207746e5d2d46c2877f6f25d15b52"
 
 object-hash@^1.1.4:
   version "1.3.1"

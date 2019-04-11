@@ -38,7 +38,7 @@ steps:
     command: 'custom' # Options: install, publish, custom
     #workingDir: # Optional
     #verbose: # Optional
-    customCommand: 'build' # Required when command == Custom
+    customCommand: 'run build' # Required when command == Custom
     #customRegistry: 'useNpmrc' # Optional. Options: useNpmrc, useFeed
     #customFeed: # Required when customRegistry == UseFeed
     #customEndpoint: # Optional
@@ -54,7 +54,7 @@ steps:
     command: 'custom' # Options: install, publish, custom
     #workingDir: # Optional
     #verbose: # Optional
-    customCommand: 'lint' # Required when command == Custom
+    customCommand: 'run lint' # Required when command == Custom
     #customRegistry: 'useNpmrc' # Optional. Options: useNpmrc, useFeed
     #customFeed: # Required when customRegistry == UseFeed
     #customEndpoint: # Optional

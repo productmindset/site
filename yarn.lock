@@ -1499,9 +1499,9 @@
   version "1.5.6-b"
   resolved "https://registry.yarnpkg.com/@stefanprobst/lokijs/-/lokijs-1.5.6-b.tgz#6a36a86dbe132e702e6b15ffd3ce4139aebfe942"
 
-"@types/auth0-js@8.11.12":
-  version "8.11.12"
-  resolved "https://registry.yarnpkg.com/@types/auth0-js/-/auth0-js-8.11.12.tgz#7d074e393cb93cc40f017687040955ff27e1c485"
+"@types/auth0-js@9.10.1":
+  version "9.10.1"
+  resolved "https://registry.yarnpkg.com/@types/auth0-js/-/auth0-js-9.10.1.tgz#fc4147b0cdf8abb949fb4d73d2382de3e2ce6ad8"
 
 "@types/babel-types@*":
   version "7.0.4"

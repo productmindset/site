@@ -2,6 +2,8 @@
 # Build a general Node.js project with npm.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+variables:
+  JEST_JUNIT_OUTPUT: ./reports/junit/js-test-results.xml
 
 trigger:
 - master
@@ -15,13 +17,90 @@ steps:
     versionSpec: '8.x'
   displayName: 'Install Node.js'
 
-- script: |
-    npm install
-    npm run build
-    npm run lint
-    JEST_JUNIT_OUTPUT="./reports/junit/js-test-results.xml" npm run test -- tests --runInBand --ci --testResultsProcessor="jest-junit"
-    npm run test:coverage:inline
-  displayName: 'npm install, build, lint, and test'
+# npm
+# Install and publish npm packages, or run an npm command. Supports npmjs.com and authenticated registries like Package Management.
+- task: Npm@1
+  displayName: npm install  # friendly name to display in the UI
+  inputs:
+    command: 'install' # Options: install, publish, custom
+    #workingDir: # Optional
+    #verbose: # Optional
+    #customCommand: # Required when command == Custom
+    #customRegistry: 'useNpmrc' # Optional. Options: useNpmrc, useFeed
+    #customFeed: # Required when customRegistry == UseFeed
+    #customEndpoint: # Optional
+    #publishRegistry: 'useExternalRegistry' # Optional. Options: useExternalRegistry, useFeed
+    #publishFeed: # Required when publishRegistry == UseFeed
+    #publishPackageMetadata: true # Optional
+    #publishEndpoint: # Required when publishRegistry == UseExternalRegistry
+
+# npm
+# Install and publish npm packages, or run an npm command. Supports npmjs.com and authenticated registries like Package Management.
+- task: Npm@1
+  displayName: npm run build  # friendly name to display in the UI
+  inputs:
+    command: 'custom' # Options: install, publish, custom
+    #workingDir: # Optional
+    #verbose: # Optional
+    customCommand: 'run build' # Required when command == Custom
+    #customRegistry: 'useNpmrc' # Optional. Options: useNpmrc, useFeed
+    #customFeed: # Required when customRegistry == UseFeed
+    #customEndpoint: # Optional
+    #publishRegistry: 'useExternalRegistry' # Optional. Options: useExternalRegistry, useFeed
+    #publishFeed: # Required when publishRegistry == UseFeed
+    #publishPackageMetadata: true # Optional
+    #publishEndpoint: # Required when publishRegistry == UseExternalRegistry
+
+# npm
+# Install and publish npm packages, or run an npm command. Supports npmjs.com and authenticated registries like Package Management.
+- task: Npm@1
+  displayName: npm run lint  # friendly name to display in the UI
+  inputs:
+    command: 'custom' # Options: install, publish, custom
+    #workingDir: # Optional
+    #verbose: # Optional
+    customCommand: 'run lint' # Required when command == Custom
+    #customRegistry: 'useNpmrc' # Optional. Options: useNpmrc, useFeed
+    #customFeed: # Required when customRegistry == UseFeed
+    #customEndpoint: # Optional
+    #publishRegistry: 'useExternalRegistry' # Optional. Options: useExternalRegistry, useFeed
+    #publishFeed: # Required when publishRegistry == UseFeed
+    #publishPackageMetadata: true # Optional
+    #publishEndpoint: # Required when publishRegistry == UseExternalRegistry
+
+# npm
+# Install and publish npm packages, or run an npm command. Supports npmjs.com and authenticated registries like Package Management.
+- task: Npm@1
+  displayName: npm run test  # friendly name to display in the UI
+  inputs:
+    command: 'custom' # Options: install, publish, custom
+    #workingDir: # Optional
+    #verbose: # Optional
+    customCommand: 'run test -- tests --runInBand --ci --testResultsProcessor="jest-junit"' # Required when command == Custom
+    #customRegistry: 'useNpmrc' # Optional. Options: useNpmrc, useFeed
+    #customFeed: # Required when customRegistry == UseFeed
+    #customEndpoint: # Optional
+    #publishRegistry: 'useExternalRegistry' # Optional. Options: useExternalRegistry, useFeed
+    #publishFeed: # Required when publishRegistry == UseFeed
+    #publishPackageMetadata: true # Optional
+    #publishEndpoint: # Required when publishRegistry == UseExternalRegistry
+
+# npm
+# Install and publish npm packages, or run an npm command. Supports npmjs.com and authenticated registries like Package Management.
+- task: Npm@1
+  displayName: npm run test:coverage:inline  # friendly name to display in the UI
+  inputs:
+    command: 'custom' # Options: install, publish, custom
+    #workingDir: # Optional
+    #verbose: # Optional
+    customCommand: 'run test:coverage:inline' # Required when command == Custom
+    #customRegistry: 'useNpmrc' # Optional. Options: useNpmrc, useFeed
+    #customFeed: # Required when customRegistry == UseFeed
+    #customEndpoint: # Optional
+    #publishRegistry: 'useExternalRegistry' # Optional. Options: useExternalRegistry, useFeed
+    #publishFeed: # Required when publishRegistry == UseFeed
+    #publishPackageMetadata: true # Optional
+    #publishEndpoint: # Required when publishRegistry == UseExternalRegistry
 
 # Publish Code Coverage Results
 # Publish Cobertura or JaCoCo code coverage results from a build

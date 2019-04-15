@@ -76,7 +76,7 @@ steps:
     command: 'custom' # Options: install, publish, custom
     #workingDir: # Optional
     #verbose: # Optional
-    customCommand: 'run test -- tests --coverage --runInBand --ci --reporters=default --reporters=jest-junit' # Required when command == Custom
+    customCommand: 'run test -- tests --coverage --runInBand --ci --reporters="default" --reporters="jest-junit"' # Required when command == Custom
     #customRegistry: 'useNpmrc' # Optional. Options: useNpmrc, useFeed
     #customFeed: # Required when customRegistry == UseFeed
     #customEndpoint: # Optional

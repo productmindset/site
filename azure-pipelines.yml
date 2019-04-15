@@ -2,6 +2,8 @@
 # Build a general Node.js project with npm.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+variables:
+  JEST_JUNIT_OUTPUT: ./reports/junit/js-test-results.xml
 
 trigger:
 - master
@@ -55,6 +57,38 @@ steps:
     #workingDir: # Optional
     #verbose: # Optional
     customCommand: 'run lint' # Required when command == Custom
+    #customRegistry: 'useNpmrc' # Optional. Options: useNpmrc, useFeed
+    #customFeed: # Required when customRegistry == UseFeed
+    #customEndpoint: # Optional
+    #publishRegistry: 'useExternalRegistry' # Optional. Options: useExternalRegistry, useFeed
+    #publishFeed: # Required when publishRegistry == UseFeed
+    #publishPackageMetadata: true # Optional
+    #publishEndpoint: # Required when publishRegistry == UseExternalRegistry
+
+# npm
+# Install and publish npm packages, or run an npm command. Supports npmjs.com and authenticated registries like Package Management.
+- task: Npm@1
+  inputs:
+    command: 'custom' # Options: install, publish, custom
+    #workingDir: # Optional
+    #verbose: # Optional
+    customCommand: 'run test -- tests --runInBand --ci --testResultsProcessor="\"jest-junit\""' # Required when command == Custom
+    #customRegistry: 'useNpmrc' # Optional. Options: useNpmrc, useFeed
+    #customFeed: # Required when customRegistry == UseFeed
+    #customEndpoint: # Optional
+    #publishRegistry: 'useExternalRegistry' # Optional. Options: useExternalRegistry, useFeed
+    #publishFeed: # Required when publishRegistry == UseFeed
+    #publishPackageMetadata: true # Optional
+    #publishEndpoint: # Required when publishRegistry == UseExternalRegistry
+
+# npm
+# Install and publish npm packages, or run an npm command. Supports npmjs.com and authenticated registries like Package Management.
+- task: Npm@1
+  inputs:
+    command: 'custom' # Options: install, publish, custom
+    #workingDir: # Optional
+    #verbose: # Optional
+    customCommand: 'run test:coverage:inline' # Required when command == Custom
     #customRegistry: 'useNpmrc' # Optional. Options: useNpmrc, useFeed
     #customFeed: # Required when customRegistry == UseFeed
     #customEndpoint: # Optional

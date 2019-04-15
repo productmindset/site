@@ -37,7 +37,7 @@ steps:
 # npm
 # Install and publish npm packages, or run an npm command. Supports npmjs.com and authenticated registries like Package Management.
 - task: Npm@1
-  displayName: npm build  # friendly name to display in the UI
+  displayName: npm run build  # friendly name to display in the UI
   inputs:
     command: 'custom' # Options: install, publish, custom
     #workingDir: # Optional
@@ -54,6 +54,7 @@ steps:
 # npm
 # Install and publish npm packages, or run an npm command. Supports npmjs.com and authenticated registries like Package Management.
 - task: Npm@1
+  displayName: npm run lint  # friendly name to display in the UI
   inputs:
     command: 'custom' # Options: install, publish, custom
     #workingDir: # Optional
@@ -70,6 +71,7 @@ steps:
 # npm
 # Install and publish npm packages, or run an npm command. Supports npmjs.com and authenticated registries like Package Management.
 - task: Npm@1
+  displayName: npm run test  # friendly name to display in the UI
   inputs:
     command: 'custom' # Options: install, publish, custom
     #workingDir: # Optional
@@ -86,6 +88,7 @@ steps:
 # npm
 # Install and publish npm packages, or run an npm command. Supports npmjs.com and authenticated registries like Package Management.
 - task: Npm@1
+  displayName: npm run test:coverage:inline  # friendly name to display in the UI
   inputs:
     command: 'custom' # Options: install, publish, custom
     #workingDir: # Optional
@@ -98,14 +101,6 @@ steps:
     #publishFeed: # Required when publishRegistry == UseFeed
     #publishPackageMetadata: true # Optional
     #publishEndpoint: # Required when publishRegistry == UseExternalRegistry
-
-#- script: |
-#    npm install
-#    npm run build
-#    npm run lint
-#    JEST_JUNIT_OUTPUT="./reports/junit/js-test-results.xml" npm run test -- tests --runInBand --ci --testResultsProcessor="jest-junit"
-#    npm run test:coverage:inline
-#  displayName: 'npm install, build, lint, and test'
 
 # Publish Code Coverage Results
 # Publish Cobertura or JaCoCo code coverage results from a build

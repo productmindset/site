@@ -72,7 +72,7 @@ steps:
     command: 'custom' # Options: install, publish, custom
     #workingDir: # Optional
     #verbose: # Optional
-    customCommand: 'run test -- --runInBand --ci --testResultsProcessor="\"jest-junit\""' # Required when command == Custom
+    customCommand: 'run test -- --runInBand --ci --testResultsProcessor=\"jest-junit\"' # Required when command == Custom
     #customRegistry: 'useNpmrc' # Optional. Options: useNpmrc, useFeed
     #customFeed: # Required when customRegistry == UseFeed
     #customEndpoint: # Optional

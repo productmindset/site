@@ -68,39 +68,10 @@ steps:
     #publishPackageMetadata: true # Optional
     #publishEndpoint: # Required when publishRegistry == UseExternalRegistry
 
-# npm
-# Install and publish npm packages, or run an npm command. Supports npmjs.com and authenticated registries like Package Management.
-- task: Npm@1
-  displayName: npm run test  # friendly name to display in the UI
-  inputs:
-    command: 'custom' # Options: install, publish, custom
-    #workingDir: # Optional
-    #verbose: # Optional
-    customCommand: 'run test -- tests --coverage --runInBand --ci --reporters="default" --reporters="jest-junit"' # Required when command == Custom
-    #customRegistry: 'useNpmrc' # Optional. Options: useNpmrc, useFeed
-    #customFeed: # Required when customRegistry == UseFeed
-    #customEndpoint: # Optional
-    #publishRegistry: 'useExternalRegistry' # Optional. Options: useExternalRegistry, useFeed
-    #publishFeed: # Required when publishRegistry == UseFeed
-    #publishPackageMetadata: true # Optional
-    #publishEndpoint: # Required when publishRegistry == UseExternalRegistry
-
-# npm
-# Install and publish npm packages, or run an npm command. Supports npmjs.com and authenticated registries like Package Management.
-- task: Npm@1
-  displayName: npm run test:coverage:inline  # friendly name to display in the UI
-  inputs:
-    command: 'custom' # Options: install, publish, custom
-    #workingDir: # Optional
-    #verbose: # Optional
-    customCommand: 'run test:coverage:inline' # Required when command == Custom
-    #customRegistry: 'useNpmrc' # Optional. Options: useNpmrc, useFeed
-    #customFeed: # Required when customRegistry == UseFeed
-    #customEndpoint: # Optional
-    #publishRegistry: 'useExternalRegistry' # Optional. Options: useExternalRegistry, useFeed
-    #publishFeed: # Required when publishRegistry == UseFeed
-    #publishPackageMetadata: true # Optional
-    #publishEndpoint: # Required when publishRegistry == UseExternalRegistry
+- script: |
+    JEST_JUNIT_OUTPUT="./reports/junit/js-test-results.xml" npm run test -- tests --runInBand --ci --reporters="default" --reporters="jest-junit"
+    npm run test:coverage:inline
+  displayName: 'npm test'
 
 # Publish Code Coverage Results
 # Publish Cobertura or JaCoCo code coverage results from a build

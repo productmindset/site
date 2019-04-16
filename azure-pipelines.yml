@@ -68,7 +68,6 @@ steps:
 - script: |
     JEST_JUNIT_OUTPUT="./reports/junit/js-test-results.xml" npm run test -- tests --coverage --runInBand --ci --reporters="default" --reporters="jest-junit"
     npm run test:coverage:inline
-    ls -R
   displayName: 'npm test'
 
 # Publish Code Coverage Results
@@ -76,8 +75,8 @@ steps:
 - task: PublishCodeCoverageResults@1
   inputs:
     codeCoverageTool: 'cobertura' # Options: cobertura, jaCoCo
-    summaryFileLocation: '$(System.DefaultWorkingDirectory)/coverage/cobertura-coverage.xml'
-    reportDirectory: '$(System.DefaultWorkingDirectory)/coverage' # Optional
+    summaryFileLocation: './coverage/cobertura-coverage.xml'
+    reportDirectory: './coverage' # Optional
     #additionalCodeCoverageFiles: # Optional
     #failIfCoverageEmpty: false # Optional
 

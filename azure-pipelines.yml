@@ -2,9 +2,6 @@
 # Build a general Node.js project with npm.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
-variables:
-  JEST_JUNIT_OUTPUT: './reports/junit/js-test-results.xml'
-
 trigger:
 - master
 
@@ -69,7 +66,7 @@ steps:
     #publishEndpoint: # Required when publishRegistry == UseExternalRegistry
 
 - script: |
-    JEST_JUNIT_OUTPUT="./reports/junit/js-test-results.xml" npm run test -- tests --runInBand --ci --reporters="default" --reporters="jest-junit"
+    JEST_JUNIT_OUTPUT="./reports/junit/js-test-results.xml" npm run test -- tests --coverage --runInBand --ci --reporters="default" --reporters="jest-junit"
     npm run test:coverage:inline
   displayName: 'npm test'
 

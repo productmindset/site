@@ -124,7 +124,7 @@
     "tslint": "5.16.0",
     "tslint-config-standard": "8.0.1",
     "tslint-eslint-rules": "5.4.0",
-    "tslint-microsoft-contrib": "6.1.1",
+    "tslint-microsoft-contrib": "6.2.0",
     "tslint-sonarts": "1.9.0",
     "typescript": "3.4.5",
     "vsts-coverage-styles": "1.0.8"

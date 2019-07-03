@@ -48,7 +48,8 @@
     "typeface-roboto": "0.0.54",
     "typeface-roboto-condensed": "0.0.54",
     "typography": "0.16.19",
-    "webpack": "4.31.0"
+    "webpack": "4.31.0",
+    "snyk": "^1.189.0"
   },
   "keywords": [
     "gatsby, typescript"
@@ -62,7 +63,9 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "test:coverage:inline": "node ./tools/inline-coverage-report.js"
+    "test:coverage:inline": "node ./tools/inline-coverage-report.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "jest": {
     "globals": {
@@ -134,5 +137,6 @@
     "Kyle Mathews <mathews.kyle@gmail.com>",
     "fabien0102 <fabien0102@gmail.com>",
     "Hays Clark <hays.clark@gmail.com>"
-  ]
+  ],
+  "snyk": true
 }

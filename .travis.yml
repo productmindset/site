@@ -1,6 +1,9 @@
 language: node_js
 node_js:
-  - "lts/*"
+  - 8
+  - 10
+os:
+  - linux
 cache: yarn
 install:
   - npm install -g codecov

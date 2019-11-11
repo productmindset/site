@@ -1656,9 +1656,9 @@
   dependencies:
     "@types/jest-diff" "*"
 
-"@types/lodash@4.14.129":
-  version "4.14.129"
-  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.129.tgz#9aaca391db126802482655c48dd79a814488202f"
+"@types/lodash@4.14.146":
+  version "4.14.146"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.146.tgz#de0d2c8610012f12a6a796455054cbc654f8fecf"
 
 "@types/minimatch@*":
   version "3.0.3"

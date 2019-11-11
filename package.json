@@ -98,7 +98,7 @@
     "@types/jest": "24.0.22",
     "@types/lodash": "4.14.146",
     "@types/react": "16.8.17",
-    "@types/react-dom": "16.8.4",
+    "@types/react-dom": "16.9.4",
     "@types/react-helmet": "5.0.14",
     "@types/react-test-renderer": "16.8.1",
     "@types/webpack-env": "1.13.9",

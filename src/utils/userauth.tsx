@@ -1,3 +1,5 @@
+// tslint:disable:no-floating-promises
+
 import * as auth0 from 'auth0-js'
 import { navigate } from 'gatsby'
 

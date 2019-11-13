@@ -1,4 +1,8 @@
-// tslint:disable:no-floating-promises
+/* tslint:disable */
+
+/*
+    Specifically, want to disable no-floating-promises for handleAuthentication()
+*/
 
 import * as auth0 from 'auth0-js'
 import { navigate } from 'gatsby'

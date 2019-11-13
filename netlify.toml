@@ -1,4 +1,4 @@
 [build]
-  command = "yarn run build"
+  command = "npm run build"
 [build.environment]
   YARN_VERSION = "1.19.1"

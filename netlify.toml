@@ -1,4 +1,4 @@
 [build]
-  command = "yarn run lint && yarn run test && yarn run build"
+  command = "npm lint && npm test && npm build"
 [build.environment]
   YARN_VERSION = "1.19.1"

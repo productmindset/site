@@ -4,7 +4,9 @@ node_js:
   - 10
 os:
   - linux
-cache: yarn
+cache:
+  npm: false
+  yarn: false
 install:
   - npm install -g codecov
   - yarn install

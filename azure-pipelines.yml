@@ -28,10 +28,10 @@ steps:
 - task: Npm@1
   displayName: npm install  # friendly name to display in the UI
   inputs:
-    command: 'install' # Options: install, publish, custom
+    command: 'custom' # Options: install, publish, custom
     #workingDir: # Optional
     #verbose: # Optional
-    #customCommand: # Required when command == Custom
+    customCommand: 'ci' # Required when command == Custom
     #customRegistry: 'useNpmrc' # Optional. Options: useNpmrc, useFeed
     #customFeed: # Required when customRegistry == UseFeed
     #customEndpoint: # Optional

@@ -103,7 +103,7 @@
     "@types/react-test-renderer": "16.9.1",
     "@types/webpack-env": "1.14.1",
     "babel-eslint": "10.0.3",
-    "core-js": "2.6.10",
+    "core-js": "2.6.11",
     "eslint": "6.7.2",
     "eslint-config-standard": "14.1.0",
     "eslint-plugin-import": "2.18.2",

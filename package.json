@@ -19,7 +19,7 @@
     "auth0-js": "9.12.2",
     "bloomer": "0.6.5",
     "bulma": "0.8.0",
-    "gatsby": "2.18.11",
+    "gatsby": "2.20.21",
     "gatsby-image": "2.2.36",
     "gatsby-plugin-manifest": "2.2.33",
     "gatsby-plugin-netlify": "2.1.30",
@@ -48,7 +48,7 @@
     "typeface-roboto": "0.0.75",
     "typeface-roboto-condensed": "0.0.75",
     "typography": "0.16.19",
-    "webpack": "4.41.4"
+    "webpack": "5.0.0"
   },
   "keywords": [
     "gatsby, typescript"

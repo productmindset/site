@@ -23,7 +23,7 @@
     "gatsby-image": "2.2.36",
     "gatsby-plugin-manifest": "2.2.33",
     "gatsby-plugin-netlify": "2.1.30",
-    "gatsby-plugin-netlify-cms": "3.0.18",
+    "gatsby-plugin-netlify-cms": "5.0.0",
     "gatsby-plugin-offline": "2.2.10",
     "gatsby-plugin-react-helmet": "3.1.18",
     "gatsby-plugin-sass": "2.1.26",

@@ -93,7 +93,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "7.7.5",
+    "@babel/core": "7.25.9",
     "@types/auth0-js": "9.12.1",
     "@types/jest": "24.0.23",
     "@types/lodash": "4.14.149",

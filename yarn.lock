@@ -1945,10 +1945,10 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
-"@types/auth0-js@9.12.1":
-  version "9.12.1"
-  resolved "https://registry.yarnpkg.com/@types/auth0-js/-/auth0-js-9.12.1.tgz#940ac7e9547c247b789310fc2f195b9070800446"
-  integrity sha512-Ak76ZtXdyGumQadYVTnFmItVmcHYK09qEU47d7ASLrtbMyxQTnVvm0P255jli2jka/jXVCInTgkHFpzuSiRATw==
+"@types/auth0-js@9.21.6":
+  version "9.21.6"
+  resolved "https://registry.yarnpkg.com/@types/auth0-js/-/auth0-js-9.21.6.tgz#31535a9cca2b3154c4836aab7854c38c2016a26c"
+  integrity sha512-wsvfk03WzQDXCbMdX8lQZH2Thh5AQk9SKQcxrBN1EdRkIOgkw9aIixxBpzsTHu/gj0I514BGQv7t5EyZSgVRmQ==
 
 "@types/babel-types@*":
   version "7.0.7"
